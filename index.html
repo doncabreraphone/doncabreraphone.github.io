@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  </head>
+  <body onload="playVideo()">
+    <video autoplay loop id="bg-video" muted>
+      <source src="videos/patagonia.mp4" type="video/mp4">
+    </video>
+    
+    <div id="menu">
+        <!--Menu content here-->
+    </div>
+    
+    <div class="container">
+        <div class="text-center d-none d-md-block first animate__animated animate__fadeIn animate__delay-1s"  id="logo">
+            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+        <div class="text-center d-block d-md-none" id="logo-small">
+            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+        <div id="message" class="second animate__animated animate__fadeIn animate__delay-3s" > <button id="get-started" style="display: none; text-align: center;"></button></div>       
+    </div>
+
+
+    <button id="menu_toggle" class="menu-toggle d-none animate__animated animate__delay-1s"></button>
+    <nav>
+    <ul class="menu">
+        <a href="#"><li data-text="Destinations">Destinations</li></a>
+        <a href="#"><li data-text="About us">About us</li></a>
+        <a href="#"><li data-text="Services">Services</li></a>
+        <a href="#"><li data-text="Contact">Contact</li></a>
+    </ul>
+    </nav>
+    
+
+    <div class="container-fluid fixed-bottom fixed-bottom-logos  animate__animated animate__fadeIn animate__delay-5s text-light">
+        <div class="card mx-auto">
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <div class="col-2">
+                <img src="images/btn1.png" alt="image1" class="img-fluid">
+              </div>
+              <div class="col-2">
+                <img src="images/btn2.png" alt="image2" class="img-fluid">
+              </div>
+              <div class="col-2">
+                <img src="images/btn3.png" alt="image3" class="img-fluid">
+              </div>
+              <div class="col-2">
+                <img src="images/btn4.png" alt="image4" class="img-fluid">
+              </div>
+              <div class="col-2">
+                <img src="images/btn5.png" alt="image5" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container mt-4 bottom-data">
+            <div class="row">
+              <div class="col">
+                <span>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <b>Argentina</b>
+                </span>
+                Paraguay 935 - Buenos Aires - Argentina &nbsp;&nbsp;
+                <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
+                <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+              </div>
+              <div class="col">
+                <span>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <b>Chile</b>
+                </span>
+                Avenida Apoquindo 4615 oficina 501 - Las Condes - Santiago - Chile&nbsp;&nbsp;
+                <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
+                <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+              </div>
+
+            </div>
+          </div>
+
+     
+          <p class="text-center mt-3 mb-1"><small>Copyright 2016 - 2022 ILS Tours</small></p>
+        
+      </div>
+    
+      
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="javascript.js"></script>
+
+</html>
