@@ -33,7 +33,7 @@ function playVideo() {
 
 
 /// typeriter
-  var message = "Designing travel experiences that <inspire a better world>";
+  var message = "Bienvenidos <Discover Argentina & Chile with us>";
   var messageEl = document.getElementById("message");
   var i = 0;
   var bold = false;
@@ -49,7 +49,7 @@ function playVideo() {
         i++;
       } 
       else if(message[i] === ' '){
-        newChar.style.marginRight = '5px';
+        newChar.style.marginRight = '3px';
         newChar.innerHTML = message[i];
         i++
       }
