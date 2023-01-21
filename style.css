@@ -113,6 +113,14 @@ html {
   color: #05A653;
 }
 
+@media only screen and (max-height: 700px) {
+  #logo {
+    top: 10%;
+  }
+  #message {
+    top: 45%;
+  }
+}
 #get-started {
   display: none;
   text-align: center;
@@ -259,6 +267,7 @@ ul.menu {
   perspective: 1000;
   color: white;
   padding: 0;
+  font-size: 0.85rem;
 }
 ul.menu a {
   color: #fff;
