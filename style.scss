@@ -122,16 +122,6 @@ html {
     
     
   }
-
-  
-  @media only screen and (max-height: 700px) {
-    #logo {
-        top: 10%;
-    }
-    #message {
-        top: 45%;
-    }
-  }
     
   //Button
   #get-started {
@@ -285,7 +275,7 @@ nav {
     perspective: 1000;
     color: white;
     padding: 0;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     a {
         color: #fff;
         text-decoration: none;
@@ -382,6 +372,19 @@ nav {
     }
   }
 
+  @media only screen and (max-height: 700px) {
+    #logo {
+        top: 10%;
+    }
+    #message {
+        top: 45%;
+        font-size: 1.4rem;
+    }
+    ul.menu {
+        top: 52%;
+        font-size: 0.85rem;
+    }
+  }
   
 .fixed-bottom-logos {
     font-size: 0.47rem;
@@ -425,3 +428,6 @@ nav {
     }
 }
   
+#first-div {
+    margin-left: 15%;
+}

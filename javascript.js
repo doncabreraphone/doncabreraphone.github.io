@@ -33,50 +33,49 @@ function playVideo() {
 
 
 /// typeriter
-  var message = "Bienvenidos <Discover Argentina & Chile with us>";
-  var messageEl = document.getElementById("message");
-  var i = 0;
-  var bold = false;
-  function typeWriter() {
-    if (i < message.length) {
-      var newChar = document.createElement("span");
-      newChar.classList.add("animated", "fadeIn");
-      if (message[i] === '<') {
-        bold = true;
-        i++;
-      } else if (message[i] === '>') {
-        bold = false;
-        i++;
-      } 
-      else if(message[i] === ' '){
-        newChar.style.marginRight = '3px';
-        newChar.innerHTML = message[i];
-        i++
-      }
-      else if (bold) {
-        newChar.style.fontWeight = 'bold';
-        newChar.classList.add("bold");
-        newChar.innerHTML = message[i];
-        i++;
-      } else {
-        newChar.innerHTML = message[i];
-        i++;
-      }
-      messageEl.appendChild(newChar);
-      setTimeout(typeWriter, 55);
-    }   else {
-        // Fade in button
-        var button = document.getElementById("get-started");
-        button.innerHTML = "Get Started";
-        button.classList.add("animated", "fadeIn");
-        button.style.display = "block";
-      }
+var message = "Bienvenidos\n<Discover Argentina & Chile with us>";
+var messageEl = document.getElementById("message");
+var i = 0;
+var bold = false;
+function typeWriter() {
+  if (i < message.length) {
+    var newChar = document.createElement("span");
+    newChar.classList.add("animated", "fadeIn");
+    if (message[i] === '<') {
+      bold = true;
+      i++;
+    } else if (message[i] === '>') {
+      bold = false;
+      i++;
+    } 
+    else if(message[i] === '\n'){
+      newChar.innerHTML = "<br>";
+      i++
     }
+    else if (bold) {
+      newChar.style.fontWeight = 'bold';
+      newChar.classList.add("bold");
+      newChar.innerHTML = message[i];
+      i++;
+    } else {
+      newChar.innerHTML = message[i];
+      i++;
+    }
+    messageEl.appendChild(newChar);
+    setTimeout(typeWriter, 55);
+  }   else {
+      // Fade in button
+      var button = document.getElementById("get-started");
+      button.innerHTML = "Get Started";
+      button.classList.add("animated", "fadeIn");
+      button.style.display = "block";
+    }
+  }
 
-    setTimeout(function(){
-        typeWriter();
-      }, 3300);
-   
+  setTimeout(function(){
+      typeWriter();
+    }, 3300);
+
 
 
     $(document).ready(function() {
