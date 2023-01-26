@@ -613,6 +613,7 @@ nav {
         margin-top: 1.3em;
     }
 
+
     #hero {
         position: relative;
         left: 0;
@@ -620,6 +621,10 @@ nav {
         top: 0;
         width: 100%;
         margin: -350px auto 0 auto;
+    }
+
+    #hero-img {
+        margin-top: -150px;
     }
 
     #hero-img::before {
@@ -632,8 +637,6 @@ nav {
         z-index: 2;
         background-image: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 96%);
     }
-
-
 
 
     #map_wrap {
@@ -657,6 +660,10 @@ nav {
         
         #left_map img {
            max-width: 65%;
+        }
+
+        #hero-img {
+            margin-top: -440px;
         }
        }
 

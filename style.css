@@ -595,6 +595,9 @@ ul.menu li:hover:after {
   width: 100%;
   margin: -350px auto 0 auto;
 }
+#destinations #hero-img {
+  margin-top: -150px;
+}
 #destinations #hero-img::before {
   content: "";
   position: absolute;
@@ -621,6 +624,9 @@ ul.menu li:hover:after {
   }
   #destinations #left_map img {
     max-width: 65%;
+  }
+  #destinations #hero-img {
+    margin-top: -440px;
   }
 }
 #destinations .mapdiv {
