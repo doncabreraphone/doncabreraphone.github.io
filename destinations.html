@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  </head>
+
+
+  <body id="destinations">
+    <div id="hero-img">
+        <img src="images/places/01_Portada.jpeg" alt="" class="img-fluid w-100" id="hero">
+    </div>
+    <button id="menu_toggle" class="menu-toggle d-none animate__animated animate__delay-1s"></button>
+    <nav>
+    <ul class="menu">
+        <a href="#"><li data-text="Destinations">Destinations</li></a>
+        <a href="#"><li data-text="About us">About us</li></a>
+        <a href="#"><li data-text="Services">Services</li></a>
+        <a href="#"><li data-text="Contact">Contact</li></a>
+    </ul>
+    </nav>
+    <div class="container-fluid p-0">
+
+        <div class="d-none d-md-block first text-center"  id="logo">
+            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+        <div class="text-center d-block d-md-none" id="logo-small">
+            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+        <button id="get-started">+</button>       
+
+
+        <div class="hero-text animate__animated animate__fadeIn">
+            <h1>Destinations</h1>
+            <h2>Highlights of Chile</h2>
+        </div>
+
+
+        <div class="container">
+        <div class="row">
+            <div class="col-4 text-center" id="map_wrap">
+                <div id="left_map">
+                    <div id="mapDiv1" class="mapdiv" style="display:none"></div>
+                    <div id="mapDiv2" class="mapdiv" style="display:none"></div>
+                    <img src="images/chile_map.png" alt="">
+                </div>
+            </div>
+            <div class="col" id="content">
+   
+                <div id="map1"></div>
+                <div class="yellow">
+                    <h3>Santiago &amp; Central Coast</h3>
+                    <h4><b>Discover</b> the capital of Chile <b>and enjoy</b> the breeze of the Pacific Ocean</h4>
+                    <h4 class="lead">Hustle and bustle &amp; ocean breezes</h4>
+                    <div class="icons_wrap text-center">
+                        <img src="images/icons_1.png" class="icons" alt="">
+                    </div>
+                </div>
+    
+                    <p>Located at the foot of the Andes Mountains, Santiago is a captivating city full of contrasts
+                        between tradition and modernity. Stroll along the traditional city center, visit the modern
+                        eastern districts and the Metropolitan Park that offers unique views of the Andes. Discover the
+                        city’s cultural activity, first-class gastronomy and lively nightlife. Last but certainly not least,
+                        during wintertime Santiago is the base for skiing in the most beautiful and largest ski resorts of
+                        the Southern Hemisphere.</p>
+
+                        <div class="card my-4">
+                            <img src="images/places/Santiago_and_Central_Coast/Santiago_de_chile8.jpeg" alt="" class="card-img-top">
+                            <div class="card-body">
+                              <p class="card-text">The Central Valley is the most populated region in the country. The city rests on an inland plain between the Andes Mountains in the east and the Coastal Range .</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card my-4">
+                            <img src="images/places/Santiago_and_Central_Coast/Santiago_de_chile3.jpeg" alt="" class="card-img-top">
+                            <div class="card-body">
+                              <p class="card-text">Chile occupies 756,096.3 km2 (291,930.4 square miles), making it the seventh-largest of the 12 South American countries.</p>
+                            </div>
+                        </div>
+
+                        <div class="card my-4">
+                            <img src="images/places/Santiago_and_Central_Coast/Santiago_de_chile5.jpeg" alt="" class="card-img-top">
+                            <div class="card-body">
+                              <p class="card-text">Gabriela Mistral was the first Latin American ever to become a Nobel Laureate.</p>
+                            </div>
+                        </div>
+
+    
+                    <p>Only 1.5 hours west of the capital you can feel the ocean breeze while wandering around the
+                        narrow streets of Valparaiso, a bohemian and vivid port. The city is characterized by its more
+                        than 40 hills as well as more than 15 funiculars, and its historic quarter is nominated World
+                        Heritage Site. Be invited to visit remarkable art galleries and delight yourself at a local
+                        restaurant with exquisite dishes prepared with fresh seafood.</p>
+    
+                <div id="map2"></div>
+                <div class="purple">
+                    <h3>Central Region Wine Valleys</h3>
+                    <h4>Chilean fine wines at a stroll</h4>
+                    <h4 class="lead">Taste the charm and flavors of the Central Region wine valleys</h4>
+                    <div class="icons_wrap text-center">
+                        <img src="images/icons_2.png" class="icons" alt="">
+                    </div>
+                </div>
+                
+                    <p>Maipú, Pirque, Casablanca, Aconcagua, Cachapoal, Colchagua are some of the most renowned
+                        wine-producing areas around Santiago.</p>
+                
+                    <p>The excellent natural conditions endow the area with a superb wine production. The most
+                        celebrated vine is the Chilean Carmenere but the Cabernet Sauvignon, Syrah, Pinot Noir and
+                        Merlot are also worth mentioning. And as white wines are concerned, Chardonnay, Sauvignon
+                        Blanc, Viognier stand out.</p>
+    
+                    <p>Visit different vineyards across the region tasting delicious wines and exquisite cuisine!
+                        You can also choose to stay in small boutique hotels and enjoy other activities such as horseback
+                        riding, cycling, or hiking amongst the vineyards.</p>
+    
+    
+         
+            </div>
+        </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="container-fluid" id="contact_us">
+        <div class="row">
+            <div class="col text-center">
+                CONTACT US
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 bottom-data">
+        <div class="row">
+            <div class="col" id="first-div">
+            <span>
+                <i class="bi bi-geo-alt-fill"></i>
+                <b>Argentina</b>
+            </span>
+            Paraguay 935 - Buenos Aires &nbsp;&nbsp;
+            <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
+            <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+            </div>
+            <div class="col">
+            <span>
+                <i class="bi bi-geo-alt-fill"></i>
+                <b>Chile</b>
+            </span>
+            Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;
+            <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
+            <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+            </div>
+
+        </div>
+        </div>
+
+    
+        <p class="text-center mt-3 mb-1" id="copy"><small>Copyright 2016 - 2022 ILS Tours</small></p>
+    
+    </div>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="javascript.js"></script>
+  </html>

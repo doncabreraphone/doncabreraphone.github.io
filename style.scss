@@ -1,7 +1,9 @@
 $green: #05A653;
 $red: #BF3127;
 $blue: #1C3761;
-
+$yellow: #fcba03;
+$purple: #420791;
+$base-font: 'Quicksand', sans-serif;
 
 /* Define a variable for the base font-size */
 $base-font-size: 16px;
@@ -22,6 +24,14 @@ html {
       font-size: $base-font-size * 1.8;
     }
   }
+
+
+body { 
+    #destinations {
+        font-family: $base-font;
+    }
+
+}
 
 // Video background
 #bg-video {
@@ -93,7 +103,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: $blue;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $base-font;
     line-height: 1.3em;
     letter-spacing: -0.08rem;
     font-weight: 400;
@@ -190,6 +200,7 @@ $color-lite: lighten($color, 10%);
 
 
 button.menu-toggle {
+    z-index: 1000 !important;
     opacity: 0.6;
     background-color: transparent;
     position: fixed;
@@ -207,8 +218,8 @@ button.menu-toggle {
       content: '×';
       color: white;
       position: absolute;
-      top: 16px;
-      left: -4px;
+      top: 40px;
+      left: 4px;
       font-family: Arial, sans-serif;
       font-size: 76px;
       line-height: 0;
@@ -237,7 +248,7 @@ button.menu-toggle {
   }
 
 nav {
-    z-index: 1;
+    z-index: 5;
     position: fixed;
     top: -100%; left: 0;
     width: 100%;
@@ -245,7 +256,7 @@ nav {
     transform: translate3d(0,0,0);
     backface-visibility: hidden;
     overflow: hidden;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $base-font;
    
     &:before {
       content: '';
@@ -391,7 +402,7 @@ nav {
     font-weight: 400;
     line-height: 0.7rem;
     text-indent: -0.3rem;
-    font-family: 'Quicksand', sans-serif;
+    font-family: $base-font;
     border: none;
     
 
@@ -430,4 +441,278 @@ nav {
   
 #first-div {
     margin-left: 15%;
+}
+
+#destinations {
+    overflow-x: hidden;
+
+    .bottom-data {
+        font-size: 0.52rem;
+        #first-div {
+            margin-left: 140px;
+        }
+
+        span {
+            display: block;
+            margin-left: -18px
+        }
+    }
+
+    #copy {
+        font-size: 0.55rem;
+    }
+
+    .hero-text {
+        background: #fff;
+        position: relative;
+        z-index: 3;
+        position: relative;
+        max-width: 50%;
+        left: 4%;
+        padding: 1.5em;
+        font-family: $base-font;
+
+        h1 {
+            color: $yellow;
+            line-height: 1.8rem;
+        }
+    }
+
+    #logo {
+        width: 100%;    
+        top:0;
+        position: absolute;
+        left: 0;
+        transform: none;
+
+        img {
+            max-width: 350px;
+        }
+    }
+    
+    &.open #logo.opened {
+        z-index: 5;
+        position: fixed;
+    }
+
+    #get-started {
+        display: block;
+        position: fixed;
+        left: 24px;
+        top: 15px;
+        z-index: 4;
+        transform: none;
+        font-family: $base-font;
+        font-size: 1.9rem;
+        padding: 0.3em;
+        background: #fff;
+        border-radius: 100%;
+        color: $blue;
+        box-shadow: none;
+    }
+
+    #content {
+        .icons {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .icons_wrap {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 1em 0;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+
+        h3, h4 {
+            font-family: $base-font;
+        }
+
+        h4 b {
+            color: black;
+        }
+
+        h3 {
+            font-size: 1.9rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        h4.lead {
+            font-size: 0.85rem;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+
+        }
+
+        .yellow {
+            h3,h4 {
+                color: $yellow;
+            }
+            h4.lead {
+                color:#6b5b28;
+            }
+        }
+
+        .purple {
+            h3,h4 {
+                color: $purple;
+            }
+            h4.lead {
+                color:#34204f;
+            }
+        }
+
+        .purple {
+            margin-top: 2.5em;
+        }
+
+        .card-text {
+            font-size: 0.7rem;
+        }
+
+        .card {
+            transform: scale(0.96);
+            transition: all 0.2s;
+            border-color: #ccc;
+            color: #666;
+            border-radius: 3px;
+            img {
+                -webkit-border-top-left-radius: 2px;
+                -webkit-border-top-right-radius: 2px;
+                -moz-border-radius-topleft: 2px;
+                -moz-border-radius-topright: 2px;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                filter: grayscale(100%);
+                margin-left: -1px;
+                width: 100.15%;
+            }
+        }
+
+        .card:hover {
+            color: #333;
+            transform: scale(1);
+            box-shadow: 0 0 30px #ccc;
+            img {
+                filter: grayscale(0%);
+            }
+        }
+
+    }
+    
+    #contact_us {
+        border-top: 1px solid #ccc;
+        padding: 1.2em 0;
+        margin-top: 1.3em;
+    }
+
+    #hero {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        margin: -350px auto 0 auto;
+    }
+
+    #hero-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        z-index: 2;
+        background-image: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 96%);
+    }
+
+
+
+
+    #map_wrap {
+        position: relative;
+    }
+
+    #left_map {
+        position: absolute;
+        margin-left: 50px !important;
+    }
+
+    #left_map img {
+        max-width: 90%;
+    }
+
+
+    @media only screen and (max-height: 700px) {
+        #hero {
+           margin-top: -100px;
+        }
+        
+        #left_map img {
+           max-width: 65%;
+        }
+       }
+
+    .mapdiv {
+        position: absolute;
+        top: 0;
+        z-index: 3;    
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #85b9ce;
+        margin-left: 77px;
+
+    }
+
+    .mapdiv::before {
+            position: absolute;
+            background: #85b9ce;
+            content: '';
+            top: 0;
+            left: 0;
+            border: 0;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            animation: pulsing 2s ease-out infinite;
+    }
+
+    
+    @keyframes pulsing {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1.8);
+            transform:  scale(1.8);
+            opacity: 0;
+        }
+    }
+
+    #mapDiv1 {
+        margin-top: 280px;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $yellow;
+        }
+    }
+
+    #mapDiv2 {
+        margin-top: 330px;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $purple;
+        }
+    }
+    
 }
