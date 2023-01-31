@@ -87,7 +87,31 @@ function typeWriter() {
 }
 
     $(document).ready(function() {
-      
+        
+
+
+        // show videos
+        if($("#destinations").length) {
+            var video = $('.videos');
+            video.get(0).currentTime = 1;
+            video.get(0).pause();
+            var videoTop, videoBottom, viewportTop, viewportBottom;
+            $(window).on('scroll', function(){
+                videoTop = video.offset().top;
+                videoBottom = videoTop + video.height();
+                viewportTop = $(window).scrollTop();
+                viewportBottom = viewportTop + $(window).height();
+                if (videoBottom > viewportTop && videoTop < viewportBottom) {
+                    video.get(0).play();
+                } else {
+                    video.get(0).pause();
+                }
+            });
+        }
+
+
+        // map
+        $("#map_wrap").fadeIn("slow");
         if ($("body").hasClass("open")) {
           setTimeout(function(){
             $("#lg").attr("src", "images/logo_blue.png");
@@ -108,6 +132,7 @@ function typeWriter() {
               if($("#destinations").length) {
                 $("#logo").toggleClass('opened');
               }
+              $('#navigation').removeClass('d-none');
             }, 600);
           }
         });
@@ -117,25 +142,35 @@ function typeWriter() {
             $("#lg").attr("src", "images/logo.png");
             $('body').toggleClass('open');
             $("#bottom-cards").addClass("d-none");
+            $('#navigation').addClass('d-none');
+
              setTimeout(function(){
-            if($("#destinations").length) {
-                $("#logo").toggleClass('opened');
-              }
+                if($("#destinations").length) {
+                    $("#logo").toggleClass('opened');
+                    $('#navigation').removeClass('d-none');
+                }
             }, 600);
+            
+
 
             if ($("body").hasClass("open")) {
                 setTimeout(function(){
                     $("#lg").attr("src", "images/logo_blue.png");
+                    // $('#navigation').removeClass('d-none');
                     }, 600);
-                } else {
-                    $("#lg").attr("src", "images/logo.png");
-                }
+                } 
+            else 
+            {
+                $("#lg").attr("src", "images/logo.png");
+                // $('#navigation').addClass('d-none');
+            }
+                
         });   
         
       
         if($("#hero").length) {
             var viewportHeight  = $(window).height();
-            var newMargin = viewportHeight  - ( viewportHeight * 0.65) + 60; 
+            var newMargin = viewportHeight  - ( viewportHeight * 0.65) - 260; 
             $(".hero-text").css('margin-top', '-' + newMargin + 'px' );
             var newMarginBottom = newMargin * 0.5;
             $(".hero-text").css('margin-bottom', '+' + newMarginBottom + 'px');
@@ -145,6 +180,12 @@ function typeWriter() {
 
 
         if($("#hero").length) {
+
+            // we turn off the interest points in the maps
+            $("#mapDiv1").toggleClass("anima");
+            $("#mapDiv2").toggleClass("anima");
+
+
             $(window).scroll(function() {
                 var divTop = $("#map_wrap").offset().top;
                 var viewportTop = $(window).scrollTop();
@@ -164,7 +205,7 @@ function typeWriter() {
                   var leftPosition = (viewportWidth - imageWidth) / 2;
                   
                   // set the position of the image
-                  $("#left_map").css("top", topPosition + "px");
+                  $("#left_map").css("top",  topPosition + "px");
                 //   $("#left_map").css("left", leftPosition + "px");
                 } else {
                   $("#left_map").css("position", "absolute");
@@ -213,11 +254,15 @@ function typeWriter() {
                   var map2Top = $("#map2").offset().top;
                   var map2Bottom = map2Top + $("#map2").height();
                   if (map1Bottom <= viewportBottom && map1Bottom >= viewportTop) {
-                    $("#mapDiv1").css("display", "block");
-                    $("#mapDiv2").css("display", "none");
+                    // $("#mapDiv1").css("display", "block");
+                    // $("#mapDiv2").css("display", "none");
+                    $("#mapDiv1").addClass("anima");
+                    $("#mapDiv2").removeClass("anima");
                   } else if (map2Bottom <= viewportBottom && map2Bottom >= viewportTop) {
-                    $("#mapDiv1").css("display", "none");
-                    $("#mapDiv2").css("display", "block");
+                    // $("#mapDiv1").css("display", "none");
+                    // $("#mapDiv2").css("display", "block");
+                    $("#mapDiv1").removeClass("anima");
+                    $("#mapDiv2").addClass("anima");
                   }
                 }, 150));
               });

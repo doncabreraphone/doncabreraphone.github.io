@@ -63,7 +63,7 @@ body #destinations {
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 6;
   padding: 1em 0.5em 0.6em 0.4em;
 }
 
@@ -449,6 +449,16 @@ ul.menu li:hover:after {
   margin-left: 15%;
 }
 
+nav #navigation {
+  position: absolute;
+  opacity: 0.4 !important;
+  filter: blur(0.25rem);
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
 #destinations {
   overflow-x: hidden;
 }
@@ -466,24 +476,28 @@ ul.menu li:hover:after {
   font-size: 0.55rem;
 }
 #destinations .hero-text {
-  background: #fff;
+  z-index: 0;
   position: relative;
-  z-index: 3;
-  position: relative;
-  max-width: 50%;
-  left: 4%;
-  padding: 1.5em;
+  text-align: center;
   font-family: "Quicksand", sans-serif;
 }
 #destinations .hero-text h1 {
+  background-color: #fff;
+  padding: 1em 2em 2em 2em;
   color: #fcba03;
+  display: inline-block;
   line-height: 1.8rem;
+  font-size: 2.3rem;
+}
+#destinations .hero-text h1 span {
+  color: #000;
+  padding-left: 0.5em;
 }
 #destinations #logo {
-  width: 100%;
+  text-align: right;
   top: 0;
   position: absolute;
-  left: 0;
+  right: 0;
   transform: none;
 }
 #destinations #logo img {
@@ -508,6 +522,9 @@ ul.menu li:hover:after {
   color: #1C3761;
   box-shadow: none;
 }
+#destinations #content {
+  z-index: 1;
+}
 #destinations #content .icons {
   max-width: 550px;
   margin: 0 auto;
@@ -531,7 +548,7 @@ ul.menu li:hover:after {
   font-size: 1.9rem;
 }
 #destinations #content h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 #destinations #content h4.lead {
   font-size: 0.85rem;
@@ -582,6 +599,19 @@ ul.menu li:hover:after {
 #destinations #content .card:hover img {
   filter: grayscale(0%);
 }
+#destinations #content .card video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.4s;
+}
+#destinations #content .card video:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
 #destinations #contact_us {
   border-top: 1px solid #ccc;
   padding: 1.2em 0;
@@ -596,7 +626,7 @@ ul.menu li:hover:after {
   margin: -350px auto 0 auto;
 }
 #destinations #hero-img {
-  margin-top: -150px;
+  margin-top: -550px;
 }
 #destinations #hero-img::before {
   content: "";
@@ -610,10 +640,28 @@ ul.menu li:hover:after {
 }
 #destinations #map_wrap {
   position: relative;
+  -webkit-animation: fadeInMap 2s;
+          animation: fadeInMap 2s;
+}
+@-webkit-keyframes fadeInMap {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInMap {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #destinations #left_map {
   position: absolute;
-  margin-left: 50px !important;
+  margin-left: 0px;
 }
 #destinations #left_map img {
   max-width: 90%;
@@ -626,18 +674,17 @@ ul.menu li:hover:after {
     max-width: 65%;
   }
   #destinations #hero-img {
-    margin-top: -440px;
+    margin-top: -570px;
   }
 }
 #destinations .mapdiv {
   position: absolute;
   top: 0;
   z-index: 3;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #85b9ce;
-  margin-left: 77px;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #333;
 }
 #destinations .mapdiv::before {
   position: absolute;
@@ -646,11 +693,14 @@ ul.menu li:hover:after {
   top: 0;
   left: 0;
   border: 0;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+#destinations .mapdiv.anima {
   -webkit-animation: pulsing 2s ease-out infinite;
           animation: pulsing 2s ease-out infinite;
+  opacity: 1;
 }
 @-webkit-keyframes pulsing {
   0% {
@@ -674,13 +724,35 @@ ul.menu li:hover:after {
 }
 #destinations #mapDiv1 {
   margin-top: 280px;
+  margin-left: 77px;
+  opacity: 0;
 }
 #destinations #mapDiv1.mapdiv, #destinations #mapDiv1.mapdiv::before {
   background: #fcba03;
 }
 #destinations #mapDiv2 {
   margin-top: 330px;
+  margin-left: 70px;
+  opacity: 0;
 }
 #destinations #mapDiv2.mapdiv, #destinations #mapDiv2.mapdiv::before {
   background: #420791;
+}
+#destinations .mapBall_1,
+#destinations .mapBall_2 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  z-index: 4;
+}
+#destinations .mapBall_1 {
+  background-color: #fcba03;
+  margin-top: 285px;
+  margin-left: 82px;
+}
+#destinations .mapBall_2 {
+  background-color: #420791;
+  margin-top: 335px;
+  margin-left: 75px;
 }/*# sourceMappingURL=style.css.map */

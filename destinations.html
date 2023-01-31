@@ -19,12 +19,14 @@
   <body id="destinations">
     <div id="hero-img">
         <video autoplay loop muted>
-            <source src="videos/chile_01.mp4" id="hero" type="video/mp4">
+            <source src="https://emastudios.com/videos/chile_01.mp4" id="hero" type="video/mp4">
         </video>
-        <!-- <img src="images/places/01_Portada.jpeg" alt="" class="img-fluid w-100" id="hero"> -->
     </div>
     <button id="menu_toggle" class="menu-toggle d-none animate__animated animate__delay-1s"></button>
     <nav>
+        <video autoplay loop muted id="navigation" class="animate__animated animate__fadeIn animate__delay-1s d-none">
+            <source src="https://emastudios.com/videos/chile_01.mp4"  type="video/mp4">
+        </video>
     <ul class="menu">
         <a href="#"><li data-text="Destinations">Destinations</li></a>
         <a href="#"><li data-text="About us">About us</li></a>
@@ -34,7 +36,7 @@
     </nav>
     <div class="container-fluid p-0">
 
-        <div class="d-none d-md-block first text-center"  id="logo">
+        <div class="d-none d-md-block first"  id="logo">
             <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
         </div>
 
@@ -45,19 +47,20 @@
         <button id="get-started">+</button>       
 
 
-        <div class="hero-text animate__animated animate__fadeIn">
-            <h1>Destinations</h1>
-            <h2>Highlights of Chile</h2>
+        <div class="hero-text animate__animated animate__fadeInUp animate__delay-1s text-center">
+            <h1>Destinations <span>Highlights of Chile</h1>
         </div>
 
 
-        <div class="container">
+        <div class="container mt-2">
         <div class="row">
             <div class="col-4 text-center" id="map_wrap">
                 <div id="left_map">
-                    <div id="mapDiv1" class="mapdiv" style="display:none"></div>
-                    <div id="mapDiv2" class="mapdiv" style="display:none"></div>
-                    <img src="images/chile_map.png" alt="">
+                    <div class="mapBall_1"></div>
+                    <div class="mapBall_2"></div>
+                    <div id="mapDiv1" class="mapdiv anima"></div>
+                    <div id="mapDiv2" class="mapdiv anima"></div>
+                    <img src="images/chile_map_new.png" alt="">
                 </div>
             </div>
             <div class="col" id="content">
@@ -78,6 +81,15 @@
                         city’s cultural activity, first-class gastronomy and lively nightlife. Last but certainly not least,
                         during wintertime Santiago is the base for skiing in the most beautiful and largest ski resorts of
                         the Southern Hemisphere.</p>
+
+                        <div class="card my-4">
+                            <video loop muted class="videos"> 
+                                <source src="https://emastudios.com/videos/chile_aventura.mp4" class="card-img-top" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                              <p class="card-text">The Central Valley is the most populated region in the country. The city rests on an inland plain between the Andes Mountains in the east and the Coastal Range .</p>
+                            </div>
+                        </div>
 
                         <div class="card my-4">
                             <img src="images/places/Santiago_and_Central_Coast/Santiago_de_chile8.jpeg" alt="" class="card-img-top">
@@ -125,6 +137,15 @@
                         celebrated vine is the Chilean Carmenere but the Cabernet Sauvignon, Syrah, Pinot Noir and
                         Merlot are also worth mentioning. And as white wines are concerned, Chardonnay, Sauvignon
                         Blanc, Viognier stand out.</p>
+
+                        <div class="card my-4">
+                            <img src="images/places/Central/Central_Valley1.jpeg" alt="" class="card-img-top">
+                            <div class="card-body">
+                              <p class="card-text">The Central Valley is the most populated region in the country. The city rests on an inland plain between the Andes Mountains in the east and the Coastal Range .</p>
+                            </div>
+                        </div>
+
+                        
     
                     <p>Visit different vineyards across the region tasting delicious wines and exquisite cuisine!
                         You can also choose to stay in small boutique hotels and enjoy other activities such as horseback
@@ -178,6 +199,6 @@
     </div>
 
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>  
   <script src="javascript.js"></script>
   </html>

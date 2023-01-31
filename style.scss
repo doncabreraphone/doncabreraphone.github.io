@@ -73,7 +73,7 @@ body {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 6;
     padding: 1em 0.5em 0.6em 0.4em;
   }
   
@@ -443,6 +443,15 @@ nav {
     margin-left: 15%;
 }
 
+nav #navigation {
+    position: absolute;
+    opacity: .4 !important;
+    filter: blur(0.25rem);
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
 #destinations {
     overflow-x: hidden;
 
@@ -463,26 +472,31 @@ nav {
     }
 
     .hero-text {
-        background: #fff;
+        z-index: 0;
         position: relative;
-        z-index: 3;
-        position: relative;
-        max-width: 50%;
-        left: 4%;
-        padding: 1.5em;
-        font-family: $base-font;
-
+        text-align: center;
+        font-family: $base-font;        
         h1 {
+            background-color: #fff;
+            padding: 1em 2em 2em 2em;
             color: $yellow;
+            display: inline-block;
             line-height: 1.8rem;
+            font-size: 2.3rem;
+            & span {
+                color: #000;
+                padding-left: 0.5em;
+            }
         }
     }
 
+
+
     #logo {
-        width: 100%;    
+        text-align: right;    
         top:0;
         position: absolute;
-        left: 0;
+        right: 0;
         transform: none;
 
         img {
@@ -512,6 +526,7 @@ nav {
     }
 
     #content {
+        z-index: 1;
         .icons {
             max-width: 550px;
             margin: 0 auto;
@@ -541,7 +556,7 @@ nav {
         }
 
         h4 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         h4.lead {
@@ -605,6 +620,20 @@ nav {
             }
         }
 
+        .card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: all 0.4s;
+        }
+
+        .card video:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
     }
     
     #contact_us {
@@ -624,7 +653,7 @@ nav {
     }
 
     #hero-img {
-        margin-top: -150px;
+        margin-top: -550px;
     }
 
     #hero-img::before {
@@ -641,11 +670,18 @@ nav {
 
     #map_wrap {
         position: relative;
+        animation: fadeInMap 2s; 
+    }
+
+
+    @keyframes fadeInMap {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
     }
 
     #left_map {
         position: absolute;
-        margin-left: 50px !important;
+        margin-left: 0px;
     }
 
     #left_map img {
@@ -663,7 +699,7 @@ nav {
         }
 
         #hero-img {
-            margin-top: -440px;
+            margin-top: -570px;
         }
        }
 
@@ -671,12 +707,10 @@ nav {
         position: absolute;
         top: 0;
         z-index: 3;    
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background-color: #85b9ce;
-        margin-left: 77px;
-
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: #333;
     }
 
     .mapdiv::before {
@@ -686,10 +720,14 @@ nav {
             top: 0;
             left: 0;
             border: 0;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            animation: pulsing 2s ease-out infinite;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+    }
+
+    .mapdiv.anima {
+        animation: pulsing 2s ease-out infinite;
+        opacity: 1;
     }
 
     
@@ -708,6 +746,8 @@ nav {
 
     #mapDiv1 {
         margin-top: 280px;
+        margin-left: 77px;
+        opacity: 0;
         &.mapdiv,
         &.mapdiv::before {
             background: $yellow;
@@ -716,10 +756,33 @@ nav {
 
     #mapDiv2 {
         margin-top: 330px;
+        margin-left: 70px;
+        opacity: 0;
         &.mapdiv,
         &.mapdiv::before {
             background: $purple;
         }
+    }
+
+    .mapBall_1,
+    .mapBall_2 {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        z-index: 4;
+    }
+
+    .mapBall_1 {
+        background-color: $yellow;
+        margin-top: 285px;
+        margin-left: 82px;
+    }
+
+    .mapBall_2 {
+        background-color: $purple;
+        margin-top: 335px;
+        margin-left: 75px;
     }
     
 }
