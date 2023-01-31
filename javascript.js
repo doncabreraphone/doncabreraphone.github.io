@@ -170,9 +170,9 @@ function typeWriter() {
       
         if($("#hero").length) {
             var viewportHeight  = $(window).height();
-            var newMargin = viewportHeight  - ( viewportHeight * 0.65) - 260; 
+            var newMargin = viewportHeight  - ( viewportHeight * 0.65) - 30; 
             $(".hero-text").css('margin-top', '-' + newMargin + 'px' );
-            var newMarginBottom = newMargin * 0.5;
+            var newMarginBottom = newMargin * 0.3;
             $(".hero-text").css('margin-bottom', '+' + newMarginBottom + 'px');
             console.log(viewportHeight );
             console.log(newMargin);
