@@ -34,13 +34,28 @@
 
 
     <button id="menu_toggle" class="menu-toggle d-none animate__animated animate__delay-1s"></button>
+    <div id="country_pick" class="d-none fade-in">
+        <div>
+            <a href="#" class="pick"><i class="bi bi-x-lg"></i></a>
+
+            <a href="destinations.html">
+                <h4 class="chile_txt">Chile</h4>
+                <img src="images/chile.png" alt="" class="img-fluid" id="pick_chile">
+            </a>
+            
+            <a href="destinations.html">
+                <h4 class="arg_txt">Argentina</h4>
+                <img src="images/arg.png" alt="" class="img-fluid" id="pick_arg">
+            </a>
+        </div>
+    </div>
     <nav>
          <video autoplay loop muted id="navigation" class="animate__animated animate__fadeIn animate__delay-1s d-none">
             <source src="https://emastudios.com/videos/video_compress.mp4"  type="video/mp4">
         </video>
 
     <ul class="menu">
-        <a href="#"><li data-text="Destinations">Destinations</li></a>
+        <a href="#" class="pick"><li data-text="Destinations">Destinations</li></a>
         <a href="#"><li data-text="About us">About us</li></a>
         <a href="#"><li data-text="Services">Services</li></a>
         <a href="#"><li data-text="Contact">Contact</li></a>

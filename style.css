@@ -337,11 +337,12 @@ ul.menu li:hover:after {
 }
 
 #country_pick {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: 6;
   box-shadow: 0 0 20px #000;
+  top: -20px;
 }
 #country_pick .pick {
   float: right;
@@ -375,7 +376,8 @@ ul.menu li:hover:after {
   opacity: 0.4;
 }
 #country_pick div img#pick_chile {
-  margin-right: -110px;
+  margin-right: -165px;
+  padding: 0 2em;
 }
 #country_pick div h4 {
   position: absolute;
@@ -1000,4 +1002,14 @@ nav #navigation {
   background-color: #8d1b93;
   margin-top: 225px;
   margin-left: -18px;
+}
+#pick_arg,
+#pick_chile {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+h4.arg_txt:hover + #pick_arg,
+h4.chile_txt:hover + #pick_chile {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
