@@ -1,8 +1,17 @@
 $green: #05A653;
-$red: #BF3127;
+$red: #FF2828;
+$dark-red: #88231b;
 $blue: #1C3761;
 $yellow: #fcba03;
 $purple: #420791;
+$brown: #BF8F45;
+$dark-brown: #846145;
+$orange: #FB4F21;
+$blueish: #218DD5;
+$greenish: #2C7866;
+$purpleish: #7B257D;
+$pink: #8d1b93;
+$pinkish: #C726D0;
 $base-font: 'Quicksand', sans-serif;
 
 /* Define a variable for the base font-size */
@@ -345,7 +354,84 @@ nav {
     }
   } 
 
+#country_pick {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    box-shadow: 0 0 20px #000;
 
+    & .pick {
+        float: right;
+    }
+}
+
+
+#country_pick div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background: #fff;
+    z-index: 10;
+    text-align: center;
+    padding: 1.1em;
+
+    
+    a {
+        text-decoration: none;
+        color: #000;
+
+        img {
+            opacity: .5;
+            transition: all .5s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    
+    }
+    
+    img {
+        max-height: 410px;
+        opacity: .4;
+    }
+
+    img#pick_chile {
+        margin-right: -110px;
+    }
+
+    h4 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.85rem;
+        &.chile_txt {
+            margin-left: -160px;
+        }
+        &.arg_txt {
+            margin-left: 170px;
+        }
+
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
   
 @keyframes menu-animation {
     0% {
@@ -488,6 +574,10 @@ nav #navigation {
             margin-bottom: 40px;
             margin-left: -2px;
             color: #fff;
+            span {
+                color: $green;
+                font-weight: bold;
+            }
         }
         h2 {
             padding: 0;
@@ -544,6 +634,23 @@ nav #navigation {
 
     #content {
         z-index: 1;
+
+        h1 {
+            color: $green;
+            font-size: 1.5rem;
+            margin: 1.7em 0 -1em 0;
+    
+        }
+        .card-body {
+            padding: 0.2em 0.4em 0.2em 0.2em;
+            text-align: right !important;
+            background-color: #ccc;
+
+            .card-text {
+                font-size: 0.6rem !important;
+            }
+        }
+
         .icons {
             max-width: 550px;
             margin: 0 auto;
@@ -570,6 +677,7 @@ nav #navigation {
 
         h3 {
             font-size: 1.9rem;
+            margin: 1.3em 0 0.2em 0;
         }
 
         h4 {
@@ -597,13 +705,71 @@ nav #navigation {
                 color: $purple;
             }
             h4.lead {
-                color:#34204f;
+                color:$purpleish;
             }
         }
 
-        .purple {
-            margin-top: 2.5em;
+        .brown {
+            h3,h4 {
+                color: $dark-brown;
+            }
+
+            h4.lead {
+                color: $brown;
+            }
         }
+
+        .red {
+            h3,h4 {
+                color: $red;
+            }
+
+            h4.lead {
+                color: $dark-red;
+            }
+        }
+
+        .orange {
+            h3,h4 {
+                color: $orange;
+            }
+
+            h4.lead {
+                color: $orange;
+            }
+        }
+
+        .blue {
+            h3,h4 {
+                color: $blueish;
+            }
+
+            h4.lead {
+                color: $blue;
+            }
+        }
+
+        .green {
+            h3,h4 {
+                color: $greenish;
+            }
+
+            h4.lead {
+                color: $green;
+            }
+        }
+
+        .pink {
+            h3,h4 {
+                color: $pink;
+            }
+
+            h4.lead {
+                color: $pinkish;
+            }
+        }
+
+
 
         .card-text {
             font-size: 0.7rem;
@@ -763,8 +929,8 @@ nav #navigation {
     }
 
     #mapDiv1 {
-        margin-top: 280px;
-        margin-left: 93px;
+        margin-top: 255px;
+        margin-left: 53px;
         opacity: 0;
         &.mapdiv,
         &.mapdiv::before {
@@ -773,8 +939,8 @@ nav #navigation {
     }
 
     #mapDiv2 {
-        margin-top: 330px;
-        margin-left: 82px;
+        margin-top: 280px;
+        margin-left: 57px;
         opacity: 0;
         &.mapdiv,
         &.mapdiv::before {
@@ -782,25 +948,163 @@ nav #navigation {
         }
     }
 
+    #mapDiv3 {
+        margin-top: 25px;
+        margin-left: 48px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $brown;
+        }
+    }
+
+    #mapDiv4 {
+        margin-top: 100px;
+        margin-left: 75px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $red;
+        }
+    }
+
+    #mapDiv5 {
+        margin-top: 200px;
+        margin-left: 50px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $orange;
+        }
+    }
+
+    #mapDiv6 {
+        margin-top: 380px;
+        margin-left: 43px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $blue;
+        }
+    }
+
+    #mapDiv7 {
+        margin-top: 430px;
+        margin-left: 37px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $green;
+        }
+    }
+
+    #mapDiv8 {
+        margin-top: 490px;
+        margin-left: 53px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $blueish;
+        }
+    }
+
+    #mapDiv9 {
+        margin-top: 660px;
+        margin-left: 63px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $purpleish;
+        }
+    }
+
+    #mapDiv10 {
+        margin-top: 220px;
+        margin-left: -23px;
+        opacity: 0;
+        &.mapdiv,
+        &.mapdiv::before {
+            background: $pink;
+        }
+    }
+
     .mapBall_1,
-    .mapBall_2 {
+    .mapBall_2,
+    .mapBall_3,
+    .mapBall_4,
+    .mapBall_5,
+    .mapBall_6,
+    .mapBall_7,
+    .mapBall_8,
+    .mapBall_9,
+    .mapBall_10 {
         position: absolute;
         width: 15px;
         height: 15px;
         border-radius: 100%;
         z-index: 4;
+        cursor: pointer;
     }
 
     .mapBall_1 {
         background-color: $yellow;
-        margin-top: 285px;
-        margin-left: 98px;
+        margin-top: 260px;
+        margin-left: 58px;
     }
 
     .mapBall_2 {
         background-color: $purple;
-        margin-top: 335px;
-        margin-left: 86px;
+        margin-top: 285px;
+        margin-left: 62px;
+    }
+
+    .mapBall_3 {
+        background-color: $brown;
+        margin-top: 30px;
+        margin-left: 53px;
+        border: 1px solid #f5bc58;
+    }
+
+    .mapBall_4 {
+        background-color: $red;
+        margin-top: 105px;
+        margin-left: 80px;
+    }
+
+    .mapBall_5 {
+        background-color: $orange;
+        margin-top: 205px;
+        margin-left: 55px;
+    }
+
+    .mapBall_6 {
+        background-color: $blue;
+        margin-top: 385px;
+        margin-left: 48px;
+    }
+
+    .mapBall_7 {
+        background-color: $green;
+        margin-top: 435px;
+        margin-left: 42px;
+    }
+
+    .mapBall_8 {
+        background-color: $blueish;
+        margin-top: 495px;
+        margin-left: 58px;
+    }
+
+    .mapBall_9 {
+        background-color: $purpleish;
+        margin-top: 665px;
+        margin-left: 68px;
+    }
+    
+    .mapBall_10 {
+        background-color: $pink;
+        margin-top: 225px;
+        margin-left: -18px;
     }
     
 

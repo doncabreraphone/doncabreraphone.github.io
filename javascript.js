@@ -144,12 +144,18 @@ function typeWriter() {
             $("#bottom-cards").addClass("d-none");
             $('#navigation').addClass('d-none');
 
+       
              setTimeout(function(){
                 if($("#destinations").length) {
                     $("#logo").toggleClass('opened');
                     $('#navigation').removeClass('d-none');
                 }
             }, 600);
+
+            if (!$("#country_pick").hasClass("d-none")){
+                $('#country_pick').addClass("d-none");
+            }
+
             
 
 
@@ -178,12 +184,18 @@ function typeWriter() {
             console.log(newMargin);
         }
 
+        $('.pick').click(function() {
+            
+             $('#country_pick').toggleClass("d-none")
+          });
+
 
         if($("#hero").length) {
 
             // we turn off the interest points in the maps
             $("#mapDiv1").toggleClass("anima");
             $("#mapDiv2").toggleClass("anima");
+            $("#mapDiv3").toggleClass("anima");
 
 
             $(window).scroll(function() {
@@ -227,47 +239,58 @@ function typeWriter() {
 
 
               $(window).scroll(function() {
-                var map1Top = $("#map1").offset().top;
+                for (var i = 1; i <= 10; i++) {
+                var mapTop = $("#map" + i).offset().top;
                 var viewportTop = $(window).scrollTop();
-                var map1Bottom = map1Top + $("#map1").height();
+                var mapBottom = mapTop + $("#map" + i).height();
                 var viewportBottom = viewportTop + $(window).height();
-                var map2Top = $("#map2").offset().top;
-                var map2Bottom = map2Top + $("#map2").height();
-                if (map1Top <= viewportTop && map1Bottom >= viewportTop) {
-                  $("#mapDiv1").css("display", "block");
-                  $("#mapDiv2").css("display", "none");
-                } else if (map2Top <= viewportTop && map2Bottom >= viewportTop) {
-                  $("#mapDiv1").css("display", "none");
-                  $("#mapDiv2").css("display", "block");
+                if (mapTop <= viewportTop && mapBottom >= viewportTop) {
+                for (var j = 1; j <= 10; j++) {
+                if (i === j) {
+                $("#mapDiv" + j).css("display", "block");
+                } else {
+                $("#mapDiv" + j).css("display", "none");
                 }
-              });
+                }
+                }
+                }
+                });
 
               
 
-              $(window).scroll(function() {
-                clearTimeout($.data(this, 'scrollTimer'));
-                $.data(this, 'scrollTimer', setTimeout(function() {
-                  var map1Top = $("#map1").offset().top;
-                  var viewportTop = $(window).scrollTop();
-                  var viewportBottom = viewportTop + $(window).height();
-                  var map1Bottom = map1Top + $("#map1").height();
-                  var map2Top = $("#map2").offset().top;
-                  var map2Bottom = map2Top + $("#map2").height();
-                  if (map1Bottom <= viewportBottom && map1Bottom >= viewportTop) {
-                    // $("#mapDiv1").css("display", "block");
-                    // $("#mapDiv2").css("display", "none");
-                    $("#mapDiv1").addClass("anima");
-                    $("#mapDiv2").removeClass("anima");
-                  } else if (map2Bottom <= viewportBottom && map2Bottom >= viewportTop) {
-                    // $("#mapDiv1").css("display", "none");
-                    // $("#mapDiv2").css("display", "block");
-                    $("#mapDiv1").removeClass("anima");
-                    $("#mapDiv2").addClass("anima");
-                  }
-                }, 150));
-              });
+                $(window).scroll(function() {
+                    clearTimeout($.data(this, 'scrollTimer'));
+                    $.data(this, 'scrollTimer', setTimeout(function() {
+                      for (var i = 1; i <= 10; i++) {
+                        var mapTop = $("#map" + i).offset().top;
+                        var viewportTop = $(window).scrollTop();
+                        var viewportBottom = viewportTop + $(window).height();
+                        var mapBottom = mapTop + $("#map" + i).height();
+                        if (mapBottom <= viewportBottom && mapBottom >= viewportTop) {
+                          for (var j = 1; j <= 10; j++) {
+                            if (i === j) {
+                              $("#mapDiv" + j).addClass("anima");
+                            } else {
+                              $("#mapDiv" + j).removeClass("anima");
+                            }
+                          }
+                        }
+                      }
+                    }, 150));
+                  });
         }
 
+
+        for (var i = 1; i <= 10; i++) {
+            (function(i) {
+                $(".mapBall_" + i).click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#map" + i).offset().top
+                  }, 1000);
+                });
+            })(i);
+        }
+        
 
       });
 
