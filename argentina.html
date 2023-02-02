@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  </head>
+
+
+  <body id="destinations">
+    <div id="hero-img">
+        <video autoplay loop muted class="w-100">
+            <source src="https://emastudios.com/videos/tango.mp4" id="hero" type="video/mp4">
+        </video>
+    </div>
+    <button id="menu_toggle" class="menu-toggle d-none animate__animated animate__delay-1s"></button>
+    <nav>
+        <video autoplay loop muted id="navigation" class="animate__animated animate__fadeIn animate__delay-1s d-none">
+            <source src="https://emastudios.com/videos/tango.mp4"  type="video/mp4">
+        </video>
+
+    <div id="country_pick" class="d-none fade-in">
+        <div>
+            
+            <a href="#" class="pick"><i class="bi bi-x-lg"></i></a>
+
+            <a href="chile.html">
+                <h4 class="chile_txt">Chile</h4>
+                <img src="images/chile.png" alt="" class="img-fluid" id="pick_chile">
+            </a>
+            
+            <a href="argentina.html">
+                <h4 class="arg_txt">Argentina</h4>
+                <img src="images/arg.png" alt="" class="img-fluid" id="pick_arg">
+            </a>
+        </div>
+    </div>
+
+    <ul class="menu">
+        <a href="#" class="pick"><li data-text="Destinations">Destinations</li></a>
+        <a href="#"><li data-text="About us">About us</li></a>
+        <a href="#"><li data-text="Services">Services</li></a>
+        <a href="#"><li data-text="Contact">Contact</li></a>
+    </ul>
+    </nav>
+    <div class="container-fluid p-0">
+
+        <div class="d-none d-md-block first"  id="logo">
+            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+        <div class="text-center d-block d-md-none" id="logo-small">
+            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+        <button id="get-started">+ <span class="position-absolute" id="destinations_text">Destinations</span></button>       
+
+
+        <div class="hero-text animate__animated animate__fadeInUp animate__delay-1s">
+            <h1>Argentina</h1>
+            <h2>Argentina is an exciting country full of contrasts. The vibrant city of Buenos Aires, imposing glaciers, breathtaking waterfalls, colorful mountains, salt flats, lakes, forests, diverse wildlife, and the "departure gate" to Antarctica from the southernmost city in the planet. Get ready to taste unique gastronomy with superb meats and wines, go to a tango show and even try your first steps of this sensual dance! Enjoy countless horseback riding adventures or sit back and watch the best polo tournaments in the world.</h2>
+        </div>
+
+
+        <div class="container mt-2">
+        <div class="row">
+            <div class="col-4 text-center" id="map_wrap">
+                <div id="left_map" class="argentina">
+                    <div class="mapBall_1"></div>
+                    <div class="mapBall_2"></div>
+                    <div class="mapBall_3"></div>
+                    <div class="mapBall_4"></div>
+                    <div class="mapBall_5"></div>
+                    <div class="mapBall_6"></div>
+                    <div class="mapBall_7"></div>
+                    <div class="mapBall_8"></div>
+                    <div class="mapBall_9"></div>
+                    <div class="mapBall_10"></div>
+                    <div id="mapDiv1" class="mapdiv anima"></div>
+                    <div id="mapDiv2" class="mapdiv anima"></div>
+                    <div id="mapDiv3" class="mapdiv anima"></div>
+                    <div id="mapDiv4" class="mapdiv anima"></div>
+                    <div id="mapDiv5" class="mapdiv anima"></div>
+                    <div id="mapDiv6" class="mapdiv anima"></div>
+                    <div id="mapDiv7" class="mapdiv anima"></div>
+                    <div id="mapDiv8" class="mapdiv anima"></div>
+                    <div id="mapDiv9" class="mapdiv anima"></div>
+                    <div id="mapDiv10" class="mapdiv anima"></div>
+                    <img src="images/arg_map.png" alt="">
+                </div>
+            </div>
+            <div class="col" id="content">
+   
+                <div class="order-1">
+                    <div id="map1"></div>
+                    <div class="yellow">
+                        <h3 class="mt-0">Buenos Aires</h3>
+                        <h4 class="lead">A city of passion</h4>
+                        <h4>Explore this vibrant and fascinating city you will fall in love with!</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_1.png" class="icons" alt="">
+                        </div>
+                    </div>
+        
+                        <p>Buenos Aires is, undoubtedly, one of the most interesting capitals in Latin America. Dynamic
+                            and cosmopolitan, it stands out for its rich cultural and architectural heritage.</p>
+
+                            <div class="card my-4">
+                                <video loop muted class="videos"> 
+                                    <source src="https://emastudios.com/videos/gastronomia.mp4" class="card-img-top" type="video/mp4">
+                                </video>
+                                <div class="card-body">
+                                <p class="card-text"><small><em>Gastronomia Argentina</em></small></p>
+                                </div>
+                            </div>
+
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Buenos Aires/Caminito Visit BA.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Caminito (La Boca)</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Buenos Aires/madero.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Puerto Madero</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Buenos Aires/Teatro Colón Visit BA.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Teatro Colón</em></small></p>
+                                </div>
+                            </div>
+
+
+        
+                        <p>Famous for tango and football, the city also has fantastic cafes, bookstores and theaters.
+                            Porteños (the local people) are passionate and welcoming.</p>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Buenos Aires/Ateneo Visit BA.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Ateneo Grand Splendid Bookshop</em></small></p>
+                                </div>
+                            </div>
+
+                            
+                        <p>In this eclectic metropolis you will discover that the past and the present, the European and
+                            Latin influences, nostalgia and passion, coexist in a perfect and unique balance.</p>
+                </div>
+
+                <div class="order-2">
+                    <div id="map8"></div>
+                    <div class="blue">
+                        <h3>The Magnificent Northwest</h3>
+                        <h4 class="lead">Enjoy culture and tradition in perfect harmony!</h4>
+                        <h4></h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_8.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>The Northwest is a region of contrasts and diversity, with yungas, puna, salt flats, valleys
+                        and gorges. Colorful landscapes with endless blue skies. Colonial cities and charming little
+                        Andean towns where time seems to have stopped and the ancient traditions are still intact.</p>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Northwest/Portada.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Northwest Landscape</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Northwest/Cafayate viñedos.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Cafayate Vineyards</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Northwest/Ciudad de Salta.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Salta City</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Northwest/Cono de Arita.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Arita's Cone</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Northwest/Salinas Grandes. Jujuy. VisitArgentina_kato78-7.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Salinas Grandes, Jujuy - copyright Visit Argentina</em></small></p>
+                        </div>
+                    </div>  
+                    
+                    <p>Follow the artisan trails and learn about the different techniques used by the local
+                        communities to create beautiful and unique pieces. Explore the high-altitude vineyards and
+                        live the experience of savoring the perfect pairing of these wines with the local cuisine.
+                        Indulge yourself with this region’s impressive shapes, colors and cultural richness.</p>
+                </div>
+   
+
+                <div class="order-3">
+                    <div id="map9"></div>
+                    <div class="purple">
+                        <h3>Puerto Iguazú</h3>
+                        <h4 class="lead">Extraordinary nature</h4>
+                        <h4>Explore the lush subtropical rainforest and feel the force of nature in this stunning natural
+                            scenery.</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_9.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>Puerto Iguazú is located on the northeast of Argentina, bordering Brazil and Paraguay where
+                        the rivers Paraná &amp; Iguazú meet. From here you can visit the majestic Iguazu Falls, declared
+                        World Heritage Site by UNESCO.</p>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Iguazu/01_Portada_Iguazu.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Puerto Iguazú</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Iguazu/coaties crias (crédito la lorenza).jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Baby Coaties</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Iguazu/iguazu_7.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Jesuit Ruins</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Iguazu/iguazu_2.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Tucan at Iguazu</em></small></p>
+                        </div>
+                    </div>  
+
+
+
+                    <p>Discover the yerba mate route and learn all about the origins and ceremony of this
+                        traditional and welcoming beverage.</p>
+                        <div class="card my-4">
+                            <img src="images/places/Argentina/Iguazu/La Lorenza (poner crédito).jpeg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text"><small><em>La Lorenza</em></small></p>
+                            </div>
+                        </div>  
+
+                    <p>Tour the impressive remains of the Jesuit Missions of the Guaranis, built in the 17 th &amp; 18 th
+                        centuries. This World Heritage Site represents an outstanding example of the evangelization
+                        efforts in South America and the cultural relations forged between locals and European
+                        missionaries.</p>
+
+                </div>
+
+
+                <div class="order-4">
+                    <div id="map10"></div>
+                    <div class="pink">
+                        <h3>Iberá Wetlands</h3>
+                        <h4 class="lead">A unique ecosystem</h4>
+                        <h4>Immerse yourself in nature like in no other place!</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_11.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>The Iberá Park, “Shiny Water” in Guaraní (local language), is a beautiful place located in the
+                        heart of Corrientes Province in the Northeast of Argentina. Here Nature expresses herself in
+                        a unique way. Formed by a complex network of wetlands, marshes, swamplands, lagoons,
+                        reservoirs and pluvial streams it has more than 700,000 protected hectares. It is one of the
+                        largest parks in Argentina and the second largest wetland in the world! High biodiversity and
+                        a great variety of landscapes blend in perfectly with the gaucho way of life.</p>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Esteros/01_Portada_Esteros_del_ibera.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Iberá Wetlands landscape</em></small></p>
+                        </div>
+                    </div>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Esteros/Rewilding Experience - Posada Uguay - credit Matias Rebak.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Posada Uguay - copyright Matias Rebak</em></small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Esteros/2.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Wildlife at Iberá Wetlands</em></small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Esteros/Rewilding Experience - Capincho - Rafael Abuin .JPG" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Capincho - copyright Rafael Abuin</em></small></p>
+                        </div>
+                    </div>
+                        
+
+                    <p>In Iberá you will find over 1400 plant species, 350 kinds of birds, 85 different mammals, 60
+                        different reptile species and 125 different fish.</p>
+
+                
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Esteros/Rewilding Experience - Palmar - Florian Von Der Fecht.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Palmar – copyright Florian Von Der Fetch</em></small></p>
+                        </div>
+                    </div>
+
+                    <p>It is an ideal place for birdwatching, take photo safaris, spot wildlife, go hiking or horseback
+                        riding and take a deep dive into the rich local culture.</p>
+                </div>
+        
+    
+                <div class="order-5">
+                    <div id="map7"></div>
+                    <div class="green">
+                        <h3>Mendoza</h3>
+                        <h4 class="lead">The cradle of Malbec</h4>
+                        <h4>Discover Mendoza’s Wine Route and its spectacular scenery!</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_7.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>Located at the foothill of the Andes, Mendoza is a world-renowned Wine Capital. The great
+                        diversity of soils, climate and altitude grants the production of different high-quality wines
+                        with specific characteristics depending on the growing area.</p>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Mendoza/01_Portada_Mendoza.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Dscover Mendoza</em></small></p>
+                        </div>
+                    </div>  
+                    
+                    <p>It is a wonderful destination for foodies due to its wide variety of wineries and gourmet
+                        restaurants where European traditions blend with local flavors.</p>
+                    
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Mendoza/Harvest-1 CASA DE UCO.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Harvest at Casa de Uco</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Mendoza/Horseback riding CASA DE UCO.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Horseback riding at Casa de Uco</em></small></p>
+                        </div>
+                    </div>  
+
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Mendoza/WineryVisit_CASA DE UCO.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Winery Visit at Casa de Uco</em></small></p>
+                        </div>
+                    </div>  
+
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Mendoza/mendoza_2.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Mendoza Landscape</em></small></p>
+                        </div>
+                    </div>  
+                
+                    <p>But not everything is about wine; Mendoza is also a great place for those seeking adventure.
+                        There are many outdoor activities to enjoy the pure, fresh air and impressive landscapes!</p>
+        
+    
+                </div>
+
+                 
+                <div class="order-6">
+                    <div id="map6"></div>
+                    <div class="blue">
+                        <h3>Bariloche &amp; The Lake District</h3>
+                        <h4 class="lead">Adventure and a picture-perfect scenery all year round!</h4>
+                        <h4></h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_6.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>Bariloche is a city located in Nahuel Huapi National Park, next to the Andes in northwest
+                        Patagonia. Surrounded by millenary forests, mountains covered in snow and crystal-clear
+                        lakes, it is the ideal starting point to explore the region and enjoy outdoor activities.</p>
+                    
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Bariloche/bariloche_1.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Bariloche Landscape</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Bariloche/bariloche_7.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Enjoy Bariloche</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Bariloche/Kayak Bahía López.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Kayak at Bahía López</em></small></p>
+                        </div>
+                    </div>  
+
+                    
+                    <p>MApart from the stunning natural setting, the Lake District is also well-known for its cuisine.
+                        Craft beer, Patagonian lamb, trout, smoked cuts and chocolate are definitely a must for any
+                        visitor.</p>
+
+                        
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Bariloche/bariloche_13.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Bariloche Landscape</em></small></p>
+                        </div>
+                    </div>  
+
+                    <p>Discover the beautiful scenic roads with magnificent views, enjoy the wonderful landscapes
+                        and indulge yourself with local delicacies!</p>
+                </div>
+
+                <div class="order-7">
+                        <div id="map3"></div>
+                        <div class="brown">
+                            <h3>Puerto Madryn</h3>
+                            <h4 class="lead">Wildlife at its best</h4>
+                            <h4></h4>
+                            <div class="icons_wrap text-center">
+                                <img src="images/icons_arg_2.png" class="icons" alt="">
+                            </div>
+                        </div>
+
+                        <p>Puerto Madryn is a small coastal city in Patagonia and a great destination for wildlife lovers.
+                            It is the gate to Peninsula Valdés (World Heritage Site by UNESCO), a unique Nature Reserve
+                            of global significance for the conservation of marine mammals. You can also visit Punta
+                            Tombo, one of the largest Magellanic penguin colonies in the world.</p>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Puerto Madryn/01_Portada_Madryn.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Whales in Puerto Madryn</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Puerto Madryn/Copia de 08.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Penguins in Puerto Madryn</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Puerto Madryn/snorkel lobos (crédito Arg Vision).JPG" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Snorkel in Puerto Madryn - copyright Argentina Vision</em></small></p>
+                                </div>
+                            </div>
+
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Puerto Madryn/Punta Tombo (crédito Argentina Vision).jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Punta Tombo - copyright Argentina Vision</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Puerto Madryn/Ea San Lorenzo 5 (crédito Arg Vision).jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>San Lorenzo Penguins - copyright Argentina Vision</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/Puerto Madryn/Ea San Lorenzo (crédito Arg Vision).jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>San Lorenzo Wildlife - copyright Argentina Vision</em></small></p>
+                                </div>
+                            </div>
+                </div>
+
+                <div class="order-8">
+                    <div id="map2"></div>
+                    <div class="purple">
+                        <h3>El Chaltén</h3>
+                        <h4 class="lead">Mountain paradise</h4>
+                        <h4>Feel the energy of this magical destination!</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_5.png" class="icons" alt="">
+                        </div>
+                    </div>
+                    
+                        <p>El Chaltén is a small village located at the foot of the spectacular Mount Fitz Roy, in Los
+                            Glaciares National Park. Known as Argentina’s trekking capital, there are multiple outdoor
+                            activities to enjoy the fresh, unpolluted air and fantastic scenery.</p>
+                    
+                            
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/El Chalten/Portada.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>The Beauty of El Chaltén</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/El Chalten/chalten_cascada.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>El Chaltén Waterfalls</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/El Chalten/el_chalten.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>El Chaltén Mountains</em></small></p>
+                                </div>
+                            </div>
+
+                            <div class="card my-4">
+                                <img src="images/places/Argentina/El Chalten/Rafting-07.jpg" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text"><small><em>Rafting at El Chaltén</em></small></p>
+                                </div>
+                            </div>
+
+
+                            <p>Activate all your senses and let yourself be dazzled by the unspoiled nature in this corner of
+                                the world!</p>
+                </div>
+
+                <div class="order-9">
+                    <div id="map5"></div>
+                    <div class="orange">
+                        <h3>El Calafate</h3>
+                        <h4 class="lead">Land of glaciers</h4>
+                        <h4>Experience the solitude and immensity of Patagonia and its breathtaking landscapes.</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_4.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>El Calafate is a small town on the shores of Lake Argentino. It is well known as the gateway
+                        to Los Glaciares National Park (World Heritage Site by UNESCO) and the majestic Perito
+                        Moreno glacier. Discover the beauty and wide variety of activities this wonderful destination
+                        has to offer!</p>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/El Calafate/Portada.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>El Calafate</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/El Calafate/Mirador Upsala 7 - copia.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Mirador Upsala</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/El Calafate/8. Cruce R. Caterina.jpg  (crédito Estancia Cristina).jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Cruce R. Caterina - copyright Estancia Cristina</em></small></p>
+                        </div>
+                    </div>  
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/El Calafate/calafate_3.JPG" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Perito Moreno Glacier</em></small></p>
+                        </div>
+                    </div>  
+                    
+                </div>
+                        
+                <div class="order-10">
+                    <div id="map4"></div>
+                    <div class="red">
+                        <h3>Ushuaia</h3>
+                        <h4 class="lead">End of the World</h4>
+                        <h4>Discover the legendary and untamed Land of Fire</h4>
+                        <div class="icons_wrap text-center">
+                            <img src="images/icons_arg_3.png" class="icons" alt="">
+                        </div>
+                    </div>
+
+                    <p>Lying on the shores of the Beagle Channel, on the Main Island of Tierra del Fuego, Ushuaia is
+                        considered the southernmost city in the world. It is a place surrounded by fantastic
+                        landscapes and the closest port to Antarctica.</p>
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Ushuaia/01_Portada_Ushuaia.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Ushuaia at dawn</em></small></p>
+                        </div>
+                    </div>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Ushuaia/shutterstock_519715858.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Lighthouse at the end of the world - copyright Shuterstock</em></small></p>
+                        </div>
+                    </div>
+
+                    <p>Explore its singular National Park where you can enjoy a combination of Sub Antarctic forest,
+                        mountains of the Andes Range and marine environment.</p>              
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Ushuaia/shutterstock_85671736.jpg" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>End of the World train - copyright Shuterstock</em></small></p>
+                        </div>
+                    </div>
+                    <p>Take a boat trip across the mythical Beagle Channel and admire the unique views of the city
+                        and the magnificent scenery around it.</p>
+
+                    <div class="card my-4">
+                        <img src="images/places/Argentina/Ushuaia/Copia de _DES0625.JPG" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text"><small><em>Local gastronomy</em></small></p>
+                        </div>
+                    </div>
+
+                    <p>Treat yourself to local cuisine. Ushuaia is an excellent place to enjoy fresh seafood,
+                        particularly king crab!</p>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="container-fluid" id="contact_us">
+        <div class="row">
+            <div class="col text-center">
+                CONTACT US
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 bottom-data">
+        <div class="row">
+            <div class="col" id="first-div">
+            <span>
+                <i class="bi bi-geo-alt-fill"></i>
+                <b>Argentina</b>
+            </span>
+            Paraguay 935 - Buenos Aires &nbsp;&nbsp;
+            <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
+            <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+            </div>
+            <div class="col">
+            <span>
+                <i class="bi bi-geo-alt-fill"></i>
+                <b>Chile</b>
+            </span>
+            Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;
+            <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
+            <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+            </div>
+
+        </div>
+        </div>
+
+    
+        <p class="text-center mt-3 mb-1" id="copy"><small>Copyright 2016 - 2022 ILS Tours</small></p>
+    
+    </div>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>  
+  <script src="javascript.js"></script>
+  </html>

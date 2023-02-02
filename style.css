@@ -150,6 +150,11 @@ body #destinations {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }
+#get-started #destinations_text {
+  font-size: 25px;
+  transition: font-size 0.05s;
+  margin-left: 35px;
+}
 
 @-webkit-keyframes fadeIn {
   from {
@@ -480,6 +485,10 @@ ul.menu li:hover:after {
     top: 52%;
     font-size: 0.85rem;
   }
+  #get-started {
+    left: 13px !important;
+    top: -5px !important;
+  }
 }
 .fixed-bottom-logos {
   font-size: 0.47rem;
@@ -571,8 +580,8 @@ nav #navigation {
   padding: 0;
   color: #333;
   display: inline-block;
-  font-size: 0.7rem;
-  line-height: 1.1rem;
+  font-size: 0.65rem;
+  line-height: 1.05rem;
 }
 #destinations .hero-text h2 span {
   color: #000;
@@ -758,7 +767,7 @@ nav #navigation {
   margin: -350px auto 0 auto;
 }
 #destinations #hero-img {
-  margin-top: -350px;
+  margin-top: -290px;
 }
 #destinations #hero-img::before {
   content: "";
@@ -808,7 +817,7 @@ nav #navigation {
     margin-top: -5px;
   }
   #destinations #hero-img {
-    margin-top: -430px;
+    margin-top: -250px;
   }
 }
 #destinations .mapdiv {
@@ -1003,6 +1012,91 @@ nav #navigation {
   background-color: #8d1b93;
   margin-top: 225px;
   margin-left: -18px;
+}
+#destinations .argentina .mapBall_1 {
+  margin-top: 350px;
+  margin-left: 178px;
+}
+#destinations .argentina #mapDiv1 {
+  margin-top: 345px;
+  margin-left: 173px;
+}
+#destinations .argentina .mapBall_3 {
+  background-color: #846145;
+  margin-top: 475px;
+  margin-left: 112px;
+  border: none;
+}
+#destinations .argentina #mapDiv3 {
+  margin-top: 470px;
+  margin-left: 107px;
+}
+#destinations .argentina #mapDiv3::before {
+  background-color: #BF8F45;
+}
+#destinations .argentina .mapBall_4 {
+  margin-top: 660px;
+  margin-left: 125px;
+}
+#destinations .argentina #mapDiv4 {
+  margin-top: 655px;
+  margin-left: 120px;
+}
+#destinations .argentina .mapBall_5 {
+  margin-top: 575px;
+  margin-left: 50px;
+}
+#destinations .argentina #mapDiv5 {
+  margin-top: 570px;
+  margin-left: 45px;
+}
+#destinations .argentina .mapBall_2 {
+  margin-top: 555px;
+  margin-left: 55px;
+}
+#destinations .argentina #mapDiv2 {
+  margin-top: 550px;
+  margin-left: 50px;
+}
+#destinations .argentina .mapBall_6 {
+  margin-top: 435px;
+  margin-left: 38px;
+}
+#destinations .argentina #mapDiv6 {
+  margin-top: 430px;
+  margin-left: 34px;
+}
+#destinations .argentina .mapBall_7 {
+  margin-top: 310px;
+  margin-left: 46px;
+}
+#destinations .argentina #mapDiv7 {
+  margin-top: 304px;
+  margin-left: 42px;
+}
+#destinations .argentina .mapBall_8 {
+  margin-top: 155px;
+  margin-left: 88px;
+}
+#destinations .argentina #mapDiv8 {
+  margin-top: 150px;
+  margin-left: 83px;
+}
+#destinations .argentina .mapBall_9 {
+  margin-top: 225px;
+  margin-left: 242px;
+}
+#destinations .argentina #mapDiv9 {
+  margin-top: 220px;
+  margin-left: 237px;
+}
+#destinations .argentina .mapBall_10 {
+  margin-top: 258px;
+  margin-left: 182px;
+}
+#destinations .argentina #mapDiv10 {
+  margin-top: 253px;
+  margin-left: 177px;
 }
 #pick_arg,
 #pick_chile {

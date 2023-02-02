@@ -175,6 +175,12 @@ body {
     &.fadeIn {
       animation-name: fadeIn;
     }
+
+    #destinations_text {
+        font-size: 25px;
+        transition: font-size 0.05s;
+        margin-left: 35px;
+    }
   }
   
   @keyframes fadeIn {
@@ -483,6 +489,11 @@ nav {
         top: 52%;
         font-size: 0.85rem;
     }
+
+    #get-started {
+        left: 13px !important;
+        top: -5px !important;
+    }
   }
   
 .fixed-bottom-logos {
@@ -585,8 +596,8 @@ nav #navigation {
             padding: 0;
             color: #333;
             display: inline-block;
-            font-size: 0.70rem;
-            line-height: 1.1rem;
+            font-size: 0.65rem;
+            line-height: 1.05rem;
             
             & span {
                 color: #000;
@@ -838,7 +849,7 @@ nav #navigation {
     }
 
     #hero-img {
-        margin-top: -350px;
+        margin-top: -290px;
     }
 
     #hero-img::before {
@@ -886,7 +897,7 @@ nav #navigation {
         }
 
         #hero-img {
-            margin-top: -430px;
+            margin-top: -250px;
         }
        }
 
@@ -1109,6 +1120,124 @@ nav #navigation {
         margin-top: 225px;
         margin-left: -18px;
     }
+
+
+    .argentina {
+        & .mapBall_1 {
+            margin-top: 350px;
+            margin-left: 178px;
+        }
+
+        & #mapDiv1 {
+            margin-top: 345px;
+            margin-left: 173px;
+        }
+
+
+        & .mapBall_3 {
+            background-color: $dark-brown;
+            margin-top: 475px;
+            margin-left: 112px;
+            border: none;
+        }
+
+        & #mapDiv3 {
+            margin-top: 470px;
+            margin-left: 107px;
+            &::before {
+                background-color: $brown;
+            }
+        }
+
+
+        & .mapBall_4 {
+            margin-top: 660px;
+            margin-left: 125px;
+        }
+
+        & #mapDiv4 {
+            margin-top: 655px;
+            margin-left: 120px;
+        }
+
+        & .mapBall_5 {
+            margin-top: 575px;
+            margin-left: 50px;
+        }
+
+        & #mapDiv5 {
+            margin-top: 570px;
+            margin-left: 45px;
+        }
+
+        & .mapBall_2 {
+            margin-top: 555px;
+            margin-left: 55px;
+        }
+
+        & #mapDiv2 {
+            margin-top: 550px;
+            margin-left: 50px;
+        }
+
+        & .mapBall_6 {
+            margin-top: 435px;
+            margin-left: 38px;
+        }
+
+        & #mapDiv6 {
+            margin-top: 430px;
+            margin-left: 34px;
+        }
+
+        & .mapBall_7 {
+            margin-top: 310px;
+            margin-left: 46px;
+        }
+
+        & #mapDiv7 {
+            margin-top: 304px;
+            margin-left: 42px;
+        }
+
+        & .mapBall_8 {
+            margin-top: 155px;
+            margin-left: 88px;        
+        }
+
+        & #mapDiv8 {
+            margin-top: 150px;
+            margin-left: 83px;
+        }
+
+        & .mapBall_9 {
+            margin-top: 225px;
+            margin-left: 242px;       
+        }
+
+        & #mapDiv9 {
+            margin-top: 220px;
+            margin-left: 237px;
+        }
+
+        & .mapBall_10 {
+            margin-top: 258px;
+            margin-left: 182px;       
+        }
+
+        & #mapDiv10 {
+            margin-top: 253px;
+            margin-left: 177px;
+        }
+
+
+        
+
+    }
+
+
+
+
     
 
     @media only screen and (max-height: 700px) {
