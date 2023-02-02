@@ -291,17 +291,7 @@ function typeWriter() {
             })(i);
         }
         
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 0) {
-              $('#destinations_text').stop().animate({
-                fontSize: '25px'
-              });
-            } else {
-              $('#destinations_text').stop().animate({
-                fontSize: '30px'
-              });
-            }
-          });
+        
 
       });
 
