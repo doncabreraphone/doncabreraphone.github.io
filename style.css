@@ -658,7 +658,7 @@ nav #navigation {
 #destinations #content p, #about #content p, #services #content p, #contact #content p {
   font-size: 0.75rem;
 }
-#destinations #content h3, #destinations #content h4, #about #content h3, #about #content h4, #services #content h3, #services #content h4, #contact #content h3, #contact #content h4 {
+#destinations #content h2, #destinations #content h3, #destinations #content h4, #about #content h2, #about #content h3, #about #content h4, #services #content h2, #services #content h3, #services #content h4, #contact #content h2, #contact #content h3, #contact #content h4 {
   font-family: "Quicksand", sans-serif;
 }
 #destinations #content h4 b, #about #content h4 b, #services #content h4 b, #contact #content h4 b {
