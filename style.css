@@ -491,7 +491,8 @@ ul.menu li:hover:after {
     top: -5px !important;
   }
   #about .lead-text h1,
-#services .lead-text h1 {
+#services .lead-text h1,
+#contact .lead-text h1 {
     font-size: 3.1rem !important;
     margin-top: -255px !important;
   }
@@ -695,6 +696,12 @@ nav #navigation {
 }
 #destinations #content .purple h4.lead, #about #content .purple h4.lead, #services #content .purple h4.lead, #contact #content .purple h4.lead {
   color: #7B257D;
+}
+#destinations #content .brownish h3, #destinations #content .brownish h4, #about #content .brownish h3, #about #content .brownish h4, #services #content .brownish h3, #services #content .brownish h4, #contact #content .brownish h3, #contact #content .brownish h4 {
+  color: #BF8F45;
+}
+#destinations #content .brownish h4.lead, #about #content .brownish h4.lead, #services #content .brownish h4.lead, #contact #content .brownish h4.lead {
+  color: #846145;
 }
 #destinations #content .brown h3, #destinations #content .brown h4, #about #content .brown h3, #about #content .brown h4, #services #content .brown h3, #services #content .brown h4, #contact #content .brown h3, #contact #content .brown h4 {
   color: #846145;
@@ -1167,6 +1174,18 @@ nav #navigation {
 }
 #contact #offices p {
   font-size: 0.72rem;
+}
+#contact p#offices_social {
+  margin: 1.2em;
+  font-size: 1.7rem;
+}
+#contact p#offices_social a {
+  color: #05A653;
+  text-decoration: none;
+  padding: 0.3em;
+}
+#contact p#offices_social a:hover {
+  color: #2C7866;
 }
 
 #pick_arg,

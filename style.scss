@@ -499,7 +499,8 @@ nav {
     }
 
     #about .lead-text h1,
-    #services .lead-text h1 {
+    #services .lead-text h1,
+    #contact .lead-text h1 {
         font-size: 3.1rem !important;
         margin-top: -255px !important;
     }
@@ -742,6 +743,16 @@ nav #navigation {
             }
             h4.lead {
                 color:$purpleish;
+            }
+        }
+
+        .brownish {
+            h3,h4 {
+                color: $brown;
+            }
+
+            h4.lead {
+                color: $dark-brown;
             }
         }
 
@@ -1299,6 +1310,20 @@ nav #navigation {
     #offices p {
         font-size: 0.72rem;
     }
+
+    p#offices_social {
+        margin: 1.2em;
+        font-size: 1.7rem;
+        a {
+            color: $green;
+            text-decoration: none;
+            padding: 0.3em;
+            &:hover {
+                color: $greenish;
+            }
+        }
+    }
+    
 }
 
 #pick_arg,
