@@ -190,7 +190,7 @@ function typeWriter() {
           });
 
 
-        if($("#hero").length) {
+        if($("#destinations").length) {
 
             // we turn off the interest points in the maps
             $("#mapDiv1").toggleClass("anima");
