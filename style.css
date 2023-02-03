@@ -490,6 +490,11 @@ ul.menu li:hover:after {
     left: 13px !important;
     top: -5px !important;
   }
+  #about .lead-text h1,
+#services .lead-text h1 {
+    font-size: 3.1rem !important;
+    margin-top: -255px !important;
+  }
 }
 .fixed-bottom-logos {
   font-size: 0.47rem;
