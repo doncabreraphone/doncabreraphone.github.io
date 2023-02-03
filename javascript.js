@@ -330,5 +330,20 @@ function typeWriter() {
             imagesInView();
         }
 
+        var fading = false;
+
+        $(window).scroll(function() {
+          var scrollPos = $(this).scrollTop();
+          if (scrollPos > 0 && !fading) {
+            fading = true;
+            setTimeout(function() {
+              $("#top_text").fadeOut();
+            }, 300);
+          } else if (scrollPos === 0 && fading) {
+            fading = false;
+            $("#top_text").fadeIn();
+          }
+        });
+
       });
 
