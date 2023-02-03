@@ -1195,6 +1195,7 @@ nav #navigation {
         }
 
         & .mapBall_5 {
+            background-color: $blueish;
             margin-top: 575px;
             margin-left: 50px;
         }
@@ -1202,66 +1203,108 @@ nav #navigation {
         & #mapDiv5 {
             margin-top: 570px;
             margin-left: 45px;
+
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $blueish;
+            }
+
         }
 
         & .mapBall_2 {
             margin-top: 555px;
             margin-left: 55px;
+            background-color: $blueish;
         }
 
         & #mapDiv2 {
             margin-top: 550px;
             margin-left: 50px;
+            
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $blueish;
+            }
         }
 
         & .mapBall_6 {
             margin-top: 435px;
             margin-left: 38px;
+            background-color: $blueish;
         }
 
         & #mapDiv6 {
             margin-top: 430px;
             margin-left: 34px;
+
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $blueish;
+            }
         }
 
         & .mapBall_7 {
             margin-top: 310px;
             margin-left: 46px;
+            background-color: $purpleish;
         }
 
         & #mapDiv7 {
             margin-top: 304px;
             margin-left: 42px;
+            
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $purpleish;
+            }
         }
 
         & .mapBall_8 {
             margin-top: 155px;
-            margin-left: 88px;        
+            margin-left: 88px; 
+            background-color: $red;       
         }
 
         & #mapDiv8 {
             margin-top: 150px;
             margin-left: 83px;
+            
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $red;
+            }
         }
 
         & .mapBall_9 {
             margin-top: 225px;
-            margin-left: 242px;       
+            margin-left: 242px;
+            background-color: $green;       
         }
 
         & #mapDiv9 {
             margin-top: 220px;
             margin-left: 237px;
+            
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $green;
+            }
         }
 
         & .mapBall_10 {
             margin-top: 258px;
-            margin-left: 182px;       
+            margin-left: 182px;    
+            background-color: $green;   
         }
 
         & #mapDiv10 {
             margin-top: 253px;
             margin-left: 177px;
+            
+            &.mapdiv,
+            &.mapdiv::before {
+                background: $green;
+            }
         }
 
 
@@ -1305,6 +1348,10 @@ nav #navigation {
         margin-top: -300px;
         font-size: 3.3rem;
         letter-spacing: -2px;
+    }
+
+    #content h2 {
+        font-size: 1.3rem !important;
     }
         
     #offices p {
