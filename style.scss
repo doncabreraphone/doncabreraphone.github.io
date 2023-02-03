@@ -491,10 +491,13 @@ nav {
         font-size: 0.85rem;
     }
 
-    #get-started {
-        left: 13px !important;
-        top: -5px !important;
+    #destinations, #about, #services {
+        #get-started {
+            left: 13px !important;
+            top: -5px !important;
+        }
     }
+
   }
   
 .fixed-bottom-logos {

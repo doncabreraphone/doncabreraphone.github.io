@@ -486,7 +486,7 @@ ul.menu li:hover:after {
     top: 52%;
     font-size: 0.85rem;
   }
-  #get-started {
+  #destinations #get-started, #about #get-started, #services #get-started {
     left: 13px !important;
     top: -5px !important;
   }
