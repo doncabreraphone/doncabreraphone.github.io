@@ -546,6 +546,9 @@ nav #navigation {
 #destinations, #about, #services, #contact {
   overflow-x: hidden;
 }
+#destinations #content p, #about #content p, #services #content p, #contact #content p {
+  font-family: "Quicksand", sans-serif;
+}
 #destinations .bottom-data, #about .bottom-data, #services .bottom-data, #contact .bottom-data {
   font-size: 0.52rem;
 }

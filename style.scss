@@ -565,6 +565,10 @@ nav #navigation {
 #destinations, #about, #services, #contact {
     overflow-x: hidden;
 
+    #content p {
+        font-family: $base-font;
+    }
+
     .bottom-data {
         font-size: 0.52rem;
         #first-div {
