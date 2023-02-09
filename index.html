@@ -16,7 +16,7 @@
   </head> 
   <body onload="playVideo()">
     <video autoplay loop id="bg-video" muted>
-      <source src="https://emastudios.com/videos/video_compress.mp4" type="video/mp4">
+      <source src="https://emastudios.com/videos/home.mp4" type="video/mp4">
     </video>
     
     
@@ -51,7 +51,7 @@
     </div>
     <nav>
          <video autoplay loop muted id="navigation" class="animate__animated animate__fadeIn animate__delay-1s d-none">
-            <source src="https://emastudios.com/videos/video_compress.mp4"  type="video/mp4">
+            <source src="https://emastudios.com/videos/home.mp4"  type="video/mp4">
         </video>
 
     <ul class="menu">
@@ -64,7 +64,7 @@
     </nav>
     
 
-    <div class="container-fluid fixed-bottom fixed-bottom-logos  animate__animated animate__fadeIn animate__delay-5s text-light">
+    <div id="footer" class="container-fluid fixed-bottom-logos animate__animated animate__fadeIn animate__delay-5s text-light">
         <div class="card mx-auto d-none animate__animated animate__fadeIn animate__delay-0.8s " id="bottom-cards">
           <div class="card-body d-none">
             <div class="row justify-content-center">
@@ -87,7 +87,24 @@
           </div>
         </div>
         
-        <div class="container mt-4 bottom-data">
+
+        <div class="container-fluid" id="contact_us">
+            <div class="row">
+                <div class="col text-center">
+
+                    <p class="text-center" id="offices_social_sm">
+                                
+                        <a href="https://instagram.com/ils_tours?igshid=YWJhMjlhZTc=">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/ilstours/">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-0 bottom-data">
             <div class="row">
               <div class="col" id="first-div">
                 <span>
@@ -96,7 +113,7 @@
                 </span>
                 Paraguay 935 - Buenos Aires &nbsp;&nbsp;
                 <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
-                <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com</a>
               </div>
               <div class="col">
                 <span>
@@ -105,7 +122,7 @@
                 </span>
                 Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;
                 <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
-                <i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com
+                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com</a>
               </div>
 
             </div>

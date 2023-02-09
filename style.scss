@@ -478,7 +478,7 @@ nav {
     }
   }
 
-  @media only screen and (max-height: 700px) {
+  @media only screen and (max-height: 760px) {
     #logo {
         top: 10%;
     }
@@ -514,6 +514,12 @@ nav {
     text-indent: -0.3rem;
     font-family: $base-font;
     border: none;
+
+    color: $blue !important;
+
+    a {
+        color: $blue !important;
+    }
     
 
     & .bottom-data {
@@ -563,6 +569,18 @@ nav #navigation {
 }
 
 
+#services h3 {
+    color: $green;
+}
+
+#services #deepdive img {
+    padding: 1em; 
+    background: #fff; 
+    margin-top:-50px; 
+    max-width: 80%; 
+    float: right;
+}
+
 #destinations, #about, #services, #contact {
     overflow-x: hidden;
 
@@ -572,6 +590,16 @@ nav #navigation {
 
     .bottom-data {
         font-size: 0.52rem;
+
+        a {
+            color: $green;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $greenish;
+        }
+
         #first-div {
             margin-left: 140px;
         }
@@ -933,7 +961,13 @@ nav #navigation {
         #hero-img {
             margin-top: -250px;
         }
-       }
+
+        #content {
+            p {
+                font-size: 0.65rem;
+            }
+        }
+    }
 
     .mapdiv {
         position: absolute;
@@ -1340,6 +1374,26 @@ nav #navigation {
 
     #ema {
         font-size: 1.1rem !important;
+    }
+}
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+}
+
+p#offices_social_sm {
+    font-size: 1rem;
+    margin: 0.5em 0 0 0.5em;
+    a {
+        text-decoration: none;
+        color: $green;
+        margin-right: 0.6em;
+    }
+
+    a:hover {
+        color: $greenish;
     }
 }
 

@@ -91,7 +91,7 @@ function typeWriter() {
 
 
         // show videos
-        if($("#destinations").length) {
+        if($(".videos").length) {
             var video = $('.videos');
             video.get(0).currentTime = 1;
             video.get(0).pause();

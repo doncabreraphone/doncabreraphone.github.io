@@ -474,7 +474,7 @@ ul.menu li:hover:after {
     border-radius: 0;
   }
 }
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 760px) {
   #logo {
     top: 10%;
   }
@@ -504,6 +504,10 @@ ul.menu li:hover:after {
   text-indent: -0.3rem;
   font-family: "Quicksand", sans-serif;
   border: none;
+  color: #1C3761 !important;
+}
+.fixed-bottom-logos a {
+  color: #1C3761 !important;
 }
 .fixed-bottom-logos .bottom-data .bottom-bi {
   margin-left: 0.3rem;
@@ -544,6 +548,18 @@ nav #navigation {
   height: 100%;
 }
 
+#services h3 {
+  color: #05A653;
+}
+
+#services #deepdive img {
+  padding: 1em;
+  background: #fff;
+  margin-top: -50px;
+  max-width: 80%;
+  float: right;
+}
+
 #destinations, #about, #services, #contact {
   overflow-x: hidden;
 }
@@ -552,6 +568,13 @@ nav #navigation {
 }
 #destinations .bottom-data, #about .bottom-data, #services .bottom-data, #contact .bottom-data {
   font-size: 0.52rem;
+}
+#destinations .bottom-data a, #about .bottom-data a, #services .bottom-data a, #contact .bottom-data a {
+  color: #05A653;
+  text-decoration: none;
+}
+#destinations .bottom-data a:hover, #about .bottom-data a:hover, #services .bottom-data a:hover, #contact .bottom-data a:hover {
+  color: #2C7866;
 }
 #destinations .bottom-data #first-div, #about .bottom-data #first-div, #services .bottom-data #first-div, #contact .bottom-data #first-div {
   margin-left: 140px;
@@ -846,6 +869,9 @@ nav #navigation {
   }
   #destinations #hero-img, #about #hero-img, #services #hero-img, #contact #hero-img {
     margin-top: -250px;
+  }
+  #destinations #content p, #about #content p, #services #content p, #contact #content p {
+    font-size: 0.65rem;
   }
 }
 #destinations .mapdiv, #about .mapdiv, #services .mapdiv, #contact .mapdiv {
@@ -1193,6 +1219,24 @@ nav #navigation {
 }
 #about #ema, #services #ema, #contact #ema {
   font-size: 1.1rem !important;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+}
+
+p#offices_social_sm {
+  font-size: 1rem;
+  margin: 0.5em 0 0 0.5em;
+}
+p#offices_social_sm a {
+  text-decoration: none;
+  color: #05A653;
+  margin-right: 0.6em;
+}
+p#offices_social_sm a:hover {
+  color: #2C7866;
 }
 
 #contact .lead-text h1 {
