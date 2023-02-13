@@ -42,6 +42,23 @@ body {
 
 }
 
+.ibera {
+    h3 {
+        color:$green !important;
+    }
+    b {
+        color: $green !important;
+    }
+
+    h4 {
+        color: $blue !important;
+    }
+    h4.lead {
+        color: $orange !important;
+    }    
+
+}
+
 // Video background
 #bg-video {
     filter: opacity(40%);

@@ -24,6 +24,19 @@ body #destinations {
   font-family: "Quicksand", sans-serif;
 }
 
+.ibera h3 {
+  color: #05A653 !important;
+}
+.ibera b {
+  color: #05A653 !important;
+}
+.ibera h4 {
+  color: #1C3761 !important;
+}
+.ibera h4.lead {
+  color: #FB4F21 !important;
+}
+
 #bg-video {
   filter: opacity(40%);
   position: fixed;
