@@ -506,6 +506,19 @@ nav {
     }
 
   }
+
+#about .easter {
+    color: $green;
+}
+
+#about .w-50 {
+    max-width: 450px;
+    margin: 0.5em 0;
+}
+
+.text-justify {
+    text-align: justify;
+}
   
 .fixed-bottom-logos {
     font-size: 0.47rem;
@@ -568,17 +581,31 @@ nav #navigation {
     height: 100%;
 }
 
-
 #services h3 {
     color: $green;
 }
 
-#services #deepdive img {
-    padding: 1em; 
-    background: #fff; 
-    margin-top:-50px; 
-    max-width: 80%; 
-    float: right;
+#services .padding-left {
+    padding-left: 2em;
+}
+
+#services .service_images img {
+    position: relative;
+    max-width: 700px;
+    padding: 0.5em;
+    &.left { margin-right: -100px; margin-left: -55px;}
+    &.right  { margin-right: -100px; }
+}
+
+@media only screen and (max-height: 780px) {
+
+    #services .service_images .left  {
+        margin-left: -150px !important;
+    }
+
+    #services .service_images .right  {
+        margin-right: -150px !important;
+    }
 }
 
 #destinations, #about, #services, #contact {
@@ -756,6 +783,10 @@ nav #navigation {
 
         }
 
+        h4.lead.brown {
+            color: $brown !important;
+        }
+
         .yellow {
             h3,h4 {
                 color: $yellow;
@@ -771,6 +802,16 @@ nav #navigation {
             }
             h4.lead {
                 color:$purpleish;
+            }
+        }
+
+
+        .purple.invertd {
+            h3,h4 {
+                color: $purpleish;
+            }
+            h4.lead {
+                color:$purple;
             }
         }
 
@@ -811,6 +852,20 @@ nav #navigation {
 
             h4.lead {
                 color: $orange;
+            }
+        }
+
+        .blue.inverted {
+            h3,h4 {
+                color: $blue;
+            }
+
+            h4.lead {
+                color: $blueish;
+            }
+
+            h4 b {
+                color: $blueish;
             }
         }
 

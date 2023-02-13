@@ -104,14 +104,11 @@ body #destinations {
   }
 }
 #message span.animated {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 #message span.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 #message span.bold {
   color: #05A653;
@@ -141,29 +138,17 @@ body #destinations {
   box-shadow: -1px 14px 12px 0 rgb(0, 0, 0);
 }
 #get-started.animated {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 #get-started.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 #get-started #top_text {
   width: 120px;
   font-size: 27px;
   transition: font-size 0.05s;
   margin-left: 35px;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fadeIn {
@@ -256,8 +241,7 @@ nav:before {
   top: 0;
 }
 .open nav:before {
-  -webkit-animation: menu-animation 0.8s ease-out forwards;
-          animation: menu-animation 0.8s ease-out forwards;
+  animation: menu-animation 0.8s ease-out forwards;
 }
 
 ul.menu {
@@ -400,8 +384,7 @@ ul.menu li:hover:after {
 }
 
 .fade-in {
-  -webkit-animation: fadeIn ease 0.5s;
-          animation: fadeIn ease 0.5s;
+  animation: fadeIn ease 0.5s;
 }
 
 @keyframes fadeIn {
@@ -410,37 +393,6 @@ ul.menu li:hover:after {
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes menu-animation {
-  0% {
-    opacity: 0;
-    transform: scale(0.04) translateY(300%);
-  }
-  40% {
-    transform: scale(0.04) translateY(0);
-    transition: ease-out;
-  }
-  40% {
-    transform: scale(0.04) translateY(0);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(0.02) translateY(0px);
-  }
-  61% {
-    transform: scale(0.04);
-  }
-  99.9% {
-    height: 0;
-    padding-bottom: 100%;
-    border-radius: 100%;
-  }
-  100% {
-    transform: scale(2);
-    height: 100%;
-    padding-bottom: 0;
-    border-radius: 0;
   }
 }
 @keyframes menu-animation {
@@ -491,12 +443,25 @@ ul.menu li:hover:after {
     top: -5px !important;
   }
   #about .lead-text h1,
-#services .lead-text h1,
-#contact .lead-text h1 {
+  #services .lead-text h1,
+  #contact .lead-text h1 {
     font-size: 3.1rem !important;
     margin-top: -255px !important;
   }
 }
+#about .easter {
+  color: #05A653;
+}
+
+#about .w-50 {
+  max-width: 450px;
+  margin: 0.5em 0;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .fixed-bottom-logos {
   font-size: 0.47rem;
   font-weight: 400;
@@ -552,14 +517,31 @@ nav #navigation {
   color: #05A653;
 }
 
-#services #deepdive img {
-  padding: 1em;
-  background: #fff;
-  margin-top: -50px;
-  max-width: 80%;
-  float: right;
+#services .padding-left {
+  padding-left: 2em;
 }
 
+#services .service_images img {
+  position: relative;
+  max-width: 700px;
+  padding: 0.5em;
+}
+#services .service_images img.left {
+  margin-right: -100px;
+  margin-left: -55px;
+}
+#services .service_images img.right {
+  margin-right: -100px;
+}
+
+@media only screen and (max-height: 780px) {
+  #services .service_images .left {
+    margin-left: -150px !important;
+  }
+  #services .service_images .right {
+    margin-right: -150px !important;
+  }
+}
 #destinations, #about, #services, #contact {
   overflow-x: hidden;
 }
@@ -708,6 +690,9 @@ nav #navigation {
   line-height: 1.2rem;
   text-transform: uppercase;
 }
+#destinations #content h4.lead.brown, #about #content h4.lead.brown, #services #content h4.lead.brown, #contact #content h4.lead.brown {
+  color: #BF8F45 !important;
+}
 #destinations #content .yellow h3, #destinations #content .yellow h4, #about #content .yellow h3, #about #content .yellow h4, #services #content .yellow h3, #services #content .yellow h4, #contact #content .yellow h3, #contact #content .yellow h4 {
   color: #fcba03;
 }
@@ -719,6 +704,12 @@ nav #navigation {
 }
 #destinations #content .purple h4.lead, #about #content .purple h4.lead, #services #content .purple h4.lead, #contact #content .purple h4.lead {
   color: #7B257D;
+}
+#destinations #content .purple.invertd h3, #destinations #content .purple.invertd h4, #about #content .purple.invertd h3, #about #content .purple.invertd h4, #services #content .purple.invertd h3, #services #content .purple.invertd h4, #contact #content .purple.invertd h3, #contact #content .purple.invertd h4 {
+  color: #7B257D;
+}
+#destinations #content .purple.invertd h4.lead, #about #content .purple.invertd h4.lead, #services #content .purple.invertd h4.lead, #contact #content .purple.invertd h4.lead {
+  color: #420791;
 }
 #destinations #content .brownish h3, #destinations #content .brownish h4, #about #content .brownish h3, #about #content .brownish h4, #services #content .brownish h3, #services #content .brownish h4, #contact #content .brownish h3, #contact #content .brownish h4 {
   color: #BF8F45;
@@ -743,6 +734,15 @@ nav #navigation {
 }
 #destinations #content .orange h4.lead, #about #content .orange h4.lead, #services #content .orange h4.lead, #contact #content .orange h4.lead {
   color: #FB4F21;
+}
+#destinations #content .blue.inverted h3, #destinations #content .blue.inverted h4, #about #content .blue.inverted h3, #about #content .blue.inverted h4, #services #content .blue.inverted h3, #services #content .blue.inverted h4, #contact #content .blue.inverted h3, #contact #content .blue.inverted h4 {
+  color: #1C3761;
+}
+#destinations #content .blue.inverted h4.lead, #about #content .blue.inverted h4.lead, #services #content .blue.inverted h4.lead, #contact #content .blue.inverted h4.lead {
+  color: #218DD5;
+}
+#destinations #content .blue.inverted h4 b, #about #content .blue.inverted h4 b, #services #content .blue.inverted h4 b, #contact #content .blue.inverted h4 b {
+  color: #218DD5;
 }
 #destinations #content .blue h3, #destinations #content .blue h4, #about #content .blue h3, #about #content .blue h4, #services #content .blue h3, #services #content .blue h4, #contact #content .blue h3, #contact #content .blue h4 {
   color: #218DD5;
@@ -832,16 +832,7 @@ nav #navigation {
 }
 #destinations #map_wrap, #about #map_wrap, #services #map_wrap, #contact #map_wrap {
   position: relative;
-  -webkit-animation: fadeInMap 2s;
-          animation: fadeInMap 2s;
-}
-@-webkit-keyframes fadeInMap {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fadeInMap 2s;
 }
 @keyframes fadeInMap {
   0% {
@@ -895,19 +886,8 @@ nav #navigation {
   border-radius: 100%;
 }
 #destinations .mapdiv.anima, #about .mapdiv.anima, #services .mapdiv.anima, #contact .mapdiv.anima {
-  -webkit-animation: pulsing 2s ease-out infinite;
-          animation: pulsing 2s ease-out infinite;
+  animation: pulsing 2s ease-out infinite;
   opacity: 1;
-}
-@-webkit-keyframes pulsing {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.8);
-    opacity: 0;
-  }
 }
 @keyframes pulsing {
   0% {
