@@ -291,44 +291,44 @@ function typeWriter() {
             })(i);
         }
 
-        if($("#destinations").length) {
-            let images = $("img");
-            let imagesToLazyLoad = images.filter(function() {
-              return this.src.endsWith(".webp");
-            });
+        // if($("#destinations").length) {
+        //     let images = $("img");
+        //     let imagesToLazyLoad = images.filter(function() {
+        //       return this.src.endsWith(".webp");
+        //     });
           
-            let imagesInView = function() {
-              let windowHeight = $(window).height();
-              let windowTopPosition = $(window).scrollTop();
-              let windowBottomPosition = windowTopPosition + windowHeight;
+        //     let imagesInView = function() {
+        //       let windowHeight = $(window).height();
+        //       let windowTopPosition = $(window).scrollTop();
+        //       let windowBottomPosition = windowTopPosition + windowHeight;
           
-              imagesToLazyLoad.each(function() {
-                let image = $(this);
-                let imageTopPosition = image.offset().top;
-                let imageBottomPosition = imageTopPosition + image.height();
+        //       imagesToLazyLoad.each(function() {
+        //         let image = $(this);
+        //         let imageTopPosition = image.offset().top;
+        //         let imageBottomPosition = imageTopPosition + image.height();
           
-                if (
-                  imageBottomPosition >= windowTopPosition &&
-                  imageTopPosition <= windowBottomPosition
-                ) {
-                  image.attr("src", image.data("src"));
-                  imagesToLazyLoad = imagesToLazyLoad.not(image);
-                }
-              });
-            };
+        //         if (
+        //           imageBottomPosition >= windowTopPosition &&
+        //           imageTopPosition <= windowBottomPosition
+        //         ) {
+        //           image.attr("src", image.data("src"));
+        //           imagesToLazyLoad = imagesToLazyLoad.not(image);
+        //         }
+        //       });
+        //     };
           
-            imagesToLazyLoad.each(function() {
-              let image = $(this);
-              image.attr("data-src", image.attr("src"));
-              image.removeAttr("src");
-            });
+        //     imagesToLazyLoad.each(function() {
+        //       let image = $(this);
+        //       image.attr("data-src", image.attr("src"));
+        //       image.removeAttr("src");
+        //     });
           
-            $(window).scroll(function() {
-              imagesInView();
-            });
+        //     $(window).scroll(function() {
+        //       imagesInView();
+        //     });
           
-            imagesInView();
-        }
+        //     imagesInView();
+        // }
 
         var fading = false;
 
