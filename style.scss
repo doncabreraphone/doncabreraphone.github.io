@@ -1515,8 +1515,8 @@ figure.snip1321 {
 
 
 #home #footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 480px;
 }
 
 p#offices_social_sm {
@@ -1594,6 +1594,14 @@ h4.chile_txt:hover + #pick_chile {
 }
 
 @media (max-width: 1365px) {
+
+    ul.menu {
+        width: 75%;
+    }
+
+    ul.menu li:hover::after { 
+        padding: none;
+    }
 
     #destinations #content .card img {
         filter: none;
@@ -1734,6 +1742,7 @@ h4.chile_txt:hover + #pick_chile {
     #contact #contact_us {
         border: none;
         margin-bottom: 1em;
+        padding: 0;
     }
 
     #destinations #logo-small, 
@@ -1813,11 +1822,11 @@ h4.chile_txt:hover + #pick_chile {
     
     #logo-small-menu {
         position: fixed;
-        top: 22%;
+        top: 15%;
         z-index: 5;
-        width: 250px;
+        width: 220px;
         left: 50%;
-        margin-left: -130px;
+        margin-left: -110px;
         opacity: 0; 
     }
 
@@ -1942,6 +1951,7 @@ h4.chile_txt:hover + #pick_chile {
     #destinations p#offices_social_sm {
         font-size: 2rem;
         margin: 0 0 0 25px;
+        padding: 0.5em 0;
     }
 
     .fixed-bottom-logos {
