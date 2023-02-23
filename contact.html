@@ -28,6 +28,11 @@
             <source src="https://emastudios.com/videos/home.mp4"  type="video/mp4">
         </video>
 
+        <div class="text-center d-block d-md-none" id="logo-small-menu">
+            <img src="images/logo_blue.png" class="img-fluid" alt="Logo" id="logo-small-menu">
+        </div>
+
+
     <div id="country_pick" class="d-none fade-in">
         <div>
             
@@ -60,7 +65,7 @@
         </div>
 
         <div class="text-center d-block d-md-none" id="logo-small">
-            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
+            <img src="images/logo_blue.png" class="img-fluid" alt="Logo" id="lg">
         </div>
 
         <button id="get-started">+ <span class="position-absolute" id="top_text">Contact</span></button>       
@@ -77,14 +82,14 @@
             <div class="col mt-4" id="content">
    
                 <div class="order-1">
-                    <div id="map1"></div>
+                   
                         
 
                         <p>
                             At ILS Tours we are dedicated to making each trip a memorable experience for our clients and are always eager to share the very best of each destination with our guests. Don’t hesitate to contact us now and let us jump into building your customers’ travel experience. Whether you need assistance with planning a trip, finding the right itinerary or just want to share feedback, our dedicated team of multilingual experts is always ready to assist you.</p>
                         
 
-                        <div class="col-lg-7 mx-auto pb-0 mb-0 mb-md-5 text-md-center mt-5">
+                        <div class="col-lg-7 mx-auto pb-0 mb-0 mb-md-5 text-md-center mt-4">
                         <h2>Let’s plan together your clients’ trip</h2>
                         <p>With offices in Buenos Aires, Argentina and Santiago, Chile we are well equipped to handle all your clients’ travel needs. Our goal is to provide excepcional service and make sure our guests have the trip of their lifetime</p>
                             <p id="ema"><a href="mailto:ils@ilstours.com">ils@ilstours.com</a></p>
@@ -97,8 +102,6 @@
                                 <p class="mx-3">Paraguay 935<br>Buenos Aires - Argentina</p>
 
                                 <p><i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931</p>
-
-                                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2553904941606!2d-58.38297522413798!3d-34.59770295718083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac82d6830e5%3A0xd17af49c5de8ed47!2sParaguay%20935%2C%20C1057AAM%20CABA!5e0!3m2!1ses-419!2sar!4v1673307186297!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="320"></iframe> -->
                                 
                             </div>
 
@@ -108,10 +111,6 @@
                                 <p class="mx-3">Av. Apoquindo 4615 of. 501<br>Santiago - Chile</p>
                                 
                                 <p><i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808</p>
-
-                                <div class="map-holder">
-									<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.3737158248523!2d-70.58414992419311!3d-33.41349989562107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf189f43dabb%3A0xc3b4c92091383674!2sAv.%20Apoquindo%204615%2C%20oficina%20501%2C%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses-419!2sar!4v1673307232036!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="320"></iframe> -->
-								</div>
                                 
                             </div>
 
@@ -141,7 +140,8 @@
 
     </div>
 
-    <div class="container-fluid" id="contact_us">
+    <div id="footer" class="container-fluid">
+    <div class=" d-none d-md-block" id="contact_us">
         <div class="row">
             <div class="col text-center">
                 CONTACT US
@@ -149,34 +149,35 @@
         </div>
     </div>
 
-    <div class="container mt-4 bottom-data">
+    <div class="container mt-0 bottom-data">
         <div class="row">
-            <div class="col" id="first-div">
+          <div class="col-12 col-sm-5" id="first-div">
             <span>
                 <i class="bi bi-geo-alt-fill"></i>
                 <b>Argentina</b>
             </span>
-            Paraguay 935 - Buenos Aires &nbsp;&nbsp;
+            Paraguay 935 - Buenos Aires &nbsp;&nbsp;<br class="d-block d-sm-none">
             <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
-            <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com</a>
-            </div>
-            <div class="col">
+            <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi me-1"></i>ils@ilstours.com</a>
+          </div>
+          <div class="col-12 col-sm-5 mt-4 mt-sm-0">
             <span>
                 <i class="bi bi-geo-alt-fill"></i>
                 <b>Chile</b>
             </span>
-            Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;
+            Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;<br class="d-block d-sm-none">
             <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
-            <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com</a>
-            </div>
+            <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi me-1"></i>ils@ilstours.com</a>
+          </div>
 
         </div>
-        </div>
+      </div>
 
+ 
+      <p class="text-center mt-3 mb-1">Copyright 2016 - <span class="yr"></span> ILS Tours</p>
     
-        <p class="text-center mt-3 mb-1" id="copy"><small>Copyright 2016 - <span class="yr"></span> ILS Tours</small></p>
-    
-    </div>
+  </div>
+  </div>
 
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>  

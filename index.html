@@ -14,7 +14,7 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   </head> 
-  <body onload="playVideo()">
+  <body onload="playVideo()" id="home">
     <video autoplay loop id="bg-video" muted>
       <source src="https://emastudios.com/videos/home.mp4" type="video/mp4">
     </video>
@@ -29,7 +29,8 @@
             <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
         </div>
 
-        <div id="message" class="second animate__animated animate__fadeIn animate__delay-3s" > <button id="get-started" style="display: none; text-align: center;"></button></div>       
+        <div id="message" class="w-100 second animate__animated animate__fadeIn animate__delay-3s" > 
+        <button id="get-started" style="display: none; text-align: center;"></button></div>       
     </div>
 
 
@@ -54,6 +55,11 @@
             <source src="https://emastudios.com/videos/home.mp4"  type="video/mp4">
         </video>
 
+        <div class="text-center d-block d-md-none" id="logo-small-menu">
+            <img src="images/logo_blue.png" class="img-fluid" alt="Logo" id="lg">
+        </div>
+
+
     <ul class="menu">
         <a href="#" class="pick"><li data-text="Destinations">Destinations</li></a>
         <a href="about.html"><li data-text="About us">About us</li></a>
@@ -63,29 +69,7 @@
     </ul>
     </nav>
     
-
     <div id="footer" class="container-fluid fixed-bottom-logos animate__animated animate__fadeIn animate__delay-5s text-light">
-        <div class="card mx-auto d-none animate__animated animate__fadeIn animate__delay-0.8s " id="bottom-cards">
-          <div class="card-body d-none">
-            <div class="row justify-content-center">
-              <div class="col-2">
-                <img src="images/btn1.png" alt="image1" class="img-fluid">
-              </div>
-              <div class="col-2">
-                <img src="images/btn2.png" alt="image2" class="img-fluid">
-              </div>
-              <div class="col-2">
-                <img src="images/btn3.png" alt="image3" class="img-fluid">
-              </div>
-              <div class="col-2">
-                <img src="images/btn4.png" alt="image4" class="img-fluid">
-              </div>
-              <div class="col-2">
-                <img src="images/btn5.png" alt="image5" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
         
 
         <div class="container-fluid" id="contact_us">
@@ -106,23 +90,23 @@
         </div>
         <div class="container mt-0 bottom-data">
             <div class="row">
-              <div class="col" id="first-div">
+              <div class="col-12 col-sm-5" id="first-div">
                 <span>
                     <i class="bi bi-geo-alt-fill"></i>
                     <b>Argentina</b>
                 </span>
-                Paraguay 935 - Buenos Aires &nbsp;&nbsp;
+                Paraguay 935 - Buenos Aires &nbsp;&nbsp;<br class="d-block d-sm-none">
                 <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
-                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com</a>
+                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi me-1"></i>ils@ilstours.com</a>
               </div>
-              <div class="col">
+              <div class="col-12 col-sm-5 mt-4 mt-sm-0">
                 <span>
                     <i class="bi bi-geo-alt-fill"></i>
                     <b>Chile</b>
                 </span>
-                Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;
+                Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;<br class="d-block d-sm-none">
                 <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
-                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi"></i> ils@ilstours.com</a>
+                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi me-1"></i>ils@ilstours.com</a>
               </div>
 
             </div>
@@ -131,7 +115,7 @@
      
           <p class="text-center mt-3 mb-1"><small>Copyright 2016 - <span class="yr"></span> ILS Tours</small></p>
         
-      </div>
+    </div>
     
       
 
