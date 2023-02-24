@@ -2054,7 +2054,8 @@ ul.menu {
 
 
 .animate__fadeOut {
-    animation: fadeOut forwards 0.6s;
+    animation-name: fadeOut;
+    visibility: hidden;
   }
   
   @keyframes fadeOut {

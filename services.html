@@ -247,4 +247,58 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>  
   <script src="javascript.js"></script>
+  <script>
+  const options = {
+  threshold: 0.25
+};
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      if (!entry.target.classList.contains('animated')) {
+        $(entry.target).addClass('animate__animated animate__flipInX animated');
+        $(entry.target).removeClass('animate__fadeOut');
+        entry.target.classList.add('animated');
+      }
+    } else {
+      if (entry.target.classList.contains('animated')) {
+        $(entry.target).removeClass('animate__animated animate__flipInX animated');
+        $(entry.target).addClass('animate__fadeOut');
+        entry.target.classList.remove('animated');
+      }
+    }
+  });
+}, options);
+
+const div1 = $('#div1')[0];
+const div2 = $('#div2')[0];
+const div3 = $('#div3')[0];
+const div4 = $('#div4')[0];
+
+observer.observe(div1);
+observer.observe(div2);
+observer.observe(div3);
+observer.observe(div4);
+
+// Debounce the scroll event to avoid performance issues
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      func.apply(null, args);
+    }, delay);
+  };
+};
+
+$(window).on('scroll', debounce(function() {
+  observer.disconnect();
+  observer.observe(div1);
+  observer.observe(div2);
+  observer.observe(div3);
+  observer.observe(div4);
+}, 20));
+  </script>
   </html>
