@@ -390,9 +390,13 @@ function typeWriter() {
             
               const div1 = $('#div1')[0];
               const div2 = $('#div2')[0];
+              const div3 = $('#div3')[0];
+              const div4 = $('#div4')[0];
             
               observer.observe(div1);
               observer.observe(div2);
+              observer.observe(div3);
+              observer.observe(div4);
 
 
         }
