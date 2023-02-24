@@ -86,7 +86,7 @@
                             <figcaption>
                                 <h3>Tailor-made Trips</h3>
                                 <img src="images_webp/places/services/kayak_pic.jpg" alt="sq-sample26" class="img-fluid w-100"/>
-                                <div class="texto">
+                                <div class="texto animate__hidden">
                                     <p>Please contact us for any group or FIT request. We will organize the itinerary according to your needs. The diversity of landscape, activities, climate and facilities make Argentina and Chile a great option for your next travel destination.</p>
                                     <p>Our tailor-made travel services include selected accommodation, multilingual guides, comfortable vehicles and domestic airline tickets at competitive fares.</p>
                                 </div>
@@ -97,7 +97,7 @@
                             <figcaption>
                                 <h3>Special Interest</h3>
                                 <img src="images_webp/places/services/wine_pic.jpg" alt="sq-sample26" class="img-fluid w-100"/>
-                                <div class="texto">
+                                <div class="texto animate__hidden">
                                     <p>Argentina and Chile are large countries with a wide range of interests to enjoy. We may develop different offers, no matter what program you are looking for. They can be cultural programs, active holidays or educational tours.</p>
                                     <p>We will connect you with the appropriate people according to your interests and create the logistic needed for a smooth operation.</p>
                                 </div>
@@ -108,7 +108,7 @@
                             <figcaption>
                                 <h3>Drive & Sleep</h3>
                                 <img src="images_webp/places/services/cruise_pic.jpg" alt="sq-sample26" class="img-fluid w-100"/>
-                                <div class="texto">
+                                <div class="texto animate__hidden">
                                     <p>This is by far the most exciting way to visit these wonderful countries. ILS offers fascinating itineraries carefully designed to make the most of each trip.</p>
                                     <p>Our packages include welcome & assistance by local guides at every airport, hand-picked accommodation for each destination, useful tips & recommendations and 24-hour assistance in case of emergencies.</p>
                                 </div>
@@ -119,7 +119,7 @@
                             <figcaption>
                                 <h3>Cruise Handling</h3>
                                 <img src="images_webp/places/services/drive_and_sleep.jpg" alt="sq-sample26" class="img-fluid w-100"/>
-                                <div class="texto">
+                                <div class="texto animate__hidden">
                                     <p>We are an experienced incoming agency for cruise handling and work in all major ports in Argentina, Chile and Uruguay. ILS organizes exciting shore excursions as well as pre-and post-cruise tours.</p>
                                     <p>All arrangements as well as port or airport assistance is provided with highly trained multilingual staff who will make the organization efficient and easy. We are familiar to the ports requirements so as to make the operation impeccable.</p>
                                 </div>
@@ -249,20 +249,24 @@
   <script src="javascript.js"></script>
   <script>
   const options = {
-  threshold: 0.25
+  threshold: 0.35
 };
 
 const observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
       if (!entry.target.classList.contains('animated')) {
-        $(entry.target).addClass('animate__animated animate__flipInX animated');
+        $(entry.target).find('img').addClass('animate__animated animate__flipInX animated');
+        setTimeout(function() {
+          $(entry.target).find('.texto').addClass('animate__animated animate__fadeInUp');
+        }, 300);
         $(entry.target).removeClass('animate__fadeOut');
         entry.target.classList.add('animated');
       }
     } else {
       if (entry.target.classList.contains('animated')) {
-        $(entry.target).removeClass('animate__animated animate__flipInX animated');
+        $(entry.target).find('img').removeClass('animate__animated animate__flipInX animated');
+        $(entry.target).find('.texto').removeClass('animate__animated animate__fadeInUp');
         $(entry.target).addClass('animate__fadeOut');
         entry.target.classList.remove('animated');
       }
@@ -300,5 +304,6 @@ $(window).on('scroll', debounce(function() {
   observer.observe(div3);
   observer.observe(div4);
 }, 20));
+
   </script>
   </html>

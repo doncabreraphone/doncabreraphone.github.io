@@ -2046,23 +2046,34 @@ ul.menu {
         left: -14px;
     }
 
-    #services .service_images figure {
-        margin: 0 0 3em 0;
-    }
+    .texto {
+        opacity: 0;
+      }
+      
+      .animate__hidden {
+        visibility: hidden;
+      }
+      .animate__fadeOut {
+          animation-name: fadeOut;
+          visibility: hidden;
+      }
+      
+      .animate__fadeInUp {
+          visibility: visible;
+      }
+      
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+
 
 }
 
 
-.animate__fadeOut {
-    animation-name: fadeOut;
-    visibility: hidden;
-  }
+
   
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
