@@ -373,7 +373,7 @@ function typeWriter() {
 
 
             const options = {
-                threshold: 0.25
+                threshold: 0.4
               };
             
               const observer = new IntersectionObserver(function(entries) {
