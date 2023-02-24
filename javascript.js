@@ -373,11 +373,12 @@ function typeWriter() {
 
 
             const options = {
-                threshold: 0.4
+                threshold: 0.25,
+                rootMargin: '0px',
               };
-            
-              const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+              
+              const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                   if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                     $(entry.target).addClass('animate__animated animate__flipInX animated');
                     $(entry.target).removeClass('animate__fadeOut');
@@ -387,16 +388,17 @@ function typeWriter() {
                   }
                 });
               }, options);
-            
+              
               const div1 = $('#div1')[0];
               const div2 = $('#div2')[0];
               const div3 = $('#div3')[0];
               const div4 = $('#div4')[0];
-            
+              
               observer.observe(div1);
               observer.observe(div2);
               observer.observe(div3);
               observer.observe(div4);
+              
 
 
         }
