@@ -1266,8 +1266,8 @@ figure.snip1321.hover:after {
 }
 
 #home #footer {
-  position: relative;
-  top: 430px;
+  position: absolute;
+  bottom: 0;
 }
 
 p#offices_social_sm {
@@ -1736,5 +1736,17 @@ h4.chile_txt:hover + #pick_chile {
   #contact .lead-text h1 {
     font-size: 3.1rem !important;
     margin-top: -255px !important;
+  }
+}
+@media screen and (max-height: 780px) and (max-width: 650px) {
+  #home #logo-small {
+    top: 5%;
+  }
+  #home #message {
+    top: 28%;
+  }
+  button.menu-toggle::after {
+    top: 20px;
+    left: -14px;
   }
 }/*# sourceMappingURL=style.css.map */

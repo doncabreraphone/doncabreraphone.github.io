@@ -1515,8 +1515,8 @@ figure.snip1321 {
 
 
 #home #footer {
-    position: relative;
-    top: 430px;
+    position: absolute;
+    bottom: 0;
 }
 
 p#offices_social_sm {
@@ -2001,34 +2001,49 @@ h4.chile_txt:hover + #pick_chile {
         font-size: 1rem;
     }
 
-  }
+}
 
-  @media (min-width: 768px) and (max-width: 1366px) {
-    #logo {
-        top: 10%;
+@media (min-width: 768px) and (max-width: 1366px) {
+#logo {
+    top: 10%;
+}
+#message {
+    top: 45%;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+}
+ul.menu {
+    top: 52%;
+    font-size: 0.85rem;
+}
+
+#destinations, #about, #services {
+    #get-started {
+        left: 13px !important;
+        top: -5px !important;
     }
-    #message {
-        top: 45%;
-        font-size: 1.3rem;
-        line-height: 1.4rem;
-    }
-    ul.menu {
-        top: 52%;
-        font-size: 0.85rem;
+}
+
+#about .lead-text h1,
+#services .lead-text h1,
+#contact .lead-text h1 {
+    font-size: 3.1rem !important;
+    margin-top: -255px !important;
+}
+
+}
+
+@media screen and (max-height: 780px) and (max-width: 650px) {
+    #home #logo-small {
+        top: 5%;
     }
 
-    #destinations, #about, #services {
-        #get-started {
-            left: 13px !important;
-            top: -5px !important;
-        }
+    #home #message {
+        top: 28%;
     }
 
-    #about .lead-text h1,
-    #services .lead-text h1,
-    #contact .lead-text h1 {
-        font-size: 3.1rem !important;
-        margin-top: -255px !important;
+    button.menu-toggle::after {
+        top: 20px;
+        left: -14px;
     }
-
-  }
+}
