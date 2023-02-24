@@ -194,10 +194,10 @@ button.menu-toggle:after {
   content: "×";
   color: white;
   position: absolute;
-  top: 40px;
+  top: 35px;
   left: 4px;
   font-family: Arial, sans-serif;
-  font-size: 76px;
+  font-size: 48px;
   line-height: 0;
   transition: opacity 0.4s ease-out;
 }
