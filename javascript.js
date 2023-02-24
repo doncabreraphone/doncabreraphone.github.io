@@ -366,3 +366,34 @@ function typeWriter() {
 
       });
 
+
+      $(document).ready(function() {
+
+        if($("#services").length) {
+
+
+            const options = {
+                threshold: 0.25
+              };
+            
+              const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                  if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    $(entry.target).addClass('animate__animated animate__flipInX animated');
+                    $(entry.target).removeClass('animate__fadeOut');
+                  } else if (!entry.isIntersecting && entry.target.classList.contains('animated')) {
+                    $(entry.target).removeClass('animate__animated animate__flipInX animated');
+                    $(entry.target).addClass('animate__fadeOut');
+                  }
+                });
+              }, options);
+            
+              const div1 = $('#div1')[0];
+              const div2 = $('#div2')[0];
+            
+              observer.observe(div1);
+              observer.observe(div2);
+
+
+        }
+      });

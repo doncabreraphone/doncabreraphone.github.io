@@ -1749,4 +1749,20 @@ h4.chile_txt:hover + #pick_chile {
     top: 20px;
     left: -14px;
   }
+  #services .service_images figure {
+    margin: 0 0 3em 0;
+  }
+}
+.animate__fadeOut {
+  animation-name: fadeOut;
+  visibility: hidden;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
