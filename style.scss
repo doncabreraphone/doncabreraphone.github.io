@@ -1597,6 +1597,46 @@ h4.chile_txt:hover + #pick_chile {
 }
 
 @media (max-width: 1365px) {
+
+    #later {
+        font-family: $base-font;
+        padding-top: 30px;
+
+        #back {
+            top: 30px;
+            left: 0;
+        }
+
+        .display-5 {
+            line-height: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .lead {
+            line-height: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        #footer #offices_social_sm {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: -15px;
+        }
+    }
+
+
+    nav #navigation {
+        position: absolute;
+        opacity: .4 !important;
+        filter: blur(0.25rem);
+        object-fit: fill;
+        width: auto !important;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
     ul.menu {
         width: 75%;
     }
