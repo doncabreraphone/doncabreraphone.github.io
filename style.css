@@ -365,6 +365,7 @@ ul.menu li:hover:after {
 #country_pick div a {
   text-decoration: none;
   color: #000;
+  position: relative;
 }
 #country_pick div a img {
   opacity: 0.5;
@@ -389,10 +390,10 @@ ul.menu li:hover:after {
   font-size: 0.85rem;
 }
 #country_pick div h4.chile_txt {
-  margin-left: -160px;
+  margin-left: -60px;
 }
 #country_pick div h4.arg_txt {
-  margin-left: 170px;
+  margin-left: 155px;
 }
 
 .fade-in {
@@ -1280,7 +1281,7 @@ p#offices_social_sm {
 p#offices_social_sm a {
   text-decoration: none;
   color: #05A653;
-  margin-right: 0.6em;
+  margin-left: 0.3em;
 }
 p#offices_social_sm a:hover {
   color: #2C7866;
@@ -1339,7 +1340,7 @@ h4.chile_txt:hover + #pick_chile {
   margin-bottom: 0;
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1280px) {
   #later {
     font-family: "Quicksand", sans-serif;
     padding-top: 30px;
@@ -1482,11 +1483,8 @@ h4.chile_txt:hover + #pick_chile {
     top: 40%;
   }
   #get-started {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1em;
-  }
-  #home #get-started {
-    width: 90%;
   }
   #destinations #contact_us,
   #about #contact_us,
@@ -1693,9 +1691,6 @@ h4.chile_txt:hover + #pick_chile {
   #footer {
     font-family: "Quicksand", sans-serif;
   }
-  #first-div {
-    margin-left: 0 !important;
-  }
   #services .service_images h3 {
     font-size: 1.6rem !important;
     margin: 0 !important;
@@ -1709,7 +1704,6 @@ h4.chile_txt:hover + #pick_chile {
   #services p#offices_social_sm,
   #destinations p#offices_social_sm {
     font-size: 2rem;
-    margin: 0 0 0 25px;
     padding: 0.5em 0;
   }
   .fixed-bottom-logos {
@@ -1725,7 +1719,7 @@ h4.chile_txt:hover + #pick_chile {
     text-align: center;
   }
   .bottom-data span {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     border-bottom: 1px solid rgba(28, 54, 97, 0.4705882353);
     margin: 0.35em 0;
     padding: 0.35em 0;
@@ -1738,7 +1732,7 @@ h4.chile_txt:hover + #pick_chile {
     width: 95%;
   }
   #country_pick div h4.chile_txt {
-    margin-left: -120px;
+    margin-left: -30px;
   }
   #country_pick div h4.arg_txt {
     margin-left: 120px;
@@ -1749,10 +1743,18 @@ h4.chile_txt:hover + #pick_chile {
   #country_pick div h4 {
     font-size: 1rem;
   }
+  #first-div {
+    margin-left: 0 !important;
+  }
+}
+@media (max-height: 600px) {
+  #logo {
+    top: 15% !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1366px) {
   #logo {
-    top: 10%;
+    top: 25%;
   }
   #message {
     top: 45%;

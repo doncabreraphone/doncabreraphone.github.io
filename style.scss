@@ -407,6 +407,7 @@ nav {
     a {
         text-decoration: none;
         color: #000;
+        position: relative;
 
         img {
             opacity: .5;
@@ -436,10 +437,10 @@ nav {
         transform: translate(-50%, -50%);
         font-size: 0.85rem;
         &.chile_txt {
-            margin-left: -160px;
+            margin-left: -60px;
         }
         &.arg_txt {
-            margin-left: 170px;
+            margin-left: 155px;
         }
     }
     
@@ -1528,7 +1529,7 @@ p#offices_social_sm {
     a {
         text-decoration: none;
         color: $green;
-        margin-right: 0.6em;
+        margin-left: 0.3em;
     }
 
     a:hover {
@@ -1596,8 +1597,14 @@ h4.chile_txt:hover + #pick_chile {
     margin-bottom: 0;
 }
 
-@media (max-width: 1365px) {
-
+@media (max-width: 1280px) {
+    p#offices_social_sm {
+        font-size: 1rem;
+        margin: 0.5em 0 0 0.5em;
+        a {
+            margin-right: 0.3em;
+        }
+    
     #later {
         font-family: $base-font;
         padding-top: 30px;
@@ -1769,13 +1776,8 @@ h4.chile_txt:hover + #pick_chile {
     }
 
     #get-started {
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 1em;
-    }
-
-
-    #home #get-started {
-        width: 90%;
     }
 
     #destinations #contact_us, 
@@ -1973,10 +1975,6 @@ h4.chile_txt:hover + #pick_chile {
         font-family: $base-font;
     }
 
-    #first-div {
-        margin-left: 0 !important;
-    }
-
     #services .service_images h3 {
         font-size: 1.6rem !important;
         margin: 0 !important;
@@ -1992,7 +1990,6 @@ h4.chile_txt:hover + #pick_chile {
     #services p#offices_social_sm,
     #destinations p#offices_social_sm {
         font-size: 2rem;
-        margin: 0 0 0 25px;
         padding: 0.5em 0;
     }
 
@@ -2012,7 +2009,7 @@ h4.chile_txt:hover + #pick_chile {
     }
 
     .bottom-data span {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         border-bottom: 1px solid #1c366178;
         margin: 0.35em 0;
         padding: 0.35em 0;
@@ -2028,7 +2025,7 @@ h4.chile_txt:hover + #pick_chile {
     }
 
     #country_pick div h4.chile_txt {
-        margin-left: -120px;
+        margin-left: -30px;
     }
 
     #country_pick div h4.arg_txt {
@@ -2043,12 +2040,25 @@ h4.chile_txt:hover + #pick_chile {
         font-size: 1rem;
     }
 
+    
+    #first-div {
+        margin-left: 0 !important;
+    }
+
+}
+
+@media (max-height:600px) {
+    #logo {
+        top: 15% !important;
+    }    
 }
 
 @media (min-width: 768px) and (max-width: 1366px) {
 #logo {
-    top: 10%;
+    top: 25%;
 }
+
+
 #message {
     top: 45%;
     font-size: 1.3rem;
