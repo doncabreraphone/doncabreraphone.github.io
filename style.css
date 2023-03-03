@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* Define a variable for the base font-size */
+body, html {
+  height: 100%;
+}
+
 html {
   font-size: 16px;
   /* Use media queries to change the font-size based on the viewport width */
@@ -157,6 +161,7 @@ body #destinations {
   animation-name: fadeIn;
 }
 #get-started #top_text {
+  color: #fff;
   width: 120px;
   font-size: 27px;
   transition: font-size 0.05s;
@@ -345,6 +350,7 @@ ul.menu li:hover:after {
   z-index: 6;
   box-shadow: 0 0 20px #000;
   top: -20px;
+  font-family: "Quicksand", sans-serif;
 }
 #country_pick .pick {
   float: right;
@@ -387,7 +393,7 @@ ul.menu li:hover:after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 #country_pick div h4.chile_txt {
   margin-left: -60px;
@@ -687,6 +693,7 @@ figure.snip1321.hover:after {
   position: absolute;
   right: 30px;
   transform: none;
+  left: auto;
 }
 #destinations #logo img, #about #logo img, #services #logo img, #contact #logo img {
   max-width: 250px;
@@ -884,9 +891,6 @@ figure.snip1321.hover:after {
   width: 100%;
   margin: -350px auto 0 auto;
 }
-#destinations #hero-img, #about #hero-img, #services #hero-img, #contact #hero-img {
-  margin-top: -290px;
-}
 #destinations #hero-img::before, #about #hero-img::before, #services #hero-img::before, #contact #hero-img::before {
   content: "";
   position: absolute;
@@ -924,9 +928,6 @@ figure.snip1321.hover:after {
   #destinations #left_map, #about #left_map, #services #left_map, #contact #left_map {
     transform: scale(0.8);
     margin-top: -5px;
-  }
-  #destinations #hero-img, #about #hero-img, #services #hero-img, #contact #hero-img {
-    margin-top: -250px;
   }
   #destinations #content p, #about #content p, #services #content p, #contact #content p {
     font-size: 0.65rem;
@@ -1340,7 +1341,36 @@ h4.chile_txt:hover + #pick_chile {
   margin-bottom: 0;
 }
 
-@media (max-width: 1280px) {
+#destinations #hero-img,
+#about #hero-img,
+#services #hero-img,
+#contact #hero-img {
+  position: relative;
+  transform: translateY(-30%);
+}
+
+#destinations .hero-text {
+  margin-top: -30% !important;
+  transform: translateY(-30%);
+}
+
+@media (max-width: 1300px) {
+  p#offices_social_sm {
+    font-size: 1rem;
+    margin: 0.5em 0 0 0.5em;
+  }
+  p#offices_social_sm a {
+    margin-right: 0.3em;
+  }
+  #country_pick div h4 {
+    font-size: 0.65rem;
+  }
+  #home #message {
+    top: 35%;
+  }
+  #home #get-started {
+    font-size: 0.85rem;
+  }
   #later {
     font-family: "Quicksand", sans-serif;
     padding-top: 30px;
@@ -1368,7 +1398,7 @@ h4.chile_txt:hover + #pick_chile {
     filter: blur(0.25rem);
     -o-object-fit: fill;
        object-fit: fill;
-    width: auto !important;
+    width: 100% !important;
     height: 100%;
     top: 50%;
     left: 50%;
@@ -1399,25 +1429,6 @@ h4.chile_txt:hover + #pick_chile {
   #destinations #content {
     margin-top: 0 !important;
   }
-  #destinations .hero-text {
-    padding: 1em;
-    background: #eee;
-    margin: 1em !important;
-    width: 90%;
-    animation: fadeIn ease 1.5s !important;
-  }
-  #destinations .hero-text h1 {
-    font-size: 2rem;
-    margin-top: -85px;
-  }
-  #destinations .hero-text h2 {
-    text-align: left;
-    padding: 0;
-    color: #333;
-    display: inline-block;
-    font-size: 1.05rem;
-    line-height: 1.5rem;
-  }
   #contact p#offices_social {
     font-size: 2rem !important;
     margin: 0.5em 0 1em 0;
@@ -1429,7 +1440,7 @@ h4.chile_txt:hover + #pick_chile {
   #about #content p,
   #services #content p,
   #contact #content p {
-    font-size: inherit;
+    font-size: 0.75rem;
   }
   #contact #ema {
     font-size: 1.8rem !important;
@@ -1438,11 +1449,7 @@ h4.chile_txt:hover + #pick_chile {
   #about #content h3,
   #services #content h3,
   #contact #content h3 {
-    font-size: 1.1rem;
-  }
-  #contact #offices .mx-3 {
-    margin-right: 1.5rem !important;
-    margin-left: 1.5rem !important;
+    font-size: auto;
   }
   #destinations #footer,
   #about #footer,
@@ -1463,12 +1470,6 @@ h4.chile_txt:hover + #pick_chile {
   #contact .lead-text h1 {
     margin: -110px 0 0 0;
     font-size: 1.8rem !important;
-  }
-  #destinations #hero-img,
-  #about #hero-img,
-  #services #hero-img,
-  #contact #hero-img {
-    margin: 0;
   }
   #destinations #hero-img::before,
   #about #hero-img::before,
@@ -1516,8 +1517,7 @@ h4.chile_txt:hover + #pick_chile {
   #contact #get-started {
     margin-left: -10px;
     margin-top: 10px;
-    font-size: 2.5rem;
-    padding: 0.3em 0.22em;
+    font-size: 1.5rem;
   }
   #destinations #map1,
   #destinations #map2,
@@ -1692,7 +1692,7 @@ h4.chile_txt:hover + #pick_chile {
     font-family: "Quicksand", sans-serif;
   }
   #services .service_images h3 {
-    font-size: 1.6rem !important;
+    font-size: 0.85rem !important;
     margin: 0 !important;
   }
   #services .service_images figure {
@@ -1703,7 +1703,7 @@ h4.chile_txt:hover + #pick_chile {
   #about p#offices_social_sm,
   #services p#offices_social_sm,
   #destinations p#offices_social_sm {
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 0.5em 0;
   }
   .fixed-bottom-logos {
@@ -1726,35 +1726,33 @@ h4.chile_txt:hover + #pick_chile {
   }
   ul.menu {
     font-size: 1.5rem;
-    width: 95%;
+    width: auto;
   }
   #country_pick div {
     width: 95%;
+    max-width: 550px;
   }
   #country_pick div h4.chile_txt {
     margin-left: -30px;
   }
   #country_pick div h4.arg_txt {
-    margin-left: 120px;
+    margin-left: 110px;
   }
   #country_pick div img#pick_chile {
-    margin-right: -138px;
-  }
-  #country_pick div h4 {
-    font-size: 1rem;
+    margin-right: -168px;
   }
   #first-div {
     margin-left: 0 !important;
   }
 }
-@media (max-height: 600px) {
+@media (max-height: 760px) {
   #logo {
-    top: 15% !important;
+    top: 15%;
   }
 }
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (max-width: 1366px) {
   #logo {
-    top: 25%;
+    top: 15%;
   }
   #message {
     top: 45%;
@@ -1765,23 +1763,79 @@ h4.chile_txt:hover + #pick_chile {
     top: 52%;
     font-size: 0.85rem;
   }
-  #destinations #get-started, #about #get-started, #services #get-started {
-    left: 13px !important;
-    top: -5px !important;
-  }
   #about .lead-text h1,
   #services .lead-text h1,
   #contact .lead-text h1 {
     font-size: 3.1rem !important;
-    margin-top: -255px !important;
+    margin-top: -520px !important;
   }
 }
-@media screen and (max-height: 780px) and (max-width: 650px) {
-  #home #logo-small {
-    top: 5%;
+#welcome {
+  position: relative;
+  height: 250px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#welcome #get-started {
+  min-width: 280px;
+}
+
+#home #logo-small, #home #logo {
+  margin-top: -130px !important;
+}
+
+@media screen and (max-width: 650px) {
+  #destinations .hero-text {
+    padding: 1em;
+    background: #eee;
+    margin: 1em !important;
+    width: 90%;
+    animation: fadeIn ease 1.5s !important;
+    margin-bottom: -60px !important;
+  }
+  #destinations .hero-text h1 {
+    font-size: 2rem;
+    margin-top: -85px;
+  }
+  #destinations .hero-text h2 {
+    text-align: left;
+    padding: 0;
+    color: #333;
+    display: inline-block;
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+  }
+  #country_pick div h4 {
+    font-size: 1.1rem;
+  }
+  #welcome {
+    position: relative;
+    height: 250px;
+    position: relative;
+    top: 25%;
+    transform: translateY(-25%);
+  }
+  #welcome #get-started {
+    min-width: 280px;
+  }
+  #home #logo-small, #home #logo {
+    margin-top: -120px !important;
   }
   #home #message {
     top: 28%;
+  }
+  #country_pick div img#pick_chile {
+    margin-right: -138px;
+  }
+  .bottom-data span {
+    font-size: 0.8rem;
+  }
+  #home #get-started {
+    font-size: 1.5rem;
+  }
+  nav #navigation {
+    width: auto !important;
   }
   button.menu-toggle::after {
     top: 20px;
@@ -1810,5 +1864,14 @@ h4.chile_txt:hover + #pick_chile {
   }
   #services-margin {
     margin-bottom: -45px;
+  }
+  #home p#offices_social_sm, #contact p#offices_social_sm, #about p#offices_social_sm, #services p#offices_social_sm, #destinations p#offices_social_sm {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  #destinations .hero-text {
+    margin-top: 20% !important;
+    margin-bottom: -100px !important;
   }
 }/*# sourceMappingURL=style.css.map */

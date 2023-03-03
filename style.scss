@@ -16,7 +16,9 @@ $base-font: 'Quicksand', sans-serif;
 
 /* Define a variable for the base font-size */
 $base-font-size: 16px;
-
+body, html {
+    height: 100%;
+}
 html {
     font-size: $base-font-size;
   
@@ -193,6 +195,7 @@ body {
     }
 
     #top_text {
+        color: #fff;
         width: 120px;
         font-size: 27px;
         transition: font-size 0.05s;
@@ -384,6 +387,7 @@ nav {
     z-index: 6;
     box-shadow: 0 0 20px #000;
     top: -20px;
+    font-family: $base-font;
 
     & .pick {
         float: right;
@@ -435,7 +439,7 @@ nav {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         &.chile_txt {
             margin-left: -60px;
         }
@@ -787,7 +791,7 @@ figure.snip1321 {
         position: absolute;
         right: 30px;
         transform: none;
-
+        left: auto;
         img {
             max-width: 250px;
         }
@@ -1055,9 +1059,9 @@ figure.snip1321 {
         margin: -350px auto 0 auto;
     }
 
-    #hero-img {
-        margin-top: -290px;
-    }
+    // #hero-img {
+    //     margin-top: -290px;
+    // }
 
     #hero-img::before {
         content: "";
@@ -1103,9 +1107,9 @@ figure.snip1321 {
            margin-top: -5px;
         }
 
-        #hero-img {
-            margin-top: -250px;
-        }
+        // #hero-img {
+        //     margin-top: -250px;
+        // }
 
         #content {
             p {
@@ -1493,7 +1497,6 @@ figure.snip1321 {
 
 
 
-
     
 }
 
@@ -1597,13 +1600,41 @@ h4.chile_txt:hover + #pick_chile {
     margin-bottom: 0;
 }
 
-@media (max-width: 1280px) {
+#destinations #hero-img, 
+#about #hero-img, 
+#services #hero-img, 
+#contact #hero-img {
+    position: relative;
+    transform: translateY(-30%);
+}
+
+#destinations .hero-text {
+    margin-top: -30% !important;
+    transform: translateY(-30%)
+}
+
+
+@media (max-width: 1300px) {
+
     p#offices_social_sm {
         font-size: 1rem;
         margin: 0.5em 0 0 0.5em;
         a {
             margin-right: 0.3em;
         }
+    }
+
+    #country_pick div h4 {
+        font-size: 0.65rem;
+    }
+
+    #home #message {
+        top: 35%;
+    }
+
+    #home #get-started {
+        font-size: 0.85rem;
+    }
     
     #later {
         font-family: $base-font;
@@ -1637,7 +1668,7 @@ h4.chile_txt:hover + #pick_chile {
         opacity: .4 !important;
         filter: blur(0.25rem);
         object-fit: fill;
-        width: auto !important;
+        width: 100% !important;
         height: 100%;
         top: 50%;
         left: 50%;
@@ -1677,27 +1708,30 @@ h4.chile_txt:hover + #pick_chile {
         margin-top: 0 !important;
     }
 
-    #destinations .hero-text {
-        padding: 1em;
-        background: #eee;
-        margin: 1em !important;
-        width: 90%;
-        animation: fadeIn ease 1.5s !important;
 
-        h1 {
-            font-size: 2rem;
-            margin-top: -85px;
-        }
 
-        h2 {
-            text-align: left;
-            padding: 0;
-            color: #333;
-            display: inline-block;
-            font-size: 1.05rem;
-            line-height: 1.5rem;
-        }
-    }
+
+    // #destinations .hero-text {
+    //     padding: 1em;
+    //     background: #eee;
+    //     margin: 1em !important;
+    //     width: 90%;
+    //     animation: fadeIn ease 1.5s !important;
+
+    //     h1 {
+    //         font-size: 2rem;
+    //         margin-top: -155px;
+    //     }
+
+    //     h2 {
+    //         text-align: left;
+    //         padding: 0;
+    //         color: #333;
+    //         display: inline-block;
+    //         font-size: 1.05rem;
+    //         line-height: 1.5rem;
+    //     }
+    // }
 
     #contact p#offices_social {
         font-size: 2rem !important;
@@ -1712,7 +1746,7 @@ h4.chile_txt:hover + #pick_chile {
     #about #content p, 
     #services #content p, 
     #contact #content p {
-        font-size: inherit;
+        font-size: 0.75rem;
     }
 
     #contact #ema {
@@ -1723,13 +1757,13 @@ h4.chile_txt:hover + #pick_chile {
     #about #content h3, 
     #services #content h3, 
     #contact #content h3 {
-        font-size: 1.1rem;
+        font-size: auto;
     }
 
-    #contact #offices .mx-3 {
-        margin-right: 1.5rem !important;
-        margin-left: 1.5rem !important;
-    }
+    // #contact #offices .mx-3 {
+    //     margin-right: 1.5rem !important;
+    //     margin-left: 1.5rem !important;
+    // }
 
     #destinations #footer, 
     #about #footer, 
@@ -1752,13 +1786,6 @@ h4.chile_txt:hover + #pick_chile {
     #contact .lead-text h1 {
         margin: -110px 0 0 0;
         font-size: 1.8rem !important;
-    }
-
-    #destinations #hero-img, 
-    #about #hero-img, 
-    #services #hero-img, 
-    #contact #hero-img {
-        margin: 0;
     }
 
     #destinations #hero-img::before, 
@@ -1813,8 +1840,7 @@ h4.chile_txt:hover + #pick_chile {
     #contact #get-started {
         margin-left: -10px;
         margin-top: 10px;
-        font-size: 2.5rem;
-        padding: 0.3em 0.22em;
+        font-size: 1.5rem;
     }
 
     #destinations {
@@ -1976,7 +2002,7 @@ h4.chile_txt:hover + #pick_chile {
     }
 
     #services .service_images h3 {
-        font-size: 1.6rem !important;
+        font-size: 0.85rem !important;
         margin: 0 !important;
     }
 
@@ -1989,7 +2015,7 @@ h4.chile_txt:hover + #pick_chile {
     #about p#offices_social_sm,
     #services p#offices_social_sm,
     #destinations p#offices_social_sm {
-        font-size: 2rem;
+        font-size: 1rem;
         padding: 0.5em 0;
     }
 
@@ -2017,11 +2043,12 @@ h4.chile_txt:hover + #pick_chile {
 
     ul.menu {
         font-size: 1.5rem;
-        width: 95%;
+        width: auto;
     }
 
     #country_pick div {
         width: 95%;
+        max-width: 550px;
     }
 
     #country_pick div h4.chile_txt {
@@ -2029,17 +2056,12 @@ h4.chile_txt:hover + #pick_chile {
     }
 
     #country_pick div h4.arg_txt {
-        margin-left: 120px;
+        margin-left: 110px;
     }
 
     #country_pick div img#pick_chile {
-        margin-right: -138px;
+        margin-right: -168px;
     }
-
-    #country_pick div h4 {
-        font-size: 1rem;
-    }
-
     
     #first-div {
         margin-left: 0 !important;
@@ -2047,17 +2069,18 @@ h4.chile_txt:hover + #pick_chile {
 
 }
 
-@media (max-height:600px) {
+@media (max-height: 760px) {
     #logo {
-        top: 15% !important;
+        top: 15%;
     }    
+    
 }
 
-@media (min-width: 768px) and (max-width: 1366px) {
+
+@media (max-width: 1366px) {
 #logo {
-    top: 25%;
+    top: 15%;
 }
-
 
 #message {
     top: 45%;
@@ -2069,29 +2092,98 @@ ul.menu {
     font-size: 0.85rem;
 }
 
-#destinations, #about, #services {
-    #get-started {
-        left: 13px !important;
-        top: -5px !important;
-    }
-}
-
 #about .lead-text h1,
 #services .lead-text h1,
 #contact .lead-text h1 {
     font-size: 3.1rem !important;
-    margin-top: -255px !important;
+    margin-top: -520px !important;
 }
 
 }
 
-@media screen and (max-height: 780px) and (max-width: 650px) {
-    #home #logo-small {
-        top: 5%;
+#welcome {
+
+    position: relative;
+    height: 250px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    #get-started {
+        min-width: 280px; 
     }
+}
+
+#home #logo-small, #home #logo {
+    margin-top: -130px !important;
+}
+
+
+
+@media screen and (max-width: 650px) {
+
+
+    #destinations .hero-text {
+        padding: 1em;
+        background: #eee;
+        margin: 1em !important;
+        width: 90%;
+        animation: fadeIn ease 1.5s !important;
+        margin-bottom: -60px !important;
+
+        h1 {
+            font-size: 2rem;
+            margin-top: -85px;
+        }
+
+        h2 {
+            text-align: left;
+            padding: 0;
+            color: #333;
+            display: inline-block;
+            font-size: 1.05rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    #country_pick div h4 {
+        font-size: 1.1rem;
+    }
+    #welcome {
+        position: relative;
+        height: 250px;
+        position: relative;
+        top: 25%;
+        transform: translateY(-25%);
+    
+        #get-started {
+            min-width: 280px; 
+        }
+    }
+    
+    #home #logo-small, #home #logo {
+        margin-top: -120px !important;
+    }
+    
 
     #home #message {
         top: 28%;
+    }
+
+    #country_pick div img#pick_chile {
+        margin-right: -138px;
+    }    
+
+    .bottom-data span {
+        font-size: 0.8rem;
+    }
+
+    #home #get-started {
+        font-size: 1.5rem;
+    }
+
+    nav #navigation {
+        width: auto !important;
     }
 
     button.menu-toggle::after {
@@ -2129,6 +2221,21 @@ ul.menu {
         }
 
 
+        #home p#offices_social_sm, #contact p#offices_social_sm, #about p#offices_social_sm, #services p#offices_social_sm, #destinations p#offices_social_sm {
+            font-size: 1.6rem;
+        }
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+
+    #destinations .hero-text {
+        margin-top: 20% !important;
+        margin-bottom: -100px !important;
+    }
 }
 
 
