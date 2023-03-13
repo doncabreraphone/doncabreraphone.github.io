@@ -1905,4 +1905,9 @@ h4.chile_txt:hover + #pick_chile {
     margin-top: 20% !important;
     margin-bottom: -100px !important;
   }
+}
+@media only screen and (min-width: 1441px) {
+  #home #logo-small, #home #logo {
+    margin-top: -170px !important;
+  }
 }/*# sourceMappingURL=style.css.map */
