@@ -131,7 +131,7 @@ $main: #bf281f;
     border: none;
 }
 
-.list-group-item:hover {
+.list-group-item:hover, .list-group.touch .list-group-item {
     box-shadow: 0 0 20px #cacaca;
     transform: scale(1.02);
 }
@@ -186,6 +186,7 @@ $main: #bf281f;
         margin-top: 1.5em;
         padding-left: 1.8em;
         padding-right: 1.8em;
+        padding-bottom: 5em;
     }
 
     .title-display-h2 {
@@ -238,11 +239,11 @@ $main: #bf281f;
 }
 
 .transition-overlay-on {
-    animation: sweep 0.5s linear forwards;
+    animation: sweep 0.35s linear forwards;
 }
 
 .transition-overlay-off {
-    animation: sweepback 0.5s linear forwards;
+    animation: sweepback 0.35s linear forwards;
 }
 
   

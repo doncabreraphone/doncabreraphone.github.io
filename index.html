@@ -841,36 +841,30 @@
                     });
                 }, 2000);
             });
+
+
+            // scroll for mobile
+            $(window).on('scroll', function() {
+                var windowHeight = $(window).height();
+                var scrollTop = $(window).scrollTop();
+                var viewportTop = scrollTop + windowHeight;
+                var viewportBottom = scrollTop + windowHeight / 2
+
+                $('.list-group').each(function() {
+                    var elementOffset = $(this).offset().top;
+
+                    if (elementOffset < viewportTop && elementOffset > viewportBottom) {
+                        $(this).delay(20000).removeClass('touch');
+                    } else {
+                        $(this).delay(20000).addClass('touch');
+                    }
+                });
+            });
+
+
         });
 
 
-        // Function to simulate mouse hover at the center of the screen
-        function simulateMouseHover() {
-        // Calculate the coordinates for the center of the viewport
-        var centerX = window.innerWidth / 2;
-        var centerY = window.innerHeight / 2;
-
-        // Create a new MouseEvent for mouseover event
-        var mouseOverEvent = new MouseEvent('mouseover', {
-            clientX: centerX,
-            clientY: centerY
-        });
-
-        // Dispatch the mouseover event to the document element
-        document.dispatchEvent(mouseOverEvent);
-        }
-
-        // Function to handle scroll event
-        function handleScroll() {
-        // Check if the user has scrolled to the bottom of the page
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            // Simulate mouse hover at the center of the screen
-            simulateMouseHover();
-        }
-        }
-
-        // Attach scroll event listener to the window
-        window.addEventListener('scroll', handleScroll);
 
 
 
