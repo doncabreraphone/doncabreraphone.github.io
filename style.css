@@ -149,6 +149,9 @@
 .btn:hover, .btn.active {
   background-color: #bf281f;
 }
+.btn:active {
+  background-color: #000 !important;
+}
 
 @media (max-width: 576px) {
   .btn {
