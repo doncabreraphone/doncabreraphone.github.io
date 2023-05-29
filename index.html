@@ -785,31 +785,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   
     <script>
-        // Obtener referencias a los elementos HTML
-        const btnQuimicaDetallada = document.getElementById('btnQuimicaDetallada');
-        const btnSoluciones = document.getElementById('btnSoluciones');
-        const divA = document.getElementById('divA');
-        const divB = document.getElementById('divB');
-      
-        // Asignar manejadores de eventos a los botones
-        btnQuimicaDetallada.addEventListener('click', function() {
-          divA.style.display = 'block'; // Mostrar div A
-          divB.style.display = 'none';  // Ocultar div B
-          btnQuimicaDetallada.classList.add("active");
-          btnSoluciones.classList.remove("active");
-
-        });
-      
-        btnSoluciones.addEventListener('click', function() {
-          divA.style.display = 'none';   // Ocultar div A
-          divB.style.display = 'block';  // Mostrar div B
-          btnQuimicaDetallada.classList.remove("active");
-          btnSoluciones.classList.add("active");
-
-        });
+        
 
 
         $(document).ready(function() {
+            var divA = $('#divA');
+            var divB = $('#divB');
+            var btnQuimicaDetallada = $('#btnQuimicaDetallada');
+            var btnSoluciones = $('#btnSoluciones');
+
+            btnQuimicaDetallada.on('click', function() {
+                divB.fadeOut(150, function() {
+                divA.fadeIn(150);
+                });
+
+                // Toggle active class on buttons
+                btnQuimicaDetallada.addClass('active');
+                btnSoluciones.removeClass('active');
+            });
+
+            btnSoluciones.on('click', function() {
+                divA.fadeOut(150, function() {
+                divB.fadeIn(150);
+                });
+
+                // Toggle active class on buttons
+                btnQuimicaDetallada.removeClass('active');
+                btnSoluciones.addClass('active');
+            });
+
+
+
+            // Transition
             var overlay = $('#transition-overlay');
             var content = $('#content');
             var logo = $('#logo');
