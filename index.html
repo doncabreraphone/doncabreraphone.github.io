@@ -1,127 +1,845 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Alkanos Test fucionalidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-light">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  </head> 
-  <body onload="playVideo()" id="home">
-    <video autoplay loop muted playsinline id="bg-video" muted>
-      <source src="videos/home.mp4" type="video/mp4">
-    </video>
-    
-    
-    <div class="container" id="welcome">
-        <div class="text-center d-none d-md-block first animate__animated animate__fadeIn animate__delay-1s"  id="logo">
-            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
-        </div>
+    <div class="container-xxl mt-2 mt-lg-5">
+    <div class="row">
+        <div class="col">
+            <div>
+                
 
-        <div class="text-center d-block d-md-none" id="logo-small">
-            <img src="images/logo.png" class="img-fluid" alt="Logo" id="lg">
-        </div>
+                <div class="row">
 
-        <div id="message" class="w-100 second animate__animated animate__fadeIn animate__delay-3s" > 
-        <button id="get-started" style="display: none; text-align: center;"></button></div>       
-    </div>
-
-
-    <button id="menu_toggle" class="menu-toggle d-none animate__animated animate__delay-1s"></button>
-    <div id="country_pick" class="d-none fade-in">
-        <div>
-            <a href="#" class="pick"><i class="bi bi-x-lg"></i></a>
-
-            <a href="chile.html">
-                <h4 class="chile_txt">Chile</h4>
-                <img src="images/chile.png" alt="" class="img-fluid" id="pick_chile">
-            </a>
-            
-            <a href="argentina.html">
-                <h4 class="arg_txt">Argentina</h4>
-                <img src="images/arg.png" alt="" class="img-fluid" id="pick_arg">
-            </a>
-        </div>
-    </div>
-    <nav>
-         <video autoplay loop muted playsinline id="navigation" class="animate__animated animate__fadeIn animate__delay-1s d-none">
-            <source src="videos/home.mp4"  type="video/mp4">
-        </video>
-
-        <div class="text-center d-block d-md-none" id="logo-small-menu">
-            <img src="images/logo_blue.png" class="img-fluid" alt="Logo" id="lg">
-        </div>
+                    <div class="col-12 col-lg-3 px-lg-5">
+                      <div class="d-grid gap-2">
+                        <a name="" id="btnQuimicaDetallada" class="btn btn-primary btn-block active" href="#" role="button">Soluciones a medida</a>
+                        <a name="" id="btnSoluciones" class="btn btn-primary btn-block" href="#" role="button">Química Detallada</a>
+                      </div>
+                    </div>
+                    <div id="divA" class="col">
+                      
+                      <!-- BOX 1 -->
+                      <div class="pb-4 box">
+                        <!-- Contenido del div A -->
+                        <h2 class="title-display-h2">Descubre el Producto Ideal para tu Proyecto</h2>
+                        <p class="lead mb-5">Explora nuestro completo catálogo de Químicos Avanzados, diseñado para satisfacer las exigentes necesidades de la industria y experimenta un rendimiento excepcional en tus procesos y aplicaciones.</p>
+                        <div class="rounded card-wrap">
+                            <div class="row">    
+                                <h3 class="title-display">Espumas Flexibles</h3>
+                            </div>
 
 
-    <ul class="menu">
-        <a href="#" class="pick"><li data-text="Destinations">Destinations</li></a>
-        <a href="about.html"><li data-text="About us">About us</li></a>
-        <a href="services.html"><li data-text="Services">Services</li></a>
-        <a href="contact.html"><li data-text="Contact">Contact</li></a>
-        <a href="later.html" class="d-inline d-sm-none"><li data-text="Agents area">Agents area</li></a>
-        <a href="http://tourplan.ilstours.com/WebConnect/Default.aspx" class="d-none d-sm-inline"><li data-text="Agents area">Agents area</li></a>
-    </ul>
-    </nav>
-    
-    <div id="footer" class="container-fluid fixed-bottom-logos animate__animated animate__fadeIn animate__delay-5s text-light">
-        
+                            <div class="row row-cols-1 row-cols-xl-3 g-4 mb-4 text-center">
 
-        <div class="container-fluid" id="contact_us">
-            <div class="row">
-                <div class="col text-center">
 
-                    <p class="text-center" id="offices_social_sm">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Corseteria</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
                                 
-                        <a href="https://instagram.com/ils_tours?igshid=YWJhMjlhZTc=">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/ilstours/">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                    </p>
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Almohadas / Almohadones</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                
+                                                <span class="badge">Alkuran</span>
+
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Esponjas</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                                <span class="badge">Arcol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-xl-2 mb-4 text-center">
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Calzado</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span> 
+                                                <span class="badge">T.D.I.</span>    
+                                                <span class="badge">Arcol</span> 
+                                                <span class="badge">Alkuran</span>   
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Ortopedia y bloques de espuma</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Wanol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-xl-1 text-center">
+
+                                <div class="col-12 col-lg-12">
+                                    
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Colchones</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">Alkuran</span>
+                                                <span class="badge">T.D.I.</span>    
+                                                <span class="badge">Matestab</span>  
+                                                <span class="badge">Arcol</span> 
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                      </div>
+
+
+                      <!-- BOX 2 -->
+                      <div class="pb-4 box">
+                        <div class="mt-5">
+                            <div class="row">    
+                                <h3 class="title-display">Construcción</h3>
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4 text-center">
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Pisos de caucho</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                                <span class="badge">T.D.I.</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Pisos decorativos</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                                <span class="badge">Arcol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Paneles</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 text-center">
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Persianas</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Puertas</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                                <span class="badge">Arcol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+                      </div>
+
+                    <!-- BOX 3 -->
+                      <div class="pb-4 box">
+                        <div class="mt-5">
+                            <div class="row">    
+                                <h3 class="title-display">Refrigeración</h3>
+
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-4 text-center">
+
+
+                                
+
+                                <div class="col">
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Heladeras</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Cámaras frigoríficas</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                                <span class="badge">T.D.I.</span>
+                                                <span class="badge">Matestab</span>
+                                                <span class="badge">Arcol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Aislación térmica (spray)</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">UNIKAT</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Bloques rígidos</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-4 text-center">
+                                
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Vehículos con aislación térmica</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                      </div>
+
+                      <!-- BOX 4 -->
+                      <div class="pb-4 box">
+                        <div class="mt-5">
+                            <div class="row">    
+                                <h3 class="title-display">Automotriz</h3>
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4 text-center">
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Asientos</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Wanol</span>
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">filtros de aire</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">volantes</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                            </div>
+                        </div>
+
+
+
+
+
+                      </div>
+
+
+                      <!-- BOX 5 -->
+                      <div class="pb-4 box">
+                        <div class="mt-5">
+                            <div class="row">    
+                                <h3 class="title-display">Consumo</h3>
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 mb-4 g-4 text-center">
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Gaseosas</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Cerveza artesanal</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Jarabes</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Propilenglicol</span>
+                                                <span class="badge">Dipropilenglicol</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Medicamentos</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Propilenglicol</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Limpiadores</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Dipropilenglicol</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Desodorantes</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Dipropilenglicol</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-4 text-center">
+
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Refrigerantes en gel</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Propilenglicol</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+                      </div>
+
+
+                      <!-- BOX 6 -->
+                      <div class="pb-4 box">
+                        <div class="mt-5">
+                            <div class="row">    
+                                <h3 class="title-display">Manufactura</h3>
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-4 g-4 text-center">
+
+                                <div class="col">
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Cuñas para minera</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">cintas transportadoras</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Multranol</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">piezas en PU</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">elastómeros</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-4 text-center">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Rodillos en PU para gráfica</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+                      </div>
+                      
+                      <!-- BOX 7 -->
+                      <div>
+                        <div class="my-5">
+                            <div class="row">    
+                                <h3 class="title-display">Maquinaria</h3>
+                            </div>
+
+
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 text-center">
+
+                                
+
+                                <div class="col">
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Máquinas para espumar</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col">
+                                
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Corte de espuma</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-body-secondary">
+                                                <span class="badge">Alkuran</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+                      </div>
+             
+                    </div>
+
+
+                    
+                    <!-- Contenido del div B -->
+                    <div id="divB" class="col mb-5" style="display: none;">
+                        
+                        <h2 class="title-display-h2">Catálogo de Químicos Avanzados</h2>
+                        <p class="lead mb-5">En Alkanos, entendemos la importancia de encontrar el producto adecuado para cada necesidad. Con nuestro enfoque técnico y experiencia, estamos aquí para ayudarte a encontrar rápidamente lo que necesitas, ya seas un experto en química o un profesional en busca de la solución perfecta.</p>
+
+                        <div class="row">
+                            <div class="col">
+                                
+                                <div class="list-group">
+                                    <div class="list-group-item">
+                                        <h3 class="title-display-h3">Alimentos • Alimentos Mascotas • Bodegas • Medicamentos • Saborizantes • Vacunas</h3>
+                                        <span class="badge rounded-pill">Propilenglicol</span>
+                                      </div>
+                                </div>
+
+                                <div class="list-group">
+                                      <div class="list-group-item">
+                                        <h3 class="title-display-h3">Catalizadores</h3>
+                                        <span class="badge rounded-pill">Unikat Bf-32</span>
+                                        <span class="badge rounded-pill">Unikat Nem</span>
+                                      </div>
+                                </div>
+
+                                <div class="list-group">
+                                      <div class="list-group-item">
+                                        <h3 class="title-display-h3">Cosmética • Fragancias • Higiene Personal • Limpieza</h3>
+                                        <span class="badge rounded-pill">Dipropilenglicol</span>
+                                      </div>
+                                </div>
+  
+                                <div class="list-group">
+                                      <div class="list-group-item">
+                                          <h3 class="title-display-h3">Esmaltes Sintéticos • Secante • Tintas</h3>
+                                          <span class="badge rounded-pill">Duroct CA 4%</span>
+                                          <span class="badge rounded-pill">Duroct CA 6%</span>
+                                          <span class="badge rounded-pill">Duroct CA 10%</span>
+                                          <span class="badge rounded-pill">Duroct CO 6%</span>
+                                          <span class="badge rounded-pill">Duroct CO 12%</span>
+                                          <span class="badge rounded-pill">Duroct ZR 18%</span>
+                                          <span class="badge rounded-pill">Duroct ZR 24%</span>
+                                          <span class="badge rounded-pill">Duroct SR 24%</span>
+                                          <span class="badge rounded-pill">Sorodry CU 6%</span>
+                                          <span class="badge rounded-pill">Meko - ANTICAPA</span>
+                                          <span class="badge rounded-pill">Secante Trimetálico</span>
+                                          <span class="badge rounded-pill">Solvfix - Sulfato De Estroncio</span>
+                                      </div>
+                                </div>
+
+                                <div class="list-group">
+                                      <div class="list-group-item">
+                                          <h3 class="title-display-h3">Pinturas en Polvo • Pinturas Látex</h3>
+                                          <span class="badge rounded-pill">Solvfix - Sulfato De Estroncio</span>
+                                      </div>
+
+                                </div>
+
+                                <div class="list-group">
+                                      <div class="list-group-item">
+                                          <h3 class="title-display-h3">Botones • Esmaltes Sintéticos • Mesadas Sintéticas • Resinas Poliéster • Secante • Tintas</h3>
+                                          <span class="badge rounded-pill">Duroct Co 12%</span>
+                                      </div>
+                                </div>
+
+                                <div class="list-group">
+                                      <div class="list-group-item">
+                                          <h3 class="title-display-h3">Dispersantes • Esmaltes Sintéticos • Tintas</h3>
+                                          <span class="badge rounded-pill">Durasperse</span>
+                                      </div>
+
+                                </div>
+
+                            
+
+
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
+
+                  
+                  
+
+
             </div>
         </div>
-        <div class="container mt-0 bottom-data">
-            <div class="row justify-content-center">
-              <div class="col-12 col-sm-6 col-lg-5" id="first-div">
-                <span>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <b>Argentina</b>
-                </span>
-                Paraguay 935 - Buenos Aires &nbsp;&nbsp;<br class="d-block d-sm-none">
-                <i class="bi bi-telephone-fill bottom-bi"></i> +54 11 5263 9931<br>
-                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi me-1"></i>ils@ilstours.com</a>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-5 mt-2 mt-sm-0">
-                <span>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <b>Chile</b>
-                </span>
-                Av. Apoquindo 4615 of. 501 - Santiago&nbsp;&nbsp;<br class="d-block d-sm-none">
-                <i class="bi bi-telephone-fill bottom-bi"></i> +56 9 9137 5808<br>
-                <a href="mailto:ils@ilstours.com"><i class="bi bi-envelope-fill bottom-bi me-1"></i>ils@ilstours.com</a>
-              </div>
-
-            </div>
-          </div>
-
-     
-          <p class="text-center mt-3 mb-1"><small>Copyright 2016 - <span class="yr"></span> ILS Tours</small></p>
-        
     </div>
-    
+    </div> 
+
+    <div id="transition-overlay">
+        <div id="logo">
+          <img src="logo.png" class="img-fluid w-100" alt="">
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  
+    <script>
+        // Obtener referencias a los elementos HTML
+        const btnQuimicaDetallada = document.getElementById('btnQuimicaDetallada');
+        const btnSoluciones = document.getElementById('btnSoluciones');
+        const divA = document.getElementById('divA');
+        const divB = document.getElementById('divB');
+      
+        // Asignar manejadores de eventos a los botones
+        btnQuimicaDetallada.addEventListener('click', function() {
+          divA.style.display = 'block'; // Mostrar div A
+          divB.style.display = 'none';  // Ocultar div B
+          btnQuimicaDetallada.classList.add("active");
+          btnSoluciones.classList.remove("active");
+
+        });
+      
+        btnSoluciones.addEventListener('click', function() {
+          divA.style.display = 'none';   // Ocultar div A
+          divB.style.display = 'block';  // Mostrar div B
+          btnQuimicaDetallada.classList.remove("active");
+          btnSoluciones.classList.add("active");
+
+        });
+
+
+        $(document).ready(function() {
+            var overlay = $('#transition-overlay');
+            var content = $('#content');
+            var logo = $('#logo');
+            overlay.addClass('transition-overlay-on');
+            var container = $('.container-xxl');
+
+            container.hide();
+
+            overlay.on('animationend', function() {
+                content.addClass('visible');
+                logo.fadeIn('fast');
+        
+
+                logo.addClass('anima');
+                
+                setTimeout(function() {
+                    logo.fadeOut('fast', function() {
+                        overlay.removeClass('transition-overlay-on');
+                        overlay.addClass('transition-overlay-off');
+                        container.show();
+
+                    });
+                }, 2000);
+            });
+        });
+
+
+
+    </script>
       
 
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="javascript.js"></script>
-
+</body>
 </html>

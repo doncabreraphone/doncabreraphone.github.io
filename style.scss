@@ -1,2289 +1,284 @@
-$green: #05A653;
-$red: #FF2828;
-$dark-red: #88231b;
-$blue: #1C3761;
-$yellow: #fcba03;
-$purple: #420791;
-$brown: #BF8F45;
-$dark-brown: #846145;
-$orange: #FB4F21;
-$blueish: #218DD5;
-$greenish: #2C7866;
-$purpleish: #7B257D;
-$pink: #8d1b93;
-$pinkish: #C726D0;
-$base-font: 'Quicksand', sans-serif;
 
-/* Define a variable for the base font-size */
-$base-font-size: 16px;
-body, html {
-    height: 100%;
-}
-html {
-    font-size: $base-font-size;
-  
-    /* Use media queries to change the font-size based on the viewport width */
-    @media (min-width: 768px) {
-      font-size: $base-font-size * 1.2;
-    }
-  
-    @media (min-width: 992px) {
-      font-size: $base-font-size * 1.5;
-    }
-  
-    @media (min-width: 1200px) {
-      font-size: $base-font-size * 1.8;
-    }
-  }
+$main: #bf281f;
 
+// CARDS ================================================================= //
 
-body { 
-    #destinations {
-        font-family: $base-font;
-    }
-
+// Transiciones y escala de la tarjeta envolvente
+.card-wrap {
+    transition: all 0.2s ease-in-out; // Transición en todas las propiedades
 }
 
-.ibera {
-    h3 {
-        color:$green !important;
-    }
-    b {
-        color: $green !important;
-    }
-
-    h4 {
-        color: $blue !important;
-    }
-    h4.lead {
-        color: $orange !important;
-    }    
-
+// Transiciones de la tarjeta y pie de página
+.card, .card-footer {
+    transition: all 0.2s ease-in-out; // Transición en todas las propiedades
 }
 
-// Video background
-#bg-video {
-    filter: opacity(40%);
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    object-fit: cover;
-  }
-
-.grayscale {
-    filter: grayscale(100%);
-}
-  
-  // Menu
-  #menu {
-    position: fixed;
-    right: -300px;
-    top: 0;
-    bottom: 0;
-    width: 300px;
-    background: #fff;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
-    transition: right 0.5s;
-    z-index: 1;
-  }
-  #menu.open {
-    right: 0;
-  }
-  
-  // Logo
-  #logo {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 6;
-    padding: 1em 0.5em 0.6em 0.4em;
-  }
-  
-  #logo img {
-    width: 100%;
-    max-width: 370px;
-  }
-
-  #logo-small {
-    width: 75%;
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    padding: 1em 0.5em 0.6em 0.4em;
-  }
-
-  
-  
-  // Message
-  #message {
-    text-align: center;
-    position: absolute;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $blue;
-    font-family: $base-font;
-    line-height: 1.3em;
-    letter-spacing: -0.08rem;
-    font-weight: 400;
-    padding: 0 0.1em;
-    font-size: 1.6rem;
-    
-    
-    @media (min-width: 1400px) {
-        top: 44%;
-        font-size: 2rem;
-    }
-
-    span {
-      &.animated {
-        animation-duration: 1s;
-        animation-fill-mode: both;
-      }
-      &.fadeIn {
-        animation-name: fadeIn;
-      }
-      &.bold {
-        color: $green;
-      }
-    }
-
-    
-    
-  }
-    
-  //Button
-  #get-started {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: none;
-    cursor: pointer;
-    flex: 0 0 auto;
-
-    background: $blue;
-    color: #fff;
-    border-radius: 6px;
-    padding: 0.55rem 0.7rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    box-shadow: -1px 3px 3px 0 rgba(0, 0, 0, 60);
-    transition: all 0.25s ease-out;
-
-    &:hover {
-        box-shadow: -1px 14px 12px 0 rgba(0, 0, 0, 25);
-    }
-
-    &.animated {
-      animation-duration: 1s;
-      animation-fill-mode: both;
-    }
-    &.fadeIn {
-      animation-name: fadeIn;
-    }
-
-    #top_text {
-        color: #fff;
-        width: 120px;
-        font-size: 27px;
-        transition: font-size 0.05s;
-        margin-left: 35px;
-    }
-  }
-  
-  @keyframes fadeIn {
-      from {
-          opacity: 0;
-      }
-      to {
-          opacity: 1;
-      }
-  }
-  
-  .animate__animated.animate__fadeIn {
-    --animate-duration: 2.5s;
-  }
-
-
-
-  
-$bp-small: 500px;
-$bp-arrow: 700px;
-$font-primary: 'Lusitana', sans-serif;
-$color: #98B296;
-$color-bg: #fcfcf4;
-$color-dark: darken($color, 10%);
-$color-lite: lighten($color, 10%);
-
-@mixin position-center {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  margin: auto;
+// Estilos de las etiquetas
+.badge {
+    font-size: 0.75rem; // Tamaño de fuente
+    font-weight: normal; // Peso de la fuente
 }
 
+// Estilos generales de la tarjeta
+.card {
+    box-shadow: 0px 1px 2px #d3d3d3; // Sombra de la tarjeta
+    position: relative; // Posición relativa
+    overflow: hidden; // Ocultar contenido que desborda
+    display: flex; // Mostrar como flex
+    align-items: center; // Centrar verticalmente
+    justify-content: center; // Centrar horizontalmente
+    background: #fff !important; // Fondo de la tarjeta (importante)
+}
 
-button.menu-toggle {
-    z-index: 1000 !important;
-    opacity: 0.6;
-    background-color: transparent;
-    position: fixed;
-    z-index: 2;
-    top: 24px;
-    left: 24px;
-    border: none;
-    width: 36px;
-    height: 30px;
-    outline: none;
-    transition: opacity 0.2s ease-out;
+.card, .card-footer {
+    border: 3px solid #fff; // Borde de la tarjeta y pie de página
+    border-radius: 12px; // Radio de borde
+    background: #fff; // Fondo de la tarjeta y pie de página
+}
 
-    &:after {
-      opacity: 0;
-      content: '×';
-      color: white;
-      position: absolute;
-      top: 35px;
-      left: 4px;
-      font-family: Arial, sans-serif;
-      font-size: 48px;
-      line-height: 0;
-      transition: opacity 0.4s ease-out;
-    }
-    &:active {
-      transform: translateY(2px);
-    }
-    &:hover {
-      opacity: 1;
-    }
-    .open & {
-      opacity: 1;
-      &:before {
-        opacity: 0;
-        width: 0;
-      }
-      &:after {
-        opacity: 1;
-        transform: translate3d(0,0,0)
-                   rotate(360deg);
-        transition: transform 0.4s 1s ease-out,
-                    opacity 0.4s 1s ease-out;
-      }
-    }
-  }
+.card-body {
+    min-height: 100px; // Altura mínima del cuerpo de la tarjeta
+}
 
-nav {
-    z-index: 5;
-    position: fixed;
-    top: -100%; left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translate3d(0,0,0);
-    backface-visibility: hidden;
-    overflow: hidden;
-    font-family: $base-font;
-   
-    &:before {
-      content: '';
-      @include position-center;
-      background: $blue;
-      width: 100%;
-      height: 0;
-      padding-bottom: 100%;
-      border-radius: 100%;
-      transform: scale(0.04), translateY(9999px);
-      overflow: hidden;
-    }
-    .open & {
-      top: 0;
-      &:before {
-        animation: menu-animation 0.8s ease-out forwards;
-      }
-    }
-  }
-  
-  ul.menu {
-    position: fixed;
-    top: 46%;
-    left: 50%;
-    transform: translate3d(-50%,-50%,0);
-    backface-visibility: hidden;
-    perspective: 1000;
-    color: white;
-    padding: 0;
-    font-size: 0.95rem;
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-    li {
-      opacity: 0;
-      text-align: center;
-      transform: translate3d(0,36px,0);
-      list-style: none;
-      &:before {
-        content: '';
-        @include position-center;
-        left: auto;
-        background-color: white;
-        height: 100%;
-        width: 0;
-        overflow: hidden;
-        transition: width 0.14s ease-out;
-      }
-      &:after {
-        position: relative !important;
-        opacity: 0;
-        content: attr(data-text);
-        @include position-center;
-        color: $green;
-        overflow: hidden;
-        font-weight: bold;
-        transform: translate(50%, 50%) !important;
-        transition: transform 0.1s ease-out,
-                    opacity 0.1s ease-out;
-                    
-      }
-      &:hover {
-        &:before {
-          left: 0;
-          right: auto;
-          width: 100%;
-        }
-        &:after {
-          opacity: 1;
-          padding: 0 20px;
-          transform: translate(0px, 6px);
-          transition: transform 0.2s 0.14s ease-out,
-                      opacity 0.2s 0.14s ease-out;
-        }
-      }
-      .open & {
-        opacity: 1;
-        transform: translate3d(0,0,0);
-        transition: transform 0.2s ease-out,
-                    opacity 0.2s ease-out;
-        @for $i from 1 to 5 {
-          &:nth-child(#{$i}) { transition-delay: $i * 0.1s + 0.65s; }
-        }
-      }
-    }
-  } 
+.card-footer {
+    position: absolute; // Posición absoluta
+    bottom: 0; // Posicionamiento inferior
+    left: 0; // Posicionamiento izquierdo
+    width: 100%; // Ancho completo
+    transform: translateY(100%); // Desplazar verticalmente oculto
+}
 
-#country_pick {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 6;
-    box-shadow: 0 0 20px #000;
-    top: -20px;
-    font-family: $base-font;
+.card-title {
+    transition: all 0.2s ease-in-out; // Transición en todas las propiedades
+    margin-top: 20px; // Margen superior del título de la tarjeta
+}
 
-    & .pick {
-        float: right;
+.card:hover .card-footer {
+    transform: translateY(0); // Desplazar verticalmente visible al pasar el mouse
+}
+
+.card:hover {
+    background: $main; // Fondo al pasar el mouse (requiere definir $main)
+    border-color: $main; // Color del borde al pasar el mouse (requiere definir $main)
+    
+    .card-footer {
+        background: $main; // Fondo del pie de página al pasar el mouse (requiere definir $main)
+        border-color: $main; // Color del borde del pie de página al pasar el mouse (requiere definir $main)
+    }
+    .card-title {
+        margin-top: 5px; // Margen superior del título de la tarjeta al pasar el mouse
     }
 }
 
+.card-body {
+    background: #fff; // Fondo del cuerpo de la tarjeta
+    border-radius: 8px; // Radio de borde
+    margin: 1px 2px; // Márgenes del cuerpo de la tarjeta
+}
 
-#country_pick div {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-radius: 8px;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    background: #fff;
-    z-index: 10;
-    text-align: center;
-    padding: 1.1em;
-
-    
-    a {
-        text-decoration: none;
-        color: #000;
-        position: relative;
-
-        img {
-            opacity: .5;
-            transition: all .5s;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    
+.card-footer {
+        padding: 3px 0; // Relleno del pie de página
+    .badge {
+        color: #fff; // Color del texto del distintivo
+        font-size: 0.95rem; // Tamaño de fuente del distintivo
     }
+}  
+
+// TITULOS ================================================================= //
+.title-display-h2 {
+    font-family: "Spline Sans", "Helvetica Neue", Helvet;
+    font-size: 2.2rem;
+}
+
+.title-display {
+    color: $main;
+    font-family: "Spline Sans", "Helvetica Neue", Helvet;
+    position: relative;
+    transition: all 0.2s ease;
     
-    img {
-        max-height: 410px;
-        opacity: .4;
-    }
-
-    img#pick_chile {
-        margin-right: -165px;
-        padding: 0 2em;
-    }
-
-    h4 {
+    &::before {
+        content: "\2B23"; /* Carácter ASCII de hexágono horizontal */
         position: absolute;
-        left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 0.8rem;
-        &.chile_txt {
-            margin-left: -60px;
-        }
-        &.arg_txt {
-            margin-left: 155px;
-        }
+        left: -15px; 
+        transform: translateY(-50%);
+        font-size: 25px;
+        color: $main;
+        display: none; 
     }
-    
 }
 
-.fade-in {
-    animation: fadeIn ease 0.5s;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-@keyframes menu-animation {
-    0% {
-      opacity: 0;
-      transform: scale(0.04)
-                 translateY(300%);
-    }
-    40% {
-      transform: scale(0.04)
-                 translateY(0);
-      transition: ease-out;
-    }
-    40% {
-      transform: scale(0.04)
-                 translateY(0);
-    }
-    60% {
-      opacity: 1;
-      transform: scale(0.02)
-                 translateY(0px);
-    }
-    61% {
-      transform: scale(0.04);
-    }
-    99.9% {
-      height: 0;
-      padding-bottom: 100%;
-      border-radius: 100%;
-    }
-    100% {
-      transform: scale(2);
-      height: 100%;
-      padding-bottom: 0;
-      border-radius: 0;
-    }
-  }
-
-
-#about .easter {
-    color: $green;
-}
-
-#about .w-50 {
-    max-width: 450px;
-    margin: 0.5em 0;
-}
-
-.text-justify {
-    text-align: justify;
-}
-  
-.fixed-bottom-logos {
-    font-size: 0.47rem;
-    font-weight: 400;
-    line-height: 0.7rem;
-    text-indent: -0.3rem;
-    font-family: $base-font;
-    border: none;
-
-    color: $blue !important;
-
-    a {
-        color: $blue !important;
-    }
-    
-
-    & .bottom-data {
-        .bottom-bi {
-            margin-left: 0.3rem;
-        }
-    }
-
-    & .card {
-        border: none;
-        max-width: 900px;
-    }
-
-    & .card-body {
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    & .card {
-        background: #fff;
-        border-radius: 4px;
-    }
-
-    & img {
-        max-width: 110px;
-        margin: 1em;
-        border-radius: 4px;
-    }
-    
-    span {
+.box:hover {
+    .title-display::before {
+        color: $main;
         display: block;
-        font-size: 0.54rem;
-    }
-
-    span.yr {
-        display: inline;
-        font-size: inherit;
     }
 }
-  
-#first-div {
-    margin-left: 15%;
+
+.title-display-h3 {
+    font-family: "Spline Sans", "Helvetica Neue", Helvet;
+    font-size: 1.4rem;
+    color: $main;
 }
 
-nav #navigation {
-    position: absolute;
-    opacity: .4 !important;
-    filter: blur(0.25rem);
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.list-group {
+    margin: 0 0 2em 0;
+
+}
+.list-group-item {
+    padding: 1.5em;
+    transition: all 0.2s ease-in-out;
+    border: none;
 }
 
-#services h3 {
-    color: $green;
+.list-group-item:hover {
+    box-shadow: 0 0 20px #cacaca;
+    transform: scale(1.02);
 }
 
-#services .padding-left {
-    padding-left: 2em;
+.list-group {
+
+
+    .badge {
+        background: #fefefe;
+        color: #777;
+        font-size: 1rem;
+        margin: 0.4em 0;
+        padding: 0.7em;
+        text-align: left;
+        display: block;
+        border-radius: 5px !important;
+        transition: all 0.07s ease-in-out;
+
+        &:hover {
+            color: #000;
+            background: #eee;
+        }
+    }
 }
 
-#services .service_images img {
-    position: relative;
-    max-width: 700px;
-    padding: 1em 0;
+.btn {
+    background: #fff;
+    padding: 2em;
+    color: #000;
+    border: none;
+    margin-bottom: 1em;
+
+    &:hover, &.active {
+        background-color: $main;
+    }
+
+    
 }
 
 
+@media (max-width: 576px) {
+    .btn {
+        padding:1em;
+        margin-bottom: 0;
+    }
 
+    #divA, #divB {
+        margin-top: 1.5em;
+        padding-left: 1.8em;
+        padding-right: 1.8em;
+    }
 
-
-
-figure.snip1321 p {
-    margin:0;
-    font-size: 0.62rem !important;
-    line-height: 0.85rem;
+    .title-display-h2 {
+        font-size: 1.8rem;
+    }
 }
 
-figure.snip1321 figcaption {
-    padding: 1em;
-    text-align: left;
+
+@media (min-width: 768px) {
+    #divA, #divB {
+        margin-right: 2em;
+    }
 }
 
-figure.snip1321 {
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-    width: 100%;
-    color: #000000;
-    -webkit-perspective: 50em;
-    perspective: 50em;
-  }
-  figure.snip1321 * {
-    -webkit-box-sizing: padding-box;
-    box-sizing: padding-box;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-  figure.snip1321 img {
-    max-width: 100%;
-    vertical-align: top;
-  }
-  figure.snip1321 figcaption {
-    top: 50%;
-    left: 20px;
-    right: 20px;
-    position: absolute;
-    opacity: 0;
-    z-index: 1;
-  }
-
-  figure.snip1321 h3 {
-    margin-top: -15px !important;
-    padding-top: 0 !important;
-  }
-  figure.snip1321 .texto {
-    font-weight: 600;
-  }
-  figure.snip1321:after {
-    background-color: #ffffff;
-    position: absolute;
-    content: "";
-    display: block;
-    top: 45px;
-    left: 25px;
-    right: 25px;
-    bottom: 45px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    -webkit-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
-    -webkit-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    opacity: 0;
-  }
-  figure.snip1321 a {
+#transition-overlay {
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 1;
-  }
-  figure.snip1321:hover figcaption,
-  figure.snip1321.hover figcaption {
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    background-color: $main;
+    z-index: 9999;
     opacity: 1;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-  figure.snip1321:hover:after,
-  figure.snip1321.hover:after {
-    -webkit-transform: rotateX(0);
-    transform: rotateX(0);
-    opacity: 0.9;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.transition-overlay-on {
+    animation: sweep 0.5s linear forwards;
+}
+
+.transition-overlay-off {
+    animation: sweepback 0.5s linear forwards;
+}
   
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-#destinations, #about, #services, #contact {
-    overflow-x: hidden;
-
-    #content p {
-        font-family: $base-font;
+  @keyframes sweep {
+    0% {
+      width: 0;
+      height: 100%;
+      bottom: 0;
+      right: 0;
     }
-
-    .bottom-data {
-        font-size: 0.52rem;
-
-        a {
-            color: $green;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: $greenish;
-        }
-
-        #first-div {
-            margin-left: 140px;
-        }
-
-        span {
-            display: block;
-            margin-left: -18px
-        }
+    100% {
+      width: 100%;
+      height: 100%;
+      bottom: auto;
+      right: auto;
     }
+  }
 
-    #copy {
-        font-size: 0.55rem;
-    }
 
-    .hero-text, .lead-text {
-        z-index: 0;
-        position: relative;
-        text-align: left;
-        font-family: $base-font;        
-        background-color: #fff;
+  @keyframes sweepback {
+    0% {
         width: 100%;
-        max-width: 900px;
-        padding: 1.35em 1.35em 0.6em 1.35em;
-        margin: 0 auto;
-        h1 {
-            font-size: 1.8rem;
-            padding: 0;
-            margin-top: -125px;
-            margin-bottom: 50px;
-            margin-left: -2px;
-            color: #fff;
-            span {
-                color: $green;
-                font-weight: bold;
-            }
-        }
-        h2 {
-            text-align: justify;
-            padding: 0;
-            color: #333;
-            display: inline-block;
-            font-size: 0.65rem;
-            line-height: 1.05rem;
-            
-            & span {
-                color: #000;
-                padding-left: 0.5em;
-            }
-        }
-    }
-
-    .lead-text {
-        max-width: 100%;
-        margin: 0;
-        background: none;
-        padding: 0;
-        text-align: left;
-        h1 {
-            margin-top: -325px;
-            font-size: 4rem;
-        }
-    }
-
-
-    #logo {
-        text-align: right;    
-        top:0;
-        position: absolute;
-        right: 30px;
-        transform: none;
-        left: auto;
-        img {
-            max-width: 250px;
-        }
-    }
-    
-    &.open #logo.opened {
-        z-index: 5;
-        position: fixed;
-    }
-
-    #get-started {
-        display: block;
-        position: fixed;
-        left: 24px;
-        top: 15px;
-        z-index: 4;
-        transform: none;
-        font-family: $base-font;
-        font-size: 1.9rem;
-        padding: 0.3em;
-        background: #fff;
-        border-radius: 100%;
-        color: $blue;
-        box-shadow: none;
-    }
-
-    #content {
-        z-index: 1;
-
-        h1 {
-            color: $green;
-            font-size: 1.5rem;
-            margin: 1.7em 0 -1em 0;
-    
-        }
-        .card-body {
-            padding: 0.2em 0.4em 0.2em 0.2em;
-            text-align: right !important;
-            background-color: #ccc;
-
-            .card-text {
-                font-size: 0.6rem !important;
-            }
-        }
-
-        .icons {
-            max-width: 550px;
-            margin: 0 auto;
-        }
-
-        .icons_wrap {
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            margin: 1em 0;
-            border-radius: 5px;
-        }
-
-        p {
-            font-size: 0.75rem;
-        }
-
-        h2, h3, h4 {
-            font-family: $base-font;
-        }
-
-        h4 b {
-            color: black;
-        }
-
-        h3 {
-            font-size: 1.9rem;
-            margin: 1.3em 0 0.2em 0;
-        }
-
-        h4 {
-            font-size: 1.3rem;
-        }
-
-        h4.lead {
-            font-size: 0.85rem;
-            line-height: 1.2rem;
-            text-transform: uppercase;
-
-        }
-
-        h4.lead.brown {
-            color: $brown !important;
-        }
-
-        .yellow {
-            h3,h4 {
-                color: $yellow;
-            }
-            h4.lead {
-                color:#6b5b28;
-            }
-        }
-
-        .purple {
-            h3,h4 {
-                color: $purple;
-            }
-            h4.lead {
-                color:$purpleish;
-            }
-        }
-
-
-        .purple.invertd {
-            h3,h4 {
-                color: $purpleish;
-            }
-            h4.lead {
-                color:$purple;
-            }
-        }
-
-        .brownish {
-            h3,h4 {
-                color: $brown;
-            }
-
-            h4.lead {
-                color: $dark-brown;
-            }
-        }
-
-        .brown {
-            h3,h4 {
-                color: $dark-brown;
-            }
-
-            h4.lead {
-                color: $brown;
-            }
-        }
-
-        .red {
-            h3,h4 {
-                color: $red;
-            }
-
-            h4.lead {
-                color: $dark-red;
-            }
-        }
-
-        .orange {
-            h3,h4 {
-                color: $orange;
-            }
-
-            h4.lead {
-                color: $orange;
-            }
-        }
-
-        .blue.inverted {
-            h3,h4 {
-                color: $blue;
-            }
-
-            h4.lead {
-                color: $blueish;
-            }
-
-            h4 b {
-                color: $blueish;
-            }
-        }
-
-        .blue {
-            h3,h4 {
-                color: $blueish;
-            }
-
-            h4.lead {
-                color: $blue;
-            }
-        }
-
-        .green {
-            h3,h4 {
-                color: $greenish;
-            }
-
-            h4.lead {
-                color: $green;
-            }
-        }
-
-        .pink {
-            h3,h4 {
-                color: $pink;
-            }
-
-            h4.lead {
-                color: $pinkish;
-            }
-        }
-
-
-
-        .card-text {
-            font-size: 0.7rem;
-        }
-
-        .card {
-            transform: scale(0.96);
-            transition: all 0.2s;
-            border-color: #ccc;
-            color: #666;
-            border-radius: 3px;
-            img {
-                -webkit-border-top-left-radius: 2px;
-                -webkit-border-top-right-radius: 2px;
-                -moz-border-radius-topleft: 2px;
-                -moz-border-radius-topright: 2px;
-                border-top-left-radius: 2px;
-                border-top-right-radius: 2px;
-                filter: grayscale(100%);
-                margin-left: -1px;
-                width: 100.15%;
-            }
-        }
-
-        .card:hover {
-            color: #333;
-            transform: scale(1);
-            box-shadow: 0 0 30px #ccc;
-            img {
-                filter: grayscale(0%);
-            }
-        }
-
-        .card video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%);
-            opacity: 0.8;
-            transition: all 0.4s;
-        }
-
-        .card video:hover {
-            opacity: 1;
-            filter: grayscale(0%);
-        }
-
-    }
-    
-    #contact_us {
-        border-top: 1px solid #ccc;
-        padding: 1.2em 0;
-        margin-top: 1.3em;
-    }
-
-
-    #hero {
-        position: relative;
-        left: 0;
-        right: 0;
-        top: 0;
-        width: 100%;
-        margin: -350px auto 0 auto;
-    }
-
-    // #hero-img {
-    //     margin-top: -290px;
-    // }
-
-    #hero-img::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 40%;
-        z-index: 2;
-        background-image: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 96%);
-    }
-
-
-    #map_wrap {
-        position: relative;
-        animation: fadeInMap 2s; 
-    }
-
-
-    @keyframes fadeInMap {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    #left_map {
-        position: absolute;
-        margin-left: 0px;
-    }
-
-    #left_map img {
-        max-width: 90%;
-        opacity: .65;
-    }
-
-
-    @media only screen and (max-height: 700px) {
-        #hero {
-           margin-top: -100px;
-        }
-        
-        #left_map  {
-           transform: scale(0.80);
-           margin-top: -5px;
-        }
-
-        // #hero-img {
-        //     margin-top: -250px;
-        // }
-
-        #content {
-            p {
-                font-size: 0.65rem;
-            }
-        }
-    }
-
-    .mapdiv {
-        position: absolute;
-        top: 0;
-        z-index: 3;    
-        width: 25px;
-        height: 25px;
-        border-radius: 100%;
-        background-color: #333;
-    }
-
-    .mapdiv::before {
-            position: absolute;
-            background: #85b9ce;
-            content: '';
-            top: 0;
-            left: 0;
-            border: 0;
-            width: 25px;
-            height: 25px;
-            border-radius: 100%;
-    }
-
-    .mapdiv.anima {
-        animation: pulsing 2s ease-out infinite;
-        opacity: 1;
-    }
-
-    
-    @keyframes pulsing {
-        0% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            -webkit-transform: scale(1.8);
-            transform:  scale(1.8);
-            opacity: 0;
-        }
-    }
-
-    #mapDiv1 {
-        margin-top: 255px;
-        margin-left: 53px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $yellow;
-        }
-    }
-
-    #mapDiv2 {
-        margin-top: 280px;
-        margin-left: 57px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $purple;
-        }
-    }
-
-    #mapDiv3 {
-        margin-top: 25px;
-        margin-left: 48px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $brown;
-        }
-    }
-
-    #mapDiv4 {
-        margin-top: 100px;
-        margin-left: 75px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $red;
-        }
-    }
-
-    #mapDiv5 {
-        margin-top: 200px;
-        margin-left: 50px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $orange;
-        }
-    }
-
-    #mapDiv6 {
-        margin-top: 380px;
-        margin-left: 43px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $blue;
-        }
-    }
-
-    #mapDiv7 {
-        margin-top: 430px;
-        margin-left: 37px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $green;
-        }
-    }
-
-    #mapDiv8 {
-        margin-top: 490px;
-        margin-left: 53px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $blueish;
-        }
-    }
-
-    #mapDiv9 {
-        margin-top: 660px;
-        margin-left: 63px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $purpleish;
-        }
-    }
-
-    #mapDiv10 {
-        margin-top: 220px;
-        margin-left: -23px;
-        opacity: 0;
-        &.mapdiv,
-        &.mapdiv::before {
-            background: $pink;
-        }
-    }
-
-    .mapBall_1,
-    .mapBall_2,
-    .mapBall_3,
-    .mapBall_4,
-    .mapBall_5,
-    .mapBall_6,
-    .mapBall_7,
-    .mapBall_8,
-    .mapBall_9,
-    .mapBall_10 {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        z-index: 4;
-        cursor: pointer;
-    }
-
-    .mapBall_1 {
-        background-color: $yellow;
-        margin-top: 260px;
-        margin-left: 58px;
-    }
-
-    .mapBall_2 {
-        background-color: $purple;
-        margin-top: 285px;
-        margin-left: 62px;
-    }
-
-    .mapBall_3 {
-        background-color: $brown;
-        margin-top: 30px;
-        margin-left: 53px;
-        border: 1px solid #f5bc58;
-    }
-
-    .mapBall_4 {
-        background-color: $red;
-        margin-top: 105px;
-        margin-left: 80px;
-    }
-
-    .mapBall_5 {
-        background-color: $orange;
-        margin-top: 205px;
-        margin-left: 55px;
-    }
-
-    .mapBall_6 {
-        background-color: $blue;
-        margin-top: 385px;
-        margin-left: 48px;
-    }
-
-    .mapBall_7 {
-        background-color: $green;
-        margin-top: 435px;
-        margin-left: 42px;
-    }
-
-    .mapBall_8 {
-        background-color: $blueish;
-        margin-top: 495px;
-        margin-left: 58px;
-    }
-
-    .mapBall_9 {
-        background-color: $purpleish;
-        margin-top: 665px;
-        margin-left: 68px;
-    }
-    
-    .mapBall_10 {
-        background-color: $pink;
-        margin-top: 225px;
-        margin-left: -18px;
-    }
-
-
-    .argentina {
-        & .mapBall_1 {
-            margin-top: 350px;
-            margin-left: 178px;
-        }
-
-        & #mapDiv1 {
-            margin-top: 345px;
-            margin-left: 173px;
-        }
-
-
-        & .mapBall_3 {
-            background-color: $dark-brown;
-            margin-top: 475px;
-            margin-left: 112px;
-            border: none;
-        }
-
-        & #mapDiv3 {
-            margin-top: 470px;
-            margin-left: 107px;
-            &::before {
-                background-color: $brown;
-            }
-        }
-
-
-        & .mapBall_4 {
-            margin-top: 660px;
-            margin-left: 125px;
-        }
-
-        & #mapDiv4 {
-            margin-top: 655px;
-            margin-left: 120px;
-        }
-
-        & .mapBall_5 {
-            background-color: $blueish;
-            margin-top: 575px;
-            margin-left: 50px;
-        }
-
-        & #mapDiv5 {
-            margin-top: 570px;
-            margin-left: 45px;
-
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $blueish;
-            }
-
-        }
-
-        & .mapBall_2 {
-            margin-top: 555px;
-            margin-left: 55px;
-            background-color: $blueish;
-        }
-
-        & #mapDiv2 {
-            margin-top: 550px;
-            margin-left: 50px;
-            
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $blueish;
-            }
-        }
-
-        & .mapBall_6 {
-            margin-top: 435px;
-            margin-left: 38px;
-            background-color: $blueish;
-        }
-
-        & #mapDiv6 {
-            margin-top: 430px;
-            margin-left: 34px;
-
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $blueish;
-            }
-        }
-
-        & .mapBall_7 {
-            margin-top: 310px;
-            margin-left: 46px;
-            background-color: $purpleish;
-        }
-
-        & #mapDiv7 {
-            margin-top: 304px;
-            margin-left: 42px;
-            
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $purpleish;
-            }
-        }
-
-        & .mapBall_8 {
-            margin-top: 155px;
-            margin-left: 88px; 
-            background-color: $red;       
-        }
-
-        & #mapDiv8 {
-            margin-top: 150px;
-            margin-left: 83px;
-            
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $red;
-            }
-        }
-
-        & .mapBall_9 {
-            margin-top: 225px;
-            margin-left: 242px;
-            background-color: $green;       
-        }
-
-        & #mapDiv9 {
-            margin-top: 220px;
-            margin-left: 237px;
-            
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $green;
-            }
-        }
-
-        & .mapBall_10 {
-            margin-top: 258px;
-            margin-left: 182px;    
-            background-color: $green;   
-        }
-
-        & #mapDiv10 {
-            margin-top: 253px;
-            margin-left: 177px;
-            
-            &.mapdiv,
-            &.mapdiv::before {
-                background: $green;
-            }
-        }
-
-
-        
-
-    }
-
-
-
-    
-}
-
-#about, #services, #contact {
-    #content {
-        h2 {
-            font-size: 1.4rem;
-            color: $green;
-        }
-        h3 {
-            font-size: 0.82rem;    
-        }
-    }
-
-    .border-lg-start {
-        border-left: 1px solid #ccc;
-    }
-
-    #ema {
-        font-size: 1.1rem !important;
-    }
-}
-
-
-#home #footer {
-    position: absolute;
-    bottom: 0;
-}
-
-p#offices_social_sm {
-    font-size: 1rem;
-    margin: 0.5em 0 0 0.5em;
-    a {
-        text-decoration: none;
-        color: $green;
-        margin-left: 0.3em;
-    }
-
-    a:hover {
-        color: $greenish;
-    }
-}
-
-#contact {
-    .lead-text h1 {
-        margin-top: -300px;
-        font-size: 3.3rem;
-        letter-spacing: -2px;
-    }
-
-    #content h2 {
-        font-size: 1.3rem !important;
-    }
-        
-    #offices p {
-        font-size: 0.72rem;
-    }
-
-    p#offices_social {
-        margin: 1.2em;
-        font-size: 1.7rem;
-        a {
-            color: $green;
-            text-decoration: none;
-            padding: 0.3em;
-            &:hover {
-                color: $greenish;
-            }
-        }
-    }
-    
-}
-
-#pick_arg,
-#pick_chile {
-    opacity: 0.5;
-    transition: opacity 0.5s ease;
-}
-    
-h4.arg_txt:hover + #pick_arg,
-h4.chile_txt:hover + #pick_chile {
-    opacity: 1;
-}
-
-
-#footer.position-absolute {
-    position: relative !important;
-    transform: translate(-50%,0%) !important
-}
-
-#footer {
-    font-size: small;
-}
-
-#contact_us {
-    font-size: 1rem;
-    margin-bottom: 1.7em;
-}
-
-#home #contact_us {
-    margin-bottom: 0;
-}
-
-#destinations #hero-img, 
-#about #hero-img, 
-#services #hero-img, 
-#contact #hero-img {
-    position: relative;
-    transform: translateY(-30%);
-}
-
-#destinations .hero-text {
-    margin-top: -30% !important;
-    transform: translateY(-30%)
-}
-
-
-@media (max-width: 1300px) {
-
-    p#offices_social_sm {
-        font-size: 1rem;
-        margin: 0.5em 0 0 0.5em;
-        a {
-            margin-right: 0.3em;
-        }
-    }
-
-    #country_pick div h4 {
-        font-size: 0.65rem;
-    }
-
-    #home #message {
-        top: 35%;
-    }
-
-    #home #get-started {
-        font-size: 0.85rem;
-    }
-    
-    #later {
-        font-family: $base-font;
-        padding-top: 30px;
-
-        #back {
-            top: 30px;
-            left: 0;
-        }
-
-        .display-5 {
-            line-height: 2rem;
-            font-size: 1.8rem;
-        }
-
-        .lead {
-            line-height: 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        #footer #offices_social_sm {
-            font-size: 2rem;
-            margin-top: 0;
-            margin-bottom: -15px;
-        }
-    }
-
-
-    nav #navigation {
-        position: absolute;
-        opacity: .4 !important;
-        filter: blur(0.25rem);
-        object-fit: fill;
-        width: 100% !important;
         height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: auto;
+        right: auto;
     }
-    
-    ul.menu {
-        width: 75%;
-    }
-
-    ul.menu li:hover::after { 
-        padding: none;
-    }
-
-    #destinations #content .card img {
-        filter: none;
-    }
-
-    #destinations #content .card video {
-        filter: none;
-    }
-
-    #destinations .icons {
-        transform: scale(1.05);
-    }
-
-    #destinations .lead {
-        font-size: 1.2rem !important;
-        line-height: 1.6rem !important;
-    }
-
-    #destinations .card-body small {
-        font-size: 0.75rem;
-    }
-
-    #destinations #content {
-        margin-top: 0 !important;
-    }
-
-
-
-
-    // #destinations .hero-text {
-    //     padding: 1em;
-    //     background: #eee;
-    //     margin: 1em !important;
-    //     width: 90%;
-    //     animation: fadeIn ease 1.5s !important;
-
-    //     h1 {
-    //         font-size: 2rem;
-    //         margin-top: -155px;
-    //     }
-
-    //     h2 {
-    //         text-align: left;
-    //         padding: 0;
-    //         color: #333;
-    //         display: inline-block;
-    //         font-size: 1.05rem;
-    //         line-height: 1.5rem;
-    //     }
-    // }
-
-    #contact p#offices_social {
-        font-size: 2rem !important;
-        margin: 0.5em 0 1em 0;
-    }
-
-    .text-justify {
-        text-align: left;
-    }
-
-    #destinations #content p, 
-    #about #content p, 
-    #services #content p, 
-    #contact #content p {
-        font-size: 0.75rem;
-    }
-
-    #contact #ema {
-        font-size: 1.8rem !important;
-        text-align: center;
-    }
-
-    #about #content h3, 
-    #services #content h3, 
-    #contact #content h3 {
-        font-size: auto;
-    }
-
-    // #contact #offices .mx-3 {
-    //     margin-right: 1.5rem !important;
-    //     margin-left: 1.5rem !important;
-    // }
-
-    #destinations #footer, 
-    #about #footer, 
-    #services #footer, 
-    #contact #footer {
-        position: relative;
-        padding: 0 1em 0.5em 0.5em;
-    } 
-
-    #contact .lead-text h1,
-    #about .lead-text h1,
-    #services .lead-text h1 {
-        margin: -120px 0 0 0;
-        padding-top: 0.6em;
-        font-size: 2.2rem;
-        letter-spacing: -1px;
-        text-shadow: 0 0 10px #000;
-    }
-
-    #contact .lead-text h1 {
-        margin: -110px 0 0 0;
-        font-size: 1.8rem !important;
-    }
-
-    #destinations #hero-img::before, 
-    #about #hero-img::before, 
-    #services #hero-img::before, 
-    #contact #hero-img::before {
-        background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 98%);
-        height: 200px;
-    }
-
-    #message {
-        font-size: 2rem;  
-        width: 90%;
-        top: 40%;
-    }
-
-    #get-started {
-        font-size: 1rem;
-        padding: 1em;
-    }
-
-    #destinations #contact_us, 
-    #about #contact_us, 
-    #services #contact_us, 
-    #contact #contact_us {
-        border: none;
-        margin-bottom: 1em;
-        padding: 0;
-    }
-
-    #destinations #logo-small, 
-    #about #logo-small, 
-    #services #logo-small, 
-    #contact #logo-small {
-        transform: none;
-        width: 200px;
-        right: 4px;
-        left: auto;
-        top: 5px;
-    } 
-
-    #destinations #get-started #top_text, 
-    #about #get-started #top_text, 
-    #services #get-started #top_text, 
-    #contact #get-started #top_text {
-        display: none !important;
-    }
-
-    #destinations #get-started, 
-    #about #get-started, 
-    #services #get-started, 
-    #contact #get-started {
-        margin-left: -10px;
-        margin-top: 10px;
-        font-size: 1.5rem;
-    }
-
-    #destinations {
+    100% {
         
-        #map1,
-        #map2,
-        #map3,
-        #map4,
-        #map5,
-        #map6,
-        #map7,
-        #map8,
-        #map9,
-        #map10 {
-            padding: 0.1em 0;
-        }
-
-        .scroll-to-top {
-            position: fixed;
-            bottom: 40px;
-            right: 20px;
-            z-index: 1000;
-        }
-    
-        .circle {
-            width: 50px;
-            height: 50px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        }
-    
-        .bi-arrow-up-short {
-            font-size: 2rem;
-            color: #6c757d;
-        }
-    
-        .circle:hover {
-            cursor: pointer;
-        }
-    
-        .circle:hover .bi-arrow-up-short {
-            color: #212529;
-        }
+      width: 0;
+      height: 100%;
+      bottom: 0;
+      right: 0;
     }
-    
-    #logo-small-menu {
-        position: fixed;
-        top: 15%;
-        z-index: 5;
-        width: 220px;
-        left: 50%;
-        margin-left: -110px;
-        opacity: 0; 
+  }
+
+  @keyframes logoshow {
+    0% {
+        transform: scale(1);
     }
-
-    .open #logo-small-menu {
-        animation: fadeIn ease-in 1s;
-        animation-delay: 0.4s;
-        animation-fill-mode: forwards !important;
+    50% {
+        transform: scale(1.1);
     }
-
-
-    #destinations #map_wrap_sm {
-        margin-bottom: 2em;
-
-        .list-group-item {
-            border: none;
-        }
-
-        ul.arg-list,
-        ul.chl-list {
-            list-style: none;
-            padding-left: 0;
-        }
-          
-        ul.arg-list li:before,
-        ul.chl-list li:before {
-            content: "\2022";
-            padding-right: 0.5em;
-            color: #fff;
-            font-size: 1.8rem;
-            line-height: 0;
-            vertical-align: middle; 
-        }
-
-        ul.arg-list li,
-        ul.chl-list li {
-            display: flex;
-            align-items: center;
-            line-height: 1.3rem;
-        }
-          
-        ul.arg-list .custom-bg-1:before { color: $yellow; }
-        ul.arg-list .custom-bg-2:before { color: $brown; }
-        ul.arg-list .custom-bg-3:before { color: $red; }
-        ul.arg-list .custom-bg-4:before { color: $blue; }
-        ul.arg-list .custom-bg-5:before { color: $blueish; } 
-        ul.arg-list .custom-bg-6:before { color: $blue; } 
-        ul.arg-list .custom-bg-7:before { color: $purpleish; }
-        ul.arg-list .custom-bg-8:before { color: $red; } 
-        ul.arg-list .custom-bg-9:before { color: $green; }
-        ul.arg-list .custom-bg-10:before { color: $greenish; }
-
-        ul.chl-list .custom-bg-1:before { color: $yellow; }
-        ul.chl-list .custom-bg-2:before { color: $brown; }
-        ul.chl-list .custom-bg-3:before { color: $red; }
-        ul.chl-list .custom-bg-4:before { color: $orange; }
-        ul.chl-list .custom-bg-5:before { color: $purple; } 
-        ul.chl-list .custom-bg-6:before { color: $blueish; } 
-        ul.chl-list .custom-bg-7:before { color: $greenish; }
-        ul.chl-list .custom-bg-8:before { color: $blueish; } 
-        ul.chl-list .custom-bg-9:before { color: $purple; }
-        ul.chl-list .custom-bg-10:before { color: $purpleish; }
-        
-        ul.arg-list li,
-        ul.chl-list li { padding-left: 1em; }
-          
+    100% {
+        transform: scale(1);
     }
-    
-    #about #content, 
-    #services #content, 
-    #contact #content {
-        margin-top: 2.5em !important;
-    }
-
-    #destinations button.menu-toggle::after,
-    #about button.menu-toggle::after,
-    #services button.menu-toggle::after,
-    #contact button.menu-toggle::after {
-        left: -7px;
-        top: 22px;
-    }
-
-
-    #destinations .bottom-data span, 
-    #about .bottom-data span, 
-    #services .bottom-data span, 
-    #contact .bottom-data span {
-        margin-left: 0;
-    }
-
-    #destinations .bottom-data, 
-    #about .bottom-data, 
-    #services .bottom-data, 
-    #contact .bottom-data {
-        font-size: small;
-    }
-
-    #footer.position-absolute {
-        position: absolute !important;
-    }
-
-    #footer {
-        font-family: $base-font;
-    }
-
-    #services .service_images h3 {
-        font-size: 0.85rem !important;
-        margin: 0 !important;
-    }
-
-    #services .service_images figure {
-        margin-bottom: 2.5em;
-    }
-
-    #home p#offices_social_sm,
-    #contact p#offices_social_sm,
-    #about p#offices_social_sm,
-    #services p#offices_social_sm,
-    #destinations p#offices_social_sm {
-        font-size: 1rem;
-        padding: 0.5em 0;
-    }
-
-    .fixed-bottom-logos {
-        font-size: 1rem;
-        line-height: 1rem;
-        
-        span {
-            font-size: inherit;
-        }
-    }
-
-    .bottom-data {
-        line-height: normal;
-        font-size: small;
-        text-align: center;
-    }
-
-    .bottom-data span {
-        font-size: 0.6rem;
-        border-bottom: 1px solid #1c366178;
-        margin: 0.35em 0;
-        padding: 0.35em 0;
-    }
-
-    ul.menu {
-        font-size: 1.5rem;
-        width: auto;
-    }
-
-    #country_pick div {
-        width: 95%;
-        max-width: 550px;
-    }
-
-    #country_pick div h4.chile_txt {
-        margin-left: -30px;
-    }
-
-    #country_pick div h4.arg_txt {
-        margin-left: 110px;
-    }
-
-    #country_pick div img#pick_chile {
-        margin-right: -168px;
-    }
-    
-    #first-div {
-        margin-left: 0 !important;
-    }
-
-}
-
-@media (max-height: 760px) {
-    #logo {
-        top: 15%;
-    }    
-    
-}
-
-
-@media only screen and (min-width: 769px) and (max-width: 1440px) { 
-    #destinations .lead-text h1, #about .lead-text h1, #services .lead-text h1, #contact .lead-text h1 {
-        margin-top: -550px;
-    }
-
-}
-
-@media (max-width: 1366px) {
-#logo {
-    top: 15%;
-}
-
-#message {
-    top: 45%;
-    font-size: 1.3rem;
-    line-height: 1.4rem;
-}
-ul.menu {
-    top: 52%;
-    font-size: 0.85rem;
-}
-
-#about .lead-text h1,
-#services .lead-text h1,
-#contact .lead-text h1 {
-    font-size: 3.1rem !important;
-    margin-top: -520px !important;
-}
-
-}
-
-#welcome {
-
-    position: relative;
-    height: 250px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    #get-started {
-        min-width: 280px; 
-    }
-}
-
-#home #logo-small, #home #logo {
-    margin-top: -130px !important;
-}
-
-
-
-@media screen and (max-width: 650px) {
-
-
-    #destinations .hero-text {
-        padding: 1em;
-        background: #eee;
-        margin: 1em !important;
-        width: 90%;
-        animation: fadeIn ease 1.5s !important;
-        margin-bottom: -60px !important;
-
-        h1 {
-            font-size: 2rem;
-            margin-top: -85px;
-        }
-
-        h2 {
-            text-align: left;
-            padding: 0;
-            color: #333;
-            display: inline-block;
-            font-size: 1.05rem;
-            line-height: 1.5rem;
-        }
-    }
-
-    #country_pick div h4 {
-        font-size: 1.1rem;
-    }
-    #welcome {
-        position: relative;
-        height: 250px;
-        position: relative;
-        top: 25%;
-        transform: translateY(-25%);
-    
-        #get-started {
-            min-width: 280px; 
-        }
-    }
-    
-    #home #logo-small, #home #logo {
-        margin-top: -120px !important;
-    }
-    
-
-    #home #message {
-        top: 28%;
-    }
-
-    #country_pick div img#pick_chile {
-        margin-right: -138px;
-    }    
-
-    .bottom-data span {
-        font-size: 0.8rem;
-    }
-
-    #home #get-started {
-        font-size: 1.5rem;
-    }
-
-    nav #navigation {
-        width: auto !important;
-    }
-
-    button.menu-toggle::after {
-        top: 20px;
-        left: -14px;
-    }
-
-    .texto {
-        opacity: 0;
-      }
-      
-      .animate__hidden {
-        visibility: hidden;
-      }
-      .animate__fadeOut {
-          animation-name: fadeOut;
-          visibility: hidden;
-      }
-      
-      .animate__fadeInUp {
-          visibility: visible;
-      }
-      
-        @keyframes fadeOut {
-          from {
-            opacity: 1;
-          }
-          to {
-            opacity: 0;
-          }
-        }
-
-        #services-margin {
-            margin-bottom: -45px;
-        }
-
-
-        #home p#offices_social_sm, #contact p#offices_social_sm, #about p#offices_social_sm, #services p#offices_social_sm, #destinations p#offices_social_sm {
-            font-size: 1.6rem;
-        }
-
-
-}
-
-
-@media screen and (max-width: 420px) {
-    #about #content h3, #services #content h3, #contact #content h3 {
-        font-size: 1.3rem !important;
-    }
-
-    ul.menu {
-        font-size: 1.1rem;
-        min-width: 250px;
-    }
-
-    #destinations .lead-text h1, #about .lead-text h1, #services .lead-text h1, #contact .lead-text h1 {
-        margin-top: -135px !important;
-    }
-
-    #destinations #hero-img, #about #hero-img, #services #hero-img, #contact #hero-img {
-        transform: none;
-    }
-
-    #about .lead-text h1, #services .lead-text h1 {
-        font-size: 2.3rem !important;
-    }
-
-    #contact .lead-text h1 {
-        font-size: 1.8rem !important;
-        margin-top: -110px !important;
-    }
-
-    #contact #content h3 {
-        font-size: 1rem !important;
-    }
-
-    #destinations #content p, #about #content p, #services #content p, #contact #content p {
-        font-size: inherit;
-    }
-
-    #destinations .hero-text {
-        margin-top: 20% !important;
-        margin-bottom: -100px !important;
-    }
-}
-
-
-@media only screen and (min-width: 1441px) { 
-    #home #logo-small, #home #logo {
-        margin-top: -170px !important;
-    }
-}
-
-
-
+  }
+
+  #logo {
+    max-width: 300px;
+    display: none;
+  }
+
+  #logo.anima {
+    animation: logoshow 0.3s linear forwards;
+  }
   
+
+
+  #content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  #content.visible {
+    opacity: 1;
+  }
