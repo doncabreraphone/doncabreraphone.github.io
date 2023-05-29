@@ -118,7 +118,7 @@
   border: none;
 }
 
-.list-group-item:hover, .list-group.touch .list-group-item {
+.list-group-item:hover {
   box-shadow: 0 0 20px #cacaca;
   transform: scale(1.02);
 }
@@ -169,6 +169,7 @@
   }
   .title-display::before {
     margin-left: 2px;
+    display: block;
   }
   #botones {
     position: fixed;
@@ -176,6 +177,7 @@
     z-index: 10;
     background: #fff;
     padding: 1em 0.5em 0.5em 0.5em;
+    box-shadow: 0 0 15px #ccc;
   }
   h5.card-title {
     font-size: 1.1rem;
@@ -183,6 +185,22 @@
   .card-footer .badge {
     font-size: 0.8rem;
     padding: 0 0.3em;
+  }
+  .card.touch {
+    background: #bf281f;
+    border-color: #bf281f;
+  }
+  .card.touch .card-footer {
+    background: #bf281f;
+    border-color: #bf281f;
+    transform: translateY(0);
+  }
+  .card.touch .card-title {
+    margin-top: 5px;
+  }
+  .list-group.touch .list-group-item {
+    box-shadow: 0 0 20px #cacaca;
+    transform: scale(1.02);
   }
 }
 @media (min-width: 768px) {

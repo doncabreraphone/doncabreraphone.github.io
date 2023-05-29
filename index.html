@@ -850,7 +850,7 @@
                 var viewportTop = scrollTop + windowHeight;
                 var viewportBottom = scrollTop + windowHeight / 2
 
-                $('.list-group').each(function() {
+                $('.list-group, .card').each(function() {
                     var elementOffset = $(this).offset().top;
 
                     if (elementOffset < viewportTop && elementOffset > viewportBottom) {
