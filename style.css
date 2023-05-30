@@ -249,6 +249,7 @@
     color: #000;
     background-color: #fafafa;
     margin: 0 0 1em 0;
+    padding: 0.7em 0.7em 0.3em 0.7em;
   }
   .list-group .badge.touch {
     background-color: #eee;
