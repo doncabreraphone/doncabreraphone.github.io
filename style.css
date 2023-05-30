@@ -288,6 +288,7 @@
     font-size: 1.1rem;
   }
   .card-footer .badge {
+    font-size: 0.8rem;
     padding: 0 0.3em;
   }
   .card.touch {
@@ -298,7 +299,6 @@
     background: #bf281f;
     border-color: #bf281f;
     transform: translateY(0);
-    margin-bottom: -5px;
   }
   .card.touch .card-title {
     margin-top: 8px;
