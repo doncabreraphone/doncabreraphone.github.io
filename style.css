@@ -301,7 +301,7 @@
     transform: translateY(4px);
   }
   .card.touch .card-title {
-    margin-top: 5px;
+    margin-top: 8px;
   }
   .list-group.touch .list-group-item {
     box-shadow: 0 0 20px #cacaca;
