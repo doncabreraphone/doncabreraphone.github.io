@@ -298,6 +298,7 @@
     background: #bf281f;
     border-color: #bf281f;
     transform: translateY(0);
+    margin-bottom: -5px;
   }
   .card.touch .card-title {
     margin-top: 8px;
