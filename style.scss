@@ -347,13 +347,13 @@ $main: #bf281f;
     }
 
     .card.touch {
-        background: $main; // Fondo al pasar el mouse (requiere definir $main)
-        border-color: $main; // Color del borde al pasar el mouse (requiere definir $main)
+        background: $main; 
+        border-color: $main; 
         
         .card-footer {
-            background: $main; // Fondo del pie de página al pasar el mouse (requiere definir $main)
-            border-color: $main; // Color del borde del pie de página al pasar el mouse (requiere definir $main)
-            transform: translateY(4px); // Desplazar verticalmente visible al pasar el mouse
+            background: $main; 
+            border-color: yellow; 
+            transform: translateY(0); 
         }
 
         .card-title {
