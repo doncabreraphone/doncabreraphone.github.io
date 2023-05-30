@@ -353,7 +353,7 @@ $main: #bf281f;
         .card-footer {
             background: $main; // Fondo del pie de página al pasar el mouse (requiere definir $main)
             border-color: $main; // Color del borde del pie de página al pasar el mouse (requiere definir $main)
-            transform: translateY(1px); // Desplazar verticalmente visible al pasar el mouse
+            transform: translateY(2px); // Desplazar verticalmente visible al pasar el mouse
         }
 
         .card-title {

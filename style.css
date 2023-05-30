@@ -298,7 +298,7 @@
   .card.touch .card-footer {
     background: #bf281f;
     border-color: #bf281f;
-    transform: translateY(1px);
+    transform: translateY(2px);
   }
   .card.touch .card-title {
     margin-top: 5px;
