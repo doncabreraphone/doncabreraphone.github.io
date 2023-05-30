@@ -44,7 +44,7 @@ $main: #bf281f;
     position: absolute; // Posición absoluta
     bottom: 0; // Posicionamiento inferior
     left: 0; // Posicionamiento izquierdo
-    width: 100%; // Ancho completo
+    width: 100.5%; // Ancho completo
     transform: translateY(100%); // Desplazar verticalmente oculto
 }
 
@@ -138,6 +138,13 @@ $main: #bf281f;
 
 .list-group {
 
+    .app {
+        float: right;
+        display: block;
+        visibility: hidden;
+        color: #777;
+
+    }
 
     .badge {
         background: #fefefe;
@@ -153,7 +160,13 @@ $main: #bf281f;
         &:hover {
             color: #000;
             background: #eee;
+ 
+            & .app {
+                visibility: visible;
+            }
         }
+
+
     }
 }
 
@@ -232,6 +245,27 @@ $main: #bf281f;
             display: none;
         }
 
+    }
+
+    .list-group .badge {
+        color: #000;
+        background-color: #fafafa;
+        margin: 0 0 1em 0;
+    }
+
+    .list-group .badge.touch {
+        background-color: #eee;
+    }
+
+    .list-group .app {
+        float: none;
+        margin: 0.5em 0 0.5em 0;
+        line-height: 1.4rem;
+        visibility: visible;
+    }
+
+    .badge {
+        white-space: normal;
     }
 
     #divA, #divB {

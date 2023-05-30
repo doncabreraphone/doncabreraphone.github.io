@@ -36,7 +36,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100.5%;
   transform: translateY(100%);
 }
 
@@ -123,6 +123,12 @@
   transform: scale(1.02);
 }
 
+.list-group .app {
+  float: right;
+  display: block;
+  visibility: hidden;
+  color: #777;
+}
 .list-group .badge {
   background: #fefefe;
   color: #777;
@@ -137,6 +143,9 @@
 .list-group .badge:hover {
   color: #000;
   background: #eee;
+}
+.list-group .badge:hover .app {
+  visibility: visible;
 }
 
 .btn {
@@ -200,6 +209,23 @@
   }
   .btn .bi-arrow-right-short {
     display: none;
+  }
+  .list-group .badge {
+    color: #000;
+    background-color: #fafafa;
+    margin: 0 0 1em 0;
+  }
+  .list-group .badge.touch {
+    background-color: #eee;
+  }
+  .list-group .app {
+    float: none;
+    margin: 0.5em 0 0.5em 0;
+    line-height: 1.4rem;
+    visibility: visible;
+  }
+  .badge {
+    white-space: normal;
   }
   #divA, #divB {
     margin-top: 1.5em;
