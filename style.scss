@@ -209,15 +209,28 @@ $main: #bf281f;
             transform: scale(1) !important;
         }
 
-    .bi-arrow-up-short {
-        margin-top: -6px;
-        font-size: 1.5rem !important;
-    }
+        .bi-arrow-up-short {
+            margin-top: -6px;
+            font-size: 1.5rem !important;
+        }
 
-    
-    .bi-arrow-right-short {
-        display: none;
-    }
+        &.active {
+            padding-right: 0.5em;
+        }
+
+        .bi {
+            right: 0;
+            bottom: 200px;
+        }
+
+        &.active .bi {
+            bottom: 0;
+            right: 0;
+        }
+        
+        .bi-arrow-right-short {
+            display: none;
+        }
 
     }
 

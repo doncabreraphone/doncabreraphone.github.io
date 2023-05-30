@@ -187,6 +187,17 @@
     margin-top: -6px;
     font-size: 1.5rem !important;
   }
+  .btn.active {
+    padding-right: 0.5em;
+  }
+  .btn .bi {
+    right: 0;
+    bottom: 200px;
+  }
+  .btn.active .bi {
+    bottom: 0;
+    right: 0;
+  }
   .btn .bi-arrow-right-short {
     display: none;
   }
