@@ -170,6 +170,22 @@ $main: #bf281f;
     }
 }
 
+.special-cat {
+    background: #e0f7ff;
+    padding: 0.8em 1em;
+    border-radius: 1em;
+
+    h3 {
+        color: #255160;
+    }
+
+    .card:hover .card-footer, .card {
+        background: #255160;
+        color: #255160;
+        border-color: #255160;
+    }
+}
+
 .btn {
     box-shadow: 0 5px 10px #eee;
     background: #fff;
@@ -209,8 +225,35 @@ $main: #bf281f;
 
 }
 
+#box6 {
+    margin-bottom: 120px;
+}
+
 
 @media (max-width: 576px) {
+
+    .special-cat {
+        margin: 0 -1em;
+
+        .title-display::before {
+            content: "";
+        }
+
+        h3 {
+            color: #255160;
+        }
+    
+        .card.touch .card-footer {
+            background: #255160;
+            color: #255160;
+            border-color: #255160;
+        }
+
+        .card.touch {
+            border-color: #255160;
+        }
+    }
+
     .btn {
         padding: 0.5em;
         margin-bottom: 0;
@@ -223,8 +266,8 @@ $main: #bf281f;
         }
 
         .bi-arrow-up-short {
-            margin-top: -6px;
-            font-size: 1.5rem !important;
+            right: 10px !important;
+            font-size: 1.8rem !important;
         }
 
         &.active {
@@ -233,11 +276,11 @@ $main: #bf281f;
 
         .bi {
             right: 0;
-            bottom: 200px;
+            top: 200px;
         }
 
         &.active .bi {
-            bottom: 0;
+            top: -3px;
             right: 0;
         }
         
