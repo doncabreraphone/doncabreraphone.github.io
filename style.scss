@@ -342,7 +342,7 @@ $main: #bf281f;
     }
 
     .card-footer .badge {
-        font-size: 0.8rem;
+
         padding: 0 0.3em;
     }
 
@@ -353,7 +353,7 @@ $main: #bf281f;
         .card-footer {
             background: $main; 
             border-color: $main; 
-            transform: translateY(4px); 
+            transform: translateY(0); 
         }
 
         .card-title {
