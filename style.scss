@@ -352,8 +352,8 @@ $main: #bf281f;
         
         .card-footer {
             background: $main; 
-            border-color: yellow; 
-            transform: translateY(0); 
+            border-color: $main; 
+            transform: translateY(2px); 
         }
 
         .card-title {
