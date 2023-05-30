@@ -166,7 +166,7 @@ $main: #bf281f;
     margin-bottom: 1em;
     transition: all 0.2s ease-in-out;
     transform: scale(1);
-    
+    overflow: hidden;
 
     &:hover, &.active {
         background-color: $main;
@@ -175,11 +175,25 @@ $main: #bf281f;
         transform: scale(1.06);
     }
 
+    &.active {
+        padding-right: 40px;
+    }
+
+    .bi {
+        position: absolute;
+        right: -200px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &.active .bi{
+        right: 28px;
+        font-size: 1.2rem;
+    }
+
     &:active {
         background-color: #000 !important;
     }
 
-    
 }
 
 
@@ -194,6 +208,17 @@ $main: #bf281f;
         &:hover {
             transform: scale(1) !important;
         }
+
+    .bi-arrow-up-short {
+        margin-top: -6px;
+        font-size: 1.5rem !important;
+    }
+
+    
+    .bi-arrow-right-short {
+        display: none;
+    }
+
     }
 
     #divA, #divB {
@@ -255,6 +280,10 @@ $main: #bf281f;
 @media (min-width: 768px) {
     #divA, #divB {
         margin-right: 2em;
+    }
+
+    .bi-arrow-up-short {
+        display: none;
     }
 }
 
