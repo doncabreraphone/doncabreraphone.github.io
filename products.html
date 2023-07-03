@@ -1,0 +1,1171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Alkanos Test fucionalidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=PT+Sans:wght@400;700&family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#363636">
+    <meta name="msapplication-config" content="https://www.alkanos.com.ar/wp-content/themes/alkanos/assets/img/favicons/browserconfig.xml">
+    
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  </head>
+
+  <body>
+<div id="full-content">
+    <div class="container-fluid">
+        
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="images/logos-horizontal.jpg" class="img-fluid" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                <a class="nav-link translate" href="index.html" data-key="inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link translate" data-key="nosotros" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link translate" href="#" data-key="industrias">Industrias</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link translate current" href="#" data-key="productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link translate" href="#" data-key="maquinaria">Maquinaria</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link translate" href="#" data-key="sustentabilidad">Sustentabilidad</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link translate" href="#" data-key="contacto">Contacto</a>
+                </li>
+            </ul>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" hidden role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Spanish</label>
+            </div>
+              
+        </nav>
+
+
+
+        <div id="block__wrapper">
+                <div class="row">
+                    <div class="col-7 px-5">
+                        <div id="hero__content">
+                            <h1 class="translate" data-key="hero_1_products">Products</h1>
+                            <h2 class="translate" data-key="hero_2_products">More than 40 years of serving the industry.</h2>
+                     
+                        </div>
+                    </div>
+                    <div class="col-5 youtube-container">
+                        <img src="/images/home_8.jpg" class="img-fluid img-box" alt="">
+                    </div>
+            </div>
+        </div>
+        
+
+
+        <!-- PRODUCTS -->
+
+        <div id="products" class="container-fluid mt-5 mt-lg-5 px-0">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        
+        
+                        <div class="row">
+        
+                            <div class="col-12 col-lg-3">
+                              <!-- MENU -->
+                              <a name="left-menu-top"></a>
+                                <div class="d-grid gap-2 sticky-top pt-4" id="left-menu">
+                                    <div class="button_wrapp"><a name="" id="btnIndustrias" class="btn btn-primary btn-block active" href="#left-menu-top" role="button">Industrias</a></div>
+                                    <div class="button_wrapp"><a name="" id="btnProductos" class="btn btn-primary btn-block" href="#left-menu-top" role="button">Productos</a></div>
+                                    <div class="button_wrapp"><a name="" id="btnSoluciones" class="btn btn-primary btn-block" href="#left-menu-top" role="button">Maquinaria</a></div>
+                              
+                                    <!-- IMAGES -->
+                                    <div id="productos_img_wrapper" class="hide_this">
+                                        <img id="productos_img" src="" alt="" class="img-fluid">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div id="divA" class="col">
+                              
+                              <!-- BOX 1 -->
+                              <div class="pb-4 box">
+                                <!-- Contenido del div A -->
+                                <h2 class="title-display-h2">Descubre el Producto Ideal para tu Proyecto</h2>
+                                <p class="lead mb-5">Explora nuestro catálogo, diseñado para satisfacer las exigentes necesidades de la industria y experimenta un rendimiento excepcional en tus procesos y aplicaciones.</p>
+                                <div class="rounded card-wrap">
+                                    <div class="row">    
+                                        <h3 class="title-display">Espumas Flexibles</h3>
+                                    </div>
+        
+        
+                                    <div class="row row-cols-1 row-cols-xl-3 g-4 mb-4 text-center">
+        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/CALZADO y TEXTIL ok.jpg">
+                                                <img src="/images/products_opt/CALZADO y TEXTIL ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Calzado</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span> 
+                                                        <span class="badge">Isocianatos</span>    
+                                                        <span class="badge">Aditivos</span> 
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+        
+                                        <div class="col-12 col-lg-6">
+                                            <div class="card" data="/images/products_opt/AGLOMERADO ok.jpg">
+                                                <img src="/images/products_opt/AGLOMERADO ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Aglomerados</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>  
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Espumas Especiales OK.jpg">
+                                                <img src="/images/products_opt/Espumas Especiales OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Espumas especiales</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-xl-2 mb-4 text-center">
+        
+                                        <div class="col">
+                                        
+                                            <div class="card" data="/images/products_opt/ALMOHADA ok.png">
+                                                <img src="/images/products_opt/ALMOHADA ok.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Almohadas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Sistemas PU Flexibles</span>
+        
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/ORTOPEDIA ok.jpg">
+                                                <img src="/images/products_opt/ORTOPEDIA ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Ortopedia</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Sistemas PU Flexibles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-xl-2 text-center">
+        
+                                        <div class="col-12 col-lg-6">
+                                            <div class="card" data="/images/products_opt/Colchones ok.jpg">
+                                                <img src="/images/products_opt/Colchones ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Colchones</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>    
+                                                        <span class="badge">Sistemas PU Flexibles</span>  
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/dummy.jpg">
+                                                <img src="/images/products_opt/dummy.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Tapicería y muebles</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Sistemas PU Flexibles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        
+        
+                                        
+                                    </div>
+                                </div>
+        
+                              </div>
+        
+        
+                              <!-- BOX 2 -->
+                              <div class="pb-4 box">
+                                <div class="mt-5">
+                                    <div class="row">    
+                                        <h3 class="title-display">Construcción</h3>
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/pisos OK.png">
+                                                <img src="/images/products_opt/pisos OK.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Pisos</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/INSONORIZACION OK.jpg">
+                                                <img src="/images/products_opt/INSONORIZACION OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Insonorización</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/PANELES ok.jpg">
+                                                <img src="/images/products_opt/PANELES ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Paneles</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/PERSIANA ok.png">
+                                                <img src="/images/products_opt/PERSIANA ok.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Persianas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/PUERTA SEL.png">
+                                                <img src="/images/products_opt/PUERTA SEL.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Puertas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mt-3 text-center">
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/CAÑERIAS ok.png">
+                                                <img src="/images/products_opt/CAÑERIAS ok.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Cañerías</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/SPRAY ok.png">
+                                                <img src="/images/products_opt/SPRAY ok.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Spray</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+        
+                                        
+                                    </div>
+                                </div>
+        
+        
+        
+        
+        
+                              </div>
+        
+                            <!-- BOX 3 -->
+                              <div class="pb-4 box">
+                                <div class="mt-5">
+                                    <div class="row">    
+                                        <h3 class="title-display">Refrigeración</h3>
+        
+                                    </div>
+        
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-4 text-center">
+        
+        
+                                        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/HELADERAS OK.png">
+                                                <img src="/images/products_opt/HELADERAS OK.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Heladeras</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/CAMARAS FRIGORIFICAS ok.jpg">
+                                                <img src="/images/products_opt/CAMARAS FRIGORIFICAS ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Cámaras frigoríficas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/SPRAY ok.png">
+                                                <img src="/images/products_opt/SPRAY ok.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Spray</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Conservadoras OK.png">
+                                                <img src="/images/products_opt/Conservadoras OK.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Conservadoras</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-4 text-center">
+                                        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/TERMOTANQUES ok.jpg">
+                                                <img src="/images/products_opt/TERMOTANQUES ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Termotanques</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/gondolas OK.png">
+                                                <img src="/images/products_opt/gondolas OK.png" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Góndolas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Carroceria SEL.jpg">
+                                                <img src="/images/products_opt/Carroceria SEL.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Carrocerías</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/EXHIBIDORAS OK.jpg">
+                                                <img src="/images/products_opt/EXHIBIDORAS OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Exhibidoras</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+        
+        
+        
+        
+        
+                              </div>
+        
+                              <!-- BOX 4 -->
+                              <div class="pb-4 box">
+                                <div class="mt-5">
+                                    <div class="row">    
+                                        <h3 class="title-display">Automotriz</h3>
+                                    </div>
+        
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 text-center">
+        
+        
+                                        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Techos y parasol OK.jpg">
+                                                <img src="/images/products_opt/Techos y parasol OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Techos y parasoles</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Sistemas PU Flexibles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Paragolpes ok.jpg">
+                                                <img src="/images/products_opt/Paragolpes ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Paragolpes</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Sistemas PU Flexibles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mt-3 text-center">
+        
+                                    <div class="col">
+                                        <div class="card" data="/images/products_opt/Filtros OK.jpg">
+                                            <img src="/images/products_opt/Filtros OK.jpg" class="hidden" alt="">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Filtros</h5>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">
+                                                    <span class="badge">Sistemas PU Microcelular</span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col">
+                                        <div class="card" data="/images/products_opt/LAMINADOS ok.jpg">
+                                            <img src="/images/products_opt/LAMINADOS ok.jpg" class="hidden" alt="">
+                                            <div class="card-body">
+                                            <h5 class="card-title">Laminados</h5>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">
+                                                    <span class="badge">Polioles</span>
+                                                    <span class="badge">Aditivos</span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-4 mt-3 text-center">
+        
+                                        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Accesorios OK.jpg">
+                                                <img src="/images/products_opt/Accesorios OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Accesorios</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Sistemas PU Microcelular</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mt-3 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/ASIENTOS SEL.jpg">
+                                                <img src="/images/products_opt/ASIENTOS SEL.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Asientos</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Polioles</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Sistemas PU Flexibles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Carroceria SEL.jpg">
+                                                <img src="/images/products_opt/Carroceria SEL.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Carrocería térmica</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Rígidos</span>
+                                                        <span class="badge">Aditivos</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    
+                                    </div>
+                                </div>
+        
+        
+        
+        
+        
+                              </div>
+        
+        
+                              <!-- BOX 5 -->
+                              <div class="pb-4 box">
+                                <div class="mt-5">
+                                    <div class="row">    
+                                        <h3 class="title-display">Consumo</h3>
+                                    </div>
+        
+        
+                                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 mb-4 g-4 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Bebidas ok.jpg">
+                                                <img src="/images/products_opt/Bebidas ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Bebidas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Medicamentos ok.jpg">
+                                                <img src="/images/products_opt/Medicamentos ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Medicamentos</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/COSMETICA ok.jpg">
+                                                <img src="/images/products_opt/COSMETICA ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Cosmética</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/CUIDADO PERSONAL ok.jpg">
+                                                <img src="/images/products_opt/CUIDADO PERSONAL ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Cuidado personal</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Fragancias OK.jpg">
+                                                <img src="/images/products_opt/Fragancias OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Fragancias</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Limpiadores OK.jpg">
+                                                <img src="/images/products_opt/Limpiadores OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Limpiadores</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-4 text-center">
+        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/dummy.jpg">
+                                                <img src="/images/products_opt/dummy.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Anticongelantes</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Glicoles</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        
+                                    </div>
+                                </div>
+        
+        
+        
+        
+        
+                              </div>
+        
+        
+                              <!-- BOX 6 -->
+                              <div class="pb-4 box">
+                                <div class="mt-5">
+                                    <div class="row">    
+                                        <h3 class="title-display">Manufactura</h3>
+                                    </div>
+        
+        
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-4 g-4 text-center">
+        
+                                        <div class="col">
+        
+                                            <div class="card" data="/images/products_opt/Piezas Minería ok.jpg">
+                                                <img src="/images/products_opt/Piezas Minería ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Piezas para minería</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Sistemas PU Microcelular</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+        
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Maquetas ok.jpg">
+                                                <img src="/images/products_opt/Maquetas ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Maquetas</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Isocianatos</span>
+                                                        <span class="badge">Sistemas PU Microcelular</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 mb-4 g-4 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/Náutica ok.jpg">
+                                                <img src="/images/products_opt/Náutica ok.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Náutica</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Flexible</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 mb-4 g-4 text-center">
+        
+                                        <div class="col">
+                                            <div class="card" data="/images/products_opt/ARTICULOS DEPORTIVOS OK.jpg">
+                                                <img src="/images/products_opt/ARTICULOS DEPORTIVOS OK.jpg" class="hidden" alt="">
+                                                <div class="card-body">
+                                                <h5 class="card-title">Artículos deportivos</h5>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-body-secondary">
+                                                        <span class="badge">Sistemas PU Flexible</span>
+                                                        <span class="badge">Sistemas PU Microcelular</span>
+                                                        <span class="badge">Isocianatos</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+        
+        
+        
+        
+        
+                              </div>
+                              
+                              
+                              
+                            </div>
+        
+        
+                            
+                            <!-- Contenido del div B -->
+                            <div id="divB" class="col mb-5" style="display: none;">
+                                
+                                <h2 class="title-display-h2">Catálogo de Químicos Avanzados</h2>
+                                <p class="lead mb-5">En Alkanos, entendemos la importancia de encontrar el producto adecuado para cada necesidad. Con nuestro enfoque técnico y experiencia, estamos aquí para ayudarte a encontrar rápidamente lo que necesitas, ya seas un experto en química o un profesional en busca de la solución perfecta.</p>
+        
+                                <div class="row">
+                                    <div class="col">
+                                        
+                                        <div class="list-group">
+                                            <div class="list-group-item">
+                                                <h3 class="title-display-h3">Alimentos • Alimentos Mascotas • Bodegas • Medicamentos • Saborizantes • Vacunas</h3>
+                                                <span class="badge rounded-pill">Propilenglicol</span>
+                                              </div>
+                                        </div>
+        
+                                        <div class="list-group">
+                                              <div class="list-group-item">
+                                                <h3 class="title-display-h3">Catalizadores</h3>
+                                                <span class="badge rounded-pill">Unikat Bf-32</span>
+                                                <span class="badge rounded-pill">Unikat Nem</span>
+                                              </div>
+                                        </div>
+        
+                                        <div class="list-group">
+                                              <div class="list-group-item">
+                                                <h3 class="title-display-h3">Cosmética • Fragancias • Higiene Personal • Limpieza</h3>
+                                                <span class="badge rounded-pill">Dipropilenglicol</span>
+                                              </div>
+                                        </div>
+          
+                                        <div class="list-group">
+                                              <div class="list-group-item">
+                                                  <h3 class="title-display-h3">Esmaltes Sintéticos • Secante • Tintas</h3>
+                                                  <span class="badge rounded-pill">Duroct CA 4%</span>
+                                                  <span class="badge rounded-pill">Duroct CA 6%</span>
+                                                  <span class="badge rounded-pill">Duroct CA 10%</span>
+                                                  <span class="badge rounded-pill">Duroct CO 6%</span>
+                                                  <span class="badge rounded-pill">Duroct CO 12%</span>
+                                                  <span class="badge rounded-pill">Duroct ZR 18%</span>
+                                                  <span class="badge rounded-pill">Duroct ZR 24%</span>
+                                                  <span class="badge rounded-pill">Duroct SR 24%</span>
+                                                  <span class="badge rounded-pill">Sorodry CU 6%</span>
+                                                  <span class="badge rounded-pill">Meko - ANTICAPA</span>
+                                                  <span class="badge rounded-pill">Secante Trimetálico</span>
+                                                  <span class="badge rounded-pill">Solvfix - Sulfato De Estroncio</span>
+                                              </div>
+                                        </div>
+        
+                                        <div class="list-group">
+                                              <div class="list-group-item">
+                                                  <h3 class="title-display-h3">Pinturas en Polvo • Pinturas Látex</h3>
+                                                  <span class="badge rounded-pill">Solvfix - Sulfato De Estroncio</span>
+                                              </div>
+        
+                                        </div>
+        
+                                        <div class="list-group">
+                                              <div class="list-group-item">
+                                                  <h3 class="title-display-h3">Botones • Esmaltes Sintéticos • Mesadas Sintéticas • Resinas Poliéster • Secante • Tintas</h3>
+                                                  <span class="badge rounded-pill">Duroct Co 12%</span>
+                                              </div>
+                                        </div>
+        
+                                        <div class="list-group">
+                                              <div class="list-group-item">
+                                                  <h3 class="title-display-h3">Dispersantes • Esmaltes Sintéticos • Tintas</h3>
+                                                  <span class="badge rounded-pill">Durasperse</span>
+                                              </div>
+        
+                                        </div>
+        
+                                    
+        
+        
+                                        
+                                    </div>
+                                </div>
+        
+                            </div>
+    
+    
+    
+                            <div id="divC" class="col mb-5" style="display:none;">
+                                
+                                <h2 class="title-display-h2">Maquinaria</h2>
+    
+                                <p class="lead mb-2"><b>Máquinas de alta performance para espuma de poliuretano</b></p>
+                                <p class="lead mb-5">Ofrecemos máquinas de firmas líderes en el mundo para la fabricación de espumas de poliuretano. Consulte la oferta de maquinaria y contacte a nuestros expertos para alcanzar sus objetivos de producción con el más alto estándar de calidad. </p>
+    
+    
+                                <div class="row row-cols-1 row-cols-xl-2 g-4 mb-4">
+    
+                                    <div class="col-12 col-md-2 text-justify">
+    
+                                        <div class="card h-100">
+                                        <img src="images/laader.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3 class="card-title display-6">Laader Berg</h3>
+                                            <p class="card-text text-muted">Laader Berg AS es una compañía líder mundial en el diseño y fabricación de máquinas espumadoras premium. Con más de 60 años en el mercado, Laader Berg ha diseñado y entregado más de 560 máquinas espumadoras de alta calidad en más de 100 países.</p>
+                                            <p class="card-text text-muted">Gracias a su capacidad de innovación, y a su determinación de permanecer actualizada y adoptar los últimos avances en tecnología en la industria, se ha convertido en una firma experta en producción de bloques continuos de espuma.</p>
+                                            
+                                        </div>
+                                        </div>
+    
+                                        
+                                    </div>
+                                    <div class="col-12 col-md-2 text-justify">
+    
+                                        <div class="card h-100">
+                                        <img src="images/fecken.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h3 class="card-title display-6">Fecken Kirfel</h3>
+                                            <p class="card-text text-muted">Fecken Kirfel es una empresa alemana que fabrica máquinas precisas y eficientes para corte y tratamiento de espumas flexibles, plásticos compactos (goma, caucho y neoprene), espuma rígida y corcho. Es un referente mundial de calidad y tecnología para las industrias del colchón, tapicería, automotriz, construcción, entre otras. Con más de 150 años de historia y con presencia en más de 35 países, Fecken Kirfel ofrece maquinaria de la más alta calidad.</p>
+    
+                                            <p class="card-text text-muted">Entre su amplia oferta de máquinas, podrá encontrar máquinas de corte vertical, corte horizontal, corte de contorno, peladoras, entre otras.</p>
+      
+                                        </div>
+                                        </div>
+                                                                                 
+                                    </div>
+                                </div>
+                                
+                            </div>
+        
+                        </div>
+    
+                    
+                          
+                          
+        
+        
+                    </div>
+                </div>
+            </div>
+            </div> 
+
+
+        <!-- END PRODUCTS AREA -->
+    </div>
+
+        <div id="talk">
+
+            <div id="talk_wrap">
+                <h1>Tenemos Respuestas</h1>
+                <h2>Hable con nuestros expertos para recibir orientación profesional y conocimientos valiosos en su industria. Benefíciese de su conocimiento y experiencia para tomar decisiones informadas y lograr resultados óptimos.</h2>
+                
+                <p>
+                    <button class="btn btn-lg alk-btn translate" data-key="btn_">Conversemos</button>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    
+    
+    <div id="footer">
+        <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 pt-5">
+                    <img src="/images/logos-horizontal.jpg" class="img-fluid logos-horizontal" alt="">
+                    
+
+                    <div id="footer-menu">
+                        <nav>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link translate" href="index.html" data-key="inicio">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link translate" data-key="nosotros" href="#">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link translate" href="#" data-key="industrias">Industrias</a></li>
+                            <li class="nav-item"><a class="nav-link translate current" href="#" data-key="productos">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link translate" href="#" data-key="maquinaria">Maquinaria</a></li>
+                            <li class="nav-item"><a class="nav-link translate" href="#" data-key="sustentabilidad">Sustentabilidad</a></li>
+                            <li class="nav-item"><a class="nav-link translate" href="#" data-key="contacto">Contacto</a></li>
+                        </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <div class="col-7 pt-5">
+                    <h2 class="translate" data-key="text_19">Colaboramos con marcas y personas innovadoras; <span class="main">construyamos algo extraordinario juntos.</span></h2>
+
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="lead translate" data-key="text_20">Empezemos a conversar</h3>
+                            <p><b>+54 11</b> 2150-3675<br><b>+54 11</b> 3220-4725</p>
+                            <p><a href="mailto:alkanos@alkanos.com.ar">alkanos@alkanos.com.ar</a></p>
+                        </div>
+                        <div class="col">
+                            <h3 class="lead translate" data-key="text_21">Conozcamonos en persona</h3>
+                            <p>Luis María Drago 2273 (B1852LHG)<br>Parque Industrial Burzaco</p>
+                        </div>
+
+                        <div class="col">
+                            <h3 class="lead translate" data-key="text_22">Siganos</h3>
+                            <p class="icons">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                    </svg>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-12 text-center mt-5">
+                    <p class="translate" data-key="text_23">Copyright @2023 Alkanos. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- TRANSITION -->
+    <div id="transition-overlay">
+        <div id="logo">
+            <img src="logo.png" class="img-fluid w-100" alt="">
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+  </html>
