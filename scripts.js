@@ -340,33 +340,7 @@
 
 
 
-        // Transition
-        var overlay = $('#transition-overlay');
-        var content = $('#content');
-        var logo = $('#logo');
-        overlay.addClass('transition-overlay-on');
-        var container = $('#full-content');
-
-        $('body').toggleClass("main");
-
-        container.hide();
-
-        overlay.on('animationend', function() {
-            content.addClass('visible');
-            logo.fadeIn('fast');
-            
-            
-            logo.addClass('anima');
-            
-            setTimeout(function() {
-                logo.fadeOut('fast', function() {
-                    overlay.removeClass('transition-overlay-on');
-                    overlay.addClass('transition-overlay-off');
-                    container.show();
-                    $('body').removeClass("main");
-                });
-            }, 0.5);
-        });
+        
 
 
         // scroll for mobile
@@ -437,8 +411,273 @@
               });
 
 
+
+
+
+        }
+        
+            // DROPDOWN MENU
+            // Enable dropdown on mouseover
+            $('.nav-item.dropdown').mouseover(function() {
+                $(this).addClass('show');
+                $(this).children('.dropdown-menu').addClass('show');
+            }).mouseout(function() {
+                $(this).removeClass('show');
+                $(this).children('.dropdown-menu').removeClass('show');
+            });
+            
+            // Disable click event for dropdown toggle
+            $('.nav-item.dropdown > .nav-link.dropdown-toggle').click(function() {
+                return false;
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+const minPerSlide = $('#industries').length && !$('.no-slide').length ? 6 : 2;
+const items = document.querySelectorAll('.carousel .carousel-item');
+
+items.forEach((el) => {
+    let next = el.nextElementSibling;
+    for (let i = 1; i < minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+            next = items[0];
+        }
+        el.appendChild(next.cloneNode(true).children[0]);
+        next = next.nextElementSibling;
+    }
+});
+            
+
+if ($('#industries').length) {
+    // BEHAVIOR
+
+    // Variable to keep track of .card-link hover
+    let cardLinkHovered = false;
+    // Variable to track the click state
+    let isClicked = false;
+    // Variable to track if a transition is ongoing
+    let isTransitioning = false;
+
+    // Function to reset all cards
+    function resetAllCards() {
+        $(".carousel-item .card").removeClass("hovered clicked");
+        $(".carousel-item .card-img").show();
+        $(".carousel-item .card-link").show();
+    }
+
+    // Function to reset the click state after a delay
+    function resetClickState() {
+        setTimeout(() => {
+            isClicked = false;
+            isTransitioning = false;
+        }, 500); // Adjust the delay (in milliseconds) as needed
+    }
+
+    // Add event listener for mouseenter on carousel items
+    $(".carousel-item .card").mouseenter(function() {
+        
+        if (!isClicked && !isTransitioning) {
+            resetAllCards();
+            $(this).addClass("hovered");
+            $(this).find(".card-link a").addClass("trigger");
+        }
+    }).mouseleave(function() {
+
+        if (!isClicked && !isTransitioning) {
+            $(this).find(".card-link a").removeClass("trigger");
+            setTimeout(() => {
+                $(this).find(".card-img").show();
+            }, 180);
+
+            setTimeout(() => {
+                $(".carousel-item .card").removeClass("clicked");
+            }, 230);
+
+            setTimeout(() => {
+                $(this).find(".card-link").show();
+            }, 300);
+
+            $(this).removeClass("hovered");
         }
 
+        if (!$(this).hasClass("clicked")) {
+            $(".carousel-item .card-img").show();
+        }
+        $(".carousel-item .card-link").show();
+    });
+
+    // Add click event handler for carousel items
+    $(".carousel-item .card").click(function() {
+        if (!isClicked && !isTransitioning) {
+            isClicked = true;
+            isTransitioning = true;
+            $(".carousel-item .card-img").show();
+            $(".carousel-item .card-link").show();
+            
+            setTimeout(() => {
+                if ($(this).hasClass("clicked")) {
+                    $(this).find(".card-img").hide();
+                    $(this).find(".card-link").hide();
+                    isTransitioning = false;
+                  }
+            }, 100);
+
+            $(".carousel-item .card").removeClass("clicked");
+            $(this).addClass("clicked");
+            resetClickState();
+        }
+    });
+
+    // Event listener for .card-link mouseover
+    $(".card-link a").mouseover(function() {
+        if (isClicked) {
+            // Prevent triggering the mouseover if clicked
+            return;
+        }
+        cardLinkHovered = true;
+    });
+
+    // Check for any card with the class "hovered"
+    // If found, reset all cards
+    setInterval(function() {
+        if ($(".carousel-item .card.hovered").length > 0) {
+            resetAllCards();
+        }
+    }, 100);
+
+
+    // Handler to reset card state if mouse hovers over carousel control arrows
+  $(".carousel-control-prev, .carousel-control-next").mouseenter(function () {
+    resetAllCards();
+  });
+    
+    
+  if ($('#talk_img_back').length) {
+    
+  const $backgroundImage = $("#talk_img_back");
+  let isAnimationDone = false;
+
+  function resetAnimation() {
+    isAnimationDone = false;
+    $backgroundImage.css("left", "-100%");
+  }
+
+  function animateBackgroundImage() {
+    if (!isAnimationDone && $(window).scrollTop() > 0) { // Check if the user has scrolled down
+      $backgroundImage.css("left", "0"); /* Slide the image to the left */
+      isAnimationDone = true;
+    }
+  }
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() === 0) {
+      resetAnimation();
+    } else {
+      animateBackgroundImage();
+    }
+  });
+}
+    
+     
+let isAnimating = false;
+
+      // Function to start the animation when the page loads
+      function startAnimation() {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        var overlay = $('#transition-overlay');
+        var content = $('#content');
+        var logo = $('#logo');
+
+        if (!overlay.hasClass('transition-overlay-internal')) {
+          logo.fadeIn('fast');
+        }
+
+        content.addClass('visible');
+        logo.addClass('anima');
+
+        setTimeout(function() {
+          logo.fadeOut('fast', function() {
+            overlay.removeClass('transition-overlay-on');
+            overlay.addClass('transition-overlay-off');
+            $("#full-content").show();
+            $('body').removeClass("main");
+
+            // Add the "fade-up" class to elements with the class "#hero__content .translate"
+            $("#hero__content .translate").addClass("fade-up");
+          });
+        }, 1000);
+      }
+
+      // Call the startAnimation function after a certain delay (adjust as needed)
+      setTimeout(startAnimation, 400);
+
+      $(".navbar a").on("click", function(event) {
+        // Prevent the default link action
+        event.preventDefault();
+
+        // Change the class of "transition-overlay" to "transition-overlay-on"
+        $("#transition-overlay").removeClass("transition-overlay-off").addClass("transition-overlay-on");
+        $("#transition-overlay").addClass("transition-overlay-internal");
+
+        // Delay for 2 seconds and then continue with the link action
+        setTimeout(function() {
+          window.location.href = event.currentTarget.href;
+        }, 500);
+      });
+
+
+
+} 
+
+            
+
+
+    
+    // // SLIDER TALK
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const backgroundImage = document.getElementById("talk_img_back");
+    //     let isAnimationDone = false;
+      
+    //     function resetAnimation() {
+    //       isAnimationDone = false;
+    //       backgroundImage.style.left = "-100%";
+    //     }
+      
+    //     function animateBackgroundImage() {
+    //       if (!isAnimationDone && window.scrollY > 0) { // Check if the user has scrolled down
+    //         backgroundImage.style.left = "0"; /* Slide the image to the left */
+    //         isAnimationDone = true;
+    //       }
+    //     }
+      
+    //     window.addEventListener("scroll", function () {
+    //       if (window.scrollY === 0) {
+    //         resetAnimation();
+    //       } else {
+    //         animateBackgroundImage();
+    //       }
+    //     });
+    //   });
+  
+
+            
     });
       
       
