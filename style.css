@@ -35,7 +35,7 @@ body.main {
   transition: all 0.8s ease-in-out;
 }
 .dropdown-menu a {
-  padding: 0.5em 2em;
+  padding: 0.3em 2em;
 }
 
 .nav-item.dropdown.show .nav-link {
