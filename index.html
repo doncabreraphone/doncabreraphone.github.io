@@ -35,11 +35,12 @@
 
   <body>
   <div id="full-content">
-    <div class="container-fluid">
-        
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
-                <img src="images/logos-horizontal.jpg" class="img-fluid" alt="">
+      
+     
+      <nav id="home_top_nav" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="images/logos-horizontal.jpg" class="img-fluid" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,14 +55,15 @@
                         <a class="nav-link translate" data-key="nosotros" href="#">Nosotros</a>
                     </li>
                     <li class="nav-item dropdown"> <!-- Change to dropdown -->
-                        <a class="nav-link translate" href="industries.html" id="industriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="industrias">Industrias</a>
+                        <a class="nav-link translate" href="flexible-foams.html" id="industriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-key="industrias">Industrias</a>
                         <div class="dropdown-menu" aria-labelledby="industriesDropdown">
                             <a class="dropdown-item" href="flexible-foams.html">Espumas Flexibles</a>
-                            <a class="dropdown-item" href="#">Construcción</a>
-                            <a class="dropdown-item" href="#">Refrigeración</a>
-                            <a class="dropdown-item" href="#">Automotriz</a>
-                            <a class="dropdown-item" href="#">Consumo</a>
-                            <a class="dropdown-item" href="#">Manufactura</a>
+                            <a class="dropdown-item" href="construction.html">Construcción</a>
+                            <a class="dropdown-item" href="refrigeration.html">Refrigeración</a>
+                            <a class="dropdown-item" href="automotive.html">Automotriz</a>
+                            <a class="dropdown-item" href="consumption.html">Consumo</a>
+                            <a class="dropdown-item" href="gas-and-mining.html">Gas y Mineria</a>
+                            <a class="dropdown-item" href="applications.html">Otras Aplicaciones</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -82,24 +84,24 @@
                 <input class="form-check-input" type="checkbox" hidden role="switch" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">English</label>
             </div>
-              
-        </nav>
-
-
-
-        <div id="block__wrapper">
-                <div class="row">
-                    <div class="col-7 px-5">
-                        <div id="hero__content">
-                            <h1 class="translate" data-key="hero_1">Soluciones en productos químicos desde 1975</h1>
-                            <h2 class="translate" data-key="hero_2">Alkanos distribuye productos de alta calidad de destacadas compañías internacionales y formula soluciones en las industrias que servimos.</h2>
-                        </div>
-                    </div>
-                    <div class="col-5 youtube-container">
-                        <div id="player1"></div>
-                    </div>
-            </div>
         </div>
+      </nav>
+
+
+
+<div id="home_top" class="youtube-container w-100 pb-5 ratio ratio-16x9">
+    <div id="over_text">
+        <div class="container my-5">
+            <div id="hero__content">
+                <h1 class="translate" data-key="hero_1">Soluciones en productos químicos desde 1975</h1>
+                <h2 class="translate" data-key="hero_2">Alkanos distribuye productos de alta calidad de destacadas compañías internacionales y formula soluciones en las industrias que servimos.</h2>
+            </div>            
+          
+        </div>
+    </div>
+    <div id="player2"></div>
+</div>
+        
 
         <div id="content_h1">
             <h1 class="translate" data-key="box_1">Lideres en <span>Innovación y Desarrollo</span></h1>
@@ -136,23 +138,30 @@
     </div>
 
 
-    <div class="youtube-container w-100 p-0 py-5 ratio ratio-16x9">
-        <div id="over_text">
-            <div class="container my-5">
-                <h1>ISO 9001 • TUV RHEINLAND</h1>
-                <p class="lead translate" data-key="text_2">El Sistema de Gestión de Calidad de Alkanos S.A. satisface los requisitos de las normas internacionales ISO 9001 y está certificado por TÜV Rheinland. Continuaremos mejorando los aspectos de nuestro negocio, estableciendo objetivos para la mejora de la calidad de nuestros productos y servicios a través de la aplicación de tecnología, recursos y las mejores prácticas operativas.</p>
 
-                <p>
-                    <button class="btn btn-lg alk-btn translate" data-key="btn_2">Ver Certificado Digital</button>
-                    <button class="btn btn-lg alk-btn translate" data-key="btn_3">Ver Política de Calidad</button>
-                </p>
+    <div id="block__wrapper" class="my-5 home_top">
+        <div class="row">
+            <div class="col-5 pl-3 pr-5">
                 
-              
+            <h1>ISO 9001 • TUV RHEINLAND</h1>
+            <p class="lead translate" data-key="text_2">El Sistema de Gestión de Calidad de Alkanos S.A. satisface los requisitos de las normas internacionales ISO 9001 y está certificado por TÜV Rheinland. Continuaremos mejorando los aspectos de nuestro negocio, estableciendo objetivos para la mejora de la calidad de nuestros productos y servicios a través de la aplicación de tecnología, recursos y las mejores prácticas operativas.</p>
+            
+            <p>
+                <button class="btn btn-lg alk-btn translate" data-key="btn_2">Ver Certificado Digital</button>
+                <button class="btn btn-lg alk-btn translate" data-key="btn_3">Ver Política de Calidad</button>
+            </p>
+
+            </div>
+
+            
+            <div class="col-7">
+                <div class=" youtube-container">
+
+                    <div id="player1"></div>
+                </div>
             </div>
         </div>
-        <div id="player2"></div>
     </div>
-
 
     <div class="container-fluid bottom-boxed">
 
@@ -179,7 +188,7 @@
 
 
             </div>
-
+            
             <div class="col-md-auto"></div>
 
             <div class="col col-lg-6">
@@ -259,7 +268,7 @@
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item"><a class="nav-link translate current" href="#" data-key="inicio">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link translate" data-key="nosotros" href="#">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link translate" href="#" data-key="industrias">Industrias</a></li>
+                            <li class="nav-item"><a class="nav-link translate" href="flexible-foams.html" data-key="industrias">Industrias</a></li>
                             <li class="nav-item"><a class="nav-link translate" href="products.html" data-key="productos">Productos</a></li>
                             <li class="nav-item"><a class="nav-link translate" href="#" data-key="maquinaria">Maquinaria</a></li>
                             <li class="nav-item"><a class="nav-link translate" href="#" data-key="sustentabilidad">Sustentabilidad</a></li>

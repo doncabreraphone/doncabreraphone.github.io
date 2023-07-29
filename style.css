@@ -341,6 +341,119 @@ body.main {
   margin-left: -100%;
 }
 
+.home_top {
+  padding: 4em 0 4em 2em !important;
+}
+.home_top .youtube-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+  overflow: hidden;
+  max-width: 95%;
+  margin-top: -5%;
+  margin-left: 60px !important;
+}
+.home_top .youtube-container iframe {
+  position: absolute;
+  left: 0;
+}
+.home_top h1 {
+  padding-top: 0.5em;
+  font-family: "League Gothic", sans-serif;
+}
+@media only screen and (min-width: 1200px) {
+  .home_top h1 {
+    font-size: 4rem !important;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .home_top h1 {
+    font-size: 6rem !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home_top p.lead {
+    font-size: 1.2rem !important;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .home_top p.lead {
+    font-size: 1.3rem !important;
+  }
+}
+.home_top h1, .home_top .lead {
+  color: #fff;
+}
+.home_top .lead {
+  font-size: 1.3rem;
+  font-family: "PT Sans", sans-serif;
+}
+.home_top .btn {
+  margin-right: 0.4em;
+  border: 2px solid #fff !important;
+}
+.home_top .btn:hover {
+  background: #000 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+#home_top {
+  margin-top: -10em;
+  z-index: -1;
+  text-align: center;
+}
+#home_top h1 {
+  text-shadow: 0 0 10px rgb(66, 0, 0);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #home_top h1 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #home_top h1 {
+    margin-top: 2em;
+    font-size: 5rem !important;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  #home_top h1 {
+    margin-top: 1.3em;
+    font-size: 6.6rem !important;
+  }
+}
+#home_top h2 {
+  text-shadow: 0 0 10px rgb(66, 0, 0);
+  color: #fff;
+  font-family: "PT Sans", sans-serif;
+}
+@media only screen and (min-width: 1200px) {
+  #home_top h2 {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  #home_top h2 {
+    font-size: 3rem;
+  }
+}
+
+#home_top_nav {
+  background: #fff;
+  width: 100%;
+  margin-top: 0;
+  padding: 1.5em 0 1.6em 0;
+}
+#home_top_nav #navbarNav,
+#home_top_nav .form-check.form-switch {
+  margin-top: 0.5em;
+}
+#home_top_nav #navbarNav label,
+#home_top_nav .form-check.form-switch label {
+  padding: 0.2em 0.3em 0.3em 0.3em !important;
+}
+
 .ratio {
   margin: 6em 0;
 }

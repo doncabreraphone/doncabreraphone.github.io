@@ -378,6 +378,124 @@ body {
     margin-left: -100%;
 }
 
+.home_top {
+
+    padding: 4em 0 4em 2em !important;
+
+    .youtube-container {
+        position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+    overflow: hidden;
+    max-width: 95%;
+    margin-top: -5%;
+    margin-left: 60px !important;
+
+        iframe {
+            position: absolute;
+            left: 0;   
+        }
+    }
+
+    h1 {
+        padding-top: .5em;
+        font-family: $gotic;
+
+        @media only screen and (min-width: 1200px) {
+            font-size: 4rem !important;
+        }
+
+        @media only screen and (min-width: 1500px) {
+            font-size: 6rem !important;
+        }
+    }
+
+    p.lead {
+        @media only screen and (min-width: 1200px) {
+            font-size: 1.2rem !important;
+        }
+
+        @media only screen and (min-width: 1500px) {
+            font-size: 1.3rem !important;
+        }
+    }
+    h1, .lead {
+        color: #fff;
+    }
+
+    .lead {
+        font-size: 1.3rem;
+        font-family: $pt;
+    }
+
+    .btn {
+        margin-right: 0.4em;
+        border: 2px solid #fff !important;
+        &:hover {
+            background: #000 !important;
+            color: #fff !important;
+            border: 2px solid #fff !important;
+        }
+    }
+}
+
+#home_top {
+    margin-top: -10em;
+    z-index: -1;
+    text-align: center;
+
+    h1 {
+        text-shadow: 0 0 10px rgb(66, 0, 0);
+
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            font-size: 5rem;
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            
+            margin-top: 2em;
+            font-size: 5rem !important;
+        }
+
+        @media only screen and (min-width: 1500px) {
+            margin-top: 1.3em;
+            font-size: 6.6rem !important;
+        }
+    }
+
+    h2 {
+        text-shadow: 0 0 10px rgb(66, 0, 0);
+        color: #fff;
+        font-family: $pt;
+        @media only screen and (min-width: 1200px) {
+            font-size: 2.7rem;            
+        }
+
+        @media only screen and (min-width: 1500px) {
+            font-size: 3rem;
+        }
+
+    }
+    
+
+}
+
+#home_top_nav {
+    background: #fff;
+    width: 100%;
+    margin-top: 0;
+    padding: 1.5em 0 1.6em 0;
+
+        #navbarNav,
+        .form-check.form-switch {
+            margin-top: 0.5em;
+            label {
+                padding: 0.2em 0.3em 0.3em 0.3em !important;
+            }
+        }
+}
+
 .ratio {
     margin: 6em 0;
 

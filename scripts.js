@@ -593,6 +593,13 @@ if ($('#industries').length) {
   });
 }
     
+
+
+} 
+
+            
+
+
      
 let isAnimating = false;
 
@@ -641,13 +648,6 @@ let isAnimating = false;
           window.location.href = event.currentTarget.href;
         }, 500);
       });
-
-
-
-} 
-
-            
-
 
     
     // // SLIDER TALK
