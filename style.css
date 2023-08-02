@@ -514,6 +514,10 @@ body.main {
   z-index: 2;
 }
 
+#block__wrapper.static h1, #block__wrapper.static h2 {
+  text-shadow: 0 0 8px #000;
+}
+
 #block__wrapper.static {
   text-align: center;
   padding: 8em 10em;
@@ -573,9 +577,9 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/car1.png");
+  background-image: url("images/products_opt/car2.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
 }
 
 #block__wrapper.static.calzado::before {
