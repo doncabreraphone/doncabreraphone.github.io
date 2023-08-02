@@ -577,9 +577,9 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/car2.jpg");
+  background-image: url("images/products_opt/car3.jpg");
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
 }
 
 #block__wrapper.static.calzado::before {
