@@ -560,8 +560,9 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/construction.png");
+  background-image: url("images/products_opt/constructors.png");
   background-size: cover;
+  background-position: bottom center;
 }
 
 #block__wrapper.static.auto::before {
@@ -572,8 +573,9 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/auto.jpg");
+  background-image: url("images/products_opt/car1.png");
   background-size: cover;
+  background-position: center center;
 }
 
 #block__wrapper.static.calzado::before {
@@ -584,7 +586,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/calzado.png");
+  background-image: url("images/products_opt/supermarket.png");
   background-size: cover;
   background-position: center center;
 }
@@ -610,7 +612,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/aplications.png");
+  background-image: url("images/products_opt/aplicaciones.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -776,7 +778,6 @@ body.main {
   z-index: 2;
   box-shadow: 0 0 10px rgba(85, 85, 85, 0.6235294118);
   box-sizing: border-box;
-  outline: 10px solid #bf281f;
 }
 #industries .carousel-item .card:hover .card-body {
   opacity: 0;
@@ -903,7 +904,6 @@ body.main {
 .effect-5:before, .effect-5:after {
   right: 0;
   bottom: 0;
-  background: #000;
 }
 .effect-5:before {
   width: 100%;
@@ -933,9 +933,6 @@ body.main {
   width: 3px;
   height: 100%;
   transform: translateY(-100%);
-}
-.effect-5.trigger:before, .effect-5.trigger:after, .effect-5.trigger > span:before, .effect-5.trigger > span:after {
-  transform: translate(0, 0);
 }
 
 .bottom-boxed h1 {
@@ -1233,6 +1230,8 @@ body.main {
 #talk h1 {
   font-family: "League Gothic", sans-serif;
   font-size: 7rem;
+  line-height: 0.85em;
+  margin-bottom: 0.2em;
 }
 
 #products .card-wrap {

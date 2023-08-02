@@ -612,8 +612,9 @@ body {
     z-index: 0;
     left: 0;
     top: 0;
-    background-image: url("images/products_opt/construction.png");
+    background-image: url("images/products_opt/constructors.png");
     background-size: cover;
+    background-position: bottom center;
 }
 
 #block__wrapper.static.auto::before {
@@ -624,8 +625,9 @@ body {
     z-index: 0;
     left: 0;
     top: 0;
-    background-image: url("images/products_opt/auto.jpg");
+    background-image: url("images/products_opt/car1.png");
     background-size: cover;
+    background-position: center center;
 }
 
 #block__wrapper.static.calzado::before {
@@ -636,7 +638,7 @@ body {
     z-index: 0;
     left: 0;
     top: 0;
-    background-image: url("images/products_opt/calzado.png");
+    background-image: url("images/products_opt/supermarket.png");
     background-size: cover;
     background-position: center center;
 }
@@ -662,7 +664,7 @@ body {
     z-index: 0;
     left: 0;
     top: 0;
-    background-image: url("images/products_opt/aplications.png");
+    background-image: url("images/products_opt/aplicaciones.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -850,7 +852,6 @@ body {
     z-index: 2;
     box-shadow: 0 0 10px #5555559f;
     box-sizing: border-box;
-    outline: 10px solid $main;
 
     .card-body {
         opacity: 0;
@@ -1007,7 +1008,7 @@ body {
     &:before, &:after {
       right: 0;
       bottom: 0;
-      background: #000;
+    //   background: #000;
     }
     &:before {
       width: 100%;
@@ -1038,9 +1039,9 @@ body {
         transform:  translateY(-100%);
       }
     }
-    &.trigger:before, &.trigger:after, &.trigger > span:before, &.trigger > span:after {
-      transform:  translate(0, 0);
-    }
+    // &.trigger:before, &.trigger:after, &.trigger > span:before, &.trigger > span:after {
+    //   transform:  translate(0, 0);
+    // }
     
 
 
@@ -1445,6 +1446,8 @@ body {
     h1 {
         font-family: $gotic;
         font-size: 7rem;
+        line-height: 0.85em;
+        margin-bottom: 0.2em;
     }
 }
 
