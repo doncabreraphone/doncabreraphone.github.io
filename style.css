@@ -671,9 +671,10 @@ body.main {
 #industries .box_sq_data p {
   padding: 0em 1.4em;
   font-size: 0.8em;
-  text-align: left;
+  text-align: justify;
   line-height: 1.3em;
   margin-bottom: 0.5em;
+  text-justify: auto;
 }
 @media (max-width: 767px) {
   #industries .carousel-inner .carousel-item > div {
@@ -827,15 +828,14 @@ body.main {
 #industries .carousel-item .card .card-link h2 {
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
   text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 0.2em 0.5em;
-  color: #fff;
-  font-size: 1.3rem;
+  padding: 0.1em 0.3em;
+  color: #333;
+  font-size: 1rem;
   transform-origin: center center;
 }
 #industries .carousel-item .card .card-link a {
-  background-color: #bf281f;
+  border-radius: 4px;
+  background-color: #fff;
 }
 #industries .carousel-item .card .card-link a, #industries .carousel-item .card .card-link a > span {
   margin: 0;

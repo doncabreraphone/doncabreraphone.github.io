@@ -495,9 +495,16 @@ if ($('#industries').length) {
             resetAllCards();
             $(this).addClass("hovered");
             $(this).find(".card-link a").addClass("trigger");
+
+            // Set a timeout to trigger a click after 1.5 seconds
+            hoverTimeout = setTimeout(() => {
+                if (!isClicked && !isTransitioning) {
+                    $(this).click(); // Simulate a click
+                }
+            }, 850);
         }
     }).mouseleave(function() {
-
+        clearTimeout(hoverTimeout); 
         if (!isClicked && !isTransitioning) {
             $(this).find(".card-link a").removeClass("trigger");
             setTimeout(() => {

@@ -697,7 +697,7 @@ body {
         max-height: 250px;
         background-color: #fff;
         border-radius: 0;
-        margin: 0 0.6em 0 0;        
+        margin: 0 0.6em 0 0; 
     }
     
     .box_sq_data {
@@ -729,9 +729,10 @@ body {
         p {
             padding: 0em 1.4em;
             font-size: 0.8em;
-            text-align: left;
+            text-align: justify;
             line-height: 1.3em;
             margin-bottom: 0.5em;
+            text-justify: auto;
         }
 
     }
@@ -910,16 +911,16 @@ body {
     h2 {
         font-family: $spline;
         text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        padding: 0.2em 0.5em;
-        color: #fff;
-        font-size: 1.3rem;
+        padding: 0.1em 0.3em;
+        color: #333;
+        font-size: 1rem;
         transform-origin: center center;
     }
 
     a {
-        background-color: $main;
+        border-radius: 4px;
+
+        background-color: #fff;
     }
 
     a, a > span {
