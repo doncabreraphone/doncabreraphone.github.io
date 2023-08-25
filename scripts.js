@@ -157,8 +157,8 @@
             // { start: 40, end: 48 },
             // { start: 64, end: 67 },
             { start: 4, end: 7 },
-            { start: 12, end: 17 },
-            { start: 22, end: 27 },
+            { start: 12, end: 15 },
+            { start: 21.5, end: 27 },
             { start: 41, end: 45 },
         ];
 
