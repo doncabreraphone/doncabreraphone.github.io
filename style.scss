@@ -1356,6 +1356,30 @@ body {
         color: #333;
     }
 
+    h3 {
+        margin: 2em 0;
+        padding: 2em;
+        background: #000;
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        transition: all 0.2s ease-in-out;
+
+        b {
+            font-family: $gotic;
+            display: block;
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            margin-bottom: 0.3em;
+        }
+
+        &:hover {
+            background: $main;
+            box-shadow: 0 10px 20px #333;
+            transform: scale(1.04);
+            }
+    }
+
     &.slide-left {
         left: -50%;
         transition: left .8s ease-in-out, opacity 0.5s ease-in-out;

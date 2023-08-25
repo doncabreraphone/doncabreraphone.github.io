@@ -1189,6 +1189,27 @@ body.main {
   line-height: 1.85rem;
   color: #333;
 }
+#about_middle h3 {
+  margin: 2em 0;
+  padding: 2em;
+  background: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  transition: all 0.2s ease-in-out;
+}
+#about_middle h3 b {
+  font-family: "League Gothic", sans-serif;
+  display: block;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+}
+#about_middle h3:hover {
+  background: #bf281f;
+  box-shadow: 0 10px 20px #333;
+  transform: scale(1.04);
+}
 #about_middle.slide-left {
   left: -50%;
   transition: left 0.8s ease-in-out, opacity 0.5s ease-in-out;
