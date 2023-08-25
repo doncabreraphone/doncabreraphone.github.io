@@ -1229,6 +1229,29 @@ body.main {
   left: 0%;
 }
 
+#planta {
+  padding: 12em 0;
+  background: url("images/warehouse2.jpg") no-repeat center center;
+  background-size: cover;
+  margin-bottom: -4em;
+}
+#planta #talk_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5em 2.5em 0 2.5em;
+  background: #fff;
+}
+#planta h1 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 4rem;
+  line-height: 0.85em;
+  margin-bottom: 0.2em;
+}
+#planta h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
 #ticker h1 {
   margin: 8em 0 4em 0;
   text-align: center;
