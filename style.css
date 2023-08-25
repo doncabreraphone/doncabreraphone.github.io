@@ -225,7 +225,7 @@ body.main {
 }
 @media only screen and (min-width: 1200px) {
   #data-container .counter-labels h2 {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
   }
 }
 @media only screen and (min-width: 1367px) {
@@ -1122,23 +1122,6 @@ body.main {
   left: 0;
 }
 
-#scroll {
-  padding: 0.2em 0.8em;
-  background: #fff;
-  text-align: right;
-  margin-top: 120px;
-  display: inline;
-  position: absolute;
-  top: 100%;
-  right: 2%;
-  z-index: 12;
-  font-size: 0.8rem;
-  font-family: "PT Sans", sans-serif;
-}
-#scroll img {
-  width: 20px;
-}
-
 .image {
   top: 100px;
   left: 0;
@@ -1156,6 +1139,13 @@ body.main {
   .sticky-top {
     margin-bottom: 85vh;
   }
+}
+
+#green_about #block__wrapper {
+  background: #fff !important;
+}
+#green_about #block__wrapper h1, #green_about #block__wrapper p {
+  color: #000 !important;
 }
 
 .visible {
@@ -1233,7 +1223,6 @@ body.main {
   padding: 12em 0;
   background: url("images/warehouse2.jpg") no-repeat center center;
   background-size: cover;
-  margin-bottom: -4em;
 }
 #planta #talk_wrap {
   max-width: 1200px;

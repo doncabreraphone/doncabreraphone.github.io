@@ -847,10 +847,9 @@ let isAnimating = false;
         
         
         
-
         const $images = $('.image');
         let currentIndex = 0;
-        let isScrolling = false; // Flag to track if scrolling is in progress
+        let isAnimating = false; // Flag to track animation state
         
         function showImage(index) {
           $images.eq(index).addClass('visible').removeClass('hidden');
@@ -860,87 +859,35 @@ let isAnimating = false;
           $images.eq(index).addClass('hidden').removeClass('visible');
         }
         
-        function handleScroll(event) {
-          event.preventDefault(); // Prevent default scroll behavior
+        function changeImage(direction) {
+          if (isAnimating) return;
+          isAnimating = true;
         
-          if (isScrolling) return; // Exit if scrolling is already in progress
+          hideImage(currentIndex);
         
-          isScrolling = true; // Set scrolling flag to true
+          if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % $images.length;
+          } else if (direction === 'prev') {
+            currentIndex = (currentIndex - 1 + $images.length) % $images.length;
+          }
         
-          const delta = event.originalEvent.deltaY;
-
-            // Check if it's the first or last image
-            const isFirstImage = currentIndex === 0;
-            const isLastImage = currentIndex === $images.length - 1;
+          showImage(currentIndex);
         
-          // If scrolling down
-            if (delta > 0 && !isLastImage) {
-                hideImage(currentIndex);
-                currentIndex++;
-                showImage(currentIndex);
-                console.log(currentIndex);
-            }
-            // If scrolling up
-            else if (delta < 0 && !isFirstImage) {
-                hideImage(currentIndex);
-                currentIndex--;
-                showImage(currentIndex);
-                console.log(currentIndex);
-            }
-
-            // else if (isLastImage) {
-            //     $('#block__about_wrapper').off('wheel', handleScroll);
-            // }
-
-            // else if (isFirstImage) {
-            //     $('#block__about_wrapper').off('wheel', handleScroll);
-            // }
-
-
-
-         
-          // Wait for a short delay before allowing scrolling again
           setTimeout(function () {
-            isScrolling = false; // Reset scrolling flag
-          }, 100); // Adjust the delay as needed
+            isAnimating = false;
+          }, 800); // Animation duration, adjust as needed
         }
         
         // Show the initial image
         showImage(currentIndex);
         
-        $.fn.isInViewport = function () {
-          var elementTop = $(this).offset().top;
-          var elementBottom = elementTop + $(this).outerHeight();
-          var viewportTop = $(window).scrollTop();
-          var viewportBottom = viewportTop + $(window).height();
-          return elementBottom > viewportTop && elementTop < viewportBottom;
-        };
+        // Change images automatically in sequence
+        function autoChangeImages() {
+          changeImage('next');
+          setTimeout(autoChangeImages, 3000); // Change every 3 seconds, adjust as needed
+        }
         
-        // Listen for scroll events on the window
-        // $(window).on('scroll', function () {
-        //   if ($('.about_top').isInViewport()) {
-        //     // Listen for mouse wheel scroll events
-        //     $('#block__about_wrapper').on('wheel', handleScroll);
-        //   } else {
-        //     // Remove the scroll event listener if the element is in viewport
-        //     $('#block__about_wrapper').off('wheel', handleScroll);
-        //   }
-        // });
-
-        $('.image-plant-container').on('mouseenter', function() {
-            $('#block__about_wrapper').on('wheel', handleScroll);
-        });
-
-        $('.image-plant-container').on('mouseleave', function() {
-            $('#block__about_wrapper').off('wheel', handleScroll);
-        });
-        
-        // Initial check on page load
-        // if (!$('.about_top').isInViewport()) {
-        //   $('#block__about_wrapper').on('wheel', handleScroll);
-        // }
-
-
+        autoChangeImages();
 
 
 
