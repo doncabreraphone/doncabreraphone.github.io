@@ -1149,12 +1149,12 @@ body.main {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sticky-top {
-    margin-bottom: 70vh;
+    margin-bottom: 80vh;
   }
 }
 @media only screen and (min-width: 1199px) {
   .sticky-top {
-    margin-bottom: 70vh;
+    margin-bottom: 85vh;
   }
 }
 
