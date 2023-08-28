@@ -271,23 +271,35 @@
         };
       }
       
-      $(window).scroll(debounce(function() {
-        var footerOffset = $('#footer').offset().top;
-        var windowHeight = $(window).height();
-        var scrollPosition = $(window).scrollTop();
-      
-        if (scrollPosition > footerOffset - windowHeight) {
-          // User has scrolled to the "footer" div
-          $('#footer').addClass('slide-right');
-          $('#footer').css({ opacity: 1 });
-        } else {
-          // User has scrolled away from the "footer" div
-          setTimeout(function() {
-            $('#footer').css({ opacity: 0 });
-            $('#footer').removeClass('slide-right');
-          }, 200); // Wait for 200 milliseconds before removing the class
+      document.addEventListener("DOMContentLoaded", function() {
+        // Function to handle the scroll event
+        function handleScroll() {
+            var footer = $('#footer');
+    
+            if (footer.length === 0) {
+                return; // Return if the footer element doesn't exist
+            }
+    
+            var footerOffset = footer.offset().top;
+            var windowHeight = $(window).height();
+            var scrollPosition = $(window).scrollTop();
+    
+            if (scrollPosition > footerOffset - windowHeight) {
+                // User has scrolled to the "footer" div
+                footer.addClass('slide-right');
+                footer.css({ opacity: 1 });
+            } else {
+                // User has scrolled away from the "footer" div
+                setTimeout(function() {
+                    footer.css({ opacity: 0 });
+                    footer.removeClass('slide-right');
+                }, 200); // Wait for 200 milliseconds before removing the class
+            }
         }
-      }, 200));
+    
+        // Attach the scroll event listener after the DOM is fully loaded
+        $(window).on('scroll', debounce(handleScroll, 200));
+    });
       
   
       
@@ -786,23 +798,58 @@ let isAnimating = false;
     });
 
 
-    /// MENU ITEM INCLUDE + CURRENT
-    function addCurrentClassToMenuItem(currentPageId) {
-        $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').parent().addClass('current');
-        $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
+    // /// MENU ITEM INCLUDE + CURRENT
+    // function addCurrentClassToMenuItem(currentPageId) {
+    //     $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').parent().addClass('current');
+    //     $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
         
-        if (currentPageClass) {
-            $('.dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
-        }
-    }
+    //     if (currentPageClass) {
+    //         $('.dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
+    //     }
+    // }
      
+    // // Get the current page ID
+    // var currentPageId = $('body').attr('id');
+    // var currentPageClass = $('body').attr('class'); // Assuming only one class
+
+    // // Add "current" class to menu items for the initial page load
+    // addCurrentClassToMenuItem(currentPageId,currentPageClass);
+    
+
+    // // Load menu content dynamically and add "current" class after loading
+    // if ($('.include').length) {
+    //     fetch("./includes/menu_top.html")
+    //     .then(response => {
+    //         return response.text();
+    //     })
+    //     .then(data => {
+    //         document.querySelector(".menu_top").innerHTML = data;
+
+    //         // Call the function to add "current" class to the dynamically loaded menu item
+    //         addCurrentClassToMenuItem(currentPageId);
+    //     });
+    // }
+
+
+function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
+    $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').parent().addClass('current');
+    $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
+
+    // Add "current" class to footer menu item
+    $('#footer .navbar-nav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
+    
+    if (currentPageClass) {
+        $('.dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
+        $('#footer .dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
+    }
+}
+
     // Get the current page ID
     var currentPageId = $('body').attr('id');
     var currentPageClass = $('body').attr('class'); // Assuming only one class
 
     // Add "current" class to menu items for the initial page load
-    addCurrentClassToMenuItem(currentPageId,currentPageClass);
-    
+    addCurrentClassToMenuItem(currentPageId, currentPageClass);
 
     // Load menu content dynamically and add "current" class after loading
     if ($('.include').length) {
@@ -814,9 +861,24 @@ let isAnimating = false;
             document.querySelector(".menu_top").innerHTML = data;
 
             // Call the function to add "current" class to the dynamically loaded menu item
-            addCurrentClassToMenuItem(currentPageId);
+            addCurrentClassToMenuItem(currentPageId, currentPageClass);
         });
     }
+
+    // Load footer content dynamically
+    if ($('.include').length) {
+        fetch("./includes/footer.html")
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            document.querySelector(".footer").innerHTML = data;
+
+            // Call the function to add "current" class to the dynamically loaded menu item
+            addCurrentClassToMenuItem(currentPageId, currentPageClass);
+        });
+    }
+
 
 
 
