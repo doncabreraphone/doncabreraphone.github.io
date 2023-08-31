@@ -1563,15 +1563,23 @@ body.main {
   background: #fff;
 }
 #products .card-body {
-  padding-bottom: 120px;
   min-height: 100px;
 }
-#products .card-footer {
-  position: absolute;
+#products .carousel-inner {
+  height: 0;
+  padding-bottom: 65%; /* this sets carousel aspect ratio (4:1 here) */
+}
+#products .carousel-item {
+  position: absolute !important; /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  width: 100.5%;
-  transform: translateY(100%);
+}
+#products .carousel-item img {
+  height: 100%; /* Bootstrap handles width already */
+  -o-object-fit: cover;
+     object-fit: cover; /* or 'contain' if you want stretch instead of crop */
 }
 #products .card-footer .alk-btn {
   margin: 0;

@@ -1810,17 +1810,33 @@ body {
 }
 
 .card-body {
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
     min-height: 100px; // Altura mínima del cuerpo de la tarjeta
 }
-
-.card-footer {
-    position: absolute; // Posición absoluta
-    bottom: 0; // Posicionamiento inferior
-    left: 0; // Posicionamiento izquierdo
-    width: 100.5%; // Ancho completo
-    transform: translateY(100%); // Desplazar verticalmente oculto
-}
+.carousel-inner {
+    height: 0;
+    padding-bottom: 65%; /* this sets carousel aspect ratio (4:1 here) */
+  }
+  
+  .carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  }
+// .card-footer {
+//     position: absolute; // Posición absoluta
+//     bottom: 0; // Posicionamiento inferior
+//     left: 0; // Posicionamiento izquierdo
+//     width: 100.5%; // Ancho completo
+//     transform: translateY(100%); // Desplazar verticalmente oculto
+// }
 
 .card-footer .alk-btn {
     margin: 0;

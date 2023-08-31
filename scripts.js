@@ -515,21 +515,22 @@
     
     
     
-    
-const minPerSlide = $('#industries').length && !$('.no-slide').length ? 6 : 2;
-const items = document.querySelectorAll('.carousel .carousel-item');
+if ($('#industries').length) {
+    const minPerSlide = $('#industries').length && !$('.no-slide').length ? 6 : 2;
+    const items = document.querySelectorAll('.carousel .carousel-item');
 
-items.forEach((el) => {
-    let next = el.nextElementSibling;
-    for (let i = 1; i < minPerSlide; i++) {
-        if (!next) {
-            // wrap carousel by using first child
-            next = items[0];
+    items.forEach((el) => {
+        let next = el.nextElementSibling;
+        for (let i = 1; i < minPerSlide; i++) {
+            if (!next) {
+                // wrap carousel by using first child
+                next = items[0];
+            }
+            el.appendChild(next.cloneNode(true).children[0]);
+            next = next.nextElementSibling;
         }
-        el.appendChild(next.cloneNode(true).children[0]);
-        next = next.nextElementSibling;
-    }
-});
+    });
+}
             
 
 if ($('#industries').length) {
