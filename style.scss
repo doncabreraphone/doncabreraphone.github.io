@@ -475,7 +475,7 @@ body {
     }
 }
 
-#home_top_nav {
+#home_top_nav, #section_top_nav {
     background: #fff;
     width: 100%;
     margin-top: 0;
@@ -570,6 +570,7 @@ body {
     padding: 8em 10em;
     position: relative;
     overflow: hidden;
+    margin-top: 0;
 }
 
 #block__wrapper.kenburn::before {
@@ -848,8 +849,8 @@ body {
 
     .card-img {
         border-radius: 0;
-        width: 100%;
-        height: auto; /* This ensures the image maintains its aspect ratio */
+        height: 100%;
+        object-fit: cover;
         position: absolute;
         top: 50%;
         left: 50%;

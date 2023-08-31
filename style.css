@@ -439,18 +439,20 @@ body.main {
   }
 }
 
-#home_top_nav {
+#home_top_nav, #section_top_nav {
   background: #fff;
   width: 100%;
   margin-top: 0;
   padding: 1.5em 0 1.6em 0;
 }
 #home_top_nav #navbarNav,
-#home_top_nav .form-check.form-switch {
+#home_top_nav .form-check.form-switch, #section_top_nav #navbarNav,
+#section_top_nav .form-check.form-switch {
   margin-top: 0.5em;
 }
 #home_top_nav #navbarNav label,
-#home_top_nav .form-check.form-switch label {
+#home_top_nav .form-check.form-switch label, #section_top_nav #navbarNav label,
+#section_top_nav .form-check.form-switch label {
   padding: 0.2em 0.3em 0.3em 0.3em !important;
 }
 
@@ -523,6 +525,7 @@ body.main {
   padding: 8em 10em;
   position: relative;
   overflow: hidden;
+  margin-top: 0;
 }
 
 #block__wrapper.kenburn::before {
@@ -780,8 +783,9 @@ body.main {
 }
 #industries .carousel-item .card .card-img {
   border-radius: 0;
-  width: 100%;
-  height: auto; /* This ensures the image maintains its aspect ratio */
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 50%;
   left: 50%;

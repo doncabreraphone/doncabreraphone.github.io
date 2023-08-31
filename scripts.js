@@ -64,9 +64,10 @@
     //   $('.youtube-container').addClass('animate-slide');
 
 
-
+    
     var player1;
     var player2;
+    var player3;
 
     function onYouTubeIframeAPIReady() {
         player1 = new YT.Player('player1', {
@@ -116,6 +117,30 @@
             onStateChange: onPlayer2StateChange,
         },
         });
+
+        player3 = new YT.Player('player3', {
+            height: '1280',
+            width: '720',
+            videoId: 'YYM2N4oyS9s',
+            playerVars: {
+                controls: 0,
+                enablejsapi: 1,
+                modestbranding: 1,
+                disablekb: 0,
+                rel: 0, // Disable related videos
+                iv_load_policy: 3, // Disable annotations
+                autoplay: 1,
+                loop: 1,
+                mute: 1,
+                start: 4, // Start playing from 0:03
+                showinfo: 0,
+                hd: 1, // Enable highest definition
+            },
+            events: {
+                onReady: onPlayer3Ready,
+                onStateChange: onPlayer3StateChange,
+            },
+            });
     }
 
     function onPlayer1Ready(event) {
@@ -186,6 +211,36 @@
         }
     }
     
+    // player 3
+    function onPlayer3Ready(event) {
+        var intervals = [
+
+            { start: 240, end: 255 },
+        ];
+
+        var currentInterval = 0;
+
+        function playNextInterval() {
+        var interval = intervals[currentInterval];
+        player3.seekTo(interval.start);
+        player3.playVideo();
+        setTimeout(function() {
+            player3.pauseVideo();
+            currentInterval = (currentInterval + 1) % intervals.length;
+            playNextInterval();
+        }, (interval.end - interval.start) * 1000);
+        }
+
+        // Play the first interval for player 3
+        playNextInterval();
+    }
+
+    function onPlayer3StateChange(event) {
+        // Remove overlays when player 3 is paused
+        if (event.data === YT.PlayerState.PAUSED) {
+        player3.getOptions('playerVars').modestbranding = 1;
+        }
+    }
 
 
     // Animate numbers
