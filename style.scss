@@ -354,6 +354,22 @@ body {
     padding-bottom: 0.5em;
 }
 
+#maquinaria {
+    .adjust {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+    }
+
+    .youtube-container {
+        margin-top: -10em !important;
+    }
+
+    .ratio #over_text {
+        top: 10% !important;
+    }
+}
+
 .youtube-container {
     padding: 3em;
     overflow: hidden;
@@ -654,6 +670,19 @@ body {
     left: 0;
     top: 0;
     background-image: url("images/products_opt/supermarket.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+#block__wrapper.static.green::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    background-image: url("images/green.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -1130,6 +1159,38 @@ body {
 }
 
 
+#green #emergency {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    border-bottom: 8px solid $main;
+
+    
+    &.border-top {
+        box-shadow: inset 0 15px 22px -3px black;
+    }
+
+    .border-btm {
+        border-top: 8px solid $main;
+        box-shadow: inset 0 -10px 22px -3px black;
+        height: 100%;
+        padding: 3em 0 3em 0;
+    }
+
+    h3 {
+        font-family: $gotic;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+
+        &.lead {
+            font-family: $pt;
+            font-size: 5.4rem;
+            letter-spacing: -2px;
+            font-weight: bold;
+        }
+    }
+}
+
 // HERO ---------------------------------------------------------------- //
 
 #block__wrapper {
@@ -1307,6 +1368,10 @@ body {
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
     position: absolute;
+  }
+
+  #green .sticky-top {
+    margin-bottom: auto !important;
   }
 
   .sticky-top {

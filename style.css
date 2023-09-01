@@ -319,6 +319,18 @@ body.main {
   padding-bottom: 0.5em;
 }
 
+#maquinaria .adjust {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+#maquinaria .youtube-container {
+  margin-top: -10em !important;
+}
+#maquinaria .ratio #over_text {
+  top: 10% !important;
+}
+
 .youtube-container {
   padding: 3em;
   overflow: hidden;
@@ -607,6 +619,19 @@ body.main {
   left: 0;
   top: 0;
   background-image: url("images/products_opt/supermarket.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+#block__wrapper.static.green::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  background-image: url("images/green.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -998,6 +1023,33 @@ body.main {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+#green #emergency {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border-bottom: 8px solid #bf281f;
+}
+#green #emergency.border-top {
+  box-shadow: inset 0 15px 22px -3px black;
+}
+#green #emergency .border-btm {
+  border-top: 8px solid #bf281f;
+  box-shadow: inset 0 -10px 22px -3px black;
+  height: 100%;
+  padding: 3em 0 3em 0;
+}
+#green #emergency h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+#green #emergency h3.lead {
+  font-family: "PT Sans", sans-serif;
+  font-size: 5.4rem;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
 #block__wrapper {
   background: #bf281f;
   margin-top: 2.2em;
@@ -1145,6 +1197,10 @@ body.main {
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
   position: absolute;
+}
+
+#green .sticky-top {
+  margin-bottom: auto !important;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
