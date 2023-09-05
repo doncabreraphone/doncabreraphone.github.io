@@ -327,6 +327,9 @@ body.main {
 #maquinaria .youtube-container {
   margin-top: -10em !important;
 }
+#maquinaria .youtube-container iframe {
+  margin-top: 150px;
+}
 #maquinaria .ratio #over_text {
   top: 10% !important;
 }
@@ -1007,6 +1010,12 @@ body.main {
   margin: 0 0 4em 0;
   transition: all 0.2s linear;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.bottom-boxed .box:hover.security {
+  background: #bf281f;
+}
+.bottom-boxed .box.security {
+  border: 12px solid #bf281f;
 }
 .bottom-boxed .box h3 {
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
