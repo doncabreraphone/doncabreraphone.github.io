@@ -488,11 +488,15 @@
         // DROPDOWN MENU
         // Enable dropdown on mouseover
         $(document).on('mouseover', '.nav-item.dropdown', function() {
-            $(this).addClass('show');
-            $(this).children('.dropdown-menu').addClass('show');
+            if (!$("#navbarNav").hasClass('show')) {
+                $(this).addClass('show');
+                $(this).children('.dropdown-menu').addClass('show');
+            }
         }).on('mouseout', '.nav-item.dropdown', function() {
-            $(this).removeClass('show');
-            $(this).children('.dropdown-menu').removeClass('show');
+            if (!$("#navbarNav").hasClass('show')) {
+                $(this).removeClass('show');
+                $(this).children('.dropdown-menu').removeClass('show');
+            }
         });
         
         // Disable click event for dropdown toggle
@@ -713,23 +717,25 @@ let isAnimating = false;
       setTimeout(startAnimation, 400);
 
        // Event delegation for navbar link clicks
-        $(document).on("click", ".navbar a", function(event) {
+       $(document).on("click", ".navbar a", function(event) {
+        // Check if the link is under #industriesDropdown
+        if ($(this).closest("#industriesDropdown").length === 0) {
             // Prevent the default link action
             event.preventDefault();
-
+    
             // Store the href in a variable
             var linkHref = event.currentTarget.href;
-
+    
             // Change the class of "transition-overlay" to "transition-overlay-on"
             $("#transition-overlay").removeClass("transition-overlay-off").addClass("transition-overlay-on");
             $("#transition-overlay").addClass("transition-overlay-internal");
-
+    
             // Delay for 0.5 seconds (500 milliseconds) and then continue with the link action
             setTimeout(function() {
                 window.location.href = linkHref;
             }, 500);
-        });
-
+        }
+    });
     
     // // SLIDER TALK
     // document.addEventListener("DOMContentLoaded", function () {
@@ -781,7 +787,7 @@ let isAnimating = false;
         }
         var itemsToAppend = Array.prototype.slice.call(itemEls, 0, partialRepeat);
         for(var i = 0; i< itemsToAppend.length; i++){
-          console.log(itemsToAppend[i]);
+        //   console.log(itemsToAppend[i]);
           parentEl.appendChild(itemsToAppend[i].cloneNode(true));
         }
       
@@ -918,9 +924,58 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
 
             // Call the function to add "current" class to the dynamically loaded menu item
             addCurrentClassToMenuItem(currentPageId, currentPageClass);
+
+            document.querySelector(".form-check-input").addEventListener("change", function() {
+                var isChecked = $(this).prop('checked');
+                var language = isChecked ? 'en' : 'es'; // Toggle between 'en' and 'es'
+                loadLanguageFile(language);
+            });
+
+            
         });
+
+        
     }
 
+
+    $(".navbar-toggler").click(function() {
+        $("#navbarNav").toggleClass("show");
+        $(".dropdown-menu").toggleClass("show");
+        $(this).toggleClass("showing");
+        
+
+
+        $(".menu_top").removeClass("slide-out_2");
+        $("#navbarNav.show .dropdown-menu").removeClass("slide-in_2");
+
+        $(".menu_top").removeClass("slide-out");
+        $("#navbarNav.show .dropdown-menu").removeClass("slide-in");
+        
+        if ($("#navbarNav").hasClass("show")) {
+              $("#industriesDropdown").on("click", function(event) {
+                    $(".menu_top").removeClass("slide-out_2");
+                    $("#navbarNav.show .dropdown-menu").removeClass("slide-in_2");
+
+                    $(".menu_top").addClass("slide-out");
+                    $("#navbarNav.show .dropdown-menu").addClass("slide-in");
+                    event.preventDefault(); 
+              });
+
+                $("#back").on("click", function(event) {
+                    $(".menu_top").removeClass("slide-out");
+                    $("#navbarNav.show .dropdown-menu").removeClass("slide-in");
+
+                    $(".menu_top").addClass("slide-out_2");
+                    $("#navbarNav.show .dropdown-menu").addClass("slide-in_2");
+                    event.preventDefault(); 
+                });
+        } 
+    });
+
+
+
+
+    
     // Load footer content dynamically
     if ($('.include').length) {
         fetch("./includes/footer.html")
