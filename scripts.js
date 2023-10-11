@@ -1064,20 +1064,74 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
 
 
 
-
-
-
-
-
-
     }
 
 
 
+/// PRODUCTS
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+            $(".ul_left, .ul_right").each(function() {
+                var element = $(this);
+                if (isElementInViewport(element[0])) {
+                    element.addClass("pop-in");
+                } else {
+                    element.removeClass("pop-in");
+                }
+            });
+        }
+
+        // Attach scroll event handler
+        $(window).on("scroll", handleScroll);
+
+        // Trigger initial check on page load
+        handleScroll();
 
 
-      
 
-    });  
-      
+
+        /// FORM
+        // Update modal content based on the link's data attributes
+        $('#formProducts').on('show.bs.modal', function (event) {
+            var link = $(event.relatedTarget); // Link that triggered the modal
+            var title = link.data('title');    // Extract info from data-* attributes
+            var subject = link.data('subject');
+
+            // Update text elements and hidden fields
+            $('#emailSubjectText').text(subject);
+            $('#emailSubject').val(subject);
+        });
+
+        // Handle form submission if needed
+        $('#emailForm').submit(function (event) {
+            // Add your logic to handle form submission
+            event.preventDefault(); // Prevent the default form submission
+            // Perform your actions (e.g., send email)
+            // Close the modal if needed: $('#formProducts').modal('hide');
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+});  
       

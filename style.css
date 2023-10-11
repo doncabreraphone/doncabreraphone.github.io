@@ -688,6 +688,217 @@ body.main {
     transform-origin: top right;
   }
 }
+#products_page {
+  padding-top: 1em;
+}
+#products_page .container-row {
+  border-top: 1em solid #bf281f;
+  min-height: 100vh;
+  position: relative;
+}
+#products_page .container-row:last-child {
+  border-bottom: 10px solid #bf281f;
+}
+#products_page #product_1,
+#products_page #product_2,
+#products_page #product_3,
+#products_page #product_4,
+#products_page #product_5,
+#products_page #product_6,
+#products_page #product_7 {
+  background-image: url("/images/products_img/sample.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (min-width: 360px) {
+  #products_page .product_info p.lead {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #products_page .product_info p.lead {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 991px) {
+  #products_page .product_info {
+    padding: 0 3em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #products_page .product_info {
+    padding: 1.2em 4em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #products_page .product_info {
+    padding: 0 7em;
+  }
+}
+#products_page h1 {
+  font-family: "League Gothic", sans-serif;
+}
+@media only screen and (min-width: 360px) and (max-width: 991px) {
+  #products_page h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #products_page h1 {
+    font-size: 3.8rem;
+    margin-top: 0.4em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #products_page h1 {
+    font-size: 5rem;
+    margin-top: 1.1em;
+  }
+}
+#products_page ul {
+  background: #bf281f;
+  color: #fff;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 2em;
+  opacity: 0;
+  padding: 0.6em;
+  margin: 0;
+}
+@media only screen and (min-width: 360px) {
+  #products_page ul {
+    min-width: 400px;
+    max-width: 440px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #products_page ul {
+    max-width: 500px;
+  }
+}
+#products_page ul.ul_left {
+  right: 3em;
+  text-align: right;
+}
+#products_page ul.ul_right {
+  left: 3em;
+  text-align: left;
+}
+#products_page ul li {
+  font-family: "PT Sans", sans-serif;
+  list-style-type: none;
+  padding: 0.3em 0.8em;
+}
+@media only screen and (min-width: 360px) {
+  #products_page ul li {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #products_page ul li {
+    font-size: 1.05rem;
+    line-height: 1.4rem;
+  }
+}
+#products_page ul li:nth-child(odd) {
+  background-color: rgba(165, 32, 25, 0.6156862745);
+}
+#products_page ul.pop-in {
+  animation: pop-in 0.4s linear forwards;
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-header {
+  border: none !important;
+}
+
+.modal-body {
+  padding-top: 0;
+}
+.modal-body input {
+  margin-top: 1.2em;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  transition: border-bottom 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+.modal-body input:focus {
+  border: none !important;
+  border-bottom: 1px solid #bf281f !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.modal-body input:focus + label {
+  color: #bf281f !important;
+  font-size: 1rem;
+}
+.modal-body label {
+  font-size: 0.8rem;
+  color: #555;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#mensaje_form {
+  background: #eee;
+  padding: 1em;
+  margin-bottom: 4em;
+  font-family: "Spline Sans", "Helvetica Neue", Helvet;
+  font-size: 0.9rem;
+}
+#mensaje_form p {
+  margin: 0;
+  padding: 0;
+}
+
+#modal_box {
+  padding: 0 1.8em;
+}
+#modal_box h2 {
+  font-size: 1.8rem;
+  font-family: "Spline Sans", "Helvetica Neue", Helvet;
+}
+#modal_box h3 {
+  font-size: 1.2rem;
+  font-family: "PT Sans", sans-serif;
+}
+#modal_box h2, #modal_box h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+#formProducts .btn {
+  margin: 2em 0;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 3px;
+  background: #bf281f;
+  border: 1px solid #bf281f;
+  font-weight: bold;
+}
+#formProducts .btn:hover {
+  border: 1px solid #bf281f;
+  color: #000;
+  background: #fff !important;
+}
+
 #industries {
   /* medium and up screens */
 }

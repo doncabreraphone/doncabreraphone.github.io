@@ -742,6 +742,226 @@ body {
 }
 
 
+#products_page {
+    padding-top: 1em;
+
+    .container-row {
+        border-top: 1em solid $main;
+        min-height: 100vh;
+        position: relative;
+
+        &:last-child {
+            border-bottom: 10px solid $main;
+        }
+    }
+    #product_1,
+    #product_2,
+    #product_3,
+    #product_4,
+    #product_5,
+    #product_6,
+    #product_7 {
+        background-image: url("/images/products_img/sample.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        
+    }
+
+
+    .product_info {
+        p.lead {
+            @media only screen and (min-width: 360px) {
+                font-size: 1.1rem;
+            }
+
+            @media only screen and (min-width: 1300px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media only screen and (min-width: 360px) and (max-width: 991px) {
+            padding: 0 3em;     
+        }
+
+        @media only screen and (min-width: 992px) {
+            padding: 1.2em 4em;
+        }
+
+        @media only screen and (min-width: 1300px) {
+            padding: 0 7em;
+        }
+    }
+
+    h1 {
+        font-family: $gotic;
+        @media only screen and (min-width: 360px) and (max-width: 991px) {
+            font-size: 3rem;     
+        }
+
+        @media only screen and (min-width: 992px) {
+            font-size: 3.8rem;
+            margin-top: 0.4em;
+        }
+
+        @media only screen and (min-width: 1300px) {
+            font-size: 5rem;
+            margin-top: 1.1em;
+        }
+    }
+
+
+    ul {
+        background: $main;
+        color: #fff;
+        width: auto;
+        display: inline-block;
+        position: absolute;
+        bottom: 2em;
+        opacity: 0;
+        padding: 0.6em;
+        margin: 0;
+        
+        @media only screen and (min-width: 360px) {
+            min-width: 400px;
+            max-width: 440px;
+        }
+
+        @media only screen and (min-width: 1300px) {
+            max-width: 500px;
+        }
+
+        &.ul_left  { right: 3em; text-align: right; }
+        &.ul_right { left: 3em; text-align: left; }
+
+        li {
+            font-family: $pt;
+            list-style-type: none;
+            padding: 0.3em 0.8em;
+
+            
+
+            @media only screen and (min-width: 360px) {
+                font-size: 1rem;
+                line-height: 1.4rem;
+            }
+    
+            @media only screen and (min-width: 1300px) {
+                font-size: 1.05rem;
+                line-height: 1.4rem;
+            }
+
+            &:nth-child(odd) {
+                background-color: #a520199d;
+            }
+        }
+
+        &.pop-in {
+            animation: pop-in .4s linear forwards;
+        }
+    }
+
+    @keyframes pop-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        80% {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+    }
+}
+
+.modal-header {
+    border: none !important;
+}
+.modal-body {
+    padding-top: 0;
+
+    input {
+        margin-top: 1.2em;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #ccc;
+        padding: 0;
+        transition: border-bottom 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+
+        &:focus {
+            border: none !important;
+            border-bottom: 1px solid $main !important;
+            outline: none !important;
+            box-shadow: none !important;
+
+            + label {
+                color: $main !important;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    label {
+        font-size: 0.8rem;
+        color: #555;
+        transition: color 0.3s ease, font-size 0.3s ease;
+    }
+}
+
+#mensaje_form {
+    background: #eee;
+    padding: 1em;
+    margin-bottom: 4em;
+    font-family: $spline;
+    font-size: 0.9rem;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#modal_box {
+    padding: 0 1.8em;
+    h2 {
+        font-size: 1.8rem;
+        font-family: $spline;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-family: $pt;
+    }
+    h2, h3 {
+        color: #333;
+        font-weight: bold;
+    }
+}
+
+#formProducts {
+    .btn {
+        margin: 2em 0;
+        font-size: 1.1rem;
+        padding: 0.5em 1em;
+        width: 100%;
+        border-radius: 3px;
+        background: $main;
+        border: 1px solid $main;
+        font-weight: bold;
+        &:hover {
+            border: 1px solid $main;
+            color: #000;
+            background: #fff !important;
+        }
+    }
+}
+
 #industries {
     .card {
         @media only screen and (min-width: 360px) and (max-width: 991px) {
