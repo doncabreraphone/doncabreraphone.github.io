@@ -688,13 +688,19 @@ body.main {
     transform-origin: top right;
   }
 }
-#products_page {
-  padding-top: 1em;
+.productos #box-shadow {
+  box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.38);
+  z-index: 1111;
+  position: relative;
 }
+
 #products_page .container-row {
-  border-top: 1em solid #bf281f;
+  border-top: 0.3em solid #bf281f;
   min-height: 100vh;
   position: relative;
+}
+#products_page .container-row:first-child {
+  border-top: none;
 }
 #products_page .container-row:last-child {
   border-bottom: 10px solid #bf281f;
@@ -706,10 +712,37 @@ body.main {
 #products_page #product_5,
 #products_page #product_6,
 #products_page #product_7 {
-  background-image: url("/images/products_img/sample.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+#products_page #product_1 {
+  background-image: url("/images/products_img/FOTO POLIOLES.jpg");
+}
+#products_page #product_2 {
+  background-image: url("/images/products_img/FOTO ISOCIANATOS.jpg");
+}
+#products_page #product_3 {
+  background-image: url("/images/products_img/sample.png");
+}
+#products_page #product_4 {
+  background-image: url("/images/products_img/FOTO SISTEMAS PU FLEX.jpg");
+}
+#products_page #product_5 {
+  background-image: url("/images/products_img/SISTEMAS PU RIGIDOS.jpg");
+}
+#products_page #product_6 {
+  background-image: url("/images/products_img/FOTO SISTEMAS PU MICROCEL.jpg");
+}
+#products_page #product_7 {
+  background-image: url("/images/products_img/FOTO GLICOLES.jpg");
+}
+#products_page .product_info h2 {
+  font-family: "Spline Sans", "Helvetica Neue", Helvet;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-top: -0.2em;
 }
 @media only screen and (min-width: 360px) {
   #products_page .product_info p.lead {

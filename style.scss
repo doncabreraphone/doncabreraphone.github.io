@@ -741,14 +741,24 @@ body {
     }
 }
 
+.productos {
+    #box-shadow {
+        box-shadow: 0px 3px 12px -1px rgba(0, 0, 0, 0.38);
+        z-index: 1111;
+        position: relative;
+    }
+}
 
 #products_page {
-    padding-top: 1em;
-
+    
     .container-row {
-        border-top: 1em solid $main;
+        border-top: .3em solid $main;
         min-height: 100vh;
         position: relative;
+
+        &:first-child {
+            border-top: none;
+        }
 
         &:last-child {
             border-bottom: 10px solid $main;
@@ -761,15 +771,50 @@ body {
     #product_5,
     #product_6,
     #product_7 {
-        background-image: url("/images/products_img/sample.png");
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
-        
+        position: relative;        
     }
+
+    #product_1 {
+        background-image: url("/images/products_img/FOTO POLIOLES.jpg");
+    }
+
+    #product_2 {
+        background-image: url("/images/products_img/FOTO ISOCIANATOS.jpg");
+    }
+
+    #product_3 {
+        background-image: url("/images/products_img/sample.png");
+    }
+
+    #product_4 {
+        background-image: url("/images/products_img/FOTO SISTEMAS PU FLEX.jpg");
+    }
+
+    #product_5 {
+        background-image: url("/images/products_img/SISTEMAS PU RIGIDOS.jpg");
+    }
+
+    #product_6 {
+        background-image: url("/images/products_img/FOTO SISTEMAS PU MICROCEL.jpg");
+    }
+
+    #product_7 {
+        background-image: url("/images/products_img/FOTO GLICOLES.jpg");
+    }
+
+    
 
 
     .product_info {
+        h2 {
+            font-family: $spline;
+            letter-spacing: -1px;
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-top: -.2em;
+        }
         p.lead {
             @media only screen and (min-width: 360px) {
                 font-size: 1.1rem;

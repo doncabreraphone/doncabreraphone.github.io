@@ -255,36 +255,36 @@
             if ($('#counter1').text() === '0') {
               // Counter animation starts
               $('#counter1').prop('Counter', 0).animate({
-                Counter: 180
+                Counter: 200
               }, {
                 duration: 2000,
                 easing: 'swing',
                 step: function(now) {
                   $(this).text(Math.ceil(now));
                   // Calculate the percentage of counter progress
-                  var percentage = (now / 180) * 100;
+                  var percentage = (now / 200) * 100;
                   // Set the width of the .counter-fill element accordingly
                   $('.counter-fill-1').css('width', percentage + '%');
                 },
                 complete: function() {
-                  $(this).text('+180'); // Set the final value
+                  $(this).text('+200'); // Set the final value
                   $('.counter-fill-1').css('width', '100%'); // Set the width to full
                 }
               });
       
               // Similar animation for the other counters...
               $('#counter2').prop('Counter', 0).animate({
-                Counter: 1500
+                Counter: 10000
               }, {
                 duration: 2000,
                 easing: 'swing',
                 step: function(now) {
                   $(this).text(Math.ceil(now));
-                  var percentage = (now / 1500) * 100;
+                  var percentage = (now / 10000) * 100;
                   $('.counter-fill-2').css('width', percentage + '%');
                 },
                 complete: function() {
-                  $(this).text('+1500');
+                  $(this).text('+10.000');
                   $('.counter-fill-2').css('width', '100%');
                 }
               });
