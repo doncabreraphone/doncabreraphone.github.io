@@ -790,10 +790,12 @@ body {
 
     #product_4 {
         background-image: url("/images/products_img/FOTO SISTEMAS PU FLEX.jpg");
+        background-position: center center !important;
     }
 
     #product_5 {
         background-image: url("/images/products_img/SISTEMAS PU RIGIDOS.jpg");
+        background-position: right center !important
     }
 
     #product_6 {
@@ -802,6 +804,7 @@ body {
 
     #product_7 {
         background-image: url("/images/products_img/FOTO GLICOLES.jpg");
+        background-position: center center !important;
     }
 
     
@@ -2898,6 +2901,73 @@ body {
   }
 
 
+  #shortcut-container {
+    padding: 3.5em 0;
+
+    h2 {
+        padding: .5em 0;
+        font-family: $spline;
+        font-weight: bold;
+        font-size: 1.65rem;
+    }
+
+    .border {
+        box-shadow: 0 0 40px #ccc;
+    }
+
+    a {
+        padding: 1.2em;
+        margin: 0;
+        display: block;
+        text-decoration: none;
+        color: #535353;
+        position: relative;
+        font-size: 1.1rem;
+        font-family: $pt;
+        font-weight: bold;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background: $main;
+            color: #fff;
+            transform: scale(1.03);
+            border-radius: 5px;
+            box-shadow: 0 0 15px #9d9d9d;
+            padding: 1.5em 1.2em;
+            margin: -0.3em 0; 
+
+
+            .bi {
+                animation: doom .3s ease-out forwards;
+            }
+        }
+    }
+
+    .bi {
+        position: absolute;
+        top: 7px;
+        font-size: 4rem;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        right: 0;
+        opacity: 0;
+    }
+
+    @keyframes doom {
+        from {
+            right: 100px;
+            opacity: 0;
+        }
+
+        to {
+            right: 15px;
+            opacity: 1;
+        }
+        
+    }
+
+}
 
 @media (max-width: 768px) {
 
@@ -2917,6 +2987,7 @@ body {
     .ratio #over_text h1 {
         font-size: 3.5rem;
     }
+
 
     #data-container {
         padding: 0;
