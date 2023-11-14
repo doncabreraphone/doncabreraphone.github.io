@@ -2536,61 +2536,28 @@ body.main {
   opacity: 1;
 }
 
-#shortcut-container {
-  padding: 3.5em 0;
-}
-#shortcut-container h2 {
+#shortcut {
   padding: 0.5em 0;
-  font-family: "Spline Sans", "Helvetica Neue", Helvet;
+  background: #eee;
+  margin-bottom: 5em;
+}
+#shortcut .alk-btn {
+  background: #fff;
+  color: #333;
+  font-family: "PT Sans", "Helvetica";
+  border-radius: 2px;
+  font-size: 1.2rem;
+  margin: 0.8em 1em;
   font-weight: bold;
-  font-size: 1.65rem;
+  padding: 0.6em 1.2em;
+  transition: all 0.2s ease;
+  border: none !important;
 }
-#shortcut-container .border {
-  box-shadow: 0 0 40px #ccc;
-}
-#shortcut-container a {
-  padding: 1.2em;
-  margin: 0;
-  display: block;
-  text-decoration: none;
-  color: #535353;
-  position: relative;
-  font-size: 1.1rem;
-  font-family: "PT Sans", sans-serif;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-}
-#shortcut-container a:hover {
-  background: #bf281f;
-  color: #fff;
-  transform: scale(1.03);
-  border-radius: 5px;
-  box-shadow: 0 0 15px #9d9d9d;
-  padding: 1.5em 1.2em;
-  margin: -0.3em 0;
-}
-#shortcut-container a:hover .bi {
-  animation: doom 0.3s ease-out forwards;
-}
-#shortcut-container .bi {
-  position: absolute;
-  top: 7px;
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-  right: 0;
-  opacity: 0;
-}
-@keyframes doom {
-  from {
-    right: 100px;
-    opacity: 0;
-  }
-  to {
-    right: 15px;
-    opacity: 1;
-  }
+#shortcut .alk-btn:hover {
+  border: none;
+  color: #000;
+  box-shadow: 0 0 40px #a0a0a0;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
