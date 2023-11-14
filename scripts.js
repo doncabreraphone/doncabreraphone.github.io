@@ -737,33 +737,6 @@ let isAnimating = false;
         }
     });
     
-    // // SLIDER TALK
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const backgroundImage = document.getElementById("talk_img_back");
-    //     let isAnimationDone = false;
-      
-    //     function resetAnimation() {
-    //       isAnimationDone = false;
-    //       backgroundImage.style.left = "-100%";
-    //     }
-      
-    //     function animateBackgroundImage() {
-    //       if (!isAnimationDone && window.scrollY > 0) { // Check if the user has scrolled down
-    //         backgroundImage.style.left = "0"; /* Slide the image to the left */
-    //         isAnimationDone = true;
-    //       }
-    //     }
-      
-    //     window.addEventListener("scroll", function () {
-    //       if (window.scrollY === 0) {
-    //         resetAnimation();
-    //       } else {
-    //         animateBackgroundImage();
-    //       }
-    //     });
-    //   });
-  
-
 
 
     if ($('.image-ticker').length) {
