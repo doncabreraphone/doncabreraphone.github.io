@@ -713,17 +713,32 @@ body {
     background-position: center center;
 }
 
+#block__wrapper.static.aplications {
+    position: relative;
+    overflow: hidden;
+}
+
 #block__wrapper.static.aplications::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1; /* Ensure the video is above other content */
     left: 0;
     top: 0;
-    background-image: url("images/products_opt/aplicaciones.jpg");
-    background-size: cover;
-    background-position: center center;
+    // background-image: url("images/products_opt/aplicaciones.jpg");
+    // background-size: cover;
+    // background-position: center center;
+}
+
+#block__wrapper.static.aplications #video-background {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Place the video behind other content */
 }
 
 @keyframes burns {
@@ -1286,13 +1301,14 @@ body {
     }
 }
 
+
 #talk_img {
     padding: 25em 0;
     position: relative;
 
     #talk_img_back {
         position: absolute;
-        background: url("images/lab_tech_3.png") no-repeat center center;
+        background: url("images/lab_tech_3.jpg") no-repeat center right;
         background-size: cover;
         transition: left 1.6s; /* Adjust the transition duration as needed */
         top: 0;
@@ -1303,7 +1319,7 @@ body {
 
     #talk_img_back_2 {
         position: absolute;
-        background: url("images/lab_tech_2.png") no-repeat center center;
+        background: url("images/FOTOMYA-E1485-128.jpg") no-repeat center center;
         background-size: cover;
         transition: left 1.6s; /* Adjust the transition duration as needed */
         top: 0;
@@ -1311,6 +1327,27 @@ body {
         width: 100%;
         height: 100%;
     }
+}
+
+
+#talk_img_back.otras {
+    background: url("images/FOTOMYA-E1485-120.jpg") no-repeat center center !important;
+}
+
+#talk_img_back.refrigeracion {
+    background: url("images/FOTOMYA-E1485-109.jpg") no-repeat center center !important;
+}
+
+#talk_img_back.automotriz {
+    background: url("images/FOTOMYA-E1485-093.jpg") no-repeat center center !important;
+}
+
+#talk_img_back.consumo {
+    background: url("images/FOTOMYA-E1485-003.jpg") no-repeat center center !important;
+}
+
+#talk_img_back.gas {
+    background: url("images/FOTOMYA-E1485-051.jpg") no-repeat center center !important;
 }
 
 
@@ -1420,12 +1457,22 @@ body {
             }
         
             @media only screen and (min-width: 1367px) {
-                font-size: 5rem;
+                font-size: 6.2rem;
             }
         }
 
         .lead {
-            font-size: 1.1rem;
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                font-size: 1.1rem;
+            }
+        
+            @media only screen and (min-width: 1200px) {
+                font-size: 1.1rem;
+            }
+        
+            @media only screen and (min-width: 1367px) {
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -1467,15 +1514,37 @@ body {
         
         h3 {
             font-family: $spline;
-            font-size: 2.2rem;
             font-weight: bold;
-            padding: 1em 0.5em 0 1em;
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                font-size: 2.2rem;
+            }
+        
+            @media only screen and (min-width: 1200px) {
+                font-size: 1.8rem;
+                padding: 1em 1.3em 0 1.3em;
+            }
+        
+            @media only screen and (min-width: 1367px) {
+                font-size: 1.7rem;
+                padding: 1em 1.3em 0 1.3em;
+            }
         }
 
         p {
             padding: 0 2em 3em 2em;
             font-family: $pt;
-            font-size: 1.15rem;
+
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                font-size: 1.05rem;
+            }
+        
+            @media only screen and (min-width: 1200px) {
+                font-size: 1.05rem;
+            }
+        
+            @media only screen and (min-width: 1367px) {
+                font-size: 1.15rem;
+            }
         }
 
         &:hover {
