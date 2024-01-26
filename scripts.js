@@ -1,59 +1,4 @@
-        var languageData = {};
-
-        function loadLanguageFile(language) {
-        $.getJSON(language + '.json', function(data) {
-            languageData = data;
-            translateText();
-            updateURLParams(language);
-            toggleSwitcherText(language);
-        });
-        }
-
-        function translateText() {
-            $('.translate').each(function() {
-              var key = $(this).data('key');
-          
-              if (languageData[key]) {
-                $(this).html(languageData[key]);
-              }
-            });
-          }
-
-        function updateURLParams(language) {
-        var url = new URL(window.location.href);
-        var pathname = window.location.pathname;
-        var newURL = url.origin + pathname + '?lang=' + language;
-        window.history.replaceState({}, '', newURL);
-        }
-
-        function toggleSwitcherText(language) {
-        var switcherLabel = $('.form-check-label');
-        if (language === 'es') {
-            switcherLabel.text('English');
-        } else {
-            switcherLabel.text('Spanish');
-        }
-        }
-
-        $('.form-check-input').click(function() {
-        var isChecked = $(this).prop('checked');
-        var language = isChecked ? 'es' : 'en';
-        loadLanguageFile(language);
-        });
-
-        $(document).ready(function() {
-        var urlParams = new URLSearchParams(window.location.search);
-        var language = urlParams.get('lang');
-        var userLanguage = navigator.language || navigator.userLanguage;
-
-        if (language) {
-            loadLanguageFile(language);
-            var isChecked = language === 'es';
-            $('.form-check-input').prop('checked', isChecked);
-        } else {
-            loadLanguageFile(userLanguage);
-        }
-        });
+        
 
 
             
@@ -902,13 +847,24 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
                 var isChecked = $(this).prop('checked');
                 var language = isChecked ? 'en' : 'es'; // Toggle between 'en' and 'es'
                 loadLanguageFile(language);
-            });
-
-            
-        });
-
-        
+            }); 
+        });        
     }
+
+
+        // Load footer content dynamically
+        if ($('.include').length) {
+            fetch("./includes/footer.html")
+            .then(response => {
+                return response.text();
+            })
+            .then(data => {
+                document.querySelector(".footer").innerHTML = data;
+    
+                // Call the function to add "current" class to the dynamically loaded menu item
+                addCurrentClassToMenuItem(currentPageId, currentPageClass);
+            });
+        }
 
 
     $(".navbar-toggler").click(function() {
@@ -949,19 +905,7 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
 
 
     
-    // Load footer content dynamically
-    if ($('.include').length) {
-        fetch("./includes/footer.html")
-        .then(response => {
-            return response.text();
-        })
-        .then(data => {
-            document.querySelector(".footer").innerHTML = data;
 
-            // Call the function to add "current" class to the dynamically loaded menu item
-            addCurrentClassToMenuItem(currentPageId, currentPageClass);
-        });
-    }
 
 
 
@@ -1101,7 +1045,62 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
 
 
 
+        var languageData = {};
 
+        function loadLanguageFile(language) {
+        $.getJSON(language + '.json', function(data) {
+            languageData = data;
+            translateText();
+            updateURLParams(language);
+            toggleSwitcherText(language);
+        });
+        }
+
+        function translateText() {
+            $('.translate').each(function() {
+              var key = $(this).data('key');
+          
+              if (languageData[key]) {
+                $(this).html(languageData[key]);
+              }
+            });
+          }
+
+        function updateURLParams(language) {
+        var url = new URL(window.location.href);
+        var pathname = window.location.pathname;
+        var newURL = url.origin + pathname + '?lang=' + language;
+        window.history.replaceState({}, '', newURL);
+        }
+
+        function toggleSwitcherText(language) {
+        var switcherLabel = $('.form-check-label');
+        if (language === 'es') {
+            switcherLabel.text('English');
+        } else {
+            switcherLabel.text('Spanish');
+        }
+        }
+
+        $('.form-check-input').click(function() {
+        var isChecked = $(this).prop('checked');
+        var language = isChecked ? 'es' : 'en';
+        loadLanguageFile(language);
+        });
+
+        $(document).ready(function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var language = urlParams.get('lang');
+        var userLanguage = navigator.language || navigator.userLanguage;
+
+        if (language) {
+            loadLanguageFile(language);
+            var isChecked = language === 'es';
+            $('.form-check-input').prop('checked', isChecked);
+        } else {
+            loadLanguageFile(userLanguage);
+        }
+        });
 
 
 
