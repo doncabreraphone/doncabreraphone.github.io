@@ -258,13 +258,28 @@ body.main {
 }
 
 #content_h1 {
-  margin: 8em auto 0 auto;
   text-align: center;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #content_h1 {
+    margin: 0 auto 0 auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #content_h1 {
+    margin: 8em auto 0 auto;
+  }
 }
 #content_h1 h1 {
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   line-height: 7.5rem;
+}
+@media (max-width: 767px) {
+  #content_h1 h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #content_h1 h1 {
@@ -305,9 +320,23 @@ body.main {
 }
 
 #content_wrapper h2.lead {
-  font-size: 1.7rem;
   margin: 0 0 1.5em 0;
   line-height: 1.3em;
+}
+@media (max-width: 767px) {
+  #content_wrapper h2.lead {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #content_wrapper h2.lead {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1025px) {
+  #content_wrapper h2.lead {
+    font-size: 1.7rem;
+  }
 }
 
 .caption-lead {
@@ -1695,12 +1724,26 @@ body.main {
 }
 
 #ticker h1 {
-  margin: 8em 0 4em 0;
   text-align: center;
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
   color: #bf281f;
   font-size: 1.8rem;
   font-weight: bold;
+}
+@media (max-width: 767px) {
+  #ticker h1 {
+    margin: 2em 0 1em 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ticker h1 {
+    margin: 8em 0 4em 0;
+  }
+}
+@media (min-width: 1025px) {
+  #ticker h1 {
+    margin: 8em 0 4em 0;
+  }
 }
 
 .image-ticker {
@@ -1791,13 +1834,39 @@ body.main {
 }
 #footer::before {
   content: "";
-  width: 30%;
-  max-width: 600px;
-  height: 60px;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background-color: #bf281f;
+}
+@media (max-width: 767px) {
+  #footer::before {
+    width: 100%;
+    max-width: 600px;
+    height: 12px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #bf281f;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer::before {
+    mwidth: 30%;
+    max-width: 600px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #bf281f;
+  }
+}
+@media (min-width: 1025px) {
+  #footer::before {
+    width: 30%;
+    max-width: 600px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #bf281f;
+  }
 }
 #footer .copyright p {
   color: #555;
@@ -1814,16 +1883,66 @@ body.main {
   font-weight: bold;
   font-family: "PT Sans", sans-serif;
 }
+@media (max-width: 767px) {
+  #footer h2 {
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer h2 {
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 1025px) {
+  #footer h2 {
+    margin-bottom: 0;
+  }
+}
 #footer h3 {
   font-size: 1.15rem;
   font-weight: bold;
   color: #444;
 }
 #footer h3.lead {
-  margin-top: 3em;
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
-  font-size: 1.1rem;
   color: #444;
+}
+@media (max-width: 767px) {
+  #footer h3.lead {
+    margin-top: 0;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer h3.lead {
+    margin-top: 3em;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1025px) {
+  #footer h3.lead {
+    margin-top: 3em;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 767px) {
+  #footer #areas div {
+    padding: 1em 1em 0 1em;
+    border-top: 1px solid #ccc;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #areas div {
+    padding: auto;
+    border-top: none;
+  }
+}
+@media (min-width: 1025px) {
+  #footer #areas div {
+    padding: auto;
+    border-top: none;
+  }
 }
 #footer p {
   font-size: 1rem;
@@ -1832,15 +1951,49 @@ body.main {
 }
 #footer #footer-menu ul {
   list-style-type: none;
-  margin: 0 0 0 3.4em;
   padding: 0;
-  font-size: 1.1rem;
   line-height: 1.7em;
   font-family: "PT Sans", sans-serif;
+}
+@media (max-width: 767px) {
+  #footer #footer-menu ul {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footer-menu ul {
+    margin: 0 0 0 3.4em;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1025px) {
+  #footer #footer-menu ul {
+    margin: 0 0 0 3.4em;
+    font-size: 1.1rem;
+  }
 }
 #footer #footer-menu a {
   text-decoration: none;
   color: #444;
+}
+@media (max-width: 767px) {
+  #footer #footer-menu a {
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footer-menu a {
+    display: inline;
+    border-bottom: none;
+  }
+}
+@media (min-width: 1025px) {
+  #footer #footer-menu a {
+    display: inline;
+    border-bottom: none;
+  }
 }
 #footer #footer-menu a:hover {
   color: #bf281f;
@@ -1860,9 +2013,40 @@ body.main {
   color: #bf281f !important;
 }
 #footer .icons svg {
-  max-width: 35px;
   margin-right: 0.6em;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  #footer .icons svg {
+    max-width: 55px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer .icons svg {
+    max-width: 35px;
+  }
+}
+@media (min-width: 1025px) {
+  #footer .icons svg {
+    max-width: 35px;
+  }
+}
+@media (max-width: 767px) {
+  #footer .icons .bi-youtube {
+    max-width: 78px;
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer .icons .bi-youtube {
+    max-width: 35px;
+  }
+}
+@media (min-width: 1025px) {
+  #footer .icons .bi-youtube {
+    max-width: 48px;
+  }
 }
 #footer .icons a {
   text-decoration: none;
@@ -2366,8 +2550,26 @@ body.main {
   font-family: "PT Sans", "Helvetica";
   border-radius: 2px;
   font-size: 1.2rem;
-  margin: 1.1em 0;
   font-weight: bold;
+  margin: 1.1em 0;
+}
+@media (max-width: 767px) {
+  .alk-btn {
+    width: 90%;
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .alk-btn {
+    width: auto;
+    display: inline-block;
+  }
+}
+@media (min-width: 1025px) {
+  .alk-btn {
+    width: auto;
+    display: inline-block;
+  }
 }
 .alk-btn:hover {
   border: 1px solid #bf281f;
@@ -2607,8 +2809,24 @@ body.main {
 
 #shortcut {
   padding: 0.5em 0;
-  background: #eee;
-  margin-bottom: 5em;
+}
+@media (max-width: 767px) {
+  #shortcut {
+    background: #eee;
+    margin: 1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #shortcut {
+    background: #eee;
+    margin-bottom: 5em;
+  }
+}
+@media (min-width: 1025px) {
+  #shortcut {
+    background: #eee;
+    margin-bottom: 5em;
+  }
 }
 #shortcut .alk-btn {
   background: #fff;
@@ -2616,11 +2834,29 @@ body.main {
   font-family: "PT Sans", "Helvetica";
   border-radius: 2px;
   font-size: 1.2rem;
-  margin: 0.8em 1em;
   font-weight: bold;
   padding: 0.6em 1.2em;
   transition: all 0.2s ease;
   border: none !important;
+}
+@media (max-width: 767px) {
+  #shortcut .alk-btn {
+    width: 90%;
+    margin: 0.4em 1em 0.4em 1em;
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #shortcut .alk-btn {
+    margin: 0.8em 1em;
+    width: auto;
+  }
+}
+@media (min-width: 1025px) {
+  #shortcut .alk-btn {
+    margin: 0.8em 1em;
+    width: auto;
+  }
 }
 #shortcut .alk-btn:hover {
   border: none;
@@ -2682,7 +2918,8 @@ body.main {
       transform: scale(1);
     }
   }
-  #home_top_nav #navbarNav label, #home_top_nav .form-check.form-switch label {
+  #home_top_nav #navbarNav label, #home_top_nav .form-check.form-switch label,
+  #section_top_nav #navbarNav label, #section_top_nav .form-check.form-switch label {
     padding: 0.3em 1em !important;
     margin-top: 1em;
   }
@@ -2712,7 +2949,8 @@ body.main {
     font-family: "League Gothic", sans-serif;
     font-size: 2.5rem;
   }
-  #home_top_nav #navbarNav.show {
+  #home_top_nav #navbarNav.show,
+  #section_top_nav #navbarNav.show {
     position: fixed;
     color: #fff;
     width: 100%;
@@ -2723,7 +2961,8 @@ body.main {
     margin-top: 0;
     animation: mobile-in 0.3s ease-in-out forwards;
   }
-  #home_top_nav #navbarNav.show::before {
+  #home_top_nav #navbarNav.show::before,
+  #section_top_nav #navbarNav.show::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -2731,32 +2970,43 @@ body.main {
     background: #bf281f;
     opacity: 0.9;
   }
-  #home_top_nav #navbarNav.show .menu_top, #home_top_nav #navbarNav.show .dropdown-menu {
+  #home_top_nav #navbarNav.show .menu_top, #home_top_nav #navbarNav.show .dropdown-menu,
+  #section_top_nav #navbarNav.show .menu_top,
+  #section_top_nav #navbarNav.show .dropdown-menu {
     width: 100%;
     height: 100%;
     padding: 1.5em !important;
   }
-  #home_top_nav #navbarNav.show .dropdown-menu {
+  #home_top_nav #navbarNav.show .dropdown-menu,
+  #section_top_nav #navbarNav.show .dropdown-menu {
     display: block;
   }
-  #home_top_nav #navbarNav.show .menu_top {
+  #home_top_nav #navbarNav.show .menu_top,
+  #section_top_nav #navbarNav.show .menu_top {
     z-index: 10;
     position: absolute;
     width: 100%;
   }
-  #home_top_nav #navbarNav.show a#industriesDropdown::after {
+  #home_top_nav #navbarNav.show a#industriesDropdown::after,
+  #section_top_nav #navbarNav.show a#industriesDropdown::after {
     content: " →";
   }
-  #home_top_nav #navbarNav.show li.nav-item a.nav-link {
+  #home_top_nav #navbarNav.show li.nav-item a.nav-link,
+  #section_top_nav #navbarNav.show li.nav-item a.nav-link {
     color: #fff;
   }
-  #home_top_nav #navbarNav.show .form-switch label {
+  #home_top_nav #navbarNav.show .form-switch label,
+  #section_top_nav #navbarNav.show .form-switch label {
     background: #333;
   }
-  #home_top_nav #navbarNav.show li, #home_top_nav #navbarNav.show a, #home_top_nav #navbarNav.show span {
+  #home_top_nav #navbarNav.show li, #home_top_nav #navbarNav.show a, #home_top_nav #navbarNav.show span,
+  #section_top_nav #navbarNav.show li,
+  #section_top_nav #navbarNav.show a,
+  #section_top_nav #navbarNav.show span {
     font-size: 1.3rem;
   }
-  #home_top_nav #navbarNav.show .dropdown-menu {
+  #home_top_nav #navbarNav.show .dropdown-menu,
+  #section_top_nav #navbarNav.show .dropdown-menu {
     background: none;
     box-shadow: none;
     position: fixed;
@@ -2764,7 +3014,9 @@ body.main {
     left: 100%;
     padding: 0;
   }
-  #home_top_nav #navbarNav.show .dropdown-menu span, #home_top_nav #navbarNav.show .dropdown-menu a {
+  #home_top_nav #navbarNav.show .dropdown-menu span, #home_top_nav #navbarNav.show .dropdown-menu a,
+  #section_top_nav #navbarNav.show .dropdown-menu span,
+  #section_top_nav #navbarNav.show .dropdown-menu a {
     color: #fff;
     padding: 0;
     line-height: 1.9em;

@@ -288,13 +288,26 @@ body {
 }
 
 #content_h1 {
-    margin: 8em auto 0 auto;
     text-align: center;
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        margin: 0 auto 0 auto;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        margin: 8em auto 0 auto;
+    }
 
     h1 {
         font-family: $gotic;
         text-transform: uppercase;
         line-height: 7.5rem;
+
+        @media (max-width: 767px) {
+            font-size: 4rem;
+            line-height: 4.5rem;
+        }
+        
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
             font-size: 7rem;
         }
@@ -339,9 +352,22 @@ body {
 
 #content_wrapper {
     h2.lead {
-        font-size: 1.7rem;
         margin: 0 0 1.5em 0;
         line-height: 1.3em;
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 1.4rem;
+        }
+
+        @media (min-width: 1025px) {
+            font-size: 1.7rem;
+        }
+
+        
     }
 }
 
@@ -1910,12 +1936,23 @@ body {
 // TICKER ------------------------------------------------------------------ //
 #ticker {
     h1 {
-        margin: 8em 0 4em 0;
         text-align: center;
         font-family: $spline;
         color: $main;
         font-size: 1.8rem;
         font-weight: bold;
+
+        @media (max-width: 767px) {
+            margin: 2em 0 1em 0;
+        }
+    
+        @media (min-width: 768px) and (max-width: 1024px) {
+            margin: 8em 0 4em 0;
+        }
+    
+        @media (min-width: 1025px) {
+            margin: 8em 0 4em 0;
+        }
     }
 }
 .image-ticker{ 
@@ -2006,13 +2043,37 @@ body {
 
     &::before {
         content: "";
-        width: 30%;
-        max-width: 600px;
-        height: 60px;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        background-color: $main;
+        
+
+        @media (max-width: 767px) {
+            width: 100%;
+            max-width: 600px;
+            height: 12px;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            background-color: $main;
+        }
+    
+        @media (min-width: 768px) and (max-width: 1024px) {
+            mwidth: 30%;
+            max-width: 600px;
+            height: 60px;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            background-color: $main;
+        }
+    
+        @media (min-width: 1025px) {
+            width: 30%;
+            max-width: 600px;
+            height: 60px;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            background-color: $main;
+        }
     }    
 
     .copyright p {
@@ -2032,6 +2093,18 @@ body {
         font-size: 2.2rem;
         font-weight: bold;
         font-family: $pt;
+
+        @media (max-width: 767px) {
+            margin-bottom: 2em;
+        }
+    
+        @media (min-width: 768px) and (max-width: 1024px) {
+            margin-bottom: 2em;
+        }
+    
+        @media (min-width: 1025px) {
+            margin-bottom: 0;
+        }
     }
 
     h3 {
@@ -2039,10 +2112,49 @@ body {
         font-weight: bold;
         color: #444;
         &.lead {
-            margin-top: 3em;
+            
             font-family: $spline;
-            font-size: 1.1rem;
+            
             color: #444;
+
+
+            @media (max-width: 767px) {
+                margin-top: 0;
+                padding: 0;
+                font-size: 1.25rem;
+            }
+        
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin-top: 3em;
+                font-size: 1.1rem;
+            }
+        
+            @media (min-width: 1025px) {
+                margin-top: 3em;
+                font-size: 1.1rem;
+            }
+
+
+        }
+    }
+
+    
+    #areas div {
+        
+
+        @media (max-width: 767px) {
+            padding: 1em 1em 0 1em;
+            border-top: 1px solid #ccc;
+        }
+    
+        @media (min-width: 768px) and (max-width: 1024px) {
+            padding: auto;
+            border-top: none;
+        }
+    
+        @media (min-width: 1025px) {
+            padding: auto;
+            border-top: none;
         }
     }
 
@@ -2055,16 +2167,45 @@ body {
     #footer-menu {
         ul {
           list-style-type: none;
-          margin: 0 0 0 3.4em;
           padding: 0;
-          font-size: 1.1rem;
           line-height: 1.7em;
           font-family: $pt;
+
+            @media (max-width: 767px) {
+                margin:0;
+                font-size: 1.4rem;
+            }
+        
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin: 0 0 0 3.4em;
+                font-size: 1.1rem;
+            }
+        
+            @media (min-width: 1025px) {
+                margin: 0 0 0 3.4em;
+                font-size: 1.1rem;
+            }
         }
             
         a {
           text-decoration: none;
           color: #444;
+
+          
+            @media (max-width: 767px) {
+                display: block;
+                border-bottom: 1px solid #eee;
+            }
+        
+            @media (min-width: 768px) and (max-width: 1024px) {
+                display: inline;
+                border-bottom: none;
+            }
+        
+            @media (min-width: 1025px) {
+                display: inline;
+                border-bottom: none;
+            }
 
           &:hover {
             color: $main;
@@ -2095,10 +2236,39 @@ body {
         
         
         svg { 
-            max-width: 35px;
+            
             margin-right: 0.6em; 
             transition: all 0.3s ease-in-out;
+
+            @media (max-width: 767px) {
+                max-width: 55px;
+            }
+        
+            @media (min-width: 768px) and (max-width: 1024px) {
+                max-width: 35px;
+            }
+        
+            @media (min-width: 1025px) {
+                max-width: 35px;
+            }
         } 
+
+        .bi-youtube {
+            @media (max-width: 767px) {
+                max-width: 78px;
+                margin-left: .5em;
+                margin-top:.2em;
+            }
+        
+            @media (min-width: 768px) and (max-width: 1024px) {
+                max-width: 35px;
+            }
+        
+            @media (min-width: 1025px) {
+                max-width: 48px;
+            }
+        }
+        
 
         a {
             text-decoration: none;
@@ -2684,8 +2854,23 @@ body {
     font-family: "PT Sans", "Helvetica";
     border-radius: 2px;
     font-size: 1.2rem;
-    margin: 1.1em 0;
     font-weight: bold;
+    margin: 1.1em 0;
+
+    @media (max-width: 767px) {
+        width: 90%;
+        display: inline-block;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: auto;
+        display: inline-block;
+    }
+
+    @media (min-width: 1025px) {
+        width: auto;
+        display: inline-block;
+    }
 
     &:hover {
         border: 1px solid $main;
@@ -2972,8 +3157,22 @@ body {
 
   #shortcut {
     padding: 0.5em 0;
-    background: #eee;
-    margin-bottom: 5em;
+
+
+    @media (max-width: 767px) {
+        background: #eee;
+        margin: 1em;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        background: #eee;
+        margin-bottom: 5em;
+    }
+
+    @media (min-width: 1025px) {
+        background: #eee;
+        margin-bottom: 5em;
+    }
 
     .alk-btn {
         background: #fff;
@@ -2981,12 +3180,28 @@ body {
         font-family: "PT Sans", "Helvetica";
         border-radius: 2px;
         font-size: 1.2rem;
-        margin: 0.8em 1em;
+        
         font-weight: bold;
         
         padding: 0.6em 1.2em;
         transition: all 0.2s ease;
         border: none !important;
+
+        @media (max-width: 767px) {
+            width: 90%;
+            margin: 0.4em 1em 0.4em 1em;
+            display: inline-block;
+        }
+    
+        @media (min-width: 768px) and (max-width: 1024px) {
+            margin: 0.8em 1em;
+            width: auto;
+        }
+    
+        @media (min-width: 1025px) {
+            margin: 0.8em 1em;
+            width: auto;
+        }
     
         &:hover {
             border: none;
@@ -3062,7 +3277,8 @@ body {
         100% { transform: scale(1); }
     }
 
-    #home_top_nav #navbarNav label, #home_top_nav .form-check.form-switch label {
+    #home_top_nav #navbarNav label, #home_top_nav .form-check.form-switch label,
+    #section_top_nav #navbarNav label, #section_top_nav .form-check.form-switch label {
         padding: .3em 1em !important;
         margin-top: 1em;
     }
@@ -3102,7 +3318,8 @@ body {
         }
     }
 
-    #home_top_nav #navbarNav.show {
+    #home_top_nav #navbarNav.show,
+    #section_top_nav #navbarNav.show {
         position: fixed;
         color: #fff;
         width: 100%;
@@ -3252,3 +3469,5 @@ body {
     }
     
 }
+
+
