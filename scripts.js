@@ -859,6 +859,7 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
                 return response.text();
             })
             .then(data => {
+
                 document.querySelector(".footer").innerHTML = data;
     
                 // Call the function to add "current" class to the dynamically loaded menu item
@@ -1043,66 +1044,106 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
 
 
 
+var languageData = {};
 
+function loadLanguageFile(language) {
+    $.getJSON(language + '.json', function(data) {
+        languageData = data;
+        translateText();
+        updateURLParams(language);
+        toggleSwitcherText(language);
+        // Save the selected language in localStorage
+        localStorage.setItem('userLang', language);
+    });
+}
 
-        var languageData = {};
+function translateText() {
+    $('.translate').each(function() {
+        var key = $(this).data('key');
 
-        function loadLanguageFile(language) {
-        $.getJSON(language + '.json', function(data) {
-            languageData = data;
-            translateText();
-            updateURLParams(language);
-            toggleSwitcherText(language);
-        });
+        if (languageData[key]) {
+            $(this).html(languageData[key]);
         }
+    });
+}
 
-        function translateText() {
-            $('.translate').each(function() {
-              var key = $(this).data('key');
-          
-              if (languageData[key]) {
-                $(this).html(languageData[key]);
-              }
-            });
-          }
+function updateURLParams(language) {
+    var url = new URL(window.location.href);
+    var pathname = window.location.pathname;
+    var newURL = url.origin + pathname + '?lang=' + language;
+    window.history.replaceState({}, '', newURL);
+}
 
-        function updateURLParams(language) {
-        var url = new URL(window.location.href);
-        var pathname = window.location.pathname;
-        var newURL = url.origin + pathname + '?lang=' + language;
-        window.history.replaceState({}, '', newURL);
-        }
+function toggleSwitcherText(language) {
+    var switcherLabel = $('.form-check-label');
+    if (language === 'es') {
+        switcherLabel.text('English');
+    } else {
+        switcherLabel.text('Spanish');
+    }
+}
 
-        function toggleSwitcherText(language) {
-        var switcherLabel = $('.form-check-label');
-        if (language === 'es') {
-            switcherLabel.text('English');
-        } else {
-            switcherLabel.text('Spanish');
-        }
-        }
+$('.form-check-input').click(function() {
+    var isChecked = $(this).prop('checked');
+    var language = isChecked ? 'es' : 'en';
+    loadLanguageFile(language);
+});
 
-        $('.form-check-input').click(function() {
-        var isChecked = $(this).prop('checked');
-        var language = isChecked ? 'es' : 'en';
+$(document).ready(function() {
+    var userLang = localStorage.getItem('userLang');
+    var urlParams = new URLSearchParams(window.location.search);
+    var language = urlParams.get('lang') || userLang; // Use language preference from localStorage if available
+
+    if (language) {
         loadLanguageFile(language);
-        });
-
-        $(document).ready(function() {
-        var urlParams = new URLSearchParams(window.location.search);
-        var language = urlParams.get('lang');
+        var isChecked = language === 'es';
+        $('.form-check-input').prop('checked', isChecked);
+    } else {
         var userLanguage = navigator.language || navigator.userLanguage;
+        loadLanguageFile(userLanguage);
+    }
+});
+      
+        
 
-        if (language) {
-            loadLanguageFile(language);
-            var isChecked = language === 'es';
-            $('.form-check-input').prop('checked', isChecked);
-        } else {
-            loadLanguageFile(userLanguage);
-        }
+      // Assumes loadLanguageFile and other related functions are defined as previously discussed
+
+function loadAndTranslateContent() {
+    // Load menu content dynamically and translate it
+    if ($('.include').length) {
+        fetch("./includes/menu_top.html")
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(".menu_top").innerHTML = data;
+            // Re-bind any event listeners if necessary here
+            // Translate the newly loaded content
+            translateText();
+        });        
+    }
+
+    // Load footer content dynamically and translate it
+    if ($('.include').length) {
+        fetch("./includes/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data; // Assuming you have an element with id="footer"
+            // Translate the newly loaded content
+            translateText();
         });
+    }
+}
 
+$(document).ready(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var userLang = localStorage.getItem('userLang') || urlParams.get('lang') || navigator.language || navigator.userLanguage;
 
+    // Adjusted to ensure loadLanguageFile not only loads the language data but also
+    // calls loadAndTranslateContent after the data is loaded to ensure dynamic content is translated
+    loadLanguageFile(userLang, function() {
+        loadAndTranslateContent(); // This ensures dynamic content is loaded and translated after language data is ready
+    });
+});
+  
 
 
 });  
