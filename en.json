@@ -3,7 +3,7 @@
     "nosotros": "About",
     "productos": "Products",
     "industrias": "Industries",
-    "sustentabilidad": "Sustainability",
+    "green": "Sustainability",
     "maquinaria": "Machinery",
     "contacto": "Contact",
     "espumas-flexibles": "Flexible Foams",
@@ -14,6 +14,8 @@
     "gas": "Oil, Gas and Mining",
     "otros": "Other Applications",
 
+
+    "productInquiry": "I need information for Alkanos products related to [product]. Please send more information",
 
     "INDEX_hero_1": "Delivering chemical solutions since 1975",
     "INDEX_hero_2": "Alkanos distributes <b>high-quality products</b> from leading international companies and formulate solutions in the industries we serve.",
@@ -206,7 +208,7 @@
     "REF_card_text_28": "Additives",
     "REF_card_text_29": "Isocyanates",
     "REF_card_text_30": "Water Heaters",
-    "REF_card_text_31": "In commercial installations, rigid polyurethane foams contribute to the energy efficiency of fish counters, gondolas, counters, walk-in coolers, among other applications.",
+    "REF_card_text_31": "In commercial installations, rigid polyurethane foams contribute to the energy efficiency of fish counters, shelves, counters, walk-in coolers, among other applications.",
     "REF_card_text_32": "We provide:",
     "REF_card_text_33": "Rigid PU Systems",
     "REF_card_text_34": "Additives",
@@ -217,9 +219,9 @@
     "REF_card_text_39": "Rigid PU Systems",
     "REF_card_text_40": "Additives",
     "REF_card_text_41": "Isocyanates",
-    "REF_card_text_42": "Bodywork",
+    "REF_card_text_42": "Refrigerated Transport",
 
-    "REF_text_3": "Consult our specialists",
+    "REF_text_3": "Contact our technical team",
     "REF_text_4": "Our technical team can help you develop the application you need and optimize your production processes with the highest quality standards.",
     "REF_text_5": "Let's talk",
     
@@ -277,7 +279,7 @@
     "AUTO_text_5": "Let's talk",
 
     "CONS_text_1": "Consumer and Personal Care",
-    "CONS_text_2": "“Basic chemical products of top quality for foods &amp; beverages, flavors &amp; fragrances, cosmetics, pharmaceuticals and veterinary products”",
+    "CONS_text_2": "Basic chemical products of top quality for foods &amp; beverages, flavors &amp; fragrances, cosmetics, pharmaceuticals and veterinary products",
     "CONS_card_text_1": "We offer products that comply with the most demanding regulations for the elaboration of flavorings and for use in closed refrigeration circuits.",
     "CONS_card_text_2": "We provide:",
     "CONS_card_text_3": "Glycols",
@@ -298,7 +300,7 @@
     "CONS_card_text_18": "We provide:",
     "CONS_card_text_19": "Glycols",
     "CONS_card_text_20": "Cooling Gel",
-    "CONS_text_3": "Consult our specialists",
+    "CONS_text_3": "Contact our technical team",
     "CONS_text_4": "Our technical team can help you develop the application you need and optimize your production processes with the highest quality standards.",
     "CONS_text_5": "Let's talk",
 
@@ -315,7 +317,7 @@
     "GAS_card_text_8": "Isocyanates",
     "GAS_card_text_9": "Microcellular PU Systems",
     "GAS_card_text_10": "Thermal insulation for tanks and pipes",
-    "GAS_text_3": "Consult our specialists",
+    "GAS_text_3": "Contact our technical team",
     "GAS_text_4": "Our technical team can help you develop the application you need and optimize your production processes with the highest quality standards.",
     "GAS_text_5": "Let's talk",
 
@@ -342,7 +344,7 @@
     "APP_card_text_18": "Microcellular PU Systems",
     "APP_card_text_19": "Isocyanates",
     "APP_card_text_20": "Sports Equipment",
-    "APP_text_3": "Consult our specialists",
+    "APP_text_3": "Contact our technical team",
     "APP_text_4": "Our technical team can help you develop the application you need and optimize your production processes with the highest quality standards.",
     "APP_text_5": "Let's talk",
 
@@ -420,7 +422,7 @@
     "FORM_msg":"Message",
 
     "FORM_text_1":"How we can assist you",
-    "FORM_text_2":"At Alkanes, we understand the importance of finding the solution that meets the needs of your industry.",
+    "FORM_text_2":"At Alkanos, we understand the importance of finding the solution that meets the needs of your industry.",
     "FORM_text_3":"Please send us information about the application you are interested in and your technical requirements. Our specialists are here to assist you.",
     "FORM_text_4":"Visit us",
     "FORM_text_5":"Arduin D. Barbieri 2273 (B1852LHG)<br>Parque Industrial Burzaco - Buenos Aires, Argentina",

@@ -3,7 +3,7 @@
     "nosotros": "Nosotros",
     "productos": "Productos",
     "industrias": "Industrias",
-    "sustentabilidad": "Sustentabilidad",
+    "green": "Sustentabilidad",
     "maquinaria": "Maquinaria",
     "contacto": "Contacto",
 
@@ -14,6 +14,8 @@
     "consumo": "Consumo y Cuidado Personal",
     "gas": "Petróleo, Gas y Minería",
     "otros": "Otras Aplicaciones",
+
+    "productInquiry": "Estoy buscando información sobre los productos de Alkanos relacionados con [product]. Por favor contactarme a la brevedad.",
 
     "INDEX_hero_1": "Soluciones en productos químicos desde 1975",
     "INDEX_hero_2": "Alkanos distribuye productos de alta calidad de destacadas compañías internacionales y formula soluciones en las industrias que servimos.",

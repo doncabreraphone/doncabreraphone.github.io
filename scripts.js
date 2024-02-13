@@ -810,20 +810,6 @@ let isAnimating = false;
     //     });
     // }
 
-
-function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
-    $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').parent().addClass('current');
-    $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
-
-    // Add "current" class to footer menu item
-    $('#footer .navbar-nav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
-    
-    if (currentPageClass) {
-        $('.dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
-        $('#footer .dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
-    }
-}
-
     // Get the current page ID
     var currentPageId = $('body').attr('id');
     var currentPageClass = $('body').attr('class'); // Assuming only one class
@@ -831,6 +817,30 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
     // Add "current" class to menu items for the initial page load
     addCurrentClassToMenuItem(currentPageId, currentPageClass);
 
+
+    
+function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
+    $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').parent().addClass('current');
+    $('#navbarNav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
+
+    // Add "current" class to footer menu item
+    $('#footer .navbar-nav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
+
+    setTimeout(() => {
+        $('#footer .navbar-nav .nav-item').find('[data-key="' + currentPageId + '"]').addClass('current');
+    }, 500);
+    
+    if (currentPageClass) {
+        $('.dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
+        $('#footer .dropdown-item[data-key="' + currentPageClass + '"]').addClass('current-link');
+    } else {
+        // console.log("no current page class");
+    }
+}
+
+
+
+    
     // Load menu content dynamically and add "current" class after loading
     if ($('.include').length) {
         fetch("./includes/menu_top.html")
@@ -847,25 +857,33 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
                 var isChecked = $(this).prop('checked');
                 var language = isChecked ? 'en' : 'es'; // Toggle between 'en' and 'es'
                 loadLanguageFile(language);
+
             }); 
+            
         });        
     }
 
 
-        // Load footer content dynamically
-        if ($('.include').length) {
-            fetch("./includes/footer.html")
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
 
-                document.querySelector(".footer").innerHTML = data;
-    
-                // Call the function to add "current" class to the dynamically loaded menu item
-                addCurrentClassToMenuItem(currentPageId, currentPageClass);
-            });
-        }
+    // Check if the footer element exists
+    var footerElement = document.querySelector(".footer");
+    if (footerElement) {
+      // If the footer element exists, proceed with fetching and adding content
+      if ($('.include').length) {
+        fetch("./includes/footer.html")
+          .then(response => {
+            return response.text();
+          })
+          .then(data => {
+            // Update the footer content
+            footerElement.innerHTML = data;
+            addCurrentClassToMenuItem(currentPageId, currentPageClass);
+            // console.log(currentPageId);
+          });
+      }
+    } else {
+      console.error("Footer element with class 'footer' not found.");
+    }
 
 
     $(".navbar-toggler").click(function() {
@@ -1023,13 +1041,16 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
         // Update modal content based on the link's data attributes
         $('#formProducts').on('show.bs.modal', function (event) {
             var link = $(event.relatedTarget); // Link that triggered the modal
-            var title = link.data('title');    // Extract info from data-* attributes
-            var subject = link.data('subject');
-
-            // Update text elements and hidden fields
-            $('#emailSubjectText').text(subject);
-            $('#emailSubject').val(subject);
+            var subjectKey = link.data('subject'); // Assume this is a key for the translation
+        
+            // Translate the subject using the languageData
+            var translatedSubject = languageData[subjectKey] ? languageData[subjectKey] : subjectKey; // Fallback to the key if no translation is found
+        
+            // Update text elements and hidden fields with the translated subject
+            $('#emailSubjectText').text(translatedSubject);
+            $('#emailSubject').val(translatedSubject);
         });
+        
 
         // Handle form submission if needed
         $('#emailForm').submit(function (event) {
@@ -1040,22 +1061,49 @@ function addCurrentClassToMenuItem(currentPageId, currentPageClass) {
         });
 
 
-
+        $('#formProducts').on('show.bs.modal', function (event) {
+            var link = $(event.relatedTarget); // Link that triggered the modal
+            var modal = $(this);
+        
+            // Assuming the product name is in an <h1> tag within the same container as the link
+            var productName = link.closest('.product_info').find('h1').text();
+        
+            // Retrieve the base message key from the link's data-subject attribute
+            var baseSubjectKey = link.data('subject');
+        
+            // Retrieve the base message using the key. This assumes you have a method to get translated messages
+            // For the sake of this example, let's say the message template is in your languageData object
+            var baseMessage = languageData[baseSubjectKey]; // e.g., "I am interested in [product]. Please contact me."
+        
+            // If your message template has a placeholder for the product name, replace it with the actual product name
+            var fullMessage = baseMessage.replace('[product]', productName);
+        
+            // Now, set the fullMessage as the data-subject for the link. Though this is not directly altering the link,
+            // you can use this fullMessage in your modal's content or email subject
+            // Example: updating a hidden input field or any element inside the modal that uses this value
+            $('#emailSubject').val(fullMessage); // If you have an input to hold the subject
+            $('#emailSubjectText').text(fullMessage); // If you display the subject somewhere in the modal
+        });
 
 
 
 var languageData = {};
 
-function loadLanguageFile(language) {
-    $.getJSON(language + '.json', function(data) {
-        languageData = data;
-        translateText();
-        updateURLParams(language);
-        toggleSwitcherText(language);
-        // Save the selected language in localStorage
-        localStorage.setItem('userLang', language);
-    });
+function loadLanguageFile(language, callback) {
+  $.getJSON(language + '.json', function(data) {
+    languageData = data;
+    translateText();
+    updateURLParams(language);
+    toggleSwitcherText(language);
+    localStorage.setItem('userLang', language);
+
+    // Call the callback function after language data is loaded
+    if (callback) {
+      callback();
+    }
+  });
 }
+
 
 function translateText() {
     $('.translate').each(function() {
@@ -1083,11 +1131,11 @@ function toggleSwitcherText(language) {
     }
 }
 
-$('.form-check-input').click(function() {
-    var isChecked = $(this).prop('checked');
-    var language = isChecked ? 'es' : 'en';
-    loadLanguageFile(language);
-});
+// $('.form-check-input').click(function() {
+//     var isChecked = $(this).prop('checked');
+//     var language = isChecked ? 'es' : 'en';
+//     loadLanguageFile(language);
+// });
 
 $(document).ready(function() {
     var userLang = localStorage.getItem('userLang');
@@ -1108,30 +1156,42 @@ $(document).ready(function() {
 
       // Assumes loadLanguageFile and other related functions are defined as previously discussed
 
-function loadAndTranslateContent() {
-    // Load menu content dynamically and translate it
-    if ($('.include').length) {
-        fetch("./includes/menu_top.html")
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector(".menu_top").innerHTML = data;
-            // Re-bind any event listeners if necessary here
-            // Translate the newly loaded content
+      function loadAndTranslateContent() {
+        let promises = [];
+    
+        if ($('.include.menu').length) {
+            promises.push(
+                fetch("./includes/menu_top.html")
+                .then(response => {
+                    if (!response.ok) throw new Error(`Failed to load menu_top.html: ${response.statusText}`);
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector(".menu_top").innerHTML = data;
+                })
+                .catch(error => console.error(error))
+            );
+        }
+        
+    
+        if ($('.include.footer').length) {
+            promises.push(
+                fetch("./includes/footer.html")
+                .then(response => {
+                    if (!response.ok) throw new Error(`Failed to load footer.html: ${response.statusText}`);
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector(".footer").innerHTML = data;
+                })
+                .catch(error => console.error(error))
+            );
+        }
+    
+        Promise.all(promises).then(() => {
             translateText();
-        });        
+        }).catch(error => console.error("Error loading or translating content:", error));
     }
-
-    // Load footer content dynamically and translate it
-    if ($('.include').length) {
-        fetch("./includes/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data; // Assuming you have an element with id="footer"
-            // Translate the newly loaded content
-            translateText();
-        });
-    }
-}
 
 $(document).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
@@ -1144,6 +1204,7 @@ $(document).ready(function() {
     });
 });
   
+
 
 
 });  
