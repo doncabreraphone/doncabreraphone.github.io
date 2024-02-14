@@ -67,7 +67,7 @@
     "ABOUT_text_14": "Nuestro Sistema de Gestión de Calidad satisface los requisitos de las normas internacionales ISO 9001 y está certificado por TÜV Rheinland. Continuaremos comprometidos con la mejora de la calidad de nuestros productos y servicios, adhiriendo a las mejoras prácticas de la industria.",
     "ABOUT_text_15": "Ver Certificado Digital",
     "ABOUT_text_16": "Ver Politica de Calidad",
-    "ABOUT_text_17": "En Alkanos acompañamos el crecimiento de nuestros clientes. Brindamos asistencia técnica para que puedan optimizar sus procesos y desarrollar aplicaciones con altos estándares de calidad en forma segura y amigable con el medio ambiente. Ofrecer soluciones y aportar innovación en la cadena productiva es nuestro compromiso constante.",
+    "ABOUT_text_17": "En Alkanos acompañamos el crecimiento de nuestros clientes. Brindamos <span>asistencia técnica</span> para que puedan optimizar sus procesos y desarrollar aplicaciones con <span>altos estándares de calidad</span> en forma segura y <span>amigable con el medio ambiente.</span> Ofrecer <span>soluciones</span> y aportar <span>innovación</span> en la cadena productiva es nuestro compromiso constante.",
     
     
     "FOAMS_text_1": "Espumas Flexibles",
@@ -430,7 +430,7 @@
     "FORM_phone":"Teléfono",
     "FORM_msg":"Mensaje",
 
-    "FORM_text_1":"Como podemos asistirlo",
+    "FORM_text_1":"¿Cómo podemos asistirlo?",
     "FORM_text_2":"En Alkanos entendemos la importancia de encontrar la solución que satisfaga las necesidades de su industria.",
     "FORM_text_3":"Por favor, envíenos información sobre la aplicación que le interesa y sus requisitos técnicos. Nuestros especialistas están para asistirlo.",
     "FORM_text_4":"Visítenos",
