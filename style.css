@@ -85,20 +85,37 @@ body.main {
   text-align: center;
 }
 
+.nav-link .current,
 .navbar-nav .current,
 .navbar-nav .current-link {
   position: relative;
   color: #bf281f;
 }
-.navbar-nav .current::before,
-.navbar-nav .current-link::before {
-  content: "•";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -2px;
-  left: 13px;
-  font-size: 1.7rem;
+@media only screen and (max-width: 992px) {
+  .nav-link .current::before,
+  .navbar-nav .current::before,
+  .navbar-nav .current-link::before {
+    content: "";
+    position: fixed;
+    width: 140%;
+    height: 40px;
+    background: #000;
+    z-index: -1;
+    margin-left: -25px;
+  }
+}
+@media only screen and (min-width: 1367px) {
+  .nav-link .current::before,
+  .navbar-nav .current::before,
+  .navbar-nav .current-link::before {
+    content: "•";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -2px;
+    left: 13px;
+    font-size: 1.7rem;
+  }
 }
 
 .navbar-nav .current:before {
@@ -123,11 +140,20 @@ body.main {
 }
 
 #quote {
-  padding: 15em 10%;
   background-size: cover;
   margin: 4em 0 0 0;
   position: relative;
   /* Standard syntax */
+}
+@media only screen and (min-width: 360px) {
+  #quote {
+    padding: 7em 10%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #quote {
+    padding: 15em 10%;
+  }
 }
 #quote::before {
   position: absolute;
@@ -155,11 +181,21 @@ body.main {
 }
 #quote h3 {
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
-  font-size: 2.2rem;
-  line-height: 3.2rem;
   text-indent: 1.6em;
   position: relative;
   color: #444;
+}
+@media only screen and (min-width: 360px) {
+  #quote h3 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #quote h3 {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
 }
 #quote h3::before {
   content: "“";
@@ -171,15 +207,40 @@ body.main {
   font-family: "PT Sans", sans-serif;
   color: #bf281f;
 }
+@media only screen and (min-width: 360px) {
+  #quote h3::before {
+    font-size: 10rem;
+    position: absolute;
+    margin-top: 45px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #quote h3::before {
+    font-size: 12rem;
+    position: absolute;
+    margin-top: 45px;
+  }
+}
 #quote h3::after {
   content: "”";
   width: 30px;
-  font-size: 12rem;
   position: absolute;
-  margin-top: 45px;
-  margin-left: -45px;
   font-family: "PT Sans", sans-serif;
   color: #bf281f;
+}
+@media only screen and (min-width: 360px) {
+  #quote h3::after {
+    font-size: 10rem;
+    margin-top: 45px;
+    margin-left: -35px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #quote h3::after {
+    font-size: 12rem;
+    margin-top: 45px;
+    margin-left: -45px;
+  }
 }
 #quote h3 span {
   color: #bf281f;
@@ -385,8 +446,10 @@ body.main {
   margin-left: -100%;
 }
 
-.home_top {
-  padding: 4em 0 4em 2em !important;
+@media only screen and (min-width: 1300px) {
+  .home_top {
+    padding: 4em 0 4em 2em !important;
+  }
 }
 .home_top .youtube-container {
   position: relative;
@@ -509,6 +572,17 @@ body.main {
   padding: 0.2em 0.3em 0.3em 0.3em !important;
 }
 
+@media only screen and (min-width: 360px) {
+  #section_top_nav .navbar-brand {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #section_top_nav .navbar-brand {
+    margin: 0;
+  }
+}
+
 .ratio {
   margin: 6em 0 2em 0;
 }
@@ -575,10 +649,31 @@ body.main {
 
 #block__wrapper.static {
   text-align: center;
-  padding: 8em 10em;
   position: relative;
   overflow: hidden;
   margin-top: 0;
+  padding: 0 0.5em;
+}
+@media only screen and (max-width: 768px) {
+  #block__wrapper.static {
+    min-height: 280px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #block__wrapper.static {
+    padding: 8em 10em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #maquinaria #block__wrapper.static {
+    min-height: 540px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #maquinaria #block__wrapper.static {
+    padding: 8em 10em;
+  }
 }
 
 #block__wrapper.kenburn::before {
@@ -986,7 +1081,7 @@ body.main {
 }
 @media only screen and (min-width: 360px) and (max-width: 991px) {
   #industries .card {
-    min-height: 220px;
+    min-height: 250px;
     max-height: 250px;
   }
 }
@@ -1034,10 +1129,14 @@ body.main {
 #industries .box_sq_data p {
   padding: 0em 1.4em;
   font-size: 0.8em;
-  text-align: justify;
   line-height: 1.3em;
   margin-bottom: 0.5em;
   text-justify: auto;
+}
+@media only screen and (min-width: 1300px) {
+  #industries .box_sq_data p {
+    text-align: justify;
+  }
 }
 @media (max-width: 767px) {
   #industries .carousel-inner .carousel-item > div {
@@ -1047,10 +1146,15 @@ body.main {
     display: block;
   }
 }
-#industries .carousel-inner .carousel-item.active,
-#industries .carousel-inner .carousel-item-next,
 #industries .carousel-inner .carousel-item-prev {
-  display: flex;
+  z-index: 2;
+}
+@media only screen and (min-width: 1300px) {
+  #industries .carousel-inner .carousel-item.active,
+  #industries .carousel-inner .carousel-item-next,
+  #industries .carousel-inner .carousel-item-prev {
+    display: flex;
+  }
 }
 @media (min-width: 768px) {
   #industries .carousel-inner .carousel-item-end.active,
@@ -1106,9 +1210,17 @@ body.main {
   padding: 0;
   height: 100%;
 }
-#industries .no-slide .carousel-item .col-md-4 {
-  transform: translateX(50%);
-  min-height: 350px;
+@media only screen and (max-width: 992px) {
+  #industries .no-slide .carousel-item .col-md-4 {
+    min-height: 250px;
+    transform: translateX(0);
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #industries .no-slide .carousel-item .col-md-4 {
+    transform: translateX(50%);
+    min-height: 350px;
+  }
 }
 #industries .no-slide .carousel-item .col-md-4:hover {
   z-index: 10 !important;
@@ -1220,8 +1332,13 @@ body.main {
   }
 }
 #industries #talk_img {
-  padding: 25em 0;
   position: relative;
+  min-height: 400px;
+}
+@media only screen and (min-width: 1300px) {
+  #industries #talk_img {
+    padding: 25em 0;
+  }
 }
 #industries #talk_img #talk_img_back {
   position: absolute;
@@ -1258,8 +1375,15 @@ body.main {
 #industries #talk_img_back.gas {
   background: url("images/FOTOMYA-E1485-051.jpg") no-repeat center center !important;
 }
-#industries #talk_form {
-  padding: 7em 0 0 5em;
+@media only screen and (max-width: 992px) {
+  #industries #talk_form {
+    padding: 3em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #industries #talk_form {
+    padding: 7em 0 0 5em;
+  }
 }
 #industries #talk {
   padding: 0;
@@ -1317,9 +1441,19 @@ body.main {
   transform: translateY(-100%);
 }
 
+.gas #industries .carousel-inner .carousel-item > div {
+  display: block !important;
+}
+
+@media only screen and (max-width: 991px) {
+  #green .bottom-boxed h1 {
+    margin-left: 0.6em;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #green .bottom-boxed h1 {
     font-size: 4.5rem;
+    margin-left: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1372,9 +1506,18 @@ body.main {
   background: #333;
   max-width: 500px;
   color: #fff;
-  margin: 0 0 4em 0;
   transition: all 0.2s linear;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+@media only screen and (max-width: 992px) {
+  .bottom-boxed .box {
+    margin: 0 0 2em 0;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .bottom-boxed .box {
+    margin: 0 0 4em 0;
+  }
 }
 .bottom-boxed .box:hover.security {
   background: #bf281f;
@@ -1385,6 +1528,12 @@ body.main {
 .bottom-boxed .box h3 {
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
   font-weight: bold;
+}
+@media only screen and (max-width: 991px) {
+  .bottom-boxed .box h3 {
+    padding-left: 1.3em;
+    padding-top: 1.2em;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .bottom-boxed .box h3 {
@@ -1448,15 +1597,28 @@ body.main {
 }
 #green #emergency h3.lead {
   font-family: "PT Sans", sans-serif;
-  font-size: 5.4rem;
   letter-spacing: -2px;
   font-weight: bold;
+}
+@media only screen and (max-width: 992px) {
+  #green #emergency h3.lead {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #green #emergency h3.lead {
+    font-size: 5.4rem;
+  }
 }
 
 #block__wrapper {
   background: #bf281f;
   margin-top: 2.2em;
-  padding: 0 0 0.3em 2em;
+}
+@media only screen and (min-width: 1300px) {
+  #block__wrapper {
+    padding: 0 0 0.3em 2em;
+  }
 }
 #block__wrapper.green_top {
   margin-top: 0;
@@ -1489,19 +1651,38 @@ body.main {
   }
 }
 #block__wrapper.about_top .parallax-container {
-  height: 70vh;
   overflow: hidden;
   position: relative;
 }
+@media only screen and (min-width: 360px) {
+  #block__wrapper.about_top .parallax-container {
+    padding: 4em 0;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #block__wrapper.about_top .parallax-container {
+    height: 70vh;
+    padding: 0;
+  }
+}
 #block__wrapper.about_top .parallax-text {
   position: relative;
-  top: 15vh;
   font-size: 24px;
   color: white;
+}
+@media only screen and (min-width: 1300px) {
+  #block__wrapper.about_top .parallax-text {
+    top: 15vh;
+  }
 }
 #block__wrapper.about_top h1, #block__wrapper.about_top p {
   color: #fff;
   text-align: center;
+}
+@media only screen and (min-width: 360px) {
+  #block__wrapper.about_top h1 {
+    font-size: 3rem;
+  }
 }
 @media only screen and (min-width: 1200px) {
   #block__wrapper.about_top h1 {
@@ -1511,6 +1692,11 @@ body.main {
 @media only screen and (min-width: 1500px) {
   #block__wrapper.about_top h1 {
     font-size: 8rem !important;
+  }
+}
+@media only screen and (min-width: 360px) {
+  #block__wrapper.about_top p.lead {
+    line-height: 1.7rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1527,19 +1713,48 @@ body.main {
     padding: 1.2em 8em;
   }
 }
-#block__wrapper #hero__content {
-  padding-bottom: 4em;
+@media only screen and (max-width: 768px) {
+  #block__wrapper #hero__content {
+    padding-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 1300) {
+  #block__wrapper #hero__content {
+    padding-bottom: 4em;
+  }
 }
 #block__wrapper #hero__content h1 {
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   color: #fff;
-  line-height: 7.5rem;
+}
+@media only screen and (min-width: 360px) {
+  #block__wrapper #hero__content h1 {
+    line-height: 3rem;
+    font-size: 2.9rem;
+    margin-top: 2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #block__wrapper #hero__content h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    margin-top: auto;
+    line-height: 7.5rem;
+  }
 }
 #block__wrapper #hero__content h2 {
   color: #fff;
   font-weight: normal;
-  font-size: 1.8rem;
+}
+@media only screen and (min-width: 360px) {
+  #block__wrapper #hero__content h2 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #block__wrapper #hero__content h2 {
+    font-size: 1.8rem;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #block__wrapper #hero__content h1 {
@@ -1605,6 +1820,11 @@ body.main {
 #green .sticky-top {
   margin-bottom: auto !important;
 }
+@media only screen and (max-width: 992px) {
+  #green .sticky-top {
+    z-index: 0 !important;
+  }
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sticky-top {
@@ -1639,12 +1859,30 @@ body.main {
   z-index: 0;
 }
 
-#block__about_wrapper {
-  padding: 4em 0;
+@media only screen and (min-width: 360px) {
+  #block__about_wrapper {
+    padding: 2.5em 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #block__about_wrapper {
+    padding: 4em 0;
+  }
 }
 #block__about_wrapper h1 {
   font-family: "League Gothic", sans-serif;
-  font-size: 4rem;
+}
+@media only screen and (min-width: 360px) {
+  #block__about_wrapper h1 {
+    font-size: 3rem;
+    margin-left: 0.35em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #block__about_wrapper h1 {
+    font-size: 4rem;
+    margin-left: 0;
+  }
 }
 
 #about_middle {
@@ -1652,13 +1890,32 @@ body.main {
   height: auto;
   position: relative;
   opacity: 0;
-  padding: 0 3em 0 3em;
+}
+@media only screen and (min-width: 992px) {
+  #about_middle {
+    padding: 0 3em 0 3em;
+  }
+}
+@media only screen and (min-width: 360px) {
+  #about_middle img {
+    margin: 1em 0 2em 0;
+  }
 }
 #about_middle p {
   font-family: "PT Sans", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.85rem;
   color: #333;
+}
+@media only screen and (min-width: 360px) {
+  #about_middle p {
+    font-size: 1.1rem;
+    line-height: 1.65rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #about_middle p {
+    font-size: 1.2rem;
+    line-height: 1.85rem;
+  }
 }
 #about_middle h3 {
   margin: 2em 0;
@@ -1713,13 +1970,72 @@ body.main {
 }
 #planta h1 {
   font-family: "League Gothic", sans-serif;
-  font-size: 4rem;
   line-height: 0.85em;
   margin-bottom: 0.2em;
 }
+@media only screen and (min-width: 360px) {
+  #planta h1 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #planta h1 {
+    font-size: 4rem;
+  }
+}
 #planta h2 {
-  font-size: 1.5rem;
   color: #333;
+}
+@media only screen and (min-width: 360px) {
+  #planta h2 {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #planta h2 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  #green_about .youtube-container {
+    margin-left: 0.65em !important;
+    padding-top: 1em;
+    transform: scale(1.1);
+  }
+}
+@media only screen and (min-width: 992px) {
+  #green_about .youtube-container {
+    margin-left: 70px !important;
+    padding-top: 3em;
+    transform: scale(1);
+  }
+}
+@media only screen and (min-width: 360px) {
+  #green_about .alk-btn {
+    width: 90%;
+    margin: 0 0.5em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #green_about .alk-btn {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 360px) {
+  #green_about h1 {
+    margin-left: 0.5em;
+    font-size: 2.5rem;
+    margin-top: 1em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #green_about h1 {
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
 #ticker h1 {
@@ -2090,9 +2406,11 @@ body.main {
   font-size: 1.5em;
 }
 
-#products {
-  padding-top: 5em;
-  padding-bottom: 3em;
+@media only screen and (min-width: 1300px) {
+  #products {
+    padding-top: 5em;
+    padding-bottom: 3em;
+  }
 }
 #products .hidden {
   display: none;
@@ -2152,9 +2470,19 @@ body.main {
 }
 #talk h1 {
   font-family: "League Gothic", sans-serif;
-  font-size: 7rem;
-  line-height: 0.85em;
   margin-bottom: 0.2em;
+}
+@media only screen and (max-width: 992px) {
+  #talk h1 {
+    font-size: 3.5rem;
+    line-height: 0.95em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  #talk h1 {
+    font-size: 7rem;
+    line-height: 0.85em;
+  }
 }
 
 #products .card-wrap {
@@ -2682,9 +3010,20 @@ body.main {
     padding-right: 1.8em;
     padding-bottom: 5em;
   }
+}
+@media only screen and (max-width: 576px) and (max-width: 768px) {
+  .title-display-h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 576px) and (min-width: 1300) {
   .title-display-h2 {
     font-size: 1.8rem;
+    text-align: left;
   }
+}
+@media (max-width: 576px) {
   .title-display::before {
     margin-left: 2px;
     display: block;
@@ -2876,7 +3215,8 @@ body.main {
     margin-bottom: 0;
   }
   .ratio #over_text h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
+    padding: 0 0.5em;
   }
   #data-container {
     padding: 0;
@@ -2956,7 +3296,7 @@ body.main {
     left: 0;
     height: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     margin-top: 0;
     animation: mobile-in 0.3s ease-in-out forwards;
   }

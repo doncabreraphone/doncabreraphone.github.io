@@ -507,6 +507,21 @@ if ($('#industries').length) {
         }, 500); // Adjust the delay (in milliseconds) as needed
     }
 
+    // Prevent clicks inside .card from bubbling up
+    $(".carousel-item .card").click(function(event) {
+        event.stopPropagation(); // This stops the click from reaching the document
+    });
+
+    // This includes preventing clicks on links within .card from bubbling up
+    $(".carousel-item .card a").click(function(event) {
+        event.stopPropagation(); // This ensures link functionality is preserved without triggering resetAllCards
+    });
+
+    // Document-level click listener for resetting cards
+    $(document).click(function() {
+        resetAllCards(); // This will only be called if clicks occur outside of .card
+    });
+
     // Add event listener for mouseenter on carousel items
     $(".carousel-item .card").mouseenter(function() {
         
