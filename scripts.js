@@ -1141,8 +1141,12 @@ function toggleSwitcherText(language) {
     var switcherLabel = $('.form-check-label');
     if (language === 'es') {
         switcherLabel.text('English');
+        switcherLabel.removeClass('spanish');
+        switcherLabel.addClass('english');
     } else {
         switcherLabel.text('Spanish');
+        switcherLabel.removeClass('english');
+        switcherLabel.addClass('spanish');
     }
 }
 

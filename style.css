@@ -3203,6 +3203,25 @@ body.main {
   transform: scale(1.05);
 }
 
+.form-switch label {
+  transition: all 0.2s ease;
+}
+
+.form-switch label:hover {
+  box-shadow: 0 5px 5px #cbcbcb;
+  transform: translateY(-2px);
+}
+
+.form-switch label.english {
+  background: #bf281f;
+  color: white;
+}
+
+.form-switch label.spanish {
+  background: #333;
+  color: white;
+}
+
 @media (max-width: 768px) {
   html, body {
     overflow-x: hidden;
