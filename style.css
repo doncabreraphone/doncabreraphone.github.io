@@ -659,7 +659,7 @@ body.main {
     min-height: 280px;
   }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 992px) {
   #block__wrapper.static {
     padding: 8em 10em;
   }
@@ -1149,7 +1149,7 @@ body.main {
 #industries .carousel-inner .carousel-item-prev {
   z-index: 2;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 992px) {
   #industries .carousel-inner .carousel-item.active,
   #industries .carousel-inner .carousel-item-next,
   #industries .carousel-inner .carousel-item-prev {
