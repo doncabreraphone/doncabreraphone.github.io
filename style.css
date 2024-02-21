@@ -1335,7 +1335,7 @@ body.main {
   position: relative;
   min-height: 400px;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 992px) {
   #industries #talk_img {
     padding: 25em 0;
   }
@@ -2468,6 +2468,11 @@ body.main {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 1300px) {
+  #talk #talk_wrap {
+    padding: 2em;
+  }
+}
 #talk h1 {
   font-family: "League Gothic", sans-serif;
   margin-bottom: 0.2em;
@@ -2475,6 +2480,12 @@ body.main {
 @media only screen and (max-width: 992px) {
   #talk h1 {
     font-size: 3.5rem;
+    line-height: 0.95em;
+  }
+}
+@media only screen and (max-width: 1299px) {
+  #talk h1 {
+    font-size: 4.5rem;
     line-height: 0.95em;
   }
 }

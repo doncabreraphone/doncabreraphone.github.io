@@ -1442,7 +1442,7 @@ body {
 #talk_img {
     position: relative;
     min-height: 400px;
-    @media only screen and (min-width: 1300px) {
+    @media only screen and (min-width: 992px) {
         padding: 25em 0;
     }
 
@@ -2706,6 +2706,10 @@ body {
     #talk_wrap {
         max-width: 1200px;
         margin: 0 auto;
+
+        @media only screen and (max-width: 1300px) {
+            padding: 2em;
+        }
     }
 
     h1 {
@@ -2713,6 +2717,11 @@ body {
         margin-bottom: 0.2em;
         @media only screen and (max-width: 992px) {
             font-size: 3.5rem;
+            line-height: 0.95em;
+        }
+
+        @media only screen and (max-width: 1299px) {
+            font-size: 4.5rem;
             line-height: 0.95em;
         }
 
