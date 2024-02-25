@@ -1771,6 +1771,7 @@ body {
 
     &.green_top {
         margin-top: 0;
+        overflow-x: hidden;
     }
 
     &.about_top::before {
@@ -2202,7 +2203,13 @@ body {
 
         @media only screen and (min-width: 992px) {
             margin-left: 70px !important;
-            padding-top: 3em;
+            padding-top: 6em;
+            transform: scale(1.2);
+        }
+
+        @media only screen and (min-width: 1500px) {
+            margin-left: 70px !important;
+            padding-top: 6em;
             transform: scale(1);
         }
     }

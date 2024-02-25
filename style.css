@@ -1622,6 +1622,7 @@ body.main {
 }
 #block__wrapper.green_top {
   margin-top: 0;
+  overflow-x: hidden;
 }
 #block__wrapper.about_top::before {
   width: 100%;
@@ -2009,7 +2010,14 @@ body.main {
 @media only screen and (min-width: 992px) {
   #green_about .youtube-container {
     margin-left: 70px !important;
-    padding-top: 3em;
+    padding-top: 6em;
+    transform: scale(1.2);
+  }
+}
+@media only screen and (min-width: 1500px) {
+  #green_about .youtube-container {
+    margin-left: 70px !important;
+    padding-top: 6em;
     transform: scale(1);
   }
 }
