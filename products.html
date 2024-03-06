@@ -55,29 +55,59 @@
                             <p><span id="emailSubjectText"></span></p>
                         </div>
 
+
+                        
                                         
 
                                         <!-- Your form content goes here -->
-                                        <form id="emailForm">
+                                        <form  
+                                         
+                                        
+                                            id="contactForm"
+                                            >
+
                                             <!-- Hidden fields for title and subject -->
 
-                                            <input type="hidden" id="emailSubject" name="emailSubject">
+                                            <!-- <input type="hidden" id="emailSubject" name="emailSubject"> -->
 
-                                            <!-- Form fields for user input -->
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="name" required>
+                                                <input type="text" name="name" class="form-control" id="name" required>
                                                 <label for="name" class="translate" data-key="FORM_name">Nombre</label>
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control" id="email" required>
+                                                <input type="email" name="email" class="form-control" id="email" required>
                                                 <label for="email" class="translate" data-key="FORM_email">Email</label>
                                             </div>
                                             <div class="form-group">
-                                                <input type="tel" class="form-control" id="phone" required>
+                                                <input type="tel" name="phone" class="form-control" id="phone" required>
                                                 <label for="phone" class="translate" data-key="FORM_phone">Teléfono</label>
                                             </div>
                                             <button type="submit" class="btn btn-primary translate" data-key="FORM_msg">Enviar Mensaje</button>
                                         </form>
+
+
+
+                                        <script>
+                                            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                                                e.preventDefault(); // Prevent the default form submission
+                                            
+                                                let formData = new FormData(this); // Create a FormData object from the form
+                                            
+                                                fetch('https://alkanos.com.ar/alkanos_form.php', {
+                                                    method: 'POST',
+                                                    body: formData
+                                                })
+                                                .then(response => response.text()) // Convert the response to text
+                                                .then(text => {
+                                                    document.getElementById('mensaje_form').innerHTML = text; // Display the response in #mensaje_form
+                                                })
+                                                .catch(error => {
+                                                    console.error('Error:', error);
+                                                });
+                                            });
+                                            </script>
+                                            
+
 
                     </div>
 
@@ -137,7 +167,7 @@
 
 
         <div class="row container-row">
-            <div class="col-5 product_info">
+            <div class="col-12 col-sm-6 order-last order-sm-first product_info">
                 <h1 class="translate" data-key="PRO_text_1" id="polioles">Polioles</h1>
                     <p class="lead translate" data-key="PRO_text_2">Los polioles constituyen la cadena estructural para la formación de distintos tipos de poliuretanos. Sus diferentes naturalezas químicas, morfología y funcionalidad los convierten en herramientas imprescindibles para conferir las propiedades únicas y distintivas de cada aplicación.</p> 
 
@@ -145,7 +175,7 @@
 
                     <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_4">Más información</a></p>
             </div>
-            <div class="col-7" id="product_1">
+            <div class="col-12 col-sm-6" id="product_1">
                 <ul class="ul_right">
                     <li class="translate" data-key="PRO_text_5">Poliéter para Espumas Convencionales</li>
                     <li class="translate" data-key="PRO_text_6">Poliéter para Espumas Especiales: Viscoelástica, Alta Resiliencia, Hipersoft</li>
@@ -157,14 +187,14 @@
 
 
         <div class="row container-row">
-            <div class="col-5" id="product_2">
+            <div class="col-12 col-sm-6" id="product_2">
                 <ul class="ul_left">
                     <li class="translate" data-key="PRO_text_9">TDI</li>
                     <li class="translate" data-key="PRO_text_10">PMDI</li>
                     <li class="translate" data-key="PRO_text_11">MDI Modificados</li>
                 </ul>
             </div>
-            <div class="col-7 product_info">
+            <div class="col-12 col-sm-6 product_info">
                 <h1 class="translate" data-key="PRO_text_12" id="isocianatos">Isocianatos</h1>
                 <p class="lead translate" data-key="PRO_text_12a">
                     Los isocianatos se caracterizan por su capacidad de reacción con sustancias que contienen hidrógenos activos, tales como los polioles, y son el fundamento de la química de los poliuretanos. No sólo es importante su correcta selección para cada aplicación sino también la calidad y responsabilidad ambiental con los que se los fabrica y utiliza.  
@@ -177,7 +207,7 @@
 
 
         <div class="row container-row">
-            <div class="col-5 product_info">
+            <div class="col-12 col-sm-6 order-2  order-last order-sm-first product_info">
                 <h1 class="translate" data-key="PRO_text_15" id="additivos_para_pu">Aditivos para PU</h1>
                 <p class="lead translate" data-key="PRO_text_16">
                     Nuestra línea de aditivos aporta beneficios en el proceso de producción y en el desempeño de las espumas de poliuretano en diversas aplicaciones. Ya sea para intervenir en el perfil reactivo, o bien para modificar las propiedades de las espumas, nuestra amplia gama de aditivos ofrece soluciones de calidad en las industrias de la construcción, muebles, colchones, automotriz y refrigeración, entre otras tantas. 
@@ -187,7 +217,7 @@
 
                 <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_18">Más información</a></p>
             </div>
-            <div class="col-7" id="product_3">
+            <div class="col-12 col-sm-6" id="product_3">
                 <ul class="ul_right">
                     <li class="translate" data-key="PRO_text_19">Catalizadores</li>
                     <li class="translate" data-key="PRO_text_20">Siliconas Estabilizantes</li>
@@ -200,7 +230,7 @@
 
 
         <div class="row container-row">
-            <div class="col-5" id="product_4">
+            <div class="col-12 col-sm-6 order-1" id="product_4">
                 <ul class="ul_left">
                     <li class="translate" data-key="PRO_text_24">Espumas Especiales en Bloque: Viscoelástica, Símil Látex, Alta Resiliencia</li>
                     <li class="translate" data-key="PRO_text_25">Espumas Moldeadas Viscoeásticas</li>
@@ -209,7 +239,7 @@
                     <li class="translate" data-key="PRO_text_28">Semirrígida</li>
                 </ul>
             </div>
-            <div class="col-7 product_info">
+            <div class="col-12 col-sm-6 order-2 product_info">
                 <h1 class="translate" data-key="PRO_text_29" id="sistemas_pu_flexibles">Sistemas PU Flexibles</h1>
                 <h2 class="translate" data-key="PRO_text_30">ALKURAN F</h2>
                 <p class="lead translate"  data-key="PRO_text_31">
@@ -222,7 +252,7 @@
 
 
         <div class="row container-row">
-            <div class="col-5 product_info">
+            <div class="col-12 col-sm-6 order-2 order-last order-sm-first product_info">
                 <h1 class="translate" data-key="PRO_text_34" id="sistemas_pu_rigidos">Sistemas PU Rígidos</h1>
                 <h2 class="translate" data-key="PRO_text_35">ALKURAN R</h2>
                 <p class="lead translate" data-key="PRO_text_36">
@@ -239,7 +269,7 @@
 
                 <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_39">Más información</a></p>
             </div>
-            <div class="col-7" id="product_5">
+            <div class="col-12 col-sm-6" id="product_5">
                 <ul class="ul_right">
                     <li class="translate" data-key="PRO_text_40">Refrigeración Doméstica y Comercial</li>
                     <li class="translate" data-key="PRO_text_41">Paneles</li>
@@ -253,14 +283,14 @@
 
 
         <div class="row container-row">
-            <div class="col-5" id="product_6">
+            <div class="col-12 col-sm-6 order-2" id="product_6">
                 <ul class="ul_left">
                     <li class="translate" data-key="PRO_text_46">Piel Integral Flexible</li>
                     <li class="translate" data-key="PRO_text_47">Rígido Estructural</li>
                     <li class="translate" data-key="PRO_text_48">Sistema para Filtros</li>
                 </ul>
             </div>
-            <div class="col-7 product_info">
+            <div class="col-12 col-sm-6 order-2 product_info">
                 <h1 class="translate" data-key="PRO_text_49" id="sistemas_pu_microcelular">Sistemas PU Microcelular</h1>
                 <p class="lead translate" data-key="PRO_text_50">
                     Nuestra línea de sistemas para espumas microcelulares cubre una amplia gama de productos y aplicaciones de espuma rígida y flexible. Las espumas estructurales, con piel integral, o alto desempeño mecánico se utilizan en aplicaciones de la industria automotriz, en minería, para decoración, en artículos deportivos, en maquetas y en muchos otros rubros. Gracias a su enorme versatilidad, las posibilidades son innumerables.
@@ -272,7 +302,7 @@
 
 
         <div class="row container-row">
-            <div class="col-5 product_info">
+            <div class="col-12 col-sm-6 order-2 order-last order-sm-first product_info">
                 <h1 class="translate" data-key="PRO_text_53" id="glicoles">Glicoles</h1>
                 <p class="lead translate" data-key="PRO_text_54">Nuestra línea de glicoles de alta pureza tiene aplicaciones industriales, farmacéuticas, veterinarias, alimenticias y cosméticas, entre otros usos. Nuestros productos cumplen los más exigentes estándares de calidad y regulatorios por provenir de fuentes de suministro de clase mundial y gracias a la aplicación de buenas prácticas en su manipulación, almacenamiento y fraccionado.</p>
 
@@ -280,7 +310,7 @@
                 
                 <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_56">Más información</a></p>
             </div>
-            <div class="col-7" id="product_7">
+            <div class="col-12 col-sm-6" id="product_7">
                 <ul class="ul_right">
                     <li class="translate" data-key="PRO_text_57">DiPropilenGlicol Fragrance Grade (DPFG)</li>
                     <li class="translate" data-key="PRO_text_58">DiPropilenGlicol Industrial (DPG)</li>

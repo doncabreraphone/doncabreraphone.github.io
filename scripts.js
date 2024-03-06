@@ -1143,10 +1143,13 @@ function toggleSwitcherText(language) {
         switcherLabel.text('English');
         switcherLabel.removeClass('spanish');
         switcherLabel.addClass('english');
+        // $('.form-check-label label').css('background-color', '#bf281f');
+        
     } else {
         switcherLabel.text('Spanish');
         switcherLabel.removeClass('english');
         switcherLabel.addClass('spanish');
+        // $('.form-check-label label').css('background-color', '#000');
     }
 }
 
@@ -1155,6 +1158,8 @@ function toggleSwitcherText(language) {
 //     var language = isChecked ? 'es' : 'en';
 //     loadLanguageFile(language);
 // });
+
+
 
 $(document).ready(function() {
     var userLang = localStorage.getItem('userLang');
@@ -1223,6 +1228,7 @@ $(document).ready(function() {
     });
 });
   
+
 
 
 
