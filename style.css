@@ -1076,8 +1076,17 @@ body.main {
   padding: 0 1.8em;
 }
 #modal_box h2 {
-  font-size: 1.8rem;
   font-family: "Spline Sans", "Helvetica Neue", Helvet;
+}
+@media only screen and (max-width: 991px) {
+  #modal_box h2 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #modal_box h2 {
+    font-size: 1.8rem;
+  }
 }
 #modal_box h3 {
   font-size: 1.2rem;
