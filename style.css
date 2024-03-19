@@ -161,7 +161,7 @@ body.main {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url("/images/home_lab.jpg") no-repeat center center;
+  background: url("/images/home_lab.webp") no-repeat center center;
   opacity: 0.35;
   background-size: cover;
   content: "";
@@ -690,7 +690,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/ESPUMAS Poli.jpeg");
+  background-image: url("images/products_opt/ESPUMAS Poli.webp");
   background-size: cover;
 }
 
@@ -702,7 +702,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/machine1-back.jpg");
+  background-image: url("images/machine1-back.webp");
   background-size: cover;
   background-position: bottom center;
 }
@@ -741,7 +741,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/car3.jpg");
+  background-image: url("images/products_opt/car3.webp");
   background-size: cover;
   background-position: center center;
 }
@@ -767,7 +767,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/green.jpg");
+  background-image: url("images/green.webp");
   background-size: cover;
   background-position: center center;
 }
@@ -780,7 +780,7 @@ body.main {
   z-index: 0;
   left: 0;
   top: 0;
-  background-image: url("images/products_opt/mining.jpg");
+  background-image: url("images/products_opt/mining.webp");
   background-size: cover;
   background-position: center center;
 }
@@ -886,27 +886,27 @@ body.main {
   position: relative;
 }
 #products_page #product_1 {
-  background-image: url("/images/products_img/FOTO POLIOLES.jpg");
+  background-image: url("/images/products_img/FOTO POLIOLES.webp");
 }
 #products_page #product_2 {
-  background-image: url("/images/products_img/FOTO ISOCIANATOS.jpg");
+  background-image: url("/images/products_img/FOTO ISOCIANATOS.webp");
 }
 #products_page #product_3 {
   background-image: url("/images/products_img/sample.png");
 }
 #products_page #product_4 {
-  background-image: url("/images/products_img/FOTO SISTEMAS PU FLEX.jpg");
+  background-image: url("/images/products_img/FOTO SISTEMAS PU FLEX.webp");
   background-position: center center !important;
 }
 #products_page #product_5 {
-  background-image: url("/images/products_img/SISTEMAS PU RIGIDOS.jpg");
+  background-image: url("/images/products_img/SISTEMAS PU RIGIDOS.webp");
   background-position: right center !important;
 }
 #products_page #product_6 {
-  background-image: url("/images/products_img/FOTO SISTEMAS PU MICROCEL.jpg");
+  background-image: url("/images/products_img/FOTO SISTEMAS PU MICROCEL.webp");
 }
 #products_page #product_7 {
-  background-image: url("/images/products_img/FOTO GLICOLES.jpg");
+  background-image: url("/images/products_img/FOTO GLICOLES.webp");
   background-position: center center !important;
 }
 #products_page .product_info h2 {
@@ -1384,7 +1384,7 @@ body.main {
 }
 #industries #talk_img #talk_img_back {
   position: absolute;
-  background: url("images/lab_tech_3.jpg") no-repeat center right;
+  background: url("images/lab_tech_3.webp") no-repeat center right;
   background-size: cover;
   transition: left 1.6s; /* Adjust the transition duration as needed */
   top: 0;
@@ -1394,7 +1394,7 @@ body.main {
 }
 #industries #talk_img #talk_img_back_2 {
   position: absolute;
-  background: url("images/FOTOMYA-E1485-128.jpg") no-repeat center center;
+  background: url("images/FOTOMYA-E1485-128.webp") no-repeat center center;
   background-size: cover;
   transition: left 1.6s; /* Adjust the transition duration as needed */
   top: 0;
@@ -1403,19 +1403,19 @@ body.main {
   height: 100%;
 }
 #industries #talk_img_back.otras {
-  background: url("images/FOTOMYA-E1485-120.jpg") no-repeat center center !important;
+  background: url("images/FOTOMYA-E1485-120.webp") no-repeat center center !important;
 }
 #industries #talk_img_back.refrigeracion {
-  background: url("images/FOTOMYA-E1485-109.jpg") no-repeat center center !important;
+  background: url("images/FOTOMYA-E1485-109.webp") no-repeat center center !important;
 }
 #industries #talk_img_back.automotriz {
-  background: url("images/FOTOMYA-E1485-093.jpg") no-repeat center center !important;
+  background: url("images/FOTOMYA-E1485-093.webp") no-repeat center center !important;
 }
 #industries #talk_img_back.consumo {
-  background: url("images/FOTOMYA-E1485-003.jpg") no-repeat center center !important;
+  background: url("images/FOTOMYA-E1485-003.webp") no-repeat center center !important;
 }
 #industries #talk_img_back.gas {
-  background: url("images/FOTOMYA-E1485-051.jpg") no-repeat center center !important;
+  background: url("images/FOTOMYA-E1485-051.webp") no-repeat center center !important;
 }
 @media only screen and (max-width: 992px) {
   #industries #talk_form {
@@ -1673,7 +1673,7 @@ body.main {
   top: 0;
   content: "";
   position: absolute;
-  background: url("../images/plant2.jpg") no-repeat center bottom;
+  background: url("../images/plant2.webp") no-repeat center bottom;
   background-size: cover;
   margin-top: 0;
   animation: anim 2.5s ease-in forwards;
@@ -2002,7 +2002,7 @@ body.main {
 
 #planta {
   padding: 12em 0;
-  background: url("images/warehouse2.jpg") no-repeat center center;
+  background: url("images/warehouse2.webp") no-repeat center center;
   background-size: cover;
 }
 #planta #talk_wrap {
@@ -2511,7 +2511,7 @@ body.main {
 
 #talk {
   padding: 20em 0;
-  background: url("images/productos.jpg") no-repeat center center;
+  background: url("images/productos.webp") no-repeat center center;
   background-size: cover;
 }
 #talk #talk_wrap {
@@ -3283,9 +3283,12 @@ body.main {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   html, body {
     overflow-x: hidden;
+  }
+  #back {
+    cursor: pointer;
   }
   .navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
     justify-content: center;

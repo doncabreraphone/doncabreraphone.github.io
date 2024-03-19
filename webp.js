@@ -2,7 +2,7 @@ const fs = require('fs');
 const sharp = require('sharp');
 const path = require('path');
 
-const inputDir = './images'; // Directory with JPG images
+const inputDir = './images/products_opt'; // Directory with JPG images
 
 fs.readdir(inputDir, (err, files) => {
     if (err) {
